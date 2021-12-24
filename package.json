@@ -1,0 +1,22 @@
+{
+  "name": "grupo_2_shoes-station",
+  "version": "1.0.0",
+  "description": "Marketplace Venta de Zapatillas Deportivas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatyAloi/grupo_2_shoes-station.git"
+  },
+  "author": "Grupo#2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CatyAloi/grupo_2_shoes-station/issues"
+  },
+  "homepage": "https://github.com/CatyAloi/grupo_2_shoes-station#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
