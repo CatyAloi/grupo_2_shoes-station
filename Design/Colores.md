@@ -1,0 +1,13 @@
+Colores:
+#ff0698
+#55f8ff
+#6577fa
+#58c8fe
+#cfe1ff
+#8fa5f4
+#d0e0e3
+#a7dfff
+#8ed7c5
+#f48da2
+#82c2f1
+#fadd77
