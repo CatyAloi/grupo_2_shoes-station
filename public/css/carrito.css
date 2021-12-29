@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.titulo_carrito{
+    background: lightgreen;
+}
+
+
+.producto_carrito{
+    /*background: lightcoral;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding:5px;
+    
+    
+    border-bottom: 2px solid rgba(250, 2, 209, 0.5);
+    border-top: 2px solid rgba(199, 18, 154, 0.5);   
+    
+}
+
+.info_producto {
+    /*background: rgb(222, 236, 153);*/
+    padding: 20px;
+    margin-top: 100px;
+    
+}
+
+.nombre_producto, .talle_producto, .cod_producto{
+
+    /*background: lightslategrey;*/
+    padding: 15px;
+}
+
+.label_cantidad  {
+    background: lightgreen;
+}
+    
+.label_subtotal {
+    background: lightgreen;
+}
+     
+
+.cantidad_producto {
+    /*background: lightgreen;*/
+    padding: 20px;
+    margin-top: 150px;
+}
+    
+
+
+.subtotal_producto{
+    /*background: lightgreen;*/
+    padding: 20px;
+    margin-top: 150px;
+
+}
+    

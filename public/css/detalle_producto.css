@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img_product{
+background: rgb(255, 255, 255);
+width: 98%;
+margin-left: 10px;
+
+}
+
+.ruta_product{
+    margin-top: 20px;
+
+}
+
+.product_name{
+    font-size: 12px;
+    margin-left: 20px;
+    
+}
+
+.price_product{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.talle_product{
+margin-top: 20px;
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+border-bottom: 2px solid rgba(250, 2, 209, 0.5);
+border-top:2px solid rgba(199, 18, 154, 0.5);
+
+}
+.label_talle{
+    background: #fff;
+
+}
+
+.talle{
+padding: 5px;
+ list-style: none;
+ margin: 5px;
+ text-align: center;
+ border-radius: 5px;
+ border: 1px  solid #222;
+ min-width: 35px;
+ width: unset;
+ cursor: pointer;
+}
+
+.cantidad{
+padding: 5px;
+ list-style: none;
+ margin: 5px;
+  text-align: center;
+ border-radius: 5px;
+ border: 1px  solid #222;
+ max-width: 35px;
+ width: unset;
+ cursor: pointer;
+}
+
+.agregar_product{
+    margin-top: 15px;
+
+}
+
+.container_agregar{
+    display: flex;
+    padding: 20px;
+
+}
+.bottom{
+    text-decoration: none;
+    border: 1px solid #82c2f1;
+    width: 330px;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+    background-color: #6577fa;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+
+}
+
+/*.boton_agregar{
+    padding: 20px;
+
+}*/
+
+.description_product h2{
+    font-size: 18px;
+    padding: 20px;
+    margin-top: 15px;
+    
+
+}
+
+.description_product p{
+padding: 20px;
+text-align: justify;
+font-size: 20px;
+}
+
+.atributos_product{
+    
+    padding: 20px;
+    
+
+}
+
+.atributos_product li{
+    list-style: none;
+    margin: 10px;
+    font-size: 17px;
+}

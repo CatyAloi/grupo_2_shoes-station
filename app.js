@@ -16,6 +16,6 @@ app.get('/login', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/fo
 
 app.get('/registro', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/form_register.html')); });
 
-app.get('/carrito', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/cart.html')); });
+app.get('/carrito', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/carrito.html')); });
 
 app.listen(3000, () => console.log('Servidor Shoes_Station corriendo'));
