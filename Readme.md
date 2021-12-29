@@ -1,1 +1,3 @@
-nuestro proyecto integrador
+Nuestro proyecto integrador: Nuestro sitio ofrece productos de calzado (... cuando entienda bien lleno mas...) moderno, confortable y eficiente, de uso urbano, apto para todas las actividades que la vida diaria requiere, con una excelente relación de precio calidad. 
+No queremos cerrarnos en un único nicho de destinatarios, estando abiertos al hombre/mujer de hoy tanto en sus etapas más intensas y juveniles como en la diversidad de la madurez, ofreciendo opciones diversas que seguramente encajarán con cada prototipo de potencial cliente. 
+(luego lleno mas, estoy probando el clone y el push y todo eso)
