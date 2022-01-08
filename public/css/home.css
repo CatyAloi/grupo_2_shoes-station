@@ -8,17 +8,25 @@ html, body {
 }
 
 .title_al {
-    background-color: rgb(171, 179, 171);
+    background-color: rgb(10, 10, 10);
     padding: 8px;
-    
 }
 
 .bx-menu {
     font-size: 25px;
+    margin-right: 15px;
+    color: white;
 }
 
 .shop-name {
     font-family: 'Prompt', sans-serif;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.fucsia {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    padding: 5px;
 }
 
 .container_al {
@@ -34,12 +42,26 @@ html, body {
 }
 
 .logo {
-    width: 30px;
+    width: 35px;
 }
 
 .logo_tipo {
     font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+}
+
+.logotipo_al {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -34px;
+    
 }
 
 .search{
@@ -65,7 +87,7 @@ html, body {
 .icons_al > a {
     font-size: 30px;
     margin: 5px;
-    color: black;
+    color: rgb(0, 0, 0);;
 }
 
 .container-slider-al {
@@ -109,10 +131,83 @@ html, body {
     left: 10px;
 }
 
+.container_products {
+    margin: 50px;
+}
+
+.sale_title {
+    font-family: 'Prompt', sans-serif;
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+.product-content {
+    border: 1px solid rgba(128, 128, 128, 0.466);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+}
+
+.date-product {
+    text-align: center;
+}
+
+.date-product > span {
+    font-family: 'Prompt', sans-serif;
+}
+
+.image-product {
+    width: 200px;
+}
+
+.product-name {
+    font-family: 'Prompt', sans-serif;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    margin-top: 60px;
+}
+
+.product-content {
+    margin: auto;
+}
+
+.container-marcas {
+    margin: 50px;
+}
+
+.title-marcas {
+    font-family: 'Prompt', sans-serif;
+    font-size: 25px;
+}
+
+.logo-marcas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-marcas {
+    padding: 50px;
+}
+
+.img-marcas > img{
+    width: 150px;
+}
+
+
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 941px) {
+
+    .nav-menu-al {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    }
+
     .title_al {
-        background-color: rgb(171, 179, 171);
         font-family: 'Prompt', sans-serif;
         text-align: center;
         padding: 8px;
@@ -125,13 +220,12 @@ html, body {
     
     .menu-al > li {
         list-style: none;
-        margin: 15px;
         padding: 15px;
     }
     
     .menu-al > li > a{
         text-decoration: none;
-        font-family: 'Prompt', sans-serif !important;
+        font-family: 'Prompt', sans-serif;
         color: black;
     }
 
@@ -149,12 +243,19 @@ html, body {
     .title_al {
         display: flex;
         justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .fucsia {
+        padding: 25px;
     }
 
     .nav-menu-al {
-        position: absolute;
+        position: fixed;
         top: 0;
-        background-color: rgba(171, 179, 171, 0.527);
+        background-image: linear-gradient(to right, #4facfe94 0%, #00f1fe94 100%);
         width: 250px;
         height: 100%;
         padding-top: 50px;
@@ -170,18 +271,23 @@ html, body {
         margin-left: 0;
     }
 
+    .menu-al {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .menu-al > li {
         line-height: 50px;
         list-style: none;
         text-align: center;
         padding: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.678);
+        border-bottom: 1px solid #399ef794;
     }
 
     .menu-al > li > a {
         text-decoration: none;
         font-family: 'Prompt', sans-serif;
-        color: rgb(0, 0, 0);
+        color: black;
     }
     
     .container_al {
@@ -189,7 +295,11 @@ html, body {
     }
 
     .header-al {
-        padding: 15px;
+        margin: 15px;
+    }
+
+    .logotipo_al {
+        margin-top: 25px;
     }
     
     .search {
