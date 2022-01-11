@@ -1,4 +1,3 @@
-
 Link de Espacio de trabajo en Trello https://trello.com/fullstackdh3/home
 Link del Repositorio: https://github.com/CatyAloi/grupo_2_shoes-station
 
