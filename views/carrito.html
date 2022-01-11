@@ -1,69 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/carrito.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/27f832f48b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&family=Russo+One&display=swap" rel="stylesheet">
+    
     <title>Mi Carrito</title>
 </head>
 <body>
     
-
-    <div class= "titulo_carrito">
+    <div class= "ca_titulo_carrito">
         <h3>Mi Carrito</h3>
     </div>
-    
-    //<section class = "label_carrito">
-        
-        <div class= "label_cantidad">
-            <h3> label cantidad</h3>
+
+
+    <div class = "ca_nombre_producto">
+        <h3>Zapatillas Adidas CoreRacer</h3>
+    </div>
+
+
+    <section class = "ca_container_producto_carrito">
+
+        <div class= "ca_imagen_producto">
+
+        <div>
+            <i class="fas fa-trash-alt"></i>
+
         </div>
-    
-        <div class= "label_subtotal">
-            <h3> label Subtotal</h3>
-        </div>
-
-    </section>//
-    
-
-    
-
-    <section class = "producto_carrito">
-
-        <div class= "imagen_producto">
           
             <img src="/images/mn_002.jpg" alt="">    
         </div>
-    
-        <div class= "info_producto">
-            
-            <div class = "nombre_producto">
-                <h3>Zapatillas Adidas CoreRacer</h3>
-            </div>
 
-            <div class = "talle_producto">
-                <h4>Talle: 39</h4>
-            </div>
 
-            <div class = "cod_producto">
-                <h4>Código: SKU-4563-002</h4>
-            </div>
+            <section class = "ca_info_producto">
 
-        </div>
-             
-        <div class= "cantidad_producto">
-            <h3>1</h3>
-        </div>
-    
-        <div class= "subtotal_producto">
-            <h3>$12.500</h3>
-        </div>
+                <div class = "ca_talle_producto">
+                    <p>Talle: 39</p>
+                </div>
+
+                <div class = "ca_cod_producto">
+                    <p>Código: SKU-4563-002</p>
+                </div>
+
+                <div class= "ca_cantidad_producto">
+                    <input type="text">
+                </div>
+           
+                <div class= "ca_subtotal_producto">
+                    <p>$12.500</p>
+                </div>
+
+            </section>
+        
 
     </section>
     
 
-    
+<section class="ca_container_total">
+            <div class = "ca_label_envio">
+                <p>Calcular el costo del Envío</p>
+            </div>
+
+
+        <section class = "ca_calculo_envio">
+            
+            <div class = "ca_codigo_postal">
+
+                <input type="text" placeholder="Ingresa tu Código Postal">
+
+                
+            </div>
+
+
+            <div class = "ca_calcular">
+                <button type ="submit" > Calcular</button>
+            </div>
+
+        </section>
+
+
+        <div class = "ca_subtotal_carrito">
+            <p>Subtotal ........................................ $18.000</p>
+
+        </div>
+        
+        <div class = "ca_costo_envio">
+            <p>Costo del Envío ................................... $600</p>
+
+        </div>
+
+        <div class = "ca_monto_total">
+            <p>Total ...................................... $26.000</p>
+        </div>
+
+</section>    
+        
+
+<section class = "ca_botones_carrito">
+
+        <a class = "bottom2" href="#">Elegir más productos</a>
+              
+        <a class = "bottom3" href="#">Finalizar Compra</a>
+        
+</section>
+
 
 </body>
 </html>

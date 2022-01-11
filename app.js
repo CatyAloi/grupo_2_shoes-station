@@ -18,4 +18,6 @@ app.get('/registro', (req, res) => {res.sendFile(path.resolve(__dirname,'./views
 
 app.get('/carrito', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/carrito.html')); });
 
+app.get('/editarproductos', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/form_edition.html')); });
+
 app.listen(3000, () => console.log('Servidor Shoes_Station corriendo'));
