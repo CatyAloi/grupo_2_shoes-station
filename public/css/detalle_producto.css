@@ -1,18 +1,27 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Prompt', sans-serif;
-    /*font-family: 'Orbitron', sans-serif;*/
 }
 
+body{
+    font-family: 'Prompt', sans-serif;
+}
+
+#franja{
+    border-top: 1px solid #399ef794;
+}
 
 .ca_caja_imagenproducto{
 background: rgb(255, 255, 255);
+border: 1px solid rgba(245, 87, 108, 0.555) ;
+border-radius: 10px;
+padding: 15px;
+width: 300px;
 margin-top: 60px;
 display: flex;
 justify-content: center;
-
+margin-left: 8%;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .ca_caja_imagenproducto img{
@@ -21,28 +30,31 @@ justify-content: center;
 
 
 .ca_caja_nombreproducto{
+    display: flex;
     font-size: 12px;
-    margin-left: 20px;
+    justify-content: center;
+    margin-top: 15px;
     
 }
 
 
 .ca_caja_codigo{
     font-size: 16px;
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 10px;
     
 }
 .ca_caja_precio{
     font-size: 30px;
     font-weight: bolder;
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 20px;
 }
 
 .ca_caja_labeltalle{
-    font-size: 15px;
-    margin-left: 20px;
+    font-size: 18px;
+    font-style: italic;
+    margin-left: 30%;
     margin-top: 20px;
 }
 
@@ -52,8 +64,8 @@ justify-content: center;
     margin-top: 5px;
     margin-right: 7px;
     padding: 20px;
-    border-bottom: 2px solid rgba(250, 2, 209, 0.5);
-    border-top:2px solid rgba(199, 18, 154, 0.5);
+    border-bottom: 1px solid #399ef794;
+    border-top:1px solid #399ef794;
     
 
 }
@@ -92,11 +104,11 @@ justify-content: center;
 .bottom{
     text-decoration: none;
     border: 1px solid #ff0698;
-    width: 250px;
+    width: 60%;
     height: 50px;
     text-align: center;
     padding-top: 10px;
-    background-color: #ff0698;
+    background-color: #000000;
     color: rgb(255, 255, 255);
     font-size: 20px;
 
