@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Prompt', sans-serif;
 }
 
 html, body {
@@ -95,7 +96,7 @@ html, body {
     background: none;
     border: none;
     font-size: 30px;
-    color: floralwhite;
+    color: rgb(10, 10, 10);
 }
 
 .btnright {
@@ -106,50 +107,147 @@ html, body {
     left: 10px;
 }
 
-.sale_title {
-    font-family: 'Prompt', sans-serif;
-    font-size: 25px;
+
+/* Slider============== */ 
+
+a {
+    text-decoration: none;
 }
 
-.contentOne {
-    margin-top: 30px;
-}
-
-.sale_title {
-    padding: 30px;
-    margin: 15px;
-}
-
-.product-content {
-    border: 1px solid rgba(245, 87, 108, 0.555) ;
-    border-radius: 10px;
-    padding: 15px;
-    width: 200px;
-}
-
-.date-product {
-    text-align: center;
-}
-
-.date-product > span {
-    font-family: 'Prompt', sans-serif;
-}
-
-.image-product {
-    width: 200px;
-}
-
-.product-name {
-    font-family: 'Prompt', sans-serif;
-}
-
-.products {
+.product-heading {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.show-more {
+    width: 65px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.product-slider-heading {
+    font-size: 20px;
+    color: #111111;
+    margin: 15px;
+
+    padding: 10px;
+    
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    /* border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px; */
+    margin: 0px 20px;
+}
+
+.p-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.p-img a, .p-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.p-img a img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+
+}
+
+.p-box-text {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.product-category {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.product-content {
-    margin: auto;
+.product-category span {
+    color: #acacac;
+    font-size: 0.9rem;
+    margin: 5px 0px;
+}
+
+.product-title {
+    color: #333333;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+.product-title:hover {
+    color: #111111;
+    opacity: 0.7;
+    transition: all ease 0.3s;
+}
+
+.content-container {
+    display: flex;
+    justify-content: left;
+    height: 320px;
+    width: 4000px;
+    margin: 10px auto;
+    margin-left: -280px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    margin: 20px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.bx-chevrons-right {
+    right: 10px;
+    font-size: 25px;
+    color: #313131;
+}
+
+.bx-chevrons-left {
+    left: 10px;
+    font-size: 25px;
+    color: #313131;
+}
+/* Finaliza estilo de slider */
+
+.title-marcas {
+    text-align: center;
+}
+
+
+.content-marcas {
+    padding: 30px;
+    margin: 15px;
 }
 
 .logo-marcas {
@@ -163,7 +261,7 @@ html, body {
 }
 
 .img-marcas > img{
-    width: 50px;
+    width: 100px;
 }
 
 .fucsiaDos {
@@ -211,8 +309,9 @@ html, body {
     padding: 5px;
 }
 
-.redes > li > i {
+.redes > li > a {
     font-size: 25px;
+    color: white;
 }
 
 .info {
@@ -257,6 +356,10 @@ html, body {
     .slider-img {
         height: 500px;
     }
+
+    .product-slider-heading {
+        font-size: 25px;    
+    }
     
     .title-marcas {
         font-family: 'Prompt', sans-serif;
@@ -292,7 +395,7 @@ html, body {
     .nav-menu-al {
         position: fixed;
         top: 0;
-        background-image: linear-gradient(to right, #4facfe94 0%, #00f1fe94 100%);
+        background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
         width: 250px;
         height: 100%;
         padding-top: 50px;
@@ -341,8 +444,17 @@ html, body {
 }
 
 @media screen and (max-width: 550px) {
+    
+    .img-marcas > img {
+        width: 40px;
+    }
+    
     .content-footer {
         flex-direction: column;
         text-align: center;
+    }
+
+    .product-slider-heading {
+        font-size: 15px;    
     }
 }
