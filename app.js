@@ -10,7 +10,7 @@ app.get('/detalleproducto', (req, res) => {res.sendFile(path.join(__dirname,'./v
 
 // app.get('/catalogoproducto', (req, res) => {res.sendFile(path.join(__dirname,'./views/catalogo_producto.html')); });
 
-// app.get('/contacto', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_contact.html')); });
+app.get('/contacto', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/form_contact.html')); });
 
 // app.get('/login', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_login.html')); });
 

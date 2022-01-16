@@ -56,95 +56,85 @@
     <div class= "ca_titulo_carrito">
         <h3>Mi Carrito</h3>
     </div>
+     <div class="comprar_mas"><a href="#">Seguir Comprando</a></div>
 
-
-    
-
-
-    <section class = "ca_container_producto_carrito">
+     <section class = "ca_container_producto_total">
         <div class = "ca_nombre_producto">
             <h3>Zapatillas Adidas CoreRacer</h3>
         </div>
         
-        <div class= "ca_imagen_producto">
+        <div class= "ca_container_producto">
 
-                <div>
-                     <img src="/images/mn_002.jpg" alt="">   
+            <img src="/images/mn_002.jpg" alt=""> 
+
+            <div class = "ca_talle_producto">
+                <p class="talle_ca">Talle: 39</p>
+                <p class="talle_ca">SKU-4563</p>
+            </div>
+                 
+            <div class="ca_data_producto">
+                <div class= "margin ca_cantidad_producto">
+                    <input type="text">
                 </div>
-
-                <section class = "ca_info_producto">
-
-                    <div class = "ca_talle_producto">
-                        <p>Talle: 39</p>
-                        <p>SKU-4563-002</p>
-                    </div>
-                                  
-                    <div class= "ca_cantidad_producto">
-                        <input type="text">
-                    </div>
-            
-                    <div class= "ca_subtotal_producto">
-                        <p>$12.500</p>
-                    </div>
-                </section>
-
-                <div>
-                    <i class="fas fa-trash-alt"></i>
-                </div>          
+        
+                <div class= "margin ca_subtotal_producto">
+                    <p class="precio_ca">$12.500</p>
+                </div>
+            </div>    
+                       
+            <div class="papelera">
+                <i class="fas fa-trash-alt"></i>
+            </div>          
           
         </div>
 
         
     </section>
     
-
-<section class="ca_container_total">
+    <section class="ca_container_content">
+        <section class="ca_container_total">
             <div class = "ca_label_envio">
                 <p>Calcular el costo del Envío</p>
             </div>
 
 
-        <section class = "ca_calculo_envio">
+            <section class = "ca_calculo_envio">
+                <div class = "ca_codigo_postal">
+                    <input type="text" placeholder="Código Postal">
+                </div>
+
+                <div class = "ca_calcular">
+                    <button type ="submit" > Calcular</button>
+                </div>
+            </section>
+
+
+            <div class = "ca_subtotal_carrito">
+                <p>Subtotal ................................. $18.000</p>
+
+            </div>
             
-            <div class = "ca_codigo_postal">
+            <div class = "ca_costo_envio">
+                <p>Costo del Envío ........................ $600</p>
 
-                <input type="text" placeholder="Ingresa tu Código Postal">
-
-                
             </div>
 
-
-            <div class = "ca_calcular">
-                <button type ="submit" > Calcular</button>
+            <div class = "ca_monto_total">
+                <p>Total ....................... $26.000</p>
             </div>
 
-        </section>
-
-
-        <div class = "ca_subtotal_carrito">
-            <p>Subtotal ........................................ $18.000</p>
-
-        </div>
+        </section> 
         
-        <div class = "ca_costo_envio">
-            <p>Costo del Envío ................................... $600</p>
+       
+    </section>
 
-        </div>
-
-        <div class = "ca_monto_total">
-            <p>Total ...................................... $26.000</p>
-        </div>
-
-</section>    
+    <section class = "ca_botones_carrito">
         
-
-<section class = "ca_botones_carrito">
-
-        <a class = "bottom2" href="#">Elegir más productos</a>
-              
-        <a class = "bottom3" href="#">Finalizar Compra</a>
+        <div><button class="shopping"> Finalizar Compra</button></div>
         
-</section>
+    </section>
+
+
 
 <footer class="container-footer">
     <div class="fucsiaDos">

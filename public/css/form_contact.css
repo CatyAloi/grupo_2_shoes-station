@@ -1,7 +1,15 @@
-
 *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
     font-family: 'Prompt', sans-serif;
-    /*font-family: 'Orbitron', sans-serif;*/
+
+}
+
+#franja{
+    border-top: 1px solid #399ef794;
 }
 
 form{
@@ -9,49 +17,61 @@ form{
     width: 600px;
     margin: auto;
     padding: 10px 20px;
-    box-shadow: 0px 0px 10px rgb(100,100,100);
-    margin-top: 150px;
-    border-radius: 7px;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
 
-h2{
-   color:#6577fa;
+.titulo_form{
+   color:#727272;
    text-align: center;
    margin: 0;
    font-size: 30px;
    margin-bottom: 25px; 
 }
 
-input, textarea {
-width: 100%;
-margin-bottom: 20px;
-padding: 7px;
-box-sizing: border-box;
-font-size: 18px;
-border: none;
-background: rgba(0,0,0,0.1);
+.form_contact, textarea {
+    text-indent: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-color: #c2c2c294;
+    background: #dff1f194;
+    border-radius: 3px;
 }
 
 textarea {
-min-height: 100px;
-max-height: 200px;
-max-width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
 
 }
 
 #btn_enviar {
-    background:#6577fa ;
-    color:#fff;
-    padding: 20px;
+    text-align: center;
+    background:#3ebfd694;
+    color:rgb(0, 0, 0);
+    font-size: 22px;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    
 }
 
 #btn_enviar:hover{
     cursor: pointer;
 }
 
-@media (max-width:480px){
+
+@media screen and (max-width: 550px) {
     form{
-        width: 100%;
-    }
+        width: 80%;
+    } 
 }

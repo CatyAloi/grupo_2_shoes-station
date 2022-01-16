@@ -1,22 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-}
-
-body{
     font-family: 'Prompt', sans-serif;
-
 }
 
 #franja{
     border-top: 1px solid #399ef794;
 }
-.fas{
-    position: absolute;
-    top: 63%;
-    left: 85%;
-    transform: translateX(-50%);
-    font-size: 20px;
+
+.papelera{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px; 
 }
 
 .ca_titulo_carrito{
@@ -25,35 +22,37 @@ body{
     margin-left: 20px;
 }
 
-.ca_imagen_producto{
+.talle_ca{/*propiedades del texto del talle y el código*/
+    font-size: 15px;
+    text-align: center;
+}
+
+.ca_container_producto{ /*imagen,talle, código, input cantidad, precio, papelera*/
     display: flex;
     flex-direction: column;
     
 }
-.ca_nombre_producto{
-   
-    color: rgb(0, 0, 0);
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.ca_imagen_producto img{
+.ca_container_producto img{
     margin-left: 20%;
     width: 60%;
     
 }
 
-.ca_container_producto_carrito{
+.ca_nombre_producto{
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+
+
+.ca_container_producto_total{
     
-    display: flex; 
-    flex-direction: column;
     border: 1px solid rgba(245, 87, 108, 0.555) ;
     border-radius: 10px;
-    padding: 10px;
-    width: 80%;
-    margin-left: 7%;
-    margin-top: 15px;
+    margin: 15px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
 }
 
 .ca_container_total{
@@ -61,30 +60,43 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 10px;
-    width: 300px;
-    margin-left: 7%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px;
+    
 }
 
-/*.ca_cantidad_producto input{ 
+.ca_cantidad_producto input{ 
     width: 30px;
-
-}*/
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px #a3a2a2;
+    outline: none;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%);
+}
 
 .ca_info_producto{
     /*background-color: rgb(238, 183, 231);*/
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
+    align-items: center;
    
 }
 
+.ca_data_producto{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+}
+
+.margin{
+    margin: 7px
+}
 .ca_subtotal_producto{
     
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
  
 }
@@ -96,14 +108,25 @@ body{
 }
 
 .ca_calculo_envio{
-display: flex;
-padding: 10px;
+    display: flex;
+    padding: 10px;
 }
 
+.ca_calcular >button{
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border: solid 1px #f5576c;
+    height:25px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%);  
+}
 
-.ca_codigo_postal{
-    background-color: rgb(233, 213, 213);
-   
+.ca_codigo_postal >input{
+    text-indent: 5px;
+    width: 130px;
+    height:23px;
+    border: solid 1px #a3a2a2;
+    outline: none;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%)
+
 
 }
 
@@ -127,55 +150,53 @@ padding: 10px;
 }   
 
 
+.comprar_mas{
+    margin: 15px;
 
-.ca_botones_carrito{
-    display: flex;
-    flex-direction: column;
+}
+
+.comprar_mas >a{
+    color: #4facfe;
+
+}
+  
+.shopping{/*botón Finalizar*/
+    font-size: 23px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 15px;
+    cursor: pointer;
     
 }
-  
-.bottom2{
-   
-    margin-right: 20px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-    border: 1px solid #4d12f0;
-    border-radius: 6px;
-    text-align: center;
-    background-color: #ffffff;
-    color: rgb(8, 31, 243);
-    font-size: 18px;
    
   
-}
+ /*TABLET*/
 
-.bottom3{
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-    border: 1px solid #ff0698;
-    text-align: center;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    height: 30px;
-    margin-bottom: 25px;
-}
-  
- 
-@media screen and (min-width: 768px) {
-
-    .ca_imagen_producto img{
-        margin-left: 10px;
-        width: 30%;
+@media (min-width:500px) and (max-width:1020px) {
+    
+    .talle_ca{
+       font-size: 20px;
     }
 
+    .ca_container_producto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    .ca_info_producto{
-         display: flex;
+    .ca_container_producto img{
+        margin-left: 10px;
+        width: 40%;
+    }
+
+     .ca_info_producto{
+        display: flex;
         flex-direction: column;
         margin-right: 20px;
         margin-top: 20px;
@@ -184,103 +205,96 @@ padding: 10px;
 
     .ca_container_total{
         box-shadow: 0px 0px 10px rgb(100,100,100); 
-        /*margin-left:10px ;
-        margin-right:10px ;*/
-        width: 40%;
-        position: relative;
-        transform: translateX(140%);
+      
     }
 
-    .bottom2{
-        width: 200px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        text-decoration: none;
-        border: 1px solid #4d12f0;
-        border-radius: 6px;
-        text-align: center;
-        background-color: #ffffff;
-        color: rgb(8, 31, 243);
-        font-size: 18px;
-        transform: translateX(210%);
+    .papelera{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right:18px;
+        
+    }
+
+   
               
 }
-    .bottom3{
-        width: 200px;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        text-decoration: none;
-        border: 1px solid #000000;
-        text-align: center;
-        background-color: #000000;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-        transform: translateX(210%);
-        
-}
-
     
-}
 
+/*DESKTOP*/
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
 
-    .ca_imagen_producto img{
-        margin-left: 10px;
-        width: 30%;
+    .ca_titulo_carrito{
+        font-size: 40px;
+    }
+    .comprar_mas >a{
+        font-size: 25px;
+    
+    }
+    .ca_nombre_producto{
+        font-size: 30px;
+        margin: 30px;
     }
 
 
-    .ca_info_producto{
-         display: flex;
-        flex-direction: column;
-        margin-right: 20px;
-        margin-top: 20px;
-        margin-bottom: 10px;
+    .talle_ca{/*propiedades del texto del talle y el código*/
+        font-size: 25px;
        
     }
 
+    .ca_container_producto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    
+    .papelera{
+        margin-right:25px;
+        font-size: 30px;
+        
+    }
+
+    .ca_container_producto img{
+        margin-left: 10px;
+        width: 150px;
+    }
+
+    .precio_ca{
+        font-size: 30px;/*esto no me funciona*/
+
+    }
+
+    .ca_cantidad_producto >input{
+        width: 70px;
+        height: 35px;
+    }
+ 
     .ca_container_total{
         box-shadow: 0px 0px 10px rgb(100,100,100); 
-        /*margin-left:10px ;
-        margin-right:10px ;*/
         width: 30%;
-        position: relative;
-        transform: translateX(230%);
-    }
-    .bottom2{
-        width: 200px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        text-decoration: none;
-        border: 1px solid #4d12f0;
-        border-radius: 6px;
-        text-align: center;
-        background-color: #ffffff;
-        color: rgb(8, 31, 243);
-        font-size: 18px;
-        transform: translateX(550%);
-              
-    }
-    .bottom3{
-        width: 200px;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        text-decoration: none;
-        border: 1px solid #000000;
-        text-align: center;
-        background-color: #000000;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-        transform: translateX(550%);
         
+    }
+
+    .ca_botones_carrito{
+        display: flex;
+        justify-content: flex-end;
+        margin: 15px;
+    }
+
+     
+    .shopping{/*botón Finalizar*/
+        width: 650px; 
+        height: 60px;
+        font-size: 35px;
+        font-weight: bold;
+         
+    }
+
+    .ca_container_content{
+        display: flex;
+        justify-content: right;
     }
 }

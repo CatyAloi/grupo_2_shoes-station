@@ -5,27 +5,34 @@
 
 
 .ca_formediction{
-    box-shadow: 0px 0px 10px rgb(100,100,100);
     box-sizing: border-box;
     width: 800px;
     margin: auto;
-    padding: 10px 20px;
-    border-radius: 7px;
-    margin-top: 150px;
+    padding: 10px 30px ;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #inp_width{
+    text-indent: 15px;
     width: 100%;
-    border: none;
-    background: rgba(0,0,0,0.1);
     margin-bottom: 20px;
     padding: 7px;
+    box-sizing: border-box;
     font-size: 16px;
+    border-color: #c2c2c294;
+    background: #dff1f194;
+    border-radius: 3px;
+    
 
 }
 
 h2{
-    color:#6577fa;
+    color:#727272;
     text-align: center;
     margin: 0;
     font-size: 30px;
@@ -36,16 +43,18 @@ h2{
      font-size: 18px;
  }
 
- #btn_editar {
-     
-    background:#6577fa ;
-    color:#fff;
-    padding: 20px;
+ #btn_editar, #btn_cancelar {
+    text-align: center;
+    background:#3ebfd694 ;
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 15px;
     border: none;
-    width: 30%;
+    border-radius: 3px;
+   
+    
 }
 
-#btn_editar:hover{
+#btn_editar, #btn_cancelar:hover{
     cursor: pointer;
 }
- 

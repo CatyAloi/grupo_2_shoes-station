@@ -6,18 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/form_contact.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&family=Russo+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/home.css">
     
     <title>Contacto</title>
 </head>
 <body>
+    <header class="header-nav">
+        <section class="title_al">
+            <div class="menu-responsive">
+                <p class="shop-name">Shoe's Station</p>
+            </div>
+            <i class='bx bx-menu' id="btnMenu"></i>
+        </section>
+        <div class="fucsia">
+
+        </div>
+        <section class="container_al">
+            <div class="logotipo_al header-al">
+                <div>
+                    <img src="images/logo2.1.png" class="logo" alt="">
+                </div>  
+            </div>
+            <div class="header-al">
+                <input type="text" class="search" placeholder="Search">
+                <button type="submit" class= "button-search"><i class='bx bx-search-alt-2'></i></button>
+            </div>
+            <div class="icons_al header-al">
+                <a href=""><i class='bx bxs-user'></i></a>
+                <a href=""><i class='bx bxs-cart'></i></a>
+            </div>
+        </section>
+        <nav class="nav-menu-al" id="menu">
+            <ul class="menu-al">
+                <li><a href="">HOMBRE</a></li>
+                <li><a href="">MUJER</a></li>
+                <li><a href="">MARCAS</a></li>
+                <li><a href="">OFERTAS</a></li>
+                <li><a href="">NOSOTROS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="franja"></div>
+    
     <form action="">
-        <h2>Déjanos tu Mensaje</h2>
-        <input type="text" name = "Nombre" placeholder="Nombre y Apellidos">
-        <input type="text" name = "Email" placeholder="correo electrónico">
-        <input type="text" name = "Telefono" placeholder="Teléfono">
+        <h2 class="titulo_form">Déjanos tu Mensaje</h2>
+        <input class="form_contact" type="text" name = "Nombre" placeholder="Nombre y Apellidos">
+        <input class="form_contact" type="text" name = "Email" placeholder="correo electrónico">
+        <input class="form_contact" type="text" name = "Telefono" placeholder="Teléfono">
         <textarea name="mensaje" placeholder= "Escriba aquí su mensaje" id="" cols="30" rows="10"></textarea> 
         <input type="button" value="Enviar" id="btn_enviar">
     </form>
+
+    <footer class="container-footer">
+        <div class="fucsiaDos">
+    
+        </div>
+        <section class="content-footer">
+            <div class="content-info about-us">
+                <a href="">Nosotros</a>
+                <a href="">Información</a>
+            </div>
+            <div class="social content-info">
+                <p>Siguenos</p>
+                <ul class="redes">
+                    <li> 
+                        <a href=""> <i class='bx bxl-facebook-circle'></i> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                    </li>
+                    <li>
+                        <a href=""> <i class='bx bxl-twitter'></i> </a>
+                    </li>
+                    <li><i class='bx bxl-tiktok'></i></li>
+                </ul>
+            </div>
+            <div class="info content-info">
+                <p><strong>CENTRO DE ATENCIÓN AL CLIENTE</strong></p>
+                <p>Lunes a viernes de 08:30 a 18:30hs <br>
+                    Sábados de 9 a 17:30hs</p>
+            </div>
+        </section>
+    </footer>
+    
+    <script src="home-js/home.js"></script>
 </body>
 </html>
