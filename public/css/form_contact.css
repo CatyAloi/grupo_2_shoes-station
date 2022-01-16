@@ -1,21 +1,48 @@
 *{
     margin: 0;
     padding: 0;
-}
-
-body{
     font-family: 'Prompt', sans-serif;
-
 }
 
 #franja{
     border-top: 1px solid #399ef794;
 }
 
+.ca_container_ppal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+
+h3{
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 25px;
+}
+
+.font p{
+    margin-top: 30px;
+    font-size: 30px;
+  
+
+}
+
+.font >img{
+    width: 30%;
+    margin: 15px;
+
+}
 form{
     box-sizing: border-box;
     width: 600px;
-    margin: auto;
+    margin: 50px;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 100px;
