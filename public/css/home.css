@@ -52,12 +52,18 @@ html, body {
 }
 
 .button-search {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
     font-size: 15px;
     width: 40px;
     height: 40px;
     border-radius: 5px;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button-search:active {
+    transform: translateY(4px);
+
 }
 
 .icons_al > a {
@@ -95,7 +101,7 @@ html, body {
     transform: translateY(-50%);
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(10, 10, 10);
 }
 
@@ -132,6 +138,10 @@ a {
     cursor: pointer;
 }
 
+.show-more:active {
+    transform: translateY(4px);
+}
+
 .product-slider-heading {
     font-size: 20px;
     color: #111111;
@@ -146,8 +156,6 @@ a {
     flex-direction: column;
     width: 200px;
     padding: 15px;
-    /* border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 10px; */
     margin: 0px 20px;
 }
 
@@ -222,7 +230,7 @@ a {
 
 .arrow {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     
 }
@@ -247,7 +255,7 @@ a {
 
 .content-marcas {
     padding: 30px;
-    margin: 15px;
+    margin: 50px;
 }
 
 .logo-marcas {
@@ -440,6 +448,10 @@ a {
     
     .search {
         width: auto;
+    }
+
+    .title-marcas {
+        font-size: 20px;
     }
 }
 
