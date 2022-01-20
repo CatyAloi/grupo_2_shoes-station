@@ -4,45 +4,22 @@
     font-family: 'Prompt', sans-serif;
 }
 
+
 #franja{
     border-top: 1px solid #399ef794;
 }
 
 .ca_container_ppal{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 50px;
-
+    flex-direction: column;
 }
 
 
-h3{
-    font-size: 45px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-p{
-    font-size: 25px;
-}
-
-.font p{
-    margin-top: 30px;
-    font-size: 30px;
-  
-
-}
-
-.font >img{
-    width: 30%;
-    margin: 15px;
-
-}
-form{
+/*SECCION FORMULARIO*/
+.ca_container_form{
     box-sizing: border-box;
-    width: 600px;
-    margin: 50px;
+    width: 90%;
+    margin-left: 17px;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 100px;
@@ -52,60 +29,102 @@ form{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
-
-.titulo_form{
-   color:#727272;
-   text-align: center;
-   margin: 0;
-   font-size: 30px;
-   margin-bottom: 25px; 
-}
-
-.form_contact, textarea {
-    text-indent: 15px;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 16px;
-    box-sizing: border-box;
-    font-size: 20px;
-    border-color: #c2c2c294;
-    background: hsla(208, 92%, 60%, 0.2);
-    border-radius: 5px;
-    border: none;
-}
-
-textarea {
-    min-height: 100px;
-    max-height: 200px;
-    max-width: 100%;
-
-}
-
-#btn_contact {
-    margin: 5px;
-    text-decoration: none;
+.ca_titulo_form{
+    color:#727272;
     text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    width: 100%;
-    height: 60px;
-    border-radius: 8px;
-    border: none;
-    color: rgb(0, 0, 0);
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 15px;
-    cursor: pointer;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 25px; 
+ }
+ 
+ .ca_input_contact {
+     text-indent: 15px;
+     width: 100%;
+     margin-bottom: 20px;
+     padding: 16px;
+     box-sizing: border-box;
+     font-size: 20px;
+     border-color: #c2c2c294;
+     background: hsla(208, 92%, 60%, 0.2);
+     border-radius: 5px;
+     border: none;
+ }
+ 
+ #ca_textarea {
+     min-height: 100px;
+     max-height: 200px;
+     max-width: 100%;
+ 
+ }
+ 
+ #btn_contact {
+     margin: 5px;
+     text-decoration: none;
+     text-align: center;
+     font-size: 25px;
+     font-weight: bold;
+     width: 100%;
+     height: 60px;
+     border-radius: 8px;
+     border: none;
+     color: rgb(0, 0, 0);
+     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     margin-bottom: 15px;
+     cursor: pointer;
+     
+ }
+ 
+ 
+
+/*SECCION METODOS DE PAGO*/
+
+.ca_title_met{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#ca_intro{
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.font >img{
+    width: 30%;
+    margin: 15px;
+
+}
+.ca_name_card{
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+ /*DESKTOP*/
+
+ @media (min-width:1024px){
+   
+
+    .ca_container_ppal{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
     
-}
+    }
 
-#btn_enviar:hover{
-    cursor: pointer;
-}
+    .ca_container_form{
+        width: 60%;
+    }
+
+   
+ }
 
 
-@media screen and (max-width: 550px) {
-    form{
-        width: 80%;
-    } 
-}
+

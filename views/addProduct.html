@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/form_edition.css" rel="stylesheet">
+    <link href="css/addProduct.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/home.css">
     
     
-    <title>Edición de Productos</title>
+    <title>Agregar Productos</title>
 </head>
 <body>
     
@@ -54,41 +54,36 @@
 
     <section class = "ca_formediction">
         <form action="" method="POST">
-            <h2 id="title_editar" >Editar un Producto</h2>
+            <h2 id="title_editar" >Agregar un Producto</h2>
 
             <p>
-                <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <label class="label_edition" for="nombre_producto">Nombre del Producto:</label>
+                <input class="ca_input_add" type="text" name = "nombre_producto" id="nombre_producto">
             </p>
     
            <p>
-            <label  class="label_edition" for="codigo del Producto">Código:</label>
-            <input type="text" name = "producto" id=inp_width>
+            <label  class="label_edition" for="codigo_producto">Código:</label>
+            <input class="ca_input_add"  type="text" name ="codigo_producto" id="codigo_producto">
            </p>
-    
+       
            <p>
-            <label class="label_edition" for="img Producto">Imagen del Producto:</label>
-            <input type="text" name = "producto" id=inp_width>
-           </p> 
-    
-           <p>
-            <label  class="label_edition"for="img Producto">Cambiar imagen:</label>
-            <input type="file" name=""> (acepta solo formatos.jpg, .png)</p>
+            <label  class="label_edition"for="imagen_producto">Agregar imagen:</label>
+            <input class="ca_input_add"  type="file" name="imagen_producto" id="imagen_producto"> (acepta solo formatos.jpg, .png)</p>
 
            <p>
-            <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-            <input type="text" name = "producto" id=inp_width>
+            <label class="label_edition" for="precio_producto">Precio del Producto:</label>
+            <input class="ca_input_add"  type="text" name = "precio_producto" id="precio_producto">
            </p>
             
             <p>
-                <label  class="label_edition" for="descuento">Precio Oferta:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <label  class="label_edition" for="descuento_producto">Precio Oferta:</label>
+                <input class="ca_input_add"  type="text" name = "descuento_producto" id="descuento_producto">
         
             </p>
            
             <p>
-                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea name="descripcion" id=inp_width cols="30" rows="10"></textarea>
+                <label class="label_edition" for="descripcion_producto">Descripción del Producto:</label> <br>
+                <textarea class="ca_input_add"  name="descripcion_producto" id="descripcion_producto" cols="30" rows="10"></textarea>
                                
             </p>
         
@@ -97,20 +92,20 @@
     
                <label class="label_edition" for="">Talles Disponibles:</label> <br>
             
-                <input type="checkbox" name="talle36" value="talle"> 36
-                <input type="checkbox" name="talle37" value="talle"> 37
-                <input type="checkbox" name="talle38" value="talle"> 38
-                <input type="checkbox" name="talle39" value="talle"> 39
-                <input type="checkbox" name="talle40" value="talle"> 40
-                <input type="checkbox" name="talle41" value="talle"> 41
-              </p>
+                <input type="checkbox" name="talle_36" value="talle_36"> 36
+                <input type="checkbox" name="talle_37" value="talle_37"> 37
+                <input type="checkbox" name="talle_38" value="talle_38"> 38
+                <input type="checkbox" name="talle_39" value="talle_39"> 39
+                <input type="checkbox" name="talle_40" value="talle_40"> 40
+                <input type="checkbox" name="talle_41" value="talle_41"> 41
+            </p>
             
               
     
     
             <p>
-                <label class="label_edition" for="marcas"><span>Marcas:</span></label>
-                    <select id="inp_width" name="categoria">
+                <label class="label_edition" for="marca"><span>Marcas:</span></label>
+                    <select  class="ca_input_add" id="marca" name="marca">
                         <option value="Adidas">Adidas</option>
                         <option value="Under Armour">Under Armour</option>
                         <option value="Nike">Nike</option>
@@ -120,7 +115,7 @@
     
             <p>
                 <label class="label_edition" for="categoria"><span>Categoría:</span></label>
-                    <select id="inp_width" name="categoria">
+                    <select class="ca_input_add" id="categoria" name="categoria">
                     <option value="hombre">Hombre</option>
                     <option value="mujer">Mujer</option>
                     
@@ -129,7 +124,7 @@
     
             <p>
                 <label class="label_edition" for="status"><span>Status:</span></label>
-                    <select id="inp_width"id="inp_width" name="status">
+                    <select class="ca_input_add" id="status" name="status">
                     <option value="activo">Activo</option>
                     <option value="inactivo">Inactivo</option>
                     
@@ -137,11 +132,11 @@
               </p>
     
             <label class="label_edition" for="stock">Stock</label>
-            <input type="number" name = "Stock" id=inp_width>
+            <input class="ca_input_add" type="number" name ="stock" id="stock">
       
                       
             <input type="reset" value="Cancelar" id="btn_cancelar">
-            <input type="button" value="Editar Producto" id="btn_editar">
+            <input type="button" value="Agregar Producto" id="btn_agregar">
             
          
     

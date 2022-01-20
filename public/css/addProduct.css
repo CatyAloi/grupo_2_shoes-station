@@ -1,0 +1,85 @@
+*{
+    font-family: 'Prompt', sans-serif;
+  /*font-family: 'Orbitron', sans-serif;*/
+}
+
+
+.ca_formediction{
+  box-sizing: border-box;
+  width: 800px;
+  margin: auto;
+  padding: 10px 30px ;
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: none;
+  outline: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+.ca_input_add{
+  text-indent: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border-color: #c2c2c294;
+  background: hsla(208, 92%, 60%, 0.2);
+  border-radius: 5px;
+  border: none;
+  
+
+}
+
+#title_editar{
+  color:#727272;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 25px; 
+}
+
+.label_edition{
+   font-size: 25px;
+}
+
+#btn_cancelar {
+  text-align: center;
+  background:#7a7a7a94 ;
+  color:rgb(0, 0, 0);
+  padding: 15px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  width: 30%;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 15px;
+  cursor: pointer;
+ 
+  
+}
+#btn_agregar{
+  margin: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  width: 60%;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+
+
