@@ -46,12 +46,11 @@
 
  #btn_cancelar {
     text-align: center;
-    background:#7a7a7a94 ;
-    color:rgb(0, 0, 0);
-    padding: 15px;
+    background-image:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    padding: 10px;
     margin: 5px;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
     width: 30%;
     height: 60px;
@@ -75,7 +74,7 @@
     border-radius: 8px;
     border: none;
     color: rgb(0, 0, 0);
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    background-image:linear-gradient(to right, #4facfeee 0%, #00f1feef 100%); 
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 15px;
     cursor: pointer;

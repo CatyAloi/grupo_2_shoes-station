@@ -61,20 +61,24 @@
 .ca_data_producto{/*Contenedor del input cantidad + precio producto*/
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    
+ 
 }
 .ca_cantidad_producto input{ /*propiedades del input para la cantidad de productos*/
     width: 30px;
     height: 20px;
     border-radius: 5px;
     border: solid 1px #a3a2a2;
+    font-size: 15px;
+    text-align: center;
     outline: none;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%);
 }
 
 
 .margin{/*aplicación de margen al input cantidad + precio producto*/
-    margin: 7px
+    margin: 10px;
 }
 .precio_ca{/*propiedades del precio del producto*/
     
@@ -242,6 +246,8 @@ position: relative;
     .ca_cantidad_producto >input{/*propiedades del input para la cantidad de productos*/
         width: 70px;
         height: 35px;
+        font-size: 22px;
+       
     }
 
     .precio_ca{/*propiedades del precio del producto*/

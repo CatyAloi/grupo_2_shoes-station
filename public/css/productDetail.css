@@ -79,6 +79,10 @@
     cursor: pointer;
 }
 
+.talle:hover{
+    background-color: #00f1feef ;
+}
+
 .ca_cantidad input{/*propiedades del input CANTIDAD*/
     margin: 5px;
     width: 50px;
@@ -86,6 +90,8 @@
     border-radius: 5px;
     border: solid 1px #a3a2a2;
     outline: none;
+    font-size: 18px;
+    text-align: center;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%);   
 }
 
@@ -197,6 +203,7 @@
         width: 55px;
         height: 36px;
        
+       
     }
 
     .ca_boton_agregar{/*propiedades del botón AGREGAR AL CARRITO*/
@@ -266,6 +273,7 @@
        
         width: 75px;
         height: 56px;
+        font-size: 24px;
        
     }
 

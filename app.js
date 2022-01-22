@@ -11,9 +11,9 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname,'./views/home.html')); });
 
-app.get('/detalleproducto', (req, res) => {res.sendFile(path.join(__dirname,'./views/productDetail.html')); });
+app.get('/detalleproducto', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/productDetail.html')); });
 
-// app.get('/catalogoproducto', (req, res) => {res.sendFile(path.join(__dirname,'./views/catalogo_producto.html')); });
+app.get('/catalogoproducto', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/catalogo_producto.html')); });
 
 app.get('/contacto', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/form_contact.html')); });
 
@@ -21,9 +21,9 @@ app.post('/contacto', (req,res) =>{
     return res.send(req.body)
 })
 
-// app.get('/login', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_login.html')); });
+app.get('/login', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/login.html')); });
 
-// app.get('/registro', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_register.html')); });
+app.get('/registro', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/register.html')); });
 
 app.get('/carrito', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/productCart.html')); });
 
