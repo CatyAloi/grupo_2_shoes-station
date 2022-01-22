@@ -73,19 +73,22 @@
             </div>
                  
             <div class="ca_data_producto">
-                <div class= "margin ca_cantidad_producto">
-                    <input type="number">
-                </div>
+                <form action="" method="POST">
+                    <div class= "margin ca_cantidad_producto">
+                        <input type="number">
+                    </div>
+                </form>
+                
         
                 <div class= "margin">
                     <p class="precio_ca">$12.500</p>
                 </div>
             </div>    
-                       
-            <div class="papelera">
-                <i class="fas fa-trash-alt"></i>
-            </div>          
-          
+                <div class="ca_remove_product">
+                    <button type="button" class="ca_btn_trash"><i class="fas fa-trash-alt"></i></button>
+                </div>       
+                     
+                   
         </div>
 
         
@@ -99,17 +102,16 @@
             </div>
 
 
-            <div class = "ca_calculo_envio">
-               
-                    <div class = "ca_codigo_postal">
-                        <input type="text" placeholder="Código Postal">
-                    </div>
-    
-                    <div class = "ca_calcular">
-                        <button type ="submit" > Calcular</button>
-                    </div>
-                
-            </div>
+                    
+                <form class = "ca_calculo_envio" action="" method="POST">
+                  
+                        <input class = "ca_codigo_postal" type="text" placeholder="Código Postal">
+            
+                        <button class = "ca_calcular" type ="submit" > Calcular</button>
+                  
+               </form>
+                    
+           
   
             <div class = "ca_subtotal_carrito">
                 <p>Subtotal ................................. $18.000</p>

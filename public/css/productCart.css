@@ -28,6 +28,8 @@
     border-radius: 10px;
     margin: 15px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    position: relative;
+    
     
 }
 
@@ -45,7 +47,10 @@
 .ca_nombre_producto{/*Propiedades nombre del producto*/
     color: rgb(0, 0, 0);
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 15px
+  
 }
 
 .talle_ca{/*propiedades del texto del TALLE y el CÓDIGO*/
@@ -78,14 +83,24 @@
  
 }
 
-.papelera{/*propiedades papelera*/
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:10px; 
-}
+.ca_remove_product{
+position: relative;
 
+}
+.ca_container_producto_total .ca_btn_trash{/*propiedades contenedor(boton) del icono papelera*/
+    
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: 3%;
+    bottom: 0;
+    padding-right: 10px;
+    background-color: transparent;
+    margin-top: -170%;
+   
+}
 
 .ca_container_dos{/*Contenedor del label envio, input codigo postal, boton calcular, texto subtotal, texto costo envío, texto monto total*/
     border: 1px solid rgba(245, 87, 108, 0.555) ;
@@ -100,15 +115,17 @@
 
     margin-left: 10px;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .ca_calculo_envio{/*Contenedor del input Cod. Postal + botón Calcular*/
     display: flex;
-    padding: 10px;
+    
+    
 }
-.ca_codigo_postal >input{/*propiedades del input Cod Postal*/
+.ca_codigo_postal{/*propiedades del input Cod Postal*/
     text-indent: 5px;
-    width: 130px;
+    width: 60%;
     height:23px;
     border: solid 1px #a3a2a2;
     outline: none;
