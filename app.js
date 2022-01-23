@@ -8,9 +8,9 @@ app.get('/', (req, res) => {res.sendFile(path.join(__dirname,'./views/home.html'
 
 app.get('/detalleproducto', (req, res) => {res.sendFile(path.join(__dirname,'./views/detalle_producto.html')); });
 
-// app.get('/catalogoproducto', (req, res) => {res.sendFile(path.join(__dirname,'./views/catalogo_producto.html')); });
+app.get('/catalogo', (req, res) => {res.sendFile(path.join(__dirname,'./views/catalogo.html')); });
 
-// app.get('/contacto', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_contact.html')); });
+app.get('/contacto', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_contact.html')); });
 
 // app.get('/login', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_login.html')); });
 
