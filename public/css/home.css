@@ -1,14 +1,5 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Prompt', sans-serif;
-}
-
-html, body {
-    height: 100%;
-}
-
 .container-slider-al {
+    margin-top: -16px;
     overflow: hidden;
     position: relative;
 }
@@ -22,7 +13,6 @@ html, body {
 
 .contenido-slide-al{
     width: 100%;
-
 }
 
 .slider-img {

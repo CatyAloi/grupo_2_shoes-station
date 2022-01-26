@@ -1,8 +1,19 @@
+html {
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
 /* Header */
 
 .title_al {
-    background-color: rgb(10, 10, 10);
-    padding: 8px;
+    background-color: rgb(0, 0, 0);
 }
 
 .bx-menu {
@@ -83,9 +94,6 @@
 .content-footer {
     color: rgb(255, 255, 255);
     font-family: 'Prompt', sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .content-footer {
@@ -102,8 +110,19 @@
     color: white;
 }
 
+
+.social {
+    text-align: center;
+}
+
+.social > p{
+    margin: 0;
+}
+
 .redes {
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .redes > li {
@@ -118,7 +137,19 @@
 
 .info {
     font-size: 13px;
-   
+    text-align: center;
+}
+
+@media screen and (min-width: 1370px){
+    html {
+        margin: auto;
+        display: table;
+    }
+    
+    body {
+        width: 1370px;
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 941px) {
@@ -130,7 +161,7 @@
     .title_al {
         font-family: 'Prompt', sans-serif;
         text-align: center;
-        padding: 8px;
+        padding: 5px;
     }
 
     .menu-al {
@@ -152,27 +183,40 @@
     .bx-menu {
         display: none;
     }
-    
+
+    .content-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 25px;
+    }
+
 }
+
 
 @media screen and (max-width: 940px) {
     .title_al {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         position: fixed;
         width: 100%;
         z-index: 1;
     }
 
+    .shop-name {
+        margin-left: 10px;
+    }
+
     .fucsia {
-        padding: 25px;
+        padding: 33px;
     }
 
     .nav-menu-al {
         position: fixed;
         top: 0;
         background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
-        width: 250px;
+        width: 200px;
         height: 100%;
         padding-top: 50px;
         margin-left: -250px;
@@ -217,14 +261,10 @@
     .search {
         width: auto;
     }
-}
 
-
-@media screen and (max-width: 550px) {
-    
     .content-footer {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
-
 }
