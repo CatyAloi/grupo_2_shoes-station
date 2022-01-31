@@ -1,0 +1,145 @@
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+.linea-al {
+    border-top: 1px solid #399ef794;
+}
+
+#menu-filters {
+    display: none;
+    position: absolute;
+    width: 50%;
+    border: 1px solid rgb(150, 147, 147);
+    top: 55px; 
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.form-filter_al {
+    margin: 20px;
+}
+
+.filters-container {
+    position: relative;
+}
+
+.filters {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 10px;
+}
+
+.form-filter_al > h3 {
+   margin-left: 20px;
+}
+
+.filters-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product-catalog {
+    margin: 20px auto;
+}
+
+.container-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.name-prod-al {
+    font-size: 10px;
+    color:#333333;
+}
+
+.info-prod-price > a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+
+.info-prod-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 941px){
+    .linea-al {
+        display: none;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    #menu-filters {
+        display: block;
+        position: relative;
+        width: 80%;
+        height: 40%;
+        margin: 0;
+        background-image: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .form-filter_al {
+        margin: 0;
+        width: 250px;
+
+    }
+
+    .filter_catalogo {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .filters-alc {
+        margin: 30px;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.486);
+        padding-bottom: 25px
+    }
+
+    .container-catalogo {
+        width: 70%;
+    }
+
+    .product-catalog {
+        width: 250px;
+    }
+
+    .product-catalog > a > img {
+        width: 100%;
+    };
+}
+
+@media screen and (max-width: 940px) {
+   
+    .container-catalogo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .catal-prod {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .catal-prod {
+        width: 120px;
+    }
+}
