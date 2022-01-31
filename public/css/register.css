@@ -27,18 +27,30 @@
     text-align: center;
     margin: 0;
     font-size: 18px;
-    margin-bottom: 25px; 
+    margin-bottom: 30px; 
  }
+
+#ca_requeridos{
+    color: crimson;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.ca_cuenta{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
  
- .ca_input_register {
-     width: 100%;
-     margin-bottom: 20px;
-     padding: 10px;
-     box-sizing: border-box;
-     border-color: #c2c2c294;
-     background: hsla(208, 92%, 60%, 0.2);
-     border-radius: 5px;
-     border: none;
+.ca_input_register {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: #c2c2c294;
+    background: hsla(208, 92%, 60%, 0.2);
+    border-radius: 5px;
+    border: none;
  }
  
  .label_register{
@@ -61,7 +73,7 @@
      background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
      margin-top: 35px;
-     margin-bottom: 15px;
+     margin-bottom: 10px;
      cursor: pointer;
      
  }
