@@ -23,11 +23,17 @@ app.post('/contacto', (req,res) =>{
 
 app.get('/login', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/login.html')); });
 
+app.get('/catalogo', (req, res) => {res.sendFile(path.join(__dirname,'./views/catalogo.html')); });
+
+app.get('/contacto', (req, res) => {res.sendFile(path.join(__dirname,'./views/form_contact.html')); });
+
 app.get('/registro', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/register.html')); });
 
 app.get('/carrito', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/productCart.html')); });
 
 app.get('/agregarproductos', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/addProduct.html')); });
+
+app.get('/carrito', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/carrito.html')); });
 
 app.get('/editarproductos', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/form_edition.html')); });
 
