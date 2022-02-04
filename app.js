@@ -8,8 +8,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(publicPath));
 
 app.use(bodyParser.json());
+app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {res.sendFile(path.join(__dirname,'./views/home.html')); });
+app.get('/', (req, res) => {
+    res.render('pages/home');
+});
 
 app.get('/detalleproducto', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/productDetail.html')); });
 
