@@ -1,0 +1,12 @@
+const express = require('express');
+const logRouter = express.Router();
+
+logRouter.get('/login', (req, res) => {
+     res.render("login.ejs", {titulo : "loginform"})
+})
+
+logRouter.get('/register', (req, res) => {
+    res.render("register.ejs", {tituloServicios: "registro"})
+})
+
+module.exports = logRouter;

@@ -10,6 +10,11 @@ app.use(express.static(publicPath));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
+app.set("views", __dirname + "/views");
+
+app.use('/login', require('./routes/loginRouter'));
+app.use('/register', require('./routes/registerRouter'));
+
 app.get('/', (req, res) => {
     res.render('pages/home');
 });
@@ -23,6 +28,14 @@ app.get('/contacto', (req, res) => {res.sendFile(path.resolve(__dirname,'./views
 app.post('/contacto', (req,res) =>{
     return res.send(req.body)
 })
+
+app.get("/login", (req, res) => {
+    res.render("login.ejs", { titulo: "formulario de login" });
+  });
+  
+  app.get("/register", (req, res) => {
+    res.render("register.ejs", { titulo: "formulario de registro" });
+  });
 
 app.get('/login', (req, res) => {res.sendFile(path.resolve(__dirname,'./views/login.html')); });
 
