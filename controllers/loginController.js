@@ -1,7 +1,7 @@
+
 const loginController = {
-    index: (req,res) =>{res.send('login.ejs')}
+    login: (req,res) =>{res.render('users/login')},
+    register: (req, res) =>{res.render('users/register');}
 } ;
-
-
 
 module.exports=loginController

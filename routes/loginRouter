@@ -1,12 +1,10 @@
 const express = require('express');
-const logRouter = express.Router();
+let control = require('../controllers/loginController');
 
-logRouter.get('/login', (req, res) => {
-     res.render("login.ejs", {titulo : "loginform"})
-})
+const router = express.Router();
 
-logRouter.get('/register', (req, res) => {
-    res.render("register.ejs", {tituloServicios: "registro"})
-})
+router.get('/login', control.login);
 
-module.exports = logRouter;
+
+
+module.exports = router; 
