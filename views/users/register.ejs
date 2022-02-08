@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+<body>
+    <%- include('../partials/header'); %>
+
+    <div id="franja"></div>
+    
+
+
+    <div>
+        <form class="ca_container_register" action="" method="POST">
+            <h2 class="ca_titulo_register">Registrarme</h2>
+
+            <p id="ca_requeridos">(*)Campos Requeridos</p>
+
+            <label class= "label_register" for="Nombre">* Nombre</label>
+            <input class="ca_input_register" type="text" name = "Nombre" placeholder="">
+            
+            <label class= "label_register" for="Apellido">* Apellido</label>
+            <input class="ca_input_register" type="text" name = "Apellido" placeholder="">
+
+            <label class= "label_register" for="Telefono">* Teléfono (cod. área + número)</label>
+            <input class="ca_input_register" type="number" name = "Telefono" placeholder="">
+
+            <label class= "label_register" for="Email">* Email</label>
+            <input class="ca_input_register" type="email" name = "Email" placeholder="">
+
+            <label class= "label_register" for="Password">* Contraseña (mínimo 8 caracteres)</label>
+            <input class="ca_input_register" type="password" name = "Password" placeholder="">
+
+            <label  class= "label_register" for="ConfirmarPassword">* Confirmar Contraseña</label>
+            <input class="ca_input_register" type="password" name = "ConfirmarPassword" placeholder="">
+           
+            <label class= "label_register" for=""><input type="checkbox" name="Politicas" value ="Politicas">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
+            
+            <button type="submit" id="btn_register">Crear mi Cuenta</button>
+
+            <p class="ca_cuenta">¿Ya tienes una Cuenta?<a href=""> Ingresá acá</a></p>
+            
+        </form>
+    </div>
+
+
+    <%- include('../partials/footer'); %>
+    
+    <script src="js/home.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

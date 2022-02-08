@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/main.css">
-        <title>shoe's Station</title>
-    </head>
+    
+    <%- include('../partials/head'); %>
+
     <body>
         <%- include('../partials/header'); %>
+
         <div class="container-slider-al">
             <div class="slider-al" id="slider-al">
                 <section class="contenido-slide-al">
@@ -791,7 +785,7 @@
         <section class="container-marcas">
             <section class="content-marcas">
                 <div class="title-marcas sale_title">
-                    <p>Navega por marcas</p>
+                    <p>Navegá por marcas</p>
                 </div>
                 <div class="logo-marcas">
                     <div class="img-marcas">
@@ -806,39 +800,9 @@
                 </div>
             </section>
         </section>
-        <footer class="container-footer">
-            <div class="fucsiaDos">
 
-            </div>
-            <section class="content-footer">
-                <div class="content-info about-us">
-                    <a href="/contacto">Contáctanos</a>
-                    <a href="">Información</a>
-                </div>
-                <div class="social content-info">
-                    <p>Siguenos</p>
-                    <ul class="redes">
-                        <li> 
-                            <a href=""> <i class='bx bxl-facebook-circle'></i> </a>
-                        </li>
-                        <li>
-                            <a href=""><i class='bx bxl-instagram-alt'></i></a>
-                        </li>
-                        <li>
-                            <a href=""> <i class='bx bxl-twitter'></i> </a>
-                        </li>
-                        <li>
-                            <a href=""><i class='bx bxl-tiktok'></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="info content-info">
-                    <p><strong>CENTRO DE ATENCIÓN AL CLIENTE</strong></p>
-                    <p>Lunes a Viernes de 08:30 a 18:30hs
-                        Sábados de 9:00 a 17:30hs</p>
-                </div>
-            </section>
-        </footer>
+       <%- include('../partials/footer'); %>
+        
         <script src="js/home.js"></script>
         <script src="js/slider_home.js"></script>
     </body>

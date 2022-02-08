@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+
+
+<body>
+    <%- include('../partials/header'); %>
+   
+        <div id="franja"></div>
+
+            <section class="ca_container1">
+
+                <div class="ca_container2">
+                    <img src="/images/<%= producto.img %>" alt="Imagen Producto">            
+                </div>
+                
+                <div class= "ca_container3">
+                    <div class="ca_caja_nombreproducto">
+                        <h1><%= producto.nombreProducto %></h1>
+                    </div>
+                
+                    <div class="ca_caja_codigo">
+                        <p><%= producto.codigo %></p>
+                    </div>
+                
+                    <div class="ca_caja_precio">
+                        <p><%= producto.precio %></p>
+                    </div>
+                    
+                    
+                    <div class="ca_caja_labeltalle">
+                        <p>Seleccionar Talle:</p> 
+                    </div>
+                
+                    <div class="ca_container_talles">
+                     
+                        <li class="talle"><span>36</span></li>
+                        <li class="talle"><span>37</span> </li>
+                        <li class="talle"><span>38</span></li>
+                        <li class="talle"> <span>39</span></li>    
+                        <li class="talle"><span>40</span></li>  
+                        <li class="talle"><span>41</span></li>
+                        <li class="talle"><span>42</span></li>
+                        <li class="talle"><span>43</span> </li>
+                              
+                    </div>
+                
+                 
+                    <form class ="ca_caja_agregar" action="" method="POST">
+                            <div class= "ca_cantidad"><input type="number"></div>
+                        
+                            <div><button class="ca_boton_agregar"> Agregar al Carrito</button></div> 
+                    </form>
+
+                </div>
+                
+            </section>
+   
+
+    <div class="ca_caja_descripcion">
+           <p><%= producto.descripcion %>.</p>
+    </div>
+
+    <div class="ca_caja_atributos">
+        <ul>
+            <li>Género: <%= producto.categoria %></li>
+            <li>Marca: <%= producto.marca %></li>
+        </ul>
+    </div>
+    
+    <%- include('../partials/footer'); %>
+
+    <script src="js/home.js"></script>
+
+</body>
+</html>

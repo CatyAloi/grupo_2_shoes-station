@@ -1,60 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/addProduct.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Orbitron:wght@600&family=Play:wght@700&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main.css">
-    
-    
-    <title>Agregar Productos</title>
-</head>
+    <%- include('../partials/head'); %>
 <body>
     
-    <header class="header-nav">
-        <section class="title_al">
-            <div class="menu-responsive">
-                <p class="shop-name">Shoe's Station</p>
-            </div>
-            <i class='bx bx-menu' id="btnMenu"></i>
-        </section>
-        <div class="fucsia">
-
-        </div>
-        <section class="container_al">
-            <div class="logotipo_al header-al">
-                <div>
-                    <img src="images/logo2.1.png" class="logo" alt="">
-                </div>  
-            </div>
-            <div class="header-al">
-                <input type="text" class="search" placeholder="Search">
-                <button type="submit" class= "button-search"><i class='bx bx-search-alt-2'></i></button>
-            </div>
-            <div class="icons_al header-al">
-                <a href=""><i class='bx bxs-user'></i></a>
-                <a href=""><i class='bx bxs-cart'></i></a>
-            </div>
-        </section>
-        <nav class="nav-menu-al" id="menu">
-            <ul class="menu-al">
-                <li><a href="">HOMBRE</a></li>
-                <li><a href="">MUJER</a></li>
-                <li><a href="">MARCAS</a></li>
-                <li><a href="">OFERTAS</a></li>
-                <li><a href="">NOSOTROS</a></li>
-            </ul>
-        </nav>
-    </header>
-
-      
+    <%- include('../partials/header'); %>
+  
 
     <section class = "ca_formediction">
         <form action="" method="POST">
-            <h2 id="title_editar" >Agregar un Producto</h2>
+            <h2 id="title_editar" >Crear un Producto</h2>
 
             <p>
                 <label class="label_edition" for="nombre_producto">Nombre del Producto:</label>
@@ -136,7 +90,7 @@
       
                       
             <input type="reset" value="Cancelar" id="btn_cancelar">
-            <input type="button" value="Agregar Producto" id="btn_agregar">
+            <input type="button" value="Crear Producto" id="btn_agregar">
             
          
     
@@ -144,37 +98,7 @@
 
     </section>
     
-    <footer class="container-footer">
-        <div class="fucsiaDos">
-    
-        </div>
-        <section class="content-footer">
-            <div class="content-info about-us">
-                <a href="">Nosotros</a>
-                <a href="">Información</a>
-            </div>
-            <div class="social content-info">
-                <p>Siguenos</p>
-                <ul class="redes">
-                    <li> 
-                        <a href=""> <i class='bx bxl-facebook-circle'></i> </a>
-                    </li>
-                    <li>
-                        <a href=""><i class='bx bxl-instagram-alt'></i></a>
-                    </li>
-                    <li>
-                        <a href=""> <i class='bx bxl-twitter'></i> </a>
-                    </li>
-                    <li><i class='bx bxl-tiktok'></i></li>
-                </ul>
-            </div>
-            <div class="info content-info">
-                <p><strong>CENTRO DE ATENCIÓN AL CLIENTE</strong></p>
-                <p>Lunes a viernes de 08:30 a 18:30hs <br>
-                    Sábados de 9 a 17:30hs</p>
-            </div>
-        </section>
-    </footer>
+    <%- include('../partials/footer'); %>
     
     <script src="js/home.js"></script>
     
