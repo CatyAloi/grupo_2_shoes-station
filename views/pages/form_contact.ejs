@@ -3,27 +3,26 @@
     <%- include('../partials/head'); %>
 <body>
     <%- include('../partials/header'); %>
-
     <div id="franja"></div>
-    
+    <section class="ca_container_ppal">
+        <div>
+            <form class="ca_container_form" action="/contacto" method="POST">
+                <h2 class="ca_titulo_form">Déjanos tu Mensaje</h2>
+                <input class="ca_input_contact" type="text" name = "Nombre" placeholder="Nombre y Apellidos">
+                <input class="ca_input_contact" type="email" name = "Email" placeholder="correo electrónico">
+                <input class="ca_input_contact" type="number" name = "Telefono" placeholder="Teléfono">
+                <textarea id="ca_textarea" class="ca_input_contact" type="text" name="mensaje" placeholder= "Escriba aquí su mensaje" id="" cols="30" rows="10"></textarea>
+                <button type="submit" id="btn_contact">Enviar</button> 
+            </form>
+        </div>
 
-<section class="ca_container_ppal">
-
-    <div>
-        <form class="ca_container_form" action="/contacto" method="POST">
-            <h2 class="ca_titulo_form">Déjanos tu Mensaje</h2>
-            <input class="ca_input_contact" type="text" name = "Nombre" placeholder="Nombre y Apellidos">
-            <input class="ca_input_contact" type="email" name = "Email" placeholder="correo electrónico">
-            <input class="ca_input_contact" type="number" name = "Telefono" placeholder="Teléfono">
-            <textarea id="ca_textarea" class="ca_input_contact" type="text" name="mensaje" placeholder= "Escriba aquí su mensaje" id="" cols="30" rows="10"></textarea>
-            <button type="submit" id="btn_contact">Enviar</button> 
-            
-        </form>
-    </div>
-
-    <div>
-        <div><h3 class="ca_title_met">Métodos de Pago</h3></div>
-        <div><p id="ca_intro">En Shoes'Station podés usar los siguientes métodos de pago:</p></div>
+        <div>
+            <div>
+                <h3 class="ca_title_met">Métodos de Pago</h3>
+            </div>
+            <div>
+                <p id="ca_intro">En Shoes'Station podés usar los siguientes métodos de pago:</p>
+            </div>
 
             <div class="font">
                 <p class="ca_name_card">Tarjetas de Crédito</p>
@@ -41,16 +40,8 @@
                 <p class="ca_name_card">Mercado Pago</p>
                 <img src="images/mercadopago.png" alt="logo mercadopago">
             </div>
-
-    </div>
-
-</section>
-
-
-
-
-<%- include('../partials/footer'); %>
-    
-    <script src="js/home.js"></script>
+        </div>
+    </section>
+    <%- include('../partials/footer'); %>
 </body>
 </html>

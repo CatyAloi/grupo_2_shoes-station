@@ -2,31 +2,28 @@
 <html lang="en">
     <%- include('../partials/head'); %>
 <body>
-    
     <%- include('../partials/header'); %>
-  
-
     <section class = "ca_formediction">
         <form action="" method="POST">
             <h2 id="title_editar" >Crear un Producto</h2>
-
             <p>
                 <label class="label_edition" for="nombre_producto">Nombre del Producto:</label>
                 <input class="ca_input_add" type="text" name = "nombre_producto" id="nombre_producto">
             </p>
     
            <p>
-            <label  class="label_edition" for="codigo_producto">Código:</label>
-            <input class="ca_input_add"  type="text" name ="codigo_producto" id="codigo_producto">
+                <label  class="label_edition" for="codigo_producto">Código:</label>
+                <input class="ca_input_add"  type="text" name ="codigo_producto" id="codigo_producto">
            </p>
        
            <p>
-            <label  class="label_edition"for="imagen_producto">Agregar imagen:</label>
-            <input class="ca_input_add"  type="file" name="imagen_producto" id="imagen_producto"> (acepta solo formatos.jpg, .png)</p>
+                <label  class="label_edition"for="imagen_producto">Agregar imagen:</label>
+                <input class="ca_input_add"  type="file" name="imagen_producto" id="imagen_producto"> (acepta solo formatos.jpg, .png)
+            </p>
 
            <p>
-            <label class="label_edition" for="precio_producto">Precio del Producto:</label>
-            <input class="ca_input_add"  type="number" name = "precio_producto" id="precio_producto">
+                <label class="label_edition" for="precio_producto">Precio del Producto:</label>
+                <input class="ca_input_add"  type="number" name = "precio_producto" id="precio_producto">
            </p>
             
             <p>
@@ -37,15 +34,11 @@
            
             <p>
                 <label class="label_edition" for="descripcion_producto">Descripción del Producto:</label> <br>
-                <textarea class="ca_input_add"  name="descripcion_producto" id="descripcion_producto" cols="30" rows="10"></textarea>
-                               
+                <textarea class="ca_input_add"  name="descripcion_producto" id="descripcion_producto" cols="30" rows="10"></textarea>             
             </p>
         
-             
             <p>
-    
-               <label class="label_edition" for="">Talles Disponibles:</label> <br>
-            
+                <label class="label_edition" for="">Talles Disponibles:</label><br>
                 <input type="checkbox" name="talle_36" value="talle_36"> 36
                 <input type="checkbox" name="talle_37" value="talle_37"> 37
                 <input type="checkbox" name="talle_38" value="talle_38"> 38
@@ -54,53 +47,45 @@
                 <input type="checkbox" name="talle_41" value="talle_41"> 41
             </p>
             
-              
-    
-    
             <p>
-                <label class="label_edition" for="marca"><span>Marcas:</span></label>
-                    <select  class="ca_input_add" id="marca" name="marca">
-                        <option value="Adidas">Adidas</option>
-                        <option value="Under Armour">Under Armour</option>
-                        <option value="Nike">Nike</option>
-                    
-                    </select>
+                <label class="label_edition" for="marca">
+                    <span>Marcas:</span>
+                </label>
+                <select  class="ca_input_add" id="marca" name="marca">
+                    <option value="Adidas">Adidas</option>
+                    <option value="Under Armour">Under Armour</option>
+                    <option value="Nike">Nike</option>
+                
+                </select>
             </p>
     
             <p>
-                <label class="label_edition" for="categoria"><span>Categoría:</span></label>
-                    <select class="ca_input_add" id="categoria" name="categoria">
+                <label class="label_edition" for="categoria">
+                    <span>Categoría:</span>
+                </label>
+                <select class="ca_input_add" id="categoria" name="categoria">
                     <option value="hombre">Hombre</option>
                     <option value="mujer">Mujer</option>
-                    
-                    </select>
+                </select>
             </p>
-    
+
             <p>
-                <label class="label_edition" for="status"><span>Status:</span></label>
-                    <select class="ca_input_add" id="status" name="status">
+                <label class="label_edition" for="status">
+                    <span>Status:</span>
+                </label>
+                <select class="ca_input_add" id="status" name="status">
                     <option value="activo">Activo</option>
                     <option value="inactivo">Inactivo</option>
-                    
-                    </select>
+                </select>
               </p>
     
             <label class="label_edition" for="stock">Stock</label>
             <input class="ca_input_add" type="number" name ="stock" id="stock">
-      
-                      
+                  
             <input type="reset" value="Cancelar" id="btn_cancelar">
             <input type="button" value="Crear Producto" id="btn_agregar">
-            
-         
-    
         </form>
-
     </section>
-    
-    <%- include('../partials/footer'); %>
-    
-    <script src="js/home.js"></script>
-    
+    <%- include('../partials/footer'); %>    
 </body>
 </html>

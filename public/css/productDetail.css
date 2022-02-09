@@ -1,11 +1,8 @@
-
-
 #franja{
     border-top: 1px solid #399ef794;
 }
 
 .ca_container2{/*Contenedor de la imagen*/
-
     border: 1px solid rgba(245, 87, 108, 0.555) ;
     border-radius: 10px;
     margin: 15px;
@@ -16,26 +13,22 @@
 
 .ca_container2 img{/*{propiedades de la imagen*/
     width: 245px;
-   
 }
-
 
 .ca_caja_nombreproducto{/*propiedades del nombre del producto*/
     display: flex;
     font-size: 13px;
     justify-content: center;
     margin-top: 15px;
-    
 }
-
 
 .ca_caja_codigo{/*propiedades del CODIGO del producto*/
     font-size: 16px;
     margin-left: 40px;
     margin-top: 10px;
-    color: rgb(136, 134, 134);
-    
+    color: rgb(136, 134, 134); 
 }
+
 .ca_caja_precio{/*propiedades del PRECIO del producto*/
     font-size: 25px;
     font-weight: bolder;
@@ -62,7 +55,6 @@
     padding: 20px;
     border-bottom: 1px solid #399ef794;
     border-top:1px solid #399ef794;
-
 }
 
 .talle{/*propiedades de los textos TALLES*/
@@ -97,8 +89,6 @@
     display: flex;
     padding: 10px;
     justify-content: center;
-   
-
 }
 
 .ca_boton_agregar{/*propiedades del botón AGREGAR AL CARRITO*/
@@ -116,8 +106,6 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 15px;
     cursor: pointer;
-    
-
 }
 
 .ca_caja_descripcion{/*propiedades de la DESCRIPCIÓN del producto*/
@@ -138,9 +126,6 @@
     font-size: 15px;
 }
 
-
-
-
 /*TABLET*/
 
 @media (min-width:600px) and (max-width:1024px) {
@@ -149,48 +134,39 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 30px;
-
-        
+        margin-top: 30px; 
     }
 
     .ca_container2{/*Contenedor de las propiedades de la imagen*/
         border: none;  
         border-radius: none;
-        box-shadow: none;
-       
-       
+        box-shadow: none;  
     }
     .ca_container2 img{/*Contenedor de las propiedades de la imagen*/
         width: 80%;
-    
     }
 
     .ca_caja_nombreproducto{/*propiedades del nombre del producto*/
         font-size: 18px;
-    
     }
 
     .ca_caja_codigo{/*propiedades del CODIGO del producto*/
         font-size: 15px;
- 
     }
     .ca_caja_precio{/*propiedades del PRECIO del producto*/
         font-size: 20px;
         font-weight: bolder;
-        color: #006bc994;
-        
+        color: #006bc994;  
     }
 
     .ca_caja_labeltalle{/*propiedades del LABEL del talle*/
-        font-size: 18x;
-        
+        font-size: 18x;   
     }
 
     .ca_caja_descripcion{/*propiedades de la DESCRIPCIÓN del producto*/
         font-size: 20px;
-     
     }
+
     .ca_caja_atributos li{/*propiedades de los ATRIBUTOS del producto*/
         font-size: 18px;
     }
@@ -202,29 +178,19 @@
     }*/
 
     .ca_boton_agregar{/*propiedades del botón AGREGAR AL CARRITO*/
-        
         width: 200px;
         height: 40px;
         font-size: 18px;
-   
-    }
-   
-   
-              
+    }           
 }
 
 /*DESKTOP*/
-
 @media (min-width: 1025px){
-
-
-  
     .ca_container1{/*Contenedor de la imagen,nombre del producto, código, precio, labeltalle, talles, input cantidad, botón Agregar al carrito*/
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 70px;
-        
     }
     .ca_container2{/*Contenedor de las propiedades de la imagen*/
         border: none;  
@@ -234,48 +200,36 @@
     }
 
     .ca_container2 img{/*propiedades de la imagen*/
-        width: 100%;
-        
+        width: 100%;    
     }
 
     .ca_caja_nombreproducto{/*propiedades del nombre del producto*/
         font-size: 25px;
-        
     }
 
-    
     .ca_caja_codigo{/*propiedades del CODIGO del producto*/
-        font-size: 10px;
-        
-       
-        
+        font-size: 10px;        
     }
+
     .ca_caja_precio{/*propiedades del PRECIO del producto*/
         font-size: 25px;
         font-weight: bolder;
-        color: #006bc994;
-        
+        color: #006bc994;    
     }
 
     .ca_caja_labeltalle{/*propiedades del LABEL del talle*/
         font-size: 18px;
-        
     }
 
     .talle{/*propiedades del número del talle*/
         font-size: 20px;
     }
 
-
     .ca_caja_descripcion{/*propiedades de la DESCRIPCIÓN del producto*/
-        font-size: 20px;
-        
-}
+        font-size: 20px;        
+    }
 
     .ca_caja_atributos li{/*propiedades de los ATRIBUTOS del producto*/
         font-size: 20px;
-}
-
-    
-
+    }
 }

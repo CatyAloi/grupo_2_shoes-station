@@ -71,9 +71,7 @@ a {
     font-size: 20px;
     color: #111111;
     margin: 15px;
-
-    padding: 10px;
-    
+    padding: 10px; 
 }
 
 .product-box {
@@ -176,7 +174,6 @@ a {
     text-align: center;
 }
 
-
 .content-marcas {
     padding: 30px;
     margin: 50px;
@@ -195,7 +192,6 @@ a {
 .img-marcas > img{
     width: 100px;
 }
-
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 941px) {
@@ -232,8 +228,7 @@ a {
     }
 }
 
-@media screen and (max-width: 550px) {
-    
+@media screen and (max-width: 550px) { 
     .img-marcas > img {
         width: 40px;
     }

@@ -13,134 +13,120 @@
     border: none;
     outline: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
+
 .ca_titulo_login{
     color:#000000;
     text-align: center;
     margin: 0;
     font-size: 18px;
     margin-bottom: 25px; 
- }
+}
  
- .ca_input_login {
-     width: 100%;
-     margin-bottom: 20px;
-     padding: 10px;
-     box-sizing: border-box;
-     border-color: #c2c2c294;
-     background: hsla(208, 92%, 60%, 0.2);
-     border-radius: 5px;
-     border: none;
- }
+.ca_input_login {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: #c2c2c294;
+    background: hsla(208, 92%, 60%, 0.2);
+    border-radius: 5px;
+    border: none;
+}
  
- .label_login{
+.label_login{
     font-size: 14px;
- }
+}
 
+.ca_container_recuperar{
+    display: flex;
+    flex-direction: column;
+}
 
- .ca_container_recuperar{
-     display: flex;
-     flex-direction: column;
- }
-
- .label_checkbox{
+.label_checkbox{
     margin-left: 15px;
     font-size: 16px;
     margin-bottom: 25px;
-    
- }
-
- .ca_recuperar_pass{
-    font-size: 12px;
-     
- }
-
-
-
- #btn_login {
-     margin: 5px;
-     text-decoration: none;
-     text-align: center;
-     font-size: 18px;
-     font-weight: bold;
-     width: 100%;
-     height: 40px;
-     border-radius: 8px;
-     border: none;
-     color: rgb(0, 0, 0);
-     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-     margin-top: 35px;
-     margin-bottom: 15px;
-     cursor: pointer;
-     
- }
-.ca_registro{
-    text-align: center;
-    font-size: 12px;
-    
 }
 
- @media (min-width:650px){
+.ca_recuperar_pass{
+    font-size: 12px;
+}
+
+#btn_login {
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.ca_registro{
+    text-align: center;
+    font-size: 12px; 
+}
+
+@media (min-width:650px){
     .ca_container_recuperar{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
- }
+}
 
- @media (min-width:1024px){
-
+@media (min-width:1024px){
     .ca_container_login{
         width: 50%;   
- }
+    }
 
     .ca_titulo_login{
-    
         font-size: 30px;
-        
- }
+    }
 
     .label_login{
         font-size: 22px;
- }
+    }
 
     #btn_login {
-    
-    font-size: 18px;
-     
-}
+        font-size: 18px;  
+    }
+
     .ca_container_recuperar{
-    display: flex;
-    flex-direction: row;
-}
- 
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 @media (min-width:1440px){
-
     .ca_container_login{
         width: 25%;   
         height: 450px;
- }
+    }
 
     .label_checkbox{
         font-size: 12px;
- }
+    }
     .ca_recuperar_pass{
-        font-size: 12px;
-     
- }
+        font-size: 12px;   
+    }
+
     .ca_container_recuperar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-.label_login{
-    font-size: 14px;
- }
-
-
+    .label_login{
+        font-size: 14px;
+    }
 }

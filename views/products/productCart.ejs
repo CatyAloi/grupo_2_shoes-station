@@ -2,99 +2,67 @@
 <html lang="es">
     <%- include('../partials/head'); %>
 <body>
-
     <%- include('../partials/header'); %>
-    
     <div id="franja"></div>
-
     <div class= "ca_titulo_carrito">
         <h3>Mi Carrito</h3>
     </div>
-     <div class="comprar_mas"><a href="/">Seguir Comprando</a></div>
+    <div class="comprar_mas">
+         <a href="/">Seguir Comprando</a>
+    </div>
 
-     <section class = "ca_container_producto_total">
+    <section class = "ca_container_producto_total">
         <div class = "ca_nombre_producto">
             <h3>Zapatillas Adidas CoreRacer</h3>
         </div>
-        
         <div class= "ca_container_producto">
-
-            <img src="/images/mn_002.jpg" alt=""> 
-
+            <img src="/images/mn_002.jpg" alt="">
             <div class = "ca_talle_producto">
                 <p class="talle_ca">Talle: 39</p>
                 <p class="talle_ca">SKU-4563</p>
-            </div>
-                 
+            </div>        
             <div class="ca_data_producto">
                 <form action="" method="POST">
                     <div class= "margin ca_cantidad_producto">
                         <input type="number">
                     </div>
                 </form>
-                
-        
                 <div class= "margin">
                     <p class="precio_ca">$12.500</p>
                 </div>
             </div>    
-                <div class="ca_remove_product">
-                    <button type="button" class="ca_btn_trash"><i class="fas fa-trash-alt"></i></button>
-                </div>       
-                     
-                   
-        </div>
-
-        
+            <div class="ca_remove_product">
+                <button type="button" class="ca_btn_trash"><i class="fas fa-trash-alt"></i></button>
+            </div>        
+        </div>   
     </section>
     
     <section class="ca_container_uno">
         <section class="ca_container_dos">
-
             <div class = "ca_label_envio">
                 <p>Calcular el costo del Envío</p>
             </div>
-
-
-                    
-                <form class = "ca_calculo_envio" action="" method="POST">
-                  
-                        <input class = "ca_codigo_postal" type="text" placeholder="Código Postal">
-            
-                        <button class = "ca_calcular" type ="submit" > Calcular</button>
-                  
-               </form>
-                    
-           
-  
+            <form class = "ca_calculo_envio" action="" method="POST">
+                <input class = "ca_codigo_postal" type="text" placeholder="Código Postal">
+    
+                <button class = "ca_calcular" type ="submit" > Calcular</button>
+            </form>
             <div class = "ca_subtotal_carrito">
                 <p>Subtotal ................................. $12.500</p>
-
             </div>
-            
             <div class = "ca_costo_envio">
                 <p>Costo del Envío ........................ $600</p>
-
             </div>
-
             <div class = "ca_monto_total">
                 <p>Total ....................... $13.100</p>
             </div>
-
-        </section> 
-        
+        </section>     
     </section>
-
     <section class = "ca_container_button">
-        
-        <div><button class="shopping"> Finalizar Compra</button></div>
-        
+        <div>
+            <button class="shopping"> Finalizar Compra</button>
+        </div>
     </section>
-
-
-
     <%- include('../partials/footer'); %>
-
-<script src="js/home.js"></script>
 </body>
 </html>

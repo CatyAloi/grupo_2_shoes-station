@@ -68,13 +68,11 @@ body {
     font-size: 14px;
 }
 
-
 .info-prod-price {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 @media screen and (min-width: 941px){
     .linea-al {
@@ -99,7 +97,6 @@ body {
     .form-filter_al {
         margin: 0;
         width: 250px;
-
     }
 
     .filter_catalogo {
@@ -126,8 +123,7 @@ body {
     };
 }
 
-@media screen and (max-width: 940px) {
-   
+@media screen and (max-width: 940px) { 
     .container-catalogo {
         display: flex;
         flex-wrap: wrap;

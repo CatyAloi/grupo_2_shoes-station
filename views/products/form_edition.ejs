@@ -2,111 +2,83 @@
 <html lang="en">
     <%- include('../partials/head'); %>
 <body>
-    
     <%- include('../partials/header'); %>
-
-      
-
     <section class = "ca_formediction">
         <form action="" method="POST">
             <h2 id="title_editar" >Editar un Producto</h2>
-
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
                 <input type="text" name = "producto" id=inp_width>
             </p>
-    
-           <p>
-            <label  class="label_edition" for="codigo del Producto">Código:</label>
-            <input type="text" name = "producto" id=inp_width>
-           </p>
-    
-           <p>
-            <label class="label_edition" for="img Producto">Imagen del Producto:</label>
-            <input type="text" name = "producto" id=inp_width>
-           </p> 
-    
-           <p>
-            <label  class="label_edition"for="img Producto">Cambiar imagen:</label>
-            <input type="file" name=""> (acepta solo formatos.jpg, .png)</p>
-
-           <p>
-            <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-            <input type="text" name = "producto" id=inp_width>
-           </p>
-            
+            <p>
+                <label  class="label_edition" for="codigo del Producto">Código:</label>
+                <input type="text" name = "producto" id=inp_width>
+            </p>
+            <p>
+                <label class="label_edition" for="img Producto">Imagen del Producto:</label>
+                <input type="text" name = "producto" id=inp_width>
+            </p> 
+            <p>
+                <label  class="label_edition"for="img Producto">Cambiar imagen:</label>
+                <input type="file" name=""> (acepta solo formatos.jpg, .png)
+            </p>
+            <p>
+                <label class="label_edition" for="precio Producto">Precio del Producto:</label>
+                <input type="text" name = "producto" id=inp_width>
+            </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
                 <input type="text" name = "producto" id=inp_width>
-        
             </p>
-           
             <p>
                 <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea name="descripcion" id=inp_width cols="30" rows="10"></textarea>
-                               
+                <textarea name="descripcion" id=inp_width cols="30" rows="10"></textarea>                   
             </p>
-        
-             
             <p>
-    
-               <label class="label_edition" for="">Talles Disponibles:</label> <br>
-            
+                <label class="label_edition" for="">Talles Disponibles:</label><br>
                 <input type="checkbox" name="talle36" value="talle"> 36
                 <input type="checkbox" name="talle37" value="talle"> 37
                 <input type="checkbox" name="talle38" value="talle"> 38
                 <input type="checkbox" name="talle39" value="talle"> 39
                 <input type="checkbox" name="talle40" value="talle"> 40
                 <input type="checkbox" name="talle41" value="talle"> 41
-              </p>
-            
-              
-    
-    
-            <p>
-                <label class="label_edition" for="marcas"><span>Marcas:</span></label>
-                    <select id="inp_width" name="categoria">
-                        <option value="Adidas">Adidas</option>
-                        <option value="Under Armour">Under Armour</option>
-                        <option value="Nike">Nike</option>
-                    
-                    </select>
             </p>
-    
             <p>
-                <label class="label_edition" for="categoria"><span>Categoría:</span></label>
-                    <select id="inp_width" name="categoria">
+                <label class="label_edition" for="marcas">
+                    <span>Marcas:</span>
+                </label>
+                <select id="inp_width" name="categoria">
+                    <option value="Adidas">Adidas</option>
+                    <option value="Under Armour">Under Armour</option>
+                    <option value="Nike">Nike</option>
+                </select>
+            </p>
+            <p>
+                <label class="label_edition" for="categoria">
+                    <span>Categoría:</span>
+                </label>
+                <select id="inp_width" name="categoria">
                     <option value="hombre">Hombre</option>
                     <option value="mujer">Mujer</option>
-                    
-                    </select>
+                </select>
             </p>
-    
             <p>
-                <label class="label_edition" for="status"><span>Status:</span></label>
-                    <select id="inp_width"id="inp_width" name="status">
+                <label class="label_edition" for="status">
+                    <span>Status:</span>
+                </label>
+                <select id="inp_width"id="inp_width" name="status">
                     <option value="activo">Activo</option>
                     <option value="inactivo">Inactivo</option>
-                    
-                    </select>
-              </p>
+                </select>
+            </p>
     
             <label class="label_edition" for="stock">Stock</label>
             <input type="number" name = "Stock" id=inp_width>
-      
-                      
+                    
             <input type="reset" value="Cancelar" id="btn_cancelar">
             <input type="button" value="Editar Producto" id="btn_editar">
-            
-         
-    
         </form>
-
     </section>
-    
-    <%- include('../partials/footer'); %>
-    
-    <script src="js/home.js"></script>
-    
+    <%- include('../partials/footer'); %>  
 </body>
 </html>

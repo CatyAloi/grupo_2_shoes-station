@@ -7,7 +7,6 @@
     flex-direction: column;
 }
 
-
 /*SECCION FORMULARIO*/
 .ca_container_form{
     box-sizing: border-box;
@@ -20,104 +19,94 @@
     border: none;
     outline: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
+
 .ca_titulo_form{
     color:#000000;
     text-align: center;
     margin: 0;
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 25px; 
- }
+}
+
+.ca_input_contact {
+    text-indent: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border-color: #c2c2c294;
+    background: hsla(208, 92%, 60%, 0.2);
+    border-radius: 5px;
+    border: none;
+}
  
- .ca_input_contact {
-     text-indent: 15px;
-     width: 100%;
-     margin-bottom: 20px;
-     padding: 16px;
-     box-sizing: border-box;
-     font-size: 20px;
-     border-color: #c2c2c294;
-     background: hsla(208, 92%, 60%, 0.2);
-     border-radius: 5px;
-     border: none;
- }
- 
- #ca_textarea {
+#ca_textarea {
      min-height: 100px;
      max-height: 200px;
      max-width: 100%;
+}
  
- }
+#btn_contact {
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 15px;
+    cursor: pointer;
+}
  
- #btn_contact {
-     margin: 5px;
-     text-decoration: none;
-     text-align: center;
-     font-size: 25px;
-     font-weight: bold;
-     width: 100%;
-     height: 60px;
-     border-radius: 8px;
-     border: none;
-     color: rgb(0, 0, 0);
-     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-     margin-bottom: 15px;
-     cursor: pointer;
-     
- }
- 
- 
-
 /*SECCION METODOS DE PAGO*/
-
 .ca_title_met{
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
 }
+
 #ca_intro{
     font-size: 15px;
     text-align: center;
 }
 
-
 .font >img{
     width: 30%;
     margin: 15px;
-
 }
+
 .ca_name_card{
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
-
-
-
- /*DESKTOP*/
-
- @media (min-width:1024px){
-   
-
+/*DESKTOP*/
+@media (min-width:1024px){
     .ca_container_ppal{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
-    
     }
 
     .ca_container_form{
         width: 60%;
     }
+}
 
-   
- }
-
-
+@media (min-width:941px) {
+    #franja {
+        display: none;
+    }
+}
 
