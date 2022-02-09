@@ -1,23 +1,13 @@
-
-
 const express = require('express');
-
 const path = require('path');
-
-let controladorProduct = require('../controllers/productControllers');
 const router = express.Router();
 
+const controladorProduct = require('../controllers/productControllers');
 
 router.get('/catalogo', controladorProduct.catalogo);
-
-router.get('/detalle', controladorProduct.detalle);
-
-/*router.get('/:id', controladorProduct.mostrarPorId);*/
-
+router.get('/detalle/:id', controladorProduct.detalle);
 router.get('/carrito', controladorProduct.carrito);
-
 router.get('/crearproductos', controladorProduct.crearProducto);
-
 router.get('/editarproductos', controladorProduct.editarProducto);
 
 module.exports = router;

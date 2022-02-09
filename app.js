@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
-
 let rutasMain = require('./routes/mainRoutes');
 let rutasProducts = require('./routes/productRoutes');
 let rutasUsers = require('./routes/usersRoutes');
@@ -19,7 +18,6 @@ let rutasUsers = require('./routes/usersRoutes');
 app.use ('/', rutasMain);
 app.use ('/', rutasProducts);
 app.use ('/', rutasUsers);
-
 
 app.post('/contacto', (req,res) =>{
     return res.send(req.body)

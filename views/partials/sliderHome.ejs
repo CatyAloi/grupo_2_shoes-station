@@ -1,0 +1,15 @@
+<div class="product-heading">
+    <p class="product-slider-heading"> <%= slide.titulo %>  </p>
+    <button class="show-more">Ver más</button>
+</div>
+<section class="p-slider container">
+    <div class="content-container slider-content" id="slider-content">
+        
+        <% slide.productos.forEach(function(producto){ %>
+            <%- include('./product', {producto: producto}); %>
+        <% }); %>
+
+        <i class='bx bx-chevrons-right arrow'></i>
+        <i class='bx bx-chevrons-left arrow'></i>
+    </div>
+</section>

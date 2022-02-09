@@ -1,0 +1,28 @@
+<div class="product-box">
+    <!-- image-container -->
+    <div class="p-img-container">
+        <div class="p-img">
+            <a href="/detalle/<%= producto.id %>">
+                <img src="images/<%= producto.img %>" class="p-img-front" alt="front">
+            </a>
+        </div>
+    </div>
+
+    <!-- Text *****************-->
+    <div class="p-box-text">
+        <!-- category -->
+        <div class="product-category">
+            <span>Zapatilla <%= producto.marca %></span>
+        </div>
+    </div>
+
+    <!-- title -->
+    <a href="/detalle/<%= producto.id %>" class="product-title">
+        Zapatillas para <%= producto.categoria %>.
+    </a>
+
+    <!-- price buy -->
+    <div class="price-buy">
+        <span class="p-price">$<%= producto.precio %></span>
+    </div>
+</div>
