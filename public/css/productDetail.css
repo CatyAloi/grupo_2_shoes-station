@@ -12,7 +12,7 @@
 }
 
 .ca_container2 img{/*{propiedades de la imagen*/
-    width: 245px;
+    width: 230px;
 }
 
 .ca_caja_nombreproducto{/*propiedades del nombre del producto*/
@@ -51,7 +51,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 5px;
-    margin-right: 7px;
     padding: 20px;
     border-bottom: 1px solid #399ef794;
     border-top:1px solid #399ef794;
@@ -127,7 +126,7 @@
 }
 
 .edit_delet_al {
-    width: 200px;
+    width: 180px;
     height: 40px;
     border-radius: 8px;
     border: none;
@@ -144,13 +143,18 @@
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
-.container_edit_delet{
-    display: flex;
-    justify-content: center;
+/* Movil */
+@media (max-width: 599px) {
+    .container_edit_delet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
 }
 
-/*TABLET*/
 
+/*TABLET*/
 @media (min-width:600px) and (max-width:1024px) {
     
     .ca_container1{/*Contenedor de la imagen,nombre del producto, código, precio, labeltalle, talles, input cantidad, botón Agregar al carrito*/
@@ -198,7 +202,12 @@
         width: 200px;
         height: 40px;
         font-size: 18px;
-    }           
+    }     
+    
+    .container_edit_delet{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /*DESKTOP*/
@@ -248,5 +257,10 @@
 
     .ca_caja_atributos li{/*propiedades de los ATRIBUTOS del producto*/
         font-size: 20px;
+    }
+
+    .container_edit_delet{
+        display: flex;
+        justify-content: center;
     }
 }
