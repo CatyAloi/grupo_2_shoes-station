@@ -126,6 +126,29 @@
     font-size: 15px;
 }
 
+.edit_delet_al {
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 10px;
+    font-weight: normal;
+    font-family: 'Prompt', sans-serif;
+    font-size: 13px;
+}
+
+.blue_edit {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.container_edit_delet{
+    display: flex;
+    justify-content: center;
+}
+
 /*TABLET*/
 
 @media (min-width:600px) and (max-width:1024px) {
@@ -170,12 +193,6 @@
     .ca_caja_atributos li{/*propiedades de los ATRIBUTOS del producto*/
         font-size: 18px;
     }
-
-    /*.ca_cantidad input{/*propiedades del input CANTIDAD
-       
-        width: 55px;
-        height: 36px;
-    }*/
 
     .ca_boton_agregar{/*propiedades del botón AGREGAR AL CARRITO*/
         width: 200px;

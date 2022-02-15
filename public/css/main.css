@@ -256,11 +256,15 @@ html, body {
     }
 
     .header-al {
-        margin: 15px;
+        margin: 10px;
     }
     
     .search {
         width: auto;
+    }
+
+    .icons_al {
+        margin-top: 30px;
     }
 
     .content-footer {
