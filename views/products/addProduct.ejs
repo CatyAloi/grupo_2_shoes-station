@@ -4,47 +4,48 @@
 <body>
     <%- include('../partials/header'); %>
     <section class = "ca_formediction">
-        <form action="" method="POST">
+
+        <form action="/crearProductos" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Crear un Producto</h2>
             <p>
-                <label class="label_edition" for="nombre_producto">Nombre del Producto:</label>
-                <input class="ca_input_add" type="text" name = "nombre_producto" id="nombre_producto">
+                <label class="label_edition" for="nombreProducto">Nombre del Producto:</label>
+                <input class="ca_input_add" type="text" name = "nombreProducto" id="nombreProducto">
             </p>
     
            <p>
-                <label  class="label_edition" for="codigo_producto">Código:</label>
-                <input class="ca_input_add"  type="text" name ="codigo_producto" id="codigo_producto">
+                <label  class="label_edition" for="codigo">Código:</label>
+                <input class="ca_input_add"  type="text" name ="codigo" id="codigo">
            </p>
        
            <p>
-                <label  class="label_edition"for="imagen_producto">Agregar imagen:</label>
-                <input class="ca_input_add"  type="file" name="imagen_producto" id="imagen_producto"> (acepta solo formatos.jpg, .png)
+                <label  class="label_edition"for="img">Agregar imagen:</label>
+                <input class="ca_input_add"  type="file" name="img" id="img"> (acepta solo formatos.jpg, .png)
             </p>
 
            <p>
-                <label class="label_edition" for="precio_producto">Precio del Producto:</label>
-                <input class="ca_input_add"  type="number" name = "precio_producto" id="precio_producto">
+                <label class="label_edition" for="precio">Precio del Producto:</label>
+                <input class="ca_input_add"  type="number" name = "precio" id="precio">
            </p>
             
             <p>
-                <label  class="label_edition" for="descuento_producto">Precio Oferta:</label>
-                <input class="ca_input_add"  type="number" name = "descuento_producto" id="descuento_producto">
+                <label  class="label_edition" for="descuento">Precio Oferta:</label>
+                <input class="ca_input_add"  type="number" name = "descuento" id="descuento">
         
             </p>
            
             <p>
-                <label class="label_edition" for="descripcion_producto">Descripción del Producto:</label> <br>
-                <textarea class="ca_input_add"  name="descripcion_producto" id="descripcion_producto" cols="30" rows="10"></textarea>             
+                <label class="label_edition" for="descripcion">Descripción del Producto:</label> <br>
+                <textarea class="ca_input_add"  name="descripcion" id="descripcion" cols="30" rows="10"></textarea>             
             </p>
         
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br>
-                <input type="checkbox" name="talle_36" value="talle_36"> 36
-                <input type="checkbox" name="talle_37" value="talle_37"> 37
-                <input type="checkbox" name="talle_38" value="talle_38"> 38
-                <input type="checkbox" name="talle_39" value="talle_39"> 39
-                <input type="checkbox" name="talle_40" value="talle_40"> 40
-                <input type="checkbox" name="talle_41" value="talle_41"> 41
+                <input type="checkbox" name="talle_36" value="36"> 36
+                <input type="checkbox" name="talle_37" value="37"> 37
+                <input type="checkbox" name="talle_38" value="38"> 38
+                <input type="checkbox" name="talle_39" value="39"> 39
+                <input type="checkbox" name="talle_40" value="40"> 40
+                <input type="checkbox" name="talle_41" value="41"> 41
             </p>
             
             <p>
@@ -83,7 +84,7 @@
             <input class="ca_input_add" type="number" name ="stock" id="stock">
                   
             <input type="reset" value="Cancelar" id="btn_cancelar">
-            <input type="button" value="Crear Producto" id="btn_agregar">
+            <input type="submit" value="Crear Producto" id="btn_agregar">
         </form>
     </section>
     <%- include('../partials/footer'); %>    
