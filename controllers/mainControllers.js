@@ -1,19 +1,23 @@
-const listaProductos = require('../models/data');
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsData.json');
+const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
     home: (req, res)=> {
         const data = [
             {
                 titulo: 'Más Vendidos',
-                productos: listaProductos
+                productos: productsJson
             },
             {
                 titulo: 'Recomendados para Vos',
-                productos: listaProductos
+                productos: productsJson
             },
             {
                 titulo: 'Ofertas',
-                productos: listaProductos
+                productos: productsJson
             }
         ];
 

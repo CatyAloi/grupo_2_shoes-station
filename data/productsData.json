@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "nombreProducto": "Zapatillas Adidas Coreracer",
     "codigo": "ma_001",
     "img": "ma_001.jpg",
@@ -12,7 +12,7 @@
     "categoria": "Mujer"
   },
   {
-    "id": "2",
+    "id": 2,
     "nombreProducto": "Zapatillas Adidas Postmove",
     "codigo": "ma_002",
     "img": "ma_002.jpg",
@@ -24,7 +24,7 @@
     "categoria": "Mujer"
   },
   {
-    "id": "3",
+    "id": 3,
     "nombreProducto": "Zapatillas Adidas Showtheway",
     "codigo": "ha_003",
     "img": "ha_003.jpg",
@@ -36,7 +36,7 @@
     "categoria": "Hombre"
   },
   {
-    "id": "4",
+    "id": 4,
     "nombreProducto": "Zapatillas Adidas Lite Racer 2.0",
     "codigo": "ha_004",
     "img": "ha_004.jpg",
@@ -48,7 +48,7 @@
     "categoria": "Hombre"
   },
   {
-    "id": "5",
+    "id": 5,
     "nombreProducto": "Zapatillas Nike Air Zoom Pegasus ",
     "codigo": "mn_001",
     "img": "mn_001.jpg",
@@ -60,7 +60,7 @@
     "categoria": "Mujer"
   },
   {
-    "id": "6",
+    "id": 6,
     "nombreProducto": "Zapatillas Nike Venture Runner",
     "codigo": "mn_002",
     "img": "mn_002.jpg",
@@ -72,7 +72,7 @@
     "categoria": "Mujer"
   },
   {
-    "id": "7",
+    "id": 7,
     "nombreProducto": "Zapatillas Nike Renew Run 2",
     "codigo": "hn_003",
     "img": "hn_003.jpg",
@@ -84,7 +84,7 @@
     "categoria": "Hombre"
   },
   {
-    "id": "8",
+    "id": 8,
     "nombreProducto": "Zapatillas Nike Quest 4",
     "codigo": "hn_004",
     "img": "hn_004.jpg",
@@ -96,7 +96,7 @@
     "categoria": "Hombre"
   },
   {
-    "id": "9",
+    "id": 9,
     "nombreProducto": "Zapatillas Under Armour HOVR Machina",
     "codigo": "mu_001",
     "img": "mu_001.jpg",
@@ -108,7 +108,7 @@
     "categoria": "Mujer"
   },
   {
-    "id": "10",
+    "id": 10,
     "nombreProducto": "Zapatillas Under Armour Essential",
     "codigo": "mu_002",
     "img": "mu_002.jpg",
@@ -120,7 +120,7 @@
     "categoria": "Mujer"
   },
   {
-    "id": "11",
+    "id": 11,
     "nombreProducto": "Zapatillas Under Armour Phade RN",
     "codigo": "hu_003",
     "img": "hu_003.jpg",
@@ -132,7 +132,7 @@
     "categoria": "Hombre"
   },
   {
-    "id": "12",
+    "id": 12,
     "nombreProducto": "Zapatillas Under Armour Charged Surpass",
     "codigo": "hu_004",
     "img": "hu_004.jpg",
@@ -142,6 +142,38 @@
     "talle": "39",
     "marca": "Under Armour",
     "categoria": "Hombre"
+  },
+  {
+    "nombreProducto": "Zapatilla Nike",
+    "codigo": "58220",
+    "precio": "18000",
+    "descuento": "15000",
+    "descripcion": "",
+    "talle_37": "37",
+    "marca": "Nike",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "15",
+    "id": 13,
+    "img": "img-1645047971748.jpeg"
+  },
+  {
+    "nombreProducto": "Zapatilla Adidas",
+    "codigo": "52485",
+    "precio": "20000",
+    "descuento": "15000",
+    "descripcion": "Zapatilla Adidas color marron",
+    "talle_36": "36",
+    "talle_37": "37",
+    "talle_38": "38",
+    "talle_39": "39",
+    "talle_40": "40",
+    "talle_41": "41",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "15",
+    "id": 14,
+    "img": "img-1645055918729.jpeg"
   }
-
 ]

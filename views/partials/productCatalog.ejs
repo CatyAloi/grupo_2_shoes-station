@@ -1,0 +1,14 @@
+<div class= "product-catalog">
+    <a href="/detalle/<%= producto.id %>">
+        <img src="images/<%= producto.img %>" class="catal-prod" alt="">
+    </a>
+
+    <div class="info-prod-price">
+        <span class="name-prod-al" >Zapatilla <%= producto.marca %> </span>
+        <a href="/detalle/<%= producto.id %>" class="">
+            Zapatillas <%= producto.marca %> <br>
+            para <%= producto.categoria %>.
+        </a>
+        <span class="price-acl"><%= producto.precio %></span>
+    </div>    
+</div>
