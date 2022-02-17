@@ -13,7 +13,6 @@ body {
 
 .product_add_acl {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    /* width: 80%; */
     height: 40px;
     border: none;
     border-radius: 5px;
@@ -21,6 +20,11 @@ body {
     font-family: 'Prompt', sans-serif;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top: 30px;
+    cursor: pointer;
+}
+
+.product_add_acl:active {
+    transform: translateY(4px);
 }
 
 .bx-plus-medical {
@@ -158,18 +162,10 @@ body {
     .catal-prod {
         width: 200px;
     }
-
-    /* .product_add_acl {
-        width: 80%;
-    } */
 }
 
 @media screen and (max-width: 400px) {
     .catal-prod {
         width: 120px;
     }
-
-    /* .product_add_acl {
-        width: 80%;
-    } */
 }

@@ -137,7 +137,13 @@
     font-weight: normal;
     font-family: 'Prompt', sans-serif;
     font-size: 13px;
+    cursor: pointer;
 }
+
+.edit_delet_al:active {
+    transform: translateY(4px);
+}
+
 
 .blue_edit {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
@@ -207,6 +213,7 @@
     .container_edit_delet{
         display: flex;
         justify-content: center;
+        cursor: pointer;
     }
 }
 
