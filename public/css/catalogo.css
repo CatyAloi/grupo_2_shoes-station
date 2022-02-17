@@ -13,7 +13,7 @@ body {
 
 .product_add_acl {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    width: 80%;
+    /* width: 80%; */
     height: 40px;
     border: none;
     border-radius: 5px;
@@ -87,6 +87,7 @@ body {
     text-decoration: none;
     color: black;
     font-size: 14px;
+    text-align: center;
 }
 
 .info-prod-price {
@@ -157,10 +158,18 @@ body {
     .catal-prod {
         width: 200px;
     }
+
+    /* .product_add_acl {
+        width: 80%;
+    } */
 }
 
 @media screen and (max-width: 400px) {
     .catal-prod {
         width: 120px;
     }
+
+    /* .product_add_acl {
+        width: 80%;
+    } */
 }
