@@ -7,7 +7,14 @@
     "precio": "18.500",
     "descuento": "10%",
     "descripcion": "Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.",
-    "talle": 37,
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
     "marca": "Adidas",
     "categoria": "Mujer"
   },
@@ -19,7 +26,14 @@
     "precio": "18.500",
     "descuento": "",
     "descripcion": "Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.",
-    "talle": 39,
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
     "marca": "Adidas",
     "categoria": "Mujer"
   },
@@ -31,7 +45,19 @@
     "precio": "18.500",
     "descuento": "10%",
     "descripcion": "Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.",
-    "talle": 40,
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Adidas",
     "categoria": "Hombre"
   },
@@ -43,7 +69,19 @@
     "precio": "18.500",
     "descuento": "15%",
     "descripcion": "Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.",
-    "talle": "42",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Adidas",
     "categoria": "Hombre"
   },
@@ -55,7 +93,14 @@
     "precio": "20.500",
     "descuento": "",
     "descripcion": "Las zapatillas Nike son un calzado versátil para la mujer de hoy y todos sus días. Inspirado en modelos running de los años 80, se compone de una parte superior de materiales y una suela de goma para mayor tracción y durabilidad.",
-    "talle": "38",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
     "marca": "Nike",
     "categoria": "Mujer"
   },
@@ -67,7 +112,14 @@
     "precio": "20.500",
     "descuento": "10%",
     "descripcion": "Las zapatillas Nike son un calzado versátil para la mujer de hoy y todos sus días. Inspirado en modelos running de los años 80, se compone de una parte superior de materiales y una suela de goma para mayor tracción y durabilidad.",
-    "talle": "39",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
     "marca": "Nike",
     "categoria": "Mujer"
   },
@@ -79,7 +131,19 @@
     "precio": "21.500",
     "descuento": "",
     "descripcion": "Las Zapatillas Nike fueron especialmente diseñadas para los hombres amantes del running, que quieren salir a correr con el calzado más cómodo y liviano.",
-    "talle": "40",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Nike",
     "categoria": "Hombre"
   },
@@ -91,7 +155,19 @@
     "precio": "23.500",
     "descuento": "",
     "descripcion": "Las Zapatillas Nike fueron especialmente diseñadas para los hombres amantes del running, que quieren salir a correr con el calzado más cómodo y liviano.",
-    "talle": "41",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Nike",
     "categoria": "Hombre"
   },
@@ -103,7 +179,14 @@
     "precio": "25.500",
     "descuento": "10%",
     "descripcion": "Para la mujer amante de días de running son perfectas las Zapatillas Under Armour por su diseño te harán rendir mejor en entrenamiento y carrera, mientras amortigua tus pisadas gracias a su media suela en espuma que te da estabilidad y firmeza a la hora de correr.",
-    "talle": "37",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
     "marca": "Under Armour",
     "categoria": "Mujer"
   },
@@ -115,7 +198,14 @@
     "precio": "22.500",
     "descuento": "",
     "descripcion": "Para la mujer amante de días de running son perfectas las Zapatillas Under Armour por su diseño te harán rendir mejor en entrenamiento y carrera, mientras amortigua tus pisadas gracias a su media suela en espuma que te da estabilidad y firmeza a la hora de correr.",
-    "talle": "39",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
     "marca": "Under Armour",
     "categoria": "Mujer"
   },
@@ -127,7 +217,19 @@
     "precio": "19.500",
     "descuento": "",
     "descripcion": "Las zapatillas Under Armour nacieron para los hombres que quieren alcanzar nuevos desafíos mientras corres. Confeccionadas con estructuras fuertes que se flexionan al momento de aplicar presión para un soporte más reactivo",
-    "talle": "40",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Under Armour",
     "categoria": "Hombre"
   },
@@ -139,7 +241,19 @@
     "precio": "17.500",
     "descuento": "10%",
     "descripcion": "Las zapatillas Under Armour nacieron para los hombres que quieren alcanzar nuevos desafíos mientras corres. Confeccionadas con estructuras fuertes que se flexionan al momento de aplicar presión para un soporte más reactivo",
-    "talle": "39",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Under Armour",
     "categoria": "Hombre"
   },
@@ -149,7 +263,19 @@
     "precio": "18000",
     "descuento": "15000",
     "descripcion": "",
-    "talle_37": "37",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Nike",
     "categoria": "hombre",
     "status": "activo",
@@ -163,17 +289,106 @@
     "precio": "20000",
     "descuento": "15000",
     "descripcion": "Zapatilla Adidas color marron",
-    "talle_36": "36",
-    "talle_37": "37",
-    "talle_38": "38",
-    "talle_39": "39",
-    "talle_40": "40",
-    "talle_41": "41",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
     "marca": "Adidas",
     "categoria": "hombre",
     "status": "activo",
     "stock": "15",
     "id": 14,
     "img": "img-1645055918729.jpeg"
+  },
+  {
+    "nombreProducto": "Zapatillas Under Armour",
+    "codigo": "85458",
+    "precio": "17.000",
+    "descuento": "17.000",
+    "descripcion": "Para quienes dan todo de sí en su entrenamiento llegaron las Zapatillas Under Armour Hovr Rise 3. Este modelo está diseñado para reducir el impacto, adaptarse a tus pisadas y mantenerte fresca durante tu entrenamiento gracias a su tela liviana y transpirable.",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "marca": "Under Armour",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "20",
+    "id": 15,
+    "img": "img-1645195428615.jpeg"
+  },
+  {
+    "nombreProducto": "Zapatillas adidas",
+    "codigo": "87595",
+    "precio": "17.000",
+    "descuento": "",
+    "descripcion": "Inspiradas para deportistas, las Zapatillas adidas Showtheway son ideales para tus entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.",
+    "talle": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "marca": "Adidas",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "19",
+    "id": 16,
+    "img": "img-1645207645507.jpeg"
+  },
+  {
+    "nombreProducto": "Zapatilla Adidas",
+    "codigo": "78545",
+    "precio": "12.000",
+    "descuento": "",
+    "descripcion": "Perfectas para tus días de running las Zapatillas adidas Supernova ideales para vos que tenés la exigencia de un profesional, su construcción en malla liviana le brindan a tus pies la comodidad y frescura en los momentos de mayor esfuerzo.",
+    "talle": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "marca": "Adidas",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "10",
+    "id": 17,
+    "img": "img-1645207922741.jpeg"
+  },
+  {
+    "nombreProducto": "Zapatilla Adidas",
+    "codigo": "95485",
+    "precio": "17.000",
+    "descuento": "",
+    "descripcion": "Perfectas para tus días de running las Zapatillas adidas Supernova ideales para vos que tenés la exigencia de un profesional, su construcción en malla liviana le brindan a tus pies la comodidad y frescura en los momentos de mayor esfuerzo.",
+    "talle": [
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "marca": "Adidas",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "10",
+    "id": 18,
+    "img": "img-1645208099796.jpeg"
   }
 ]

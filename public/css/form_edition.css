@@ -1,6 +1,6 @@
 .ca_formediction{
     box-sizing: border-box;
-    width: 800px;
+    width: 80%;
     margin: auto;
     padding: 10px 30px ;
     border-radius: 8px;
@@ -15,58 +15,83 @@
     text-indent: 15px;
     width: 100%;
     margin-bottom: 20px;
-    padding: 16px;
+    padding: 12px;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 15px;
     border-color: #c2c2c294;
     background: hsla(208, 92%, 60%, 0.2);
     border-radius: 5px;
     border: none;
+    font-family: 'Prompt', sans-serif;
+}
+
+.img-input-acl {
+    width: 100%;
+    font-size: 10px;
 }
 
 #title_editar{
     color:#000000;
     text-align: center;
     margin: 0;
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 25px; 
 }
 
 .label_edition{
-     font-size: 25px;
+     font-size: 18px;
 }
 
-#btn_cancelar {
+#btn_cancelar-acl {
     text-align: center;
     background-image:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-    padding: 10px;
     margin: 5px;
     text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    width: 30%;
-    height: 60px;
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
     border-radius: 8px;
     border: none;
     color: rgb(0, 0, 0);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 15px;
+    font-family: 'Prompt', sans-serif;
     cursor: pointer;    
+    align-items: center;
 }
 
 #btn_editar{
     margin: 5px;
     text-decoration: none;
     text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    width: 60%;
-    height: 60px;
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
     border-radius: 8px;
     border: none;
     color: rgb(0, 0, 0);
+    font-family: 'Prompt', sans-serif;
     background-image:linear-gradient(to right, #4facfeee 0%, #00f1feef 100%); 
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 15px;
     cursor: pointer;
+}
+
+@media screen and (min-width: 941px) {
+    .ca_formediction {
+        width: 800px;
+    }
+
+    .container-cancl-edit-alc {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .container-cancl-edit-alc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

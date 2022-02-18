@@ -35,7 +35,7 @@ router.get('/crearproductos', controladorProduct.crearProducto);
 router.post('/crearproductos', upload.single('img'), controladorProduct.store);
 
 //EDIT ONE PRODUCT//
-router.get('/editarproductos', controladorProduct.editarProducto);
+router.get('/editarproductos/:id', controladorProduct.editarProducto);
 
 //DELETE ONE PRODUCT//
 

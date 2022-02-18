@@ -1,16 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const dataPath = path.join(__dirname, '../data');
+const productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
+const tallesJson = JSON.parse(fs.readFileSync(dataPath + '/talles.json', 'utf-8'));
 
 const product_Controllers = {
     catalogo: (req, res)=> {
-        res.render('products/catalogo', { productos: productsJson });
+        res.render('products/catalogo', { productos: productsJson, talles: tallesJson });
     },
     detalle: (req, res)=> {
         let producto = productsJson.find(producto => producto.id == req.params.id);
-        res.render("products/productDetail", { producto });
+        res.render("products/productDetail", { producto, talles: tallesJson });
     },
     carrito: (req, res)=> {
         res.render('products/productCart');
@@ -38,7 +39,6 @@ const product_Controllers = {
         productNew.id = productosTemporarios[0].id + 1;
         //----------------------------------------------------------
         productNew.img = req.file.filename;
-        console.log(productNew);
         productsJson.push(productNew)
         const productNewJson = JSON.stringify(productsJson, null, 2);
         fs.writeFileSync('./data/productsData.json', productNewJson);
@@ -47,10 +47,12 @@ const product_Controllers = {
     
     //EDITA EL PRODUCTO EXISTENTE          
     editarProducto: (req, res)=> {
-        res.render('products/form_edition');
+        let producto = productsJson.find(producto => producto.id == req.params.id);
+        res.render('products/form_edition', { producto, talles: tallesJson });
     },
 
     //ELIMINA EL PRODUCTO EXISTENTE 
+
 };
 
 module.exports = product_Controllers;

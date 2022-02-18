@@ -39,18 +39,10 @@
 
                     <div class="filters-alc">
                         <h3 class="title_filter">Talle</h3>
-                        <input type="checkbox" id="" name="" value="">
-                        <label for=""> 36 </label><br>
-                        <input type="checkbox" id="" name="" value="">
-                        <label for="adidas"> 37</label><br>
-                        <input type="checkbox" id="" name="" value="">
-                        <label for=""> 38 </label><br>
-                        <input type="checkbox" id="" name="" value="">
-                        <label for=""> 39 </label><br>
-                        <input type="checkbox" id="" name="" value="">
-                        <label for="adidas"> 40 </label><br>
-                        <input type="checkbox" id="" name="" value="">
-                        <label for=""> 41 </label>
+                        <% talles.forEach(function (talle){ %>
+                            <input type="checkbox" id="" name="" value="">
+                            <label for=""> <%= talle %>  </label><br>
+                       <% }); %>
                     </div>
                 </form> 
             </div> 

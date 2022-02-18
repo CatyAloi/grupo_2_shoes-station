@@ -21,15 +21,10 @@
                 <div class="ca_caja_labeltalle">
                     <p>Seleccionar Talle:</p> 
                 </div>  
-                <div class="ca_container_talles">         
-                    <li class="talle"><span>36</span></li>
-                    <li class="talle"><span>37</span> </li>
-                    <li class="talle"><span>38</span></li>
-                    <li class="talle"> <span>39</span></li>    
-                    <li class="talle"><span>40</span></li>  
-                    <li class="talle"><span>41</span></li>
-                    <li class="talle"><span>42</span></li>
-                    <li class="talle"><span>43</span> </li>               
+                <div class="ca_container_talles">
+                    <% talles.forEach(function (talle){ %>
+                        <li class="talle"><span> <%= talle %> </span></li>
+                   <% }); %>
                 </div>         
                 <form class ="ca_caja_agregar" action="" method="POST">
                         <div class= "ca_cantidad"><input type="number"></div>
@@ -39,7 +34,7 @@
                         </div> 
                 </form>
                 <section class="container_edit_delet">
-                   <a href="/editarproductos">
+                   <a href="/editarproductos/<%= producto.id %>">
                         <button class="edit_delet_al blue_edit"> <i class='bx bxs-pencil'></i> Editar producto</button>
                    </a> 
                    

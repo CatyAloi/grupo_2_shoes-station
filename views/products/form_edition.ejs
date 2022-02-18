@@ -8,40 +8,40 @@
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <input type="text" name= "producto" id=inp_width value="<%= producto.nombreProducto %> ">
             </p>
             <p>
                 <label  class="label_edition" for="codigo del Producto">Código:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <input type="text" name= "producto" id=inp_width value="<%= producto.codigo %> ">
             </p>
             <p>
                 <label class="label_edition" for="img Producto">Imagen del Producto:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <input type="text" name= "producto" id=inp_width value=" <%= producto.img %> ">
             </p> 
             <p>
-                <label  class="label_edition"for="img Producto">Cambiar imagen:</label>
-                <input type="file" name=""> (acepta solo formatos.jpg, .png)
+                <label  class="label_edition img-edit" for="img Producto">Cambiar imagen:</label>
+                <input type="file" name="" class="img-input-acl"> <br>
+                (acepta solo formatos.jpg, .png)
             </p>
             <p>
                 <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <input type="text" name= "producto" id=inp_width value=" <%= producto.precio  %> ">
             </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
-                <input type="text" name = "producto" id=inp_width>
+                <input type="text" name= "producto" id=inp_width value=" <%= producto.precio %>" >
             </p>
             <p>
                 <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea name="descripcion" id=inp_width cols="30" rows="10"></textarea>                   
+                <textarea name="descripcion" id=inp_width cols="30" rows="10">
+                    <%= producto.descripcion %>
+                </textarea>                   
             </p>
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br>
-                <input type="checkbox" name="talle36" value="talle"> 36
-                <input type="checkbox" name="talle37" value="talle"> 37
-                <input type="checkbox" name="talle38" value="talle"> 38
-                <input type="checkbox" name="talle39" value="talle"> 39
-                <input type="checkbox" name="talle40" value="talle"> 40
-                <input type="checkbox" name="talle41" value="talle"> 41
+                <% talles.forEach(function (talle){ %>
+                    <input type="checkbox" name="talle[]" value="<%= talle %>"> <%= talle %>
+                <% }); %>
             </p>
             <p>
                 <label class="label_edition" for="marcas">
@@ -75,8 +75,12 @@
             <label class="label_edition" for="stock">Stock</label>
             <input type="number" name = "Stock" id=inp_width>
                     
-            <input type="reset" value="Cancelar" id="btn_cancelar">
-            <input type="button" value="Editar Producto" id="btn_editar">
+            <div class="container-cancl-edit-alc">
+                <input type="reset" value="Cancelar" id="btn_cancelar-acl">
+                <input type="button" value="Editar Producto" id="btn_editar"> 
+            </div>
+            <!-- <input type="reset" value="Cancelar" id="btn_cancelar">
+            <input type="button" value="Editar Producto" id="btn_editar"> -->
         </form>
     </section>
     <%- include('../partials/footer'); %>  
