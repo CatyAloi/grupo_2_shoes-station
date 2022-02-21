@@ -51,27 +51,37 @@ setInterval(function (){
 const sliderProducts = document.querySelectorAll('.slider-content');
 
 if (sliderProducts.length > 0) {
+    let movingNext = false;
+    let movingPrev = false;
     function moveNext(slider){
+        if (movingNext) return false;
+        movingNext = true;
+
         let sliderProductFirts = slider.querySelectorAll('.product-box')[0];
         slider.style.marginLeft = '-550px';
-        slider.style.transition = 'all 1s';
+        slider.style.transition = 'all 0.5s';
         setTimeout (function(){
+            movingNext = false;
             slider.style.transition = 'none';
             slider.insertAdjacentElement('beforeend', sliderProductFirts);
             slider.style.marginLeft = '-280px';
-        },1000);
+        }, 500);
     }
     
     function movePrev(slider){
+        if (movingPrev) return false;
+        movingPrev = true;
+
         let sliderSectionProduct = slider.querySelectorAll('.product-box');
         let sliderSectionProdLast = sliderSectionProduct[sliderSectionProduct.length -1];
         slider.style.marginLeft = '0';
-        slider.style.transition = 'all 1s';
+        slider.style.transition = 'all 0.5s';
         setTimeout (function(){
+            movingPrev = false;
             slider.style.transition = 'none';
             slider.insertAdjacentElement('afterbegin', sliderSectionProdLast);
             slider.style.marginLeft = '-270px';
-        },1000);
+        }, 500);
     
     }
     

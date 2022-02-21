@@ -4,32 +4,32 @@
 <body>
     <%- include('../partials/header'); %>
     <section class = "ca_formediction">
-        <form action="" method="POST">
+        <form action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
-                <input type="text" name= "producto" id=inp_width value="<%= producto.nombreProducto %> ">
+                <input type="text" name="nombreProducto" id=inp_width value="<%= producto.nombreProducto %> ">
             </p>
             <p>
                 <label  class="label_edition" for="codigo del Producto">Código:</label>
-                <input type="text" name= "producto" id=inp_width value="<%= producto.codigo %> ">
-            </p>
-            <p>
-                <label class="label_edition" for="img Producto">Imagen del Producto:</label>
-                <input type="text" name= "producto" id=inp_width value=" <%= producto.img %> ">
+                <input type="text" name="codigo" id=inp_width value="<%= producto.codigo %> ">
             </p> 
+            <section class="editNew-acl">
+                <h4>Imagen del Producto</h4>
+                <img src="/images/<%= producto.img %>" alt="" class="editNew-prod">
+            </section>
             <p>
                 <label  class="label_edition img-edit" for="img Producto">Cambiar imagen:</label>
-                <input type="file" name="" class="img-input-acl"> <br>
+                <input type="file" name="img" class="img-input-acl"> 
                 (acepta solo formatos.jpg, .png)
             </p>
             <p>
                 <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-                <input type="text" name= "producto" id=inp_width value=" <%= producto.precio  %> ">
+                <input type="text" name= "precio" id=inp_width value="<%= producto.precio  %>">
             </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
-                <input type="text" name= "producto" id=inp_width value=" <%= producto.precio %>" >
+                <input type="text" name= "descuento" id=inp_width value="<%= producto.descuento %>" >
             </p>
             <p>
                 <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
@@ -40,17 +40,21 @@
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br>
                 <% talles.forEach(function (talle){ %>
-                    <input type="checkbox" name="talle[]" value="<%= talle %>"> <%= talle %>
+                    <% if (producto.talle.includes(talle)) { %> 
+                        <input type="checkbox" name="talle[]" value="<%= talle %>" checked> <%= talle %>
+                    <% } else { %>
+                        <input type="checkbox" name="talle[]" value="<%= talle %>"> <%= talle %>
+                    <% }  %>
                 <% }); %>
             </p>
             <p>
                 <label class="label_edition" for="marcas">
                     <span>Marcas:</span>
                 </label>
-                <select id="inp_width" name="categoria">
-                    <option value="Adidas">Adidas</option>
-                    <option value="Under Armour">Under Armour</option>
-                    <option value="Nike">Nike</option>
+                <select id="inp_width" name="marca">
+                    <option value="Adidas" <% if (producto.marca === 'Adidas') { %> selected="selected" <% } %>>Adidas</option>
+                    <option value="Under Armour" <% if (producto.marca === 'Under Armour') { %> selected="selected" <% } %>>Under Armour</option>
+                    <option value="Nike" <% if (producto.marca === 'Nike') { %> selected="selected" <% } %>>Nike</option>
                 </select>
             </p>
             <p>
@@ -58,8 +62,8 @@
                     <span>Categoría:</span>
                 </label>
                 <select id="inp_width" name="categoria">
-                    <option value="hombre">Hombre</option>
-                    <option value="mujer">Mujer</option>
+                    <option value="hombre" <% if (producto.categoria === 'hombre') { %> selected="selected" <% } %>>Hombre</option>
+                    <option value="mujer" <% if (producto.categoria === 'mujer') { %> selected="selected" <% } %>>Mujer</option>
                 </select>
             </p>
             <p>
@@ -67,20 +71,18 @@
                     <span>Status:</span>
                 </label>
                 <select id="inp_width"id="inp_width" name="status">
-                    <option value="activo">Activo</option>
-                    <option value="inactivo">Inactivo</option>
+                    <option value="activo" <% if (producto.status === 'activo') { %> selected="selected" <% } %>>Activo</option>
+                    <option value="inactivo" <% if (producto.status === 'inactivo') { %> selected="selected" <% } %>>Inactivo</option>
                 </select>
             </p>
     
             <label class="label_edition" for="stock">Stock</label>
-            <input type="number" name = "Stock" id=inp_width>
+            <input type="number" name="stock" id=inp_width value="<%= producto.stock %>">
                     
             <div class="container-cancl-edit-alc">
                 <input type="reset" value="Cancelar" id="btn_cancelar-acl">
-                <input type="button" value="Editar Producto" id="btn_editar"> 
+                <input type="submit" value="Editar Producto" id="btn_editar"> 
             </div>
-            <!-- <input type="reset" value="Cancelar" id="btn_cancelar">
-            <input type="button" value="Editar Producto" id="btn_editar"> -->
         </form>
     </section>
     <%- include('../partials/footer'); %>  

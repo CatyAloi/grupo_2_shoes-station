@@ -11,7 +11,7 @@ const product_Controllers = {
     },
     detalle: (req, res)=> {
         let producto = productsJson.find(producto => producto.id == req.params.id);
-        res.render("products/productDetail", { producto, talles: tallesJson });
+        res.render("products/productDetail", { producto });
     },
     carrito: (req, res)=> {
         res.render('products/productCart');
@@ -19,30 +19,56 @@ const product_Controllers = {
 
     // MUESTRA EL FORMULARIO DE AGREGAR NUEVO PRODUCTO
     crearProducto: (req,res)=> { 
-        res.render('products/addProduct'); },
+        res.render('products/addProduct', { talles: tallesJson }); 
+    },
 
-    //GUARDAR O AGREGAR EL NUEVO PRODUCTO A LA BD       
+    //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
     store: (req, res)=> { 
-        let productNew = (req.body);
-        //Creación de ID temporario en base de dato se eliminara ---
-        const productosTemporarios = [...productsJson];
-        productosTemporarios.sort(function (a, b) {
-            if (a.id > b.id) {
-                return -1;
-            } else if (a.id < b.id) {
-                return 1;
-            } 
-            
-            return 0;
-        });
-       
-        productNew.id = productosTemporarios[0].id + 1;
-        //----------------------------------------------------------
-        productNew.img = req.file.filename;
-        productsJson.push(productNew)
-        const productNewJson = JSON.stringify(productsJson, null, 2);
-        fs.writeFileSync('./data/productsData.json', productNewJson);
-        res.redirect('/catalogo'); 
+        const camposProductoFormulario = req.body;
+        if (req.file) {
+            camposProductoFormulario.img = req.file.filename;
+        }
+        if (req.params['id'] == undefined) {
+            //Creación de ID temporario en base de dato se eliminara ---
+            const productosTemporarios = [...productsJson];
+            productosTemporarios.sort(function (a, b) {
+                if (a.id > b.id) {
+                    return -1;
+                } else if (a.id < b.id) {
+                    return 1;
+                } 
+                
+                return 0;
+            });
+        
+            camposProductoFormulario.id = productosTemporarios[0].id + 1;
+            //----------------------------------------------------------
+            productsJson.push(camposProductoFormulario)
+            const updatedProducts = JSON.stringify(productsJson, null, 2);
+            fs.writeFileSync('./data/productsData.json', updatedProducts);
+            res.redirect('/catalogo'); 
+        } else {
+            const id = req.params.id;
+            const product = productsJson.find(function (producto){
+                return producto.id == id;
+            });
+            product.nombreProducto = camposProductoFormulario.nombreProducto;
+            product.codigo = camposProductoFormulario.codigo;
+            if (camposProductoFormulario.img) {
+                product.img = camposProductoFormulario.img;
+            }
+            product.precio = camposProductoFormulario.precio;
+            product.descuento = camposProductoFormulario.descuento;
+            product.descripcion = camposProductoFormulario.descripcion;
+            product.talle = camposProductoFormulario.talle;
+            product.marca = camposProductoFormulario.marca;
+            product.categoria = camposProductoFormulario.categoria;
+            product.status = camposProductoFormulario.status;
+            product.stock = camposProductoFormulario.stock;
+            const updatedProducts = JSON.stringify(productsJson, null, 2);
+            fs.writeFileSync('./data/productsData.json', updatedProducts);
+            res.redirect('/detalle/' + id);
+        }
     },
     
     //EDITA EL PRODUCTO EXISTENTE          

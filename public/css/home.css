@@ -96,7 +96,7 @@ a {
 }
 
 .p-img a img {
-    width: 100%;
+    width: 200px;
     height: 100%;
     object-position: center;
     object-fit: contain;
@@ -137,7 +137,7 @@ a {
     display: flex;
     justify-content: left;
     height: 320px;
-    width: 4000px;
+    /* width: 4000px; */
     margin: 10px auto;
     margin-left: -280px;
 }
@@ -230,6 +230,7 @@ a {
 }
 
 @media screen and (max-width: 550px) { 
+  
     .img-marcas > img {
         width: 40px;
     }
