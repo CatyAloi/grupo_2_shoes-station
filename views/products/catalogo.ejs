@@ -52,6 +52,7 @@
             </div> 
         </div>  
         <section class="container-catalogo">
+            <!--
             <div class= "product-catalog">
                 <a href="#">
                     <img src="images/ha_003.jpg" class="catal-prod" alt="">
@@ -66,160 +67,10 @@
                     <span class="price-acl">$15000</span>
                 </div>    
             </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/mu_001.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/mu_002.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/ha_004.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/hn_003.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/hn_004.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/hu_003.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/hu_004.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/ma_001.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/ma_002.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/mn_002.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
-
-            <div class= "product-catalog">
-                <a href="#">
-                    <img src="images/mu_001.jpg" class="catal-prod" alt="">
-                </a>
-                <div class="info-prod-price">
-                    <span class="name-prod-al" >Zapatilla Adidas</span>
-                    <a href="" class="">
-                        Zapatillas adidas <br>
-                        para hombres.
-                    </a>
-                    <span class="price-acl">$15000</span>
-                </div>    
-            </div>
+            -->
+            <% productos.forEach(producto => { %>
+                <%- include('../partials/productCatalogItem', { producto }); %>
+            <% }); %> 
         </section>
     </div>
     <%- include('../partials/footer'); %>

@@ -1,7 +1,8 @@
-const listaProductos = require('../models/data');
+const modelProductos = require('../models/producto'); 
 
 module.exports = {
     home: (req, res)=> {
+        const listaProductos = modelProductos.cargarProductos().productos
         const data = [
             {
                 titulo: 'Más Vendidos',

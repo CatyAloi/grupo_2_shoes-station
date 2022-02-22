@@ -9,5 +9,6 @@ router.get('/detalle/:id', controladorProduct.detalle);
 router.get('/carrito', controladorProduct.carrito);
 router.get('/crearproductos', controladorProduct.crearProducto);
 router.get('/editarproductos', controladorProduct.editarProducto);
+router.delete('/borrarProducto/:id', controladorProduct.borrarProducto);
 
 module.exports = router;
