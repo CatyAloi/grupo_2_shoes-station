@@ -445,5 +445,26 @@
     "stock": "2",
     "img": "img-1645410557333.jpeg",
     "id": 21
+  },
+  {
+    "nombreProducto": "Prueba",
+    "codigo": "858456",
+    "precio": "19.000",
+    "descuento": "15.000",
+    "descripcion": "prueba",
+    "talle": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+    ],
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "15",
+    "img": "img-1645554728270.jpeg",
+    "id": 22
   }
 ]
