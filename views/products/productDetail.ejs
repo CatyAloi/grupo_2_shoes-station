@@ -34,11 +34,14 @@
                         </div> 
                 </form>
                 <section class="container_edit_delet">
+
                    <a href="/editarproductos/<%= producto.id %>">
                         <button class="edit_delet_al blue_edit"> <i class='bx bxs-pencil'></i> Editar producto</button>
-                   </a> 
-                   
-                    <button class="edit_delet_al"> <i class='bx bxs-trash-alt'></i> Borrar producto</button>
+                   </a>
+                    <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST">
+                        <button class="edit_delet_al" type="submit"> <i class='bx bxs-trash-alt'></i> Borrar producto</button>
+                    </form>
+
                 </section>
             </div>
         </section>  

@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const modelProductos = require('../models/producto'); 
 
 const dataPath = path.join(__dirname, '../data');
-const productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
+let productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
 const tallesJson = JSON.parse(fs.readFileSync(dataPath + '/talles.json', 'utf-8'));
 
 const product_Controllers = {
@@ -78,7 +79,10 @@ const product_Controllers = {
     },
 
     //ELIMINA EL PRODUCTO EXISTENTE 
-
+    borrarProducto: (req, res)=> {
+        productsJson = modelProductos.borrarProducto(req.params.id);
+        res.redirect('/catalogo');
+    },
 };
 
 module.exports = product_Controllers;
