@@ -463,5 +463,47 @@
     "stock": "2",
     "img": "img-1645630225064.jpeg",
     "id": 22
+  },
+  {
+    "nombreProducto": "zapatillas Nike Air Max",
+    "codigo": "8989890",
+    "precio": "23000",
+    "descuento": "20000",
+    "descripcion": "Zapatillas Air Max Nike ",
+    "talle": [
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "marca": "Nike",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "20",
+    "img": "img-1645650166941.jpeg",
+    "id": 23
+  },
+  {
+    "nombreProducto": "Zapatillas Nike  ",
+    "codigo": "686868 ",
+    "precio": "18000",
+    "descuento": "15000",
+    "descripcion": "                    Zapatillas Nike Modelo b6 \r\n                ",
+    "talle": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+    ],
+    "marca": "Nike",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "15",
+    "img": "img-1645650219858.jpeg",
+    "id": 24
   }
 ]
