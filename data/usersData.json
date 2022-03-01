@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1",
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "telefono": "55835440",
+    "email": "fgrdew@gmail.com",
+    "password": "12345678",
+    "confirmarPassword": "12345678"
+  },
+  {
+    "id": "2",
+    "nombre": "Ana",
+    "apellido": "Gutierrez",
+    "telefono": "45123698",
+    "email": "anagutierrez@gmail.com",
+    "password": "78945612",
+    "confirmarPassword": "78945612"
+  },
+  {
+    "nombre": "EDWIN",
+    "apellido": "BUSTAMANTE",
+    "telefono": "1555867893",
+    "email": "ew75h@gmail.com",
+    "password": "15156328",
+    "confirmarPassword": "15156328"
+  },
+  {
+    "nombre": "Abraham ",
+    "apellido": "Bustamante",
+    "telefono": "152312348",
+    "email": "abraham@gmail.com",
+    "password": "Caracas2022",
+    "confirmarPassword": "Caracas2022"
+  },
+  {
+    "Nombre": "CATERINA",
+    "Apellido": "ALOI",
+    "Telefono": "455555",
+    "Email": "SDFDGDG@gmail.ocm",
+    "Password": "1222256746",
+    "ConfirmarPassword": "4245464566"
+  },
+  {
+    "Nombre": "WACHA",
+    "Apellido": "MARTINEZ",
+    "Telefono": "91155847563",
+    "Email": "wacha@gmail.com",
+    "Password": "11233566",
+    "ConfirmarPassword": "4555555",
+    "Politicas": "Politicas",
+    "img": "img-1646006317054.png"
+  },
+  {
+    "Nombre": "srfert",
+    "Apellido": "gdggs",
+    "Telefono": "45646456",
+    "Email": "catya@gmail.com",
+    "password": "$2a$10$ocPGprqDJmE1Q6eJqVYemOyAQqsj4IUt6N7FkIrSSDbLG6CQdqLHC",
+    "confirmarPassword": "11112446546",
+    "img": "img-1646009970589.png"
+  },
+  {
+    "Nombre": "Juana",
+    "Apellido": "Perez",
+    "Telefono": "",
+    "Email": "",
+    "password": "$2a$10$CcBaktj6uzk6muhs3fhRVuFy3knxNkZ8JyP8fBbrJX5gZ00awjDf6",
+    "confirmarPassword": "$2a$10$ciTi.8E4rOuJx3r7yOsgluQl/.Q7kyOmY7xRPYM3/Ohd3pC32936O",
+    "img": "img-1646010790370.png"
+  },
+  {
+    "Nombre": "Juan",
+    "Apellido": "Perez",
+    "Telefono": "121235",
+    "Email": "juan@gmail.com",
+    "password": "$2a$10$NBTvbcGicrJmZ2tELxccCu/bb5QIo0jTlFEbsAv8IiV0WF95QFhwa",
+    "confirmarPassword": "$2a$10$fUBn/iJ.IR65PJAFLmNZOOXr1GNMhhHcomzYGe7nKs5wnFDIw1Uya",
+    "img": "img-1646010823920.png"
+  },
+  {
+    "Nombre": "Alberto",
+    "Apellido": "Marlrt",
+    "Telefono": "123456789",
+    "Email": "alberto@gmail.com",
+    "password": "$2a$10$AftMd.QaBk2RVdk7VaXOz.NaDdOqZ/rPU9e6UDOwJCb42Mz49UBka",
+    "confirmarPassword": "123456",
+    "Politicas": "Politicas",
+    "img": "img-1646012439390.jpg"
+  },
+  {
+    "Nombre": "dgdsg",
+    "Apellido": "dgdsgsdg",
+    "Telefono": "4565445",
+    "Email": "dsfsgf@gmail.com",
+    "password": "$2a$10$p9iKjMOtwxo6KFcaqPaOxufr/ptCkbTuCqXpPR4yCCqKK7W2mAyIq",
+    "confirmarPassword": "1234",
+    "img": "img-1646013602306.png"
+  },
+  {
+    "Nombre": "fsfsf",
+    "Apellido": "sdsgsg",
+    "Telefono": "112233",
+    "Email": "dfsdsggs@gmail.com",
+    "password": "$2a$10$nE0rWcgol8wdNtTQ6.gquO2.V1n0gYdjBweAcrwfnUDWdIi/vpH2O",
+    "confirmarPassword": "1234",
+    "img": "img-1646013756184.png"
+  },
+  {
+    "Nombre": "eeeee",
+    "Apellido": "eeeee",
+    "Telefono": "678676",
+    "Email": "sfdssdg@gmail.com",
+    "password": "$2a$10$hKeqmRARD/eIxEtEP60caeSkWZ7se3DkJbAv1fV5YVXufZFJGMHpm",
+    "confirmarPassword": "123456",
+    "img": "img-1646013807268.png"
+  },
+  {
+    "Nombre": "fgdg",
+    "Apellido": "gdgdsg",
+    "Telefono": "67656",
+    "Email": "fsfdsg@gmail.com",
+    "password": "$2a$10$AqTHhG4fzLi9IwWAU5BQlOAduhgW6BinBlSlql.6W4ymhQ34FEXHe",
+    "confirmarPassword": "4654646",
+    "img": "img-1646013888584.png"
+  },
+  {
+    "Nombre": "rewet",
+    "Apellido": "wtewtwet",
+    "Telefono": "646678",
+    "Email": "fsfsf@gmail.com",
+    "password": "$2a$10$x1YFjCb6do7MNB0ySmPfoeN.9sCXf16rc8PBFNEI4TRtll9g1cTTS",
+    "confirmarPassword": "123456",
+    "img": "img-1646013942604.png"
+  },
+  {
+    "Nombre": "dadfasfa",
+    "Apellido": "ffasfasgf",
+    "Telefono": "54545",
+    "Email": "sdsfs@gmail.com",
+    "password": "$2a$10$.S1wjDQBDysqWiyXTXBt4.KQE9yf899L4t8FMY7SAi96lxRdFhzOa",
+    "confirmarPassword": "12345",
+    "politicas": "politicas",
+    "img": "img-1646015514257.png"
+  },
+  {
+    "Nombre": "Alberto",
+    "Apellido": "Fernandez",
+    "Telefono": "115212332",
+    "Email": "dgdfghfdh@gmail.com",
+    "password": "$2a$10$IzE.VZsUs6tZNvDnGzexKOfETZDYJIThKVz5L.wjsam6EDr45WkvW",
+    "confirmarPassword": "1233452",
+    "politicas": "politicas",
+    "img": "img-1646096098320.jpg"
+  }
+]

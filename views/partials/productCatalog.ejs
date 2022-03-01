@@ -4,11 +4,11 @@
     </a>
 
     <div class="info-prod-price">
-        <span class="name-prod-al" >Zapatilla <%= producto.marca %> </span>
+        <span class="name-prod-al" ><%= producto.nombreProducto %> </span>
         <a href="/detalle/<%= producto.id %>" class="">
             <%= producto.marca %> <br>
             para <%= producto.categoria %>.
         </a>
-        <span class="price-acl"><%= producto.precio %></span>
+        <span class="price-acl"> $ <%= producto.precio %></span>
     </div>    
 </div>

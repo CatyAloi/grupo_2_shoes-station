@@ -24,5 +24,5 @@ app.use ('/', rutasUsers);
 app.post('/contacto', (req,res) =>{
     return res.send(req.body)
 })
-
+ 
 app.listen(3000, () => console.log('Servidor Shoes_Station corriendo, http://localhost:3000'));
