@@ -10,20 +10,38 @@
 
             <p id="ca_requeridos">(*)Campos Requeridos</p>
 
-            <label class= "label_register" for="Nombre">* Nombre</label>
-            <input class="ca_input_register" type="text" name = "Nombre" placeholder="">
+            <div class="input-container">
+                <label class= "label_register" for="nombre">* Nombre</label>
+                <input class="ca_input_register" type="text" name="nombre" placeholder="" value="<%= data.nombre %>">
+                <% if (errors.nombre) { %> 
+                    <span class="error"><%= errors.nombre.msg %> </span>
+                    <br><br>
+                <% } %>
+            </div>
             
-            <label class= "label_register" for="Apellido">* Apellido</label>
-            <input class="ca_input_register" type="text" name = "Apellido" placeholder="">
+            <label class= "label_register" for="apellido">* Apellido</label>
+            <input class="ca_input_register" type="text" name="apellido" placeholder="" value="<%= data.apellido %>">
 
             <label  class="label_register"for="img">Agregar imagen o Avatar de perfil:</label>
             <input class="ca_input_register"  type="file" name="img" id="img" (acepta solo formatos.jpg, .png)>
         
-            <label class= "label_register" for="Telefono">* Teléfono (cod. área + número)</label>
-            <input class="ca_input_register" type="number" name = "Telefono" placeholder="">
+            <div class="input-container">
+                <label class= "label_register" for="telefono">* Teléfono (cod. área + número)</label>
+                <input class="ca_input_register" type="number" name="telefono" placeholder="" value="<%= data.telefono %>">
+                <% if (errors.telefono) { %> 
+                    <span class="error"><%= errors.telefono.msg %> </span>
+                    <br><br>
+                <% } %>
+            </div>
 
-            <label class= "label_register" for="Email">* Email</label>
-            <input class="ca_input_register" type="email" name = "Email" placeholder="">
+            <div class="input-container">
+                <label class= "label_register" for="email">* Email</label>
+                <input class="ca_input_register" type="email" name="email" placeholder="" value="<%= data.email %>">
+                <% if (errors.email) { %> 
+                    <span class="error"><%= errors.email.msg %> </span>
+                    <br><br>
+                <% } %>
+            </div>
 
             <label class= "label_register" for="password">* Contraseña (mínimo 8 caracteres)</label>
             <input class="ca_input_register" type="password" name = "password" placeholder="">

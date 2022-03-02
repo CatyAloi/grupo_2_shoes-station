@@ -273,3 +273,15 @@ html, body {
         align-items: center;
     }
 }
+
+.input-container {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    color: #f5576c;
+    left: 0;
+    bottom: 22px;
+    font-size: 11px;
+}

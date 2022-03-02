@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const router = express.Router();
 const multer = require('multer');
+const { body, check } = require ('express-validator');
+const router = express.Router();
 
 const storage = multer.diskStorage({
     // Carpeta destino del archivo
@@ -22,10 +23,17 @@ let usersControllers = require('../controllers/usersControllers');
 
 router.get('/login', usersControllers.login);
 
-
 //CREAR O REGISTRAR UN USUARIO//
 router.get('/registro', usersControllers.registro);
 
-router.post('/registro', upload.single('img'), usersControllers.updateRegistro);
+router.post(
+    '/registro',
+    upload.single('img'),
+    check('nombre', 'El nombre es requerido').notEmpty(),
+    check('telefono').notEmpty().withMessage('El teléfono es requerido').isNumeric().withMessage('Solo se aceptan números'),
+    check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no es valido'),
+    usersControllers.formValidationRegister,
+    usersControllers.updateRegistro
+);
 
 module.exports = router;

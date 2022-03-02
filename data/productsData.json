@@ -25,11 +25,19 @@
     "img": "ma_002.jpg",
     "precio": "18500",
     "descuento": "",
-    "descripcion": "                    Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                ",
+    "descripcion": "Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                ",
     "marca": "Adidas",
     "categoria": "hombre",
     "status": "activo",
-    "stock": ""
+    "stock": "",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ]
   },
   {
     "id": 3,
@@ -38,7 +46,7 @@
     "img": "ha_003.jpg",
     "precio": "18.500",
     "descuento": "10%",
-    "descripcion": "                    Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.\r\n                ",
+    "descripcion": "Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.\r\n                ",
     "talle": [
       "40",
       "41",
