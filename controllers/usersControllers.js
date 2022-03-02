@@ -18,7 +18,6 @@ const users_Controllers = {
 
     formValidationRegister: (req, res, next) => {
         req.errors = validationResult(req);
-
         if (req.errors.isEmpty()) {
             next();
         } else {
@@ -35,6 +34,7 @@ const users_Controllers = {
     //GUARDAR O AGREGAR UN NUEVO USUARIO A LA BD 
     updateRegistro: (req,res)=> { 
         let usuarioNew = (req.body);
+        delete usuarioNew.confirmarPassword;
         if (req.file) {
             usuarioNew.img = req.file.filename;
         }
@@ -44,8 +44,7 @@ const users_Controllers = {
         fs.writeFileSync('./data/usersData.json', usuarioNewJson);
         
         res.redirect('/login'); 
-    }
-        
+    }     
 };
 
 module.exports = users_Controllers;

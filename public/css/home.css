@@ -137,7 +137,6 @@ a {
     display: flex;
     justify-content: left;
     height: 320px;
-    /* width: 4000px; */
     margin: 10px auto;
     margin-left: -280px;
 }

@@ -17,7 +17,7 @@
   margin-bottom: 20px;
   padding: 16px;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 14px;
   border-color: #c2c2c294;
   background: hsla(208, 92%, 60%, 0.2);
   border-radius: 5px;
@@ -28,7 +28,8 @@
   color:#000000;
   text-align: center;
   margin: 0;
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: 500;
   margin-bottom: 25px; 
 }
 
@@ -38,15 +39,16 @@
 
 #btn_cancelar {
   text-align: center;
+  align-content: center;
   background-image:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);;
   color:rgb(0, 0, 0);
-  padding: 10px;
   margin: 5px;
   text-decoration: none;
-  font-size: 25px;
-  font-weight: bold;
+  font-family: 'Prompt', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   width: 30%;
-  height: 60px;
+  height: 40px;
   border-radius: 8px;
   border: none;
   color: rgb(0, 0, 0);
@@ -59,10 +61,11 @@
   margin: 5px;
   text-decoration: none;
   text-align: center;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Prompt', sans-serif;
   width: 60%;
-  height: 60px;
+  height: 40px;
   border-radius: 8px;
   border: none;
   color: rgb(0, 0, 0);
@@ -70,4 +73,27 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   margin-bottom: 15px;
   cursor: pointer;
+}
+
+#btn_cancelar:active {
+  transform: translateY(4px);
+}
+
+#btn_agregar {
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 440px){
+  .flex_cancelar_agregar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #btn_cancelar {
+    width: 100%;
+  }
+
+  #btn_agregar {
+    width: 100%;
+  }
 }

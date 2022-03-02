@@ -162,5 +162,14 @@
     "password": "$2a$10$6Bk0pxS1Bmrn1TKtJXZ8hOa0mRst.hqGWinRWdcBMXA7/QkPeass6",
     "confirmarPassword": "",
     "politicas": "politicas"
+  },
+  {
+    "nombre": "Lalalala",
+    "apellido": "lalalalalala",
+    "telefono": "784589",
+    "email": "xxx@gmail.com",
+    "password": "$2a$10$xprN5J4or1lq1Be.MxFkre3btkFKbot7SFXqJeE6SatwdnrkXHeTa",
+    "politicas": "politicas",
+    "img": "img-1646241345950.png"
   }
 ]

@@ -32,6 +32,10 @@ router.post(
     check('nombre', 'El nombre es requerido').notEmpty(),
     check('telefono').notEmpty().withMessage('El teléfono es requerido').isNumeric().withMessage('Solo se aceptan números'),
     check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no es valido'),
+    check('password').notEmpty().withMessage('La contraseña es requerida'),
+    check('confirmarPassword')
+        .notEmpty().withMessage('La contraseña es requerida')
+        .custom((value, {req}) => (value === req.body.password)).withMessage('Las contraseñas no coinciden'),
     usersControllers.formValidationRegister,
     usersControllers.updateRegistro
 );

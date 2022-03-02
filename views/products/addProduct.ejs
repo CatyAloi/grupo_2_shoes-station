@@ -79,9 +79,12 @@
     
             <label class="label_edition" for="stock">Stock</label>
             <input class="ca_input_add" type="number" name ="stock" id="stock">
-                  
-            <input type="reset" value="Cancelar" id="btn_cancelar">
-            <input type="submit" value="Crear Producto" id="btn_agregar">
+                
+            <div class="flex_cancelar_agregar">
+                <input type="reset" value="Cancelar" id="btn_cancelar" >
+                <input type="submit" value="Crear Producto" id="btn_agregar">
+            </div>
+            
         </form>
     </section>
     <%- include('../partials/footer'); %>    

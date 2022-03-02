@@ -43,14 +43,25 @@
                 <% } %>
             </div>
 
-            <label class= "label_register" for="password">* Contraseña (mínimo 8 caracteres)</label>
-            <input class="ca_input_register" type="password" name = "password" placeholder="">
+            <div class="input-container">
+                <label class= "label_register" for="password">* Contraseña (mínimo 8 caracteres)</label>
+                <input class="ca_input_register" type="password" name = "password" placeholder="">
+                <% if (errors.password) { %> 
+                    <span class="error"><%= errors.password.msg %> </span>
+                    <br><br>
+                <% } %>
+            </div>
 
-            <label  class= "label_register" for="confirmarPassword">* Confirmar Contraseña</label>
-            <input class="ca_input_register" type="password" name = "confirmarPassword" placeholder="">
-           
-            <label class= "label_register" for="politicas"><input type="checkbox" name="politicas" value ="politicas">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
+            <div class="input-container">
+                <label  class= "label_register" for="confirmarPassword">* Confirmar Contraseña</label>
+                <input class="ca_input_register" type="password" name = "confirmarPassword" placeholder="">
+                <% if (errors.confirmarPassword) { %> 
+                    <span class="error"><%= errors.confirmarPassword.msg %> </span>
+                    <br><br>
+                <% } %>
+            </div>
             
+            <label class= "label_register" for="politicas"><input type="checkbox" name="politicas" value ="politicas">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
             
             <input type="submit" value="Crear mi Cuenta" id="btn_register">
             <p class="ca_cuenta">¿Ya tienes una Cuenta?<a href="/login"> Ingresá acá</a></p>
