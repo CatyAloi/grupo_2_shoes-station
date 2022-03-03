@@ -1,33 +1,51 @@
 const bcrypt = require('bcryptjs/dist/bcrypt');
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require ('express-validator');
+const { validationResult  } = require('express-validator');
+const res = require('express/lib/response');
 const usuariosFilePath = path.join(__dirname, '../data/usersData.json');
 const usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 const users_Controllers = {
 
     login: (req,res)=> {
-        res.render('users/login');
+    //    let userToLogin = usuariosJson.findByField('email', req.body.email); 
+       res.render('users/login'); 
     },
-    
+
+    formValidationLogin: (req, res, next) => {
+        const resultErrors = validationResult(req);
+        if (resultErrors.isEmpty()) {
+            next();
+        } else {
+            const formateadoErrors = {};
+            resultErrors.array().forEach(err => {
+                if (formateadoErrors[err.param] === undefined) {
+                    formateadoErrors[err.param] = { msg: err.msg };
+                }
+            })
+        }
+
+        console.log(resultErrors.array());
+    },
+
     //MOSTRAR EL FORMULARIO DEL REGISTRO DE USUARIO
     registro: (req,res)=> {
         res.render('users/register', { errors: {}, data: {} });
     },
 
     formValidationRegister: (req, res, next) => {
-        req.errors = validationResult(req);
-        if (req.errors.isEmpty()) {
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
             next();
         } else {
-            const errors = {};
-            req.errors.errors.forEach(err => {
-                if (!errors[err.param]) {
-                    errors[err.param] = { msg: err.msg };
+            const formateadoErrors = {};
+            errors.array().forEach(err => {
+                if (!formateadoErrors[err.param]) {
+                    formateadoErrors[err.param] = { msg: err.msg };
                 }
             });
-            res.render('users/register', { errors, data: req.body });
+            res.render('users/register', { errors: formateadoErrors, data: req.body });
         } 
     },    
 
