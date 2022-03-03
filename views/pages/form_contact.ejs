@@ -5,7 +5,7 @@
     <%- include('../partials/header'); %>
     <div id="franja"></div>
     <section class="ca_container_ppal">
-        <div>
+        <div class="content-formContact-acl">
             <form class="ca_container_form" action="/contacto" method="POST">
                 <h2 class="ca_titulo_form">Déjanos tu Mensaje</h2>
                 <input class="ca_input_contact" type="text" name = "Nombre" placeholder="Nombre y Apellidos">
@@ -15,7 +15,6 @@
                 <button type="submit" id="btn_contact">Enviar</button> 
             </form>
         </div>
-
         <div>
             <div>
                 <h3 class="ca_title_met">Métodos de Pago</h3>
@@ -24,19 +23,25 @@
                 <p id="ca_intro">En Shoes'Station podés usar los siguientes métodos de pago:</p>
             </div>
 
-            <div class="font">
-                <p class="ca_name_card">Tarjetas de Crédito</p>
-                    <img src="images/visa_credito.png" alt="logo tarjeta visa">
-                    <img src="images/mastercard_credito.png" alt="logo tarjeta mastercard">
+            <div class="font card-debit-credit">
+                    <p class="ca_name_card">Tarjetas de Crédito</p>
+                    <div class="font-imgcard">
+                        <img src="images/visa_credito.png" alt="logo tarjeta visa">
+                        <img src="images/mastercard_credito.png" alt="logo tarjeta mastercard">   
+                    </div>
+                    
             </div>
 
-            <div class="font">
+            <div class="font card-debit-credit">
                 <p class="ca_name_card">Tarjetas de Débito</p>
-                <img src="images/visa_credito.png" alt="logo tarjeta visa">
-                <img src="images/maestro.png" alt="logo tarjeta maestro">
+                <div class="font-imgcard">
+                    <img src="images/visa_credito.png" alt="logo tarjeta visa">
+                    <img src="images/maestro.png" alt="logo tarjeta maestro">
+                </div>
+                
             </div>
 
-            <div class="font">
+            <div class="font merc-pago-acl">
                 <p class="ca_name_card">Mercado Pago</p>
                 <img src="images/mercadopago.png" alt="logo mercadopago">
             </div>

@@ -17,25 +17,21 @@
 }
 
 .ca_container_producto_total{/* Contenedor del nombre del producto, imagen,talle, código, input cantidad, precio, papelera*/
-    
     border: 1px solid rgba(245, 87, 108, 0.555) ;
     border-radius: 10px;
     margin: 15px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     position: relative;
-    
-    
 }
 
 .ca_container_producto{ /* Contenedor de la imagen,talle, código, input cantidad, precio, papelera*/
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
 }
+
 .ca_container_producto img{/*propiedades de la imagen*/
-    margin-left: 20%;
     width: 60%;
-    
 }
 
 .ca_nombre_producto{/*Propiedades nombre del producto*/
@@ -44,21 +40,20 @@
     margin-left: 15px;
     margin-bottom: 10px;
     font-size: 15px
-  
 }
 
 .talle_ca{/*propiedades del texto del TALLE y el CÓDIGO*/
     font-size: 15px;
     text-align: center;
+    margin: 0;
 }
 
 .ca_data_producto{/*Contenedor del input cantidad + precio producto*/
     display: flex;
     justify-content: center;
     align-items: center;
-    
- 
 }
+
 .ca_cantidad_producto input{ /*propiedades del input para la cantidad de productos*/
     width: 30px;
     height: 20px;
@@ -70,34 +65,26 @@
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%);
 }
 
-
 .margin{/*aplicación de margen al input cantidad + precio producto*/
     margin: 10px;
 }
+
+.fa-trash-alt {
+    font-size: 20px;
+    padding: 10px;
+}
+
 .precio_ca{/*propiedades del precio del producto*/
-    
     font-size: 18px;
-    font-weight: bold;
- 
+    font-weight: 500;
 }
 
-.ca_remove_product{
-position: relative;
-
-}
 .ca_container_producto_total .ca_btn_trash{/*propiedades contenedor(boton) del icono papelera*/
-    
     border: none;
     border-radius: 0;
     font-size: 15px;
-    position: absolute;
-    top: 0;
-    right: 3%;
     bottom: 0;
-    padding-right: 10px;
-    background-color: transparent;
-    margin-top: -170%;
-   
+    background-color: transparent;   
 }
 
 .ca_container_dos{/*Contenedor del label envio, input codigo postal, boton calcular, texto subtotal, texto costo envío, texto monto total*/
@@ -106,11 +93,9 @@ position: relative;
     border-radius: 10px;
     padding: 10px;
     margin: 15px;
-    
 }
 
 .ca_label_envio{/*propiedades del label*/
-
     margin-left: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -118,9 +103,9 @@ position: relative;
 
 .ca_calculo_envio{/*Contenedor del input Cod. Postal + botón Calcular*/
     display: flex;
-    
-    
+    justify-content: center;
 }
+
 .ca_codigo_postal{/*propiedades del input Cod Postal*/
     text-indent: 5px;
     width: 60%;
@@ -128,15 +113,14 @@ position: relative;
     border: solid 1px #a3a2a2;
     outline: none;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%)
-
 }
+
 .ca_calcular >button{/*propiedades del botón Calcular*/
     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
     border: solid 1px #f5576c;
     height:25px;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 19%);  
 }
-
 
 .ca_subtotal_carrito {/*propiedades del texto SUBTOTAL*/
     padding: 10px;
@@ -151,12 +135,13 @@ position: relative;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
-}   
+} 
+
 .shopping{/*propiedades del botón Finalizar*/
     font-size: 18px;
     font-weight: 500;
     font-family: 'Prompt', sans-serif;
-    width: 100%;
+    width: 90%;
     height: 40px;
     border-radius: 8px;
     border: none;
@@ -164,15 +149,22 @@ position: relative;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 15px;
     cursor: pointer;
-    
 }
-   
+
+.shopping-button-acl {
+    display: flex;
+    justify-content: center;
+}
+
+.ca_container_dos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
  /*TABLET*/
 
-@media (min-width:500px) and (max-width:1020px) {
-    
-  
-
+@media (min-width:600px) and (max-width:1020px) {
     .ca_container_producto{/*Contenedor de la imagen,talle, código, input cantidad, precio, papelera*/
         display: flex;
         flex-direction: row;
@@ -187,12 +179,11 @@ position: relative;
 
     .talle_ca{/*propiedades del TALLE y el CÓDIGO del producto*/
         font-size: 20px;
-     }
-
-     .ca_container_dos{/*Contenedor del label envio, input codigo postal, boton calcular, texto subtotal, texto costo envío, texto monto total*/
-        box-shadow: 0px 0px 10px rgb(100,100,100); 
     }
 
+    .ca_container_dos{/*Contenedor del label envio, input codigo postal, boton calcular, texto subtotal, texto costo envío, texto monto total*/
+        box-shadow: 0px 0px 10px rgb(100,100,100); 
+    }
     
     .fa-trash-alt{
         font-size: 16px;
@@ -201,30 +192,27 @@ position: relative;
         align-items: center;
         margin-right:18px; 
     }
-              
 }
     
 
 /*DESKTOP*/
 
 @media (min-width: 1024px) {
-
     .ca_titulo_carrito{/*Propiedades del Titulo: Mi Carrito*/
         font-size: 30px;
     }
+
     .comprar_mas >a{/*Propiedades link seguir comprando*/
         font-size: 18px;
-    
     }
+
     .ca_nombre_producto{/*Propiedades nombre del producto*/
         font-size: 25px;
         margin: 30px;
     }
 
-
     .talle_ca{/*propiedades del texto del TALLE y el CÓDIGO*/
         font-size: 18px;
-       
     }
 
     .ca_container_producto{/* Contenedor de la imagen,talle, código, input cantidad, precio, papelera*/
@@ -235,25 +223,22 @@ position: relative;
     }
 
     .ca_container_producto img{/*propiedades de la imagen*/
-        margin-left: 10px;
+        margin: 10px;
         width: 150px;
     }
     .ca_cantidad_producto >input{/*propiedades del input para la cantidad de productos*/
         width: 70px;
         height: 35px;
         font-size: 22px;
-       
     }
 
     .precio_ca{/*propiedades del precio del producto*/
         font-size: 25px;
-
     }
  
     .fa-trash-alt{/*propiedades papelera*/
         margin-right:25px;
-        font-size: 16px;
-        
+        font-size: 16px; 
     }
 
     .ca_container_uno{/*Contenedor del container dos para aplicarle flex-box*/
@@ -262,7 +247,9 @@ position: relative;
     }
     .ca_container_dos{/*Contenedor del label envio, input codigo postal, boton calcular, texto subtotal, texto costo envío, texto monto total*/
         width: 30%;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .ca_container_button{/*Contenedor del botón Finalizar*/
@@ -271,13 +258,8 @@ position: relative;
         margin: 15px;
     }
 
-     
     .shopping{/*Propiedades del botón Finalizar*/
         width: 450px; 
-        font-size: 18px;
-        font-weight: bold;
-         
-    }
-
-   
+        font-size: 18px;     
+    }   
 }

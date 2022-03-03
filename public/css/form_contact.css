@@ -8,10 +8,15 @@
 }
 
 /*SECCION FORMULARIO*/
+
+.content-formContact-acl {
+    display: flex;
+    justify-content: center;
+}
+
 .ca_container_form{
     box-sizing: border-box;
     width: 90%;
-    margin-left: 17px;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 100px;
@@ -40,6 +45,7 @@
     background: hsla(208, 92%, 60%, 0.2);
     border-radius: 5px;
     border: none;
+    font-family: 'Prompt', sans-serif;
 }
  
 #ca_textarea {
@@ -49,13 +55,13 @@
 }
  
 #btn_contact {
-    margin: 5px;
     text-decoration: none;
+    font-family: 'Prompt', sans-serif;
     text-align: center;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 8px;
     border: none;
     color: rgb(0, 0, 0);
@@ -78,7 +84,23 @@
     text-align: center;
 }
 
-.font >img{
+.merc-pago-acl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.font-imgcard {
+    display: flex;
+    justify-content: center;    
+}
+
+.font-imgcard > img{
+    width: 30%;
+    margin: 15px;
+}
+
+.merc-pago-acl > img {
     width: 30%;
     margin: 15px;
 }
