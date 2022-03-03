@@ -19,8 +19,15 @@
                 <% } %>
             </div>
             
-            <label class= "label_register" for="apellido">* Apellido</label>
-            <input class="ca_input_register" type="text" name="apellido" placeholder="" value="<%= data.apellido %>">
+            <div class="input-container">
+                <label class= "label_register" for="apellido">* Apellido</label>
+                <input class="ca_input_register" type="text" name="apellido" placeholder="" value="<%= data.apellido %>">
+                <% if (errors.apellido) { %> 
+                    <span class="error"><%= errors.apellido.msg %> </span>
+                    <br><br>
+                <% } %>
+            </div>
+            
 
             <label  class="label_register"for="img">Agregar imagen o Avatar de perfil:</label>
             <input class="ca_input_register"  type="file" name="img" id="img" (acepta solo formatos.jpg, .png)>
@@ -61,7 +68,9 @@
                 <% } %>
             </div>
             
-            <label class= "label_register" for="politicas"><input type="checkbox" name="politicas" value ="politicas">Acepto las Políticas de Privacidad y Términos y Condiciones</label>
+            <label class= "label_register" for="politicas">
+                <input type="checkbox" name="politicas" value ="politicas"> Acepto las Políticas de Privacidad y Términos y Condiciones
+            </label>
             
             <input type="submit" value="Crear mi Cuenta" id="btn_register">
             <p class="ca_cuenta">¿Ya tienes una Cuenta?<a href="/login"> Ingresá acá</a></p>

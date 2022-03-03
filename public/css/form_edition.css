@@ -48,7 +48,7 @@
 }
 
 .editNew-prod {
-    width: 200px;
+    width: 80%;
 }
 
 #btn_cancelar-acl {
@@ -94,6 +94,10 @@
     .container-cancl-edit-alc {
         display: flex;
         justify-content: center;
+    }
+
+    .editNew-prod {
+        width: 200px;
     }
 }
 

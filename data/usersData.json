@@ -171,5 +171,19 @@
     "password": "$2a$10$xprN5J4or1lq1Be.MxFkre3btkFKbot7SFXqJeE6SatwdnrkXHeTa",
     "politicas": "politicas",
     "img": "img-1646241345950.png"
+  },
+  {
+    "nombre": "lalalala",
+    "apellido": "jajkajakaka",
+    "telefono": "4585458",
+    "email": "xxx@gmail.com",
+    "password": "$2a$10$qH0VvJW2UE4YIYz8shJCNuv/11AehTHaB2cbFE8FIPxzjs/K.l8ry"
+  },
+  {
+    "nombre": "sdsfhsdifs",
+    "apellido": "dfgsfhdf",
+    "telefono": "1254528552",
+    "email": "xxx@gmail.com",
+    "password": "$2a$10$oWcZBV2BsohFzSqPIqU0k.h.WMbcOsohWH6x1XVU49gEkp6eazN0u"
   }
 ]

@@ -32,7 +32,7 @@ const users_Controllers = {
     },    
 
     //GUARDAR O AGREGAR UN NUEVO USUARIO A LA BD 
-    updateRegistro: (req,res)=> { 
+    storeRegistro: (req,res)=> { 
         let usuarioNew = (req.body);
         delete usuarioNew.confirmarPassword;
         if (req.file) {
