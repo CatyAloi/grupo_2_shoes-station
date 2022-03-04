@@ -8,11 +8,24 @@
         <form class="ca_container_login" action="" method="POST">
             <h2 class="ca_titulo_login">Iniciar Sesión</h2>        
 
-            <label class= "label_login" for="email">* Email</label>
-            <input class="ca_input_login" type="email" name="email" placeholder="">
-           
-            <label class= "label_login" for="password">* Contraseña</label>
-            <input class="ca_input_login" type="password" name="password" placeholder="">
+            <div class="input-container">
+                <label class= "label_login" for="email">* Email</label>
+                <input class="ca_input_login" type="email" name="email" placeholder="">
+                <% if (resultErrors.email) { %>
+                    <span class="error"> <%= resultErrors.email.msg %> </span>
+                    <br><br>   
+                <% } %>  
+            </div>
+
+            <div class="input-container">
+                <label class= "label_login" for="password">* Contraseña</label>
+                <input class="ca_input_login" type="password" name="password" placeholder="">
+                <% if (resultErrors.email) { %>
+                    <span class="error"> <%= resultErrors.password.msg %> </span>
+                    <br><br>   
+                <% } %>  
+            </div>
+            
 
             <div class="ca_container_recuperar">
                 <label class= "label_checkbox" for=""><input type="checkbox" name="recordarPassword" value ="recordarPassword">  Recuerdame</label>
@@ -27,10 +40,3 @@
     <%- include('../partials/footer'); %>
 </body>
 </html>
-
-
-
-
-
-
-

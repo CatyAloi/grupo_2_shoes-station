@@ -10,7 +10,7 @@ const users_Controllers = {
 
     login: (req,res)=> {
     //    let userToLogin = usuariosJson.findByField('email', req.body.email); 
-       res.render('users/login'); 
+       res.render('users/login', { resultErrors: {} }); 
     },
 
     formValidationLogin: (req, res, next) => {
@@ -23,10 +23,10 @@ const users_Controllers = {
                 if (formateadoErrors[err.param] === undefined) {
                     formateadoErrors[err.param] = { msg: err.msg };
                 }
-            })
+            }); 
+            res.render('users/login', { resultErrors: formateadoErrors });
         }
-
-        console.log(resultErrors.array());
+        // console.log(resultErrors.array());
     },
 
     //MOSTRAR EL FORMULARIO DEL REGISTRO DE USUARIO
