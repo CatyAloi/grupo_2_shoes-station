@@ -23,6 +23,11 @@
     font-weight: 500;
     margin-bottom: 25px; 
 }
+
+.error-login {
+    font-size: 11px;
+    color: crimson;
+}
  
 .ca_input_login {
     width: 100%;

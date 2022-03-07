@@ -9,6 +9,12 @@
             <h2 class="ca_titulo_register">Registrarme</h2>
 
             <p id="ca_requeridos">(*)Campos Requeridos</p>
+            <div class="container-error-login">
+                <% if (errorEmail) { %>
+                    <span class="error-login"> <%= errorEmail%> </span>
+                    <br><br>  
+                <% } %>     
+            </div>
 
             <div class="input-container">
                 <label class= "label_register" for="nombre">* Nombre</label>

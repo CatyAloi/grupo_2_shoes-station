@@ -6,12 +6,15 @@
     <div id="franja"></div>
     <div>
         <form class="ca_container_login" action="/login" method="POST">
-            <h2 class="ca_titulo_login">Iniciar Sesión</h2>     
+            <h2 class="ca_titulo_login">Iniciar Sesión</h2>   
             
-            <% if (errorLogin) { %>
-                <span class="error"> <%= errorLogin%> </span>
-                <br><br>  
-            <% } %>   
+            <div class="container-error-login">
+                <% if (errorLogin) { %>
+                    <span class="error-login"> <%= errorLogin%> </span>
+                    <br><br>  
+                <% } %>     
+            </div>
+            
 
             <div class="input-container">
                 <label class= "label_login" for="email">* Email</label>

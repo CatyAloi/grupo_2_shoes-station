@@ -49,13 +49,13 @@ const users_Controllers = {
                     formateadoErrors[err.param] = { msg: err.msg };
                 }
             }); 
-            res.render('users/login', { resultErrors: formateadoErrors });
+            res.render('users/login', { resultErrors: formateadoErrors, errorLogin: undefined });
         }
     },
 
     //MOSTRAR EL FORMULARIO DEL REGISTRO DE USUARIO
     registro: (req,res)=> {
-        res.render('users/register', { errors: {}, data: {} });
+        res.render('users/register', { errors: {}, data: {}, errorEmail: undefined});
     },
 
     formValidationRegister: (req, res, next) => {
@@ -75,19 +75,25 @@ const users_Controllers = {
 
     //GUARDAR O AGREGAR UN NUEVO USUARIO A LA BD 
     storeRegistro: (req,res)=> { 
-        let usuarioNew = (req.body);
+        let usuarioNew = req.body;
         delete usuarioNew.confirmarPassword;
-        if (req.file) {
-            usuarioNew.img = req.file.filename;
+        let userInDb = usuariosJson.find(usuario => {
+            return usuario.email === usuarioNew.email;
+        });
+        if(userInDb) {
+            res.render('users/register', { errorEmail: 'El Email ya existe', data: {}, errors: {} });
+        } else {
+            if (req.file) {
+                usuarioNew.img = req.file.filename;
+            }
+            const salt = bcrypt.genSaltSync(10);
+            usuarioNew.password = bcrypt.hashSync(req.body.password.trim(), salt);
+            usuariosJson.push(usuarioNew)
+            const usuarioNewJson = JSON.stringify(usuariosJson, null, 2);
+            fs.writeFileSync('./data/usersData.json', usuarioNewJson);
+            
+            res.redirect('/login');
         }
-        
-        const salt = bcrypt.genSaltSync(10);
-        usuarioNew.password = bcrypt.hashSync(req.body.password.trim(), salt);
-        usuariosJson.push(usuarioNew)
-        const usuarioNewJson = JSON.stringify(usuariosJson, null, 2);
-        fs.writeFileSync('./data/usersData.json', usuarioNewJson);
-        
-        res.redirect('/login'); 
     }     
 };
 
