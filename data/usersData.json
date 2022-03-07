@@ -150,7 +150,7 @@
     "nombre": "asdasd",
     "apellido": "asdafdfsvaefv",
     "telefono": "123123",
-    "email": "xxx@gmail.com",
+    "email": "5555@gmail.com",
     "password": "$2a$10$TaNfnMXgPF1FPxd.Is3oPehj6Y1.i.W4CfvgOzo9/fP7ZRJXHsxQG",
     "confirmarPassword": ""
   },
@@ -158,7 +158,7 @@
     "nombre": "qweqwe",
     "apellido": "asdafdfsvaefv",
     "telefono": "123123",
-    "email": "xxx@gmail.com",
+    "email": "2126s3@gmail.com",
     "password": "$2a$10$6Bk0pxS1Bmrn1TKtJXZ8hOa0mRst.hqGWinRWdcBMXA7/QkPeass6",
     "confirmarPassword": "",
     "politicas": "politicas"
@@ -167,7 +167,7 @@
     "nombre": "Lalalala",
     "apellido": "lalalalalala",
     "telefono": "784589",
-    "email": "xxx@gmail.com",
+    "email": "ddd@gmail.com",
     "password": "$2a$10$xprN5J4or1lq1Be.MxFkre3btkFKbot7SFXqJeE6SatwdnrkXHeTa",
     "politicas": "politicas",
     "img": "img-1646241345950.png"
@@ -176,14 +176,21 @@
     "nombre": "lalalala",
     "apellido": "jajkajakaka",
     "telefono": "4585458",
-    "email": "xxx@gmail.com",
+    "email": "x333xx@gmail.com",
     "password": "$2a$10$qH0VvJW2UE4YIYz8shJCNuv/11AehTHaB2cbFE8FIPxzjs/K.l8ry"
   },
   {
     "nombre": "sdsfhsdifs",
     "apellido": "dfgsfhdf",
     "telefono": "1254528552",
-    "email": "xxx@gmail.com",
+    "email": "4444@gmail.com",
     "password": "$2a$10$oWcZBV2BsohFzSqPIqU0k.h.WMbcOsohWH6x1XVU49gEkp6eazN0u"
+  },
+  {
+    "nombre": "ssss",
+    "apellido": "ssss",
+    "telefono": "123123",
+    "email": "xxx@gmail.com",
+    "password": "$2a$10$5rogkFJPgV1xVsw7fZdPMu83./LoXUXQv.IJBWstfZ9rwMMm.fg1a"
   }
 ]

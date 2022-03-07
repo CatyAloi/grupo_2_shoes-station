@@ -1,16 +1,41 @@
-const bcrypt = require('bcryptjs/dist/bcrypt');
+// const bcrypt = require('bcryptjs/dist/bcrypt');
+const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 const { validationResult  } = require('express-validator');
 const res = require('express/lib/response');
+const { use } = require('../routes/usersRoutes');
 const usuariosFilePath = path.join(__dirname, '../data/usersData.json');
 const usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 const users_Controllers = {
 
     login: (req,res)=> {
-    //    let userToLogin = usuariosJson.findByField('email', req.body.email); 
-       res.render('users/login', { resultErrors: {} }); 
+       res.render('users/login', { resultErrors: {}, errorLogin: undefined }); 
+    },
+      
+    loginProcess: (req, res) => { 
+        const email = req.body.email;
+        const password = req.body.password.trim();
+
+        let userToLogin = usuariosJson.find(usuario => {
+           return usuario.email === email;
+        });
+
+        if(userToLogin === undefined){
+            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
+        }
+
+        const passwordCorrecto = bcrypt.compareSync(password, userToLogin.password);
+
+        if (!passwordCorrecto){
+            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
+            return;
+        }
+        // delete userToLogin.password; // para que no se mantenga el password en toda la aplicación; 
+        // para simular el login por ahora redirecciono al home, Falta propagar los dato del usuario.
+        res.redirect('/');
+        return;
     },
 
     formValidationLogin: (req, res, next) => {
@@ -26,7 +51,6 @@ const users_Controllers = {
             }); 
             res.render('users/login', { resultErrors: formateadoErrors });
         }
-        // console.log(resultErrors.array());
     },
 
     //MOSTRAR EL FORMULARIO DEL REGISTRO DE USUARIO
@@ -56,7 +80,9 @@ const users_Controllers = {
         if (req.file) {
             usuarioNew.img = req.file.filename;
         }
-        usuarioNew.password = bcrypt.hashSync(req.body.password, 10);
+        
+        const salt = bcrypt.genSaltSync(10);
+        usuarioNew.password = bcrypt.hashSync(req.body.password.trim(), salt);
         usuariosJson.push(usuarioNew)
         const usuarioNewJson = JSON.stringify(usuariosJson, null, 2);
         fs.writeFileSync('./data/usersData.json', usuarioNewJson);
