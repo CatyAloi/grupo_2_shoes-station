@@ -477,5 +477,17 @@
     "stock": "15",
     "img": "img-1646094829452.jpg",
     "id": 26
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 27
   }
 ]

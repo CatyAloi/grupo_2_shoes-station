@@ -192,5 +192,19 @@
     "telefono": "123123",
     "email": "xxx@gmail.com",
     "password": "$2a$10$5rogkFJPgV1xVsw7fZdPMu83./LoXUXQv.IJBWstfZ9rwMMm.fg1a"
+  },
+  {
+    "nombre": "Keyla",
+    "apellido": "Guzmán",
+    "telefono": "55784123",
+    "email": "keyla@gmail.com",
+    "password": "$2a$10$UXlR2FoaFxDOdQWwyCbkr.i.HJ9w1tiaqN4eN4YkgUVqSgeXmoUTO"
+  },
+  {
+    "nombre": "Caty",
+    "apellido": "Aloi",
+    "telefono": "45233",
+    "email": "caty@gmail.com",
+    "password": "$2a$10$641kIoa6lmQKzJtzXWBqLu8qmLvPgC67MmE3lg3Q.XlNHa4fbDvoW"
   }
 ]

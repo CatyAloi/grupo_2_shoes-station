@@ -70,7 +70,7 @@ const users_Controllers = {
                     formateadoErrors[err.param] = { msg: err.msg };
                 }
             });
-            res.render('users/register', { errors: formateadoErrors, data: req.body });
+            res.render('users/register', { errors: formateadoErrors, data: req.body, errorEmail: undefined });
         } 
     },    
 
