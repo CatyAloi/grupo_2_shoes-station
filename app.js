@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const app = express();
 const bodyParser = require ('body-parser');
@@ -7,6 +8,12 @@ app.use(methodOverride('_method'));
 
 const publicPath = path.resolve (__dirname, './public');
 app.use(express.static(publicPath));
+
+app.use(session({
+    secret: 'Secret',
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());

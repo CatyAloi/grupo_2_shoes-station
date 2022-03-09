@@ -8,19 +8,19 @@ const tallesJson = JSON.parse(fs.readFileSync(dataPath + '/talles.json', 'utf-8'
 
 const product_Controllers = {
     catalogo: (req, res)=> {
-        res.render('products/catalogo', { productos: productsJson, talles: tallesJson });
+        res.render('products/catalogo', { productos: productsJson, talles: tallesJson, usuario: req.session.userLogged });
     },
     detalle: (req, res)=> {
         let producto = productsJson.find(producto => producto.id == req.params.id);
-        res.render("products/productDetail", { producto });
+        res.render("products/productDetail", { producto, usuario: req.session.userLogged });
     },
     carrito: (req, res)=> {
-        res.render('products/productCart');
+        res.render('products/productCart',{ usuario: req.session.userLogged });
     },
 
     // MUESTRA EL FORMULARIO DE AGREGAR NUEVO PRODUCTO
     crearProducto: (req,res)=> { 
-        res.render('products/addProduct', { talles: tallesJson }); 
+        res.render('products/addProduct', { talles: tallesJson, usuario: req.session.userLogged }); 
     },
 
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
@@ -75,7 +75,7 @@ const product_Controllers = {
     //EDITA EL PRODUCTO EXISTENTE          
     editarProducto: (req, res)=> {
         let producto = productsJson.find(producto => producto.id == req.params.id);
-        res.render('products/form_edition', { producto, talles: tallesJson });
+        res.render('products/form_edition', { producto, talles: tallesJson, usuario: req.session.userLogged });
     },
 
     //ELIMINA EL PRODUCTO EXISTENTE 

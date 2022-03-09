@@ -67,13 +67,34 @@ html, body {
 
 .button-search:active {
     transform: translateY(4px);
+}
 
+.user-login-acl {
+    position: relative;
+}
+
+.bxs-user-circle {
+    color: green;
+    font-size: 30px;
+    position: absolute;
+    top: -10%;
+    transform: translatex(-35px);
 }
 
 .icons_al > a {
     font-size: 30px;
     margin: 5px;
     color: rgb(0, 0, 0);;
+}
+
+.icons_al {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-login-acl {
+    margin-right: 18px;
 }
 
 /* Footer */

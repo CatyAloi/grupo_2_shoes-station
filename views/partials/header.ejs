@@ -19,7 +19,14 @@
             <button type="submit" class= "button-search"><i class='bx bx-search-alt-2'></i></button>
         </div>
         <div class="icons_al header-al">
-            <a href="/login"><i class='bx bxs-user'></i></a>
+            <% if (typeof usuario == "object") { %>
+             <div class="user-login-acl">
+                <i class='bx bxs-user-circle' ></i> <%= usuario.nombre %>  
+             </div>
+            <% } else { %>
+                 <a href="/login"><i class='bx bxs-user'></i></a> 
+            <% } %>
+
             <a href="/carrito"><i class='bx bxs-cart'></i></a>
         </div>
     </section>

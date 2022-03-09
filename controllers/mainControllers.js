@@ -22,9 +22,9 @@ module.exports = {
         ];
 
         const marcas = [];
-        res.render('pages/home', { data, marcas });
+        res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
     },
     contacto: (req, res)=> {
-        res.render('pages/form_contact');
+        res.render('pages/form_contact', { usuario: req.session.userLogged });
     }
 };

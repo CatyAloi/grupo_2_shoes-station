@@ -1,4 +1,3 @@
-// const bcrypt = require('bcryptjs/dist/bcrypt');
 const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
@@ -32,8 +31,10 @@ const users_Controllers = {
             res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
             return;
         }
-        // delete userToLogin.password; // para que no se mantenga el password en toda la aplicación; 
+        
+        delete userToLogin.password; // para que no se mantenga el password en toda la aplicación; 
         // para simular el login por ahora redirecciono al home, Falta propagar los dato del usuario.
+        req.session.userLogged = userToLogin;
         res.redirect('/');
         return;
     },
