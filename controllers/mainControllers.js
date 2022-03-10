@@ -26,5 +26,20 @@ module.exports = {
     },
     contacto: (req, res)=> {
         res.render('pages/form_contact', { usuario: req.session.userLogged });
+    },
+    terminos: (req, res)=> {
+        res.render('pages/terminos_condiciones');
+    },
+
+    privacidad: (req, res)=> {
+        res.render('pages/politicas_privacidad');
+    },
+
+    nosotros: (req, res)=> {
+        res.render('pages/nosotros');
+    },
+
+    metodos_pago: (req, res)=> {
+        res.render('pages/metodos_pago');
     }
 };

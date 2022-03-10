@@ -1,0 +1,10 @@
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+
+.nosotros > p{
+  text-align: justify;
+}

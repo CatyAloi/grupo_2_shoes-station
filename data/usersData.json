@@ -206,5 +206,20 @@
     "telefono": "45233",
     "email": "caty@gmail.com",
     "password": "$2a$10$641kIoa6lmQKzJtzXWBqLu8qmLvPgC67MmE3lg3Q.XlNHa4fbDvoW"
+  },
+  {
+    "nombre": "Caty ",
+    "apellido": "Aloi",
+    "telefono": "4512632",
+    "email": "catya2022@gmail.com",
+    "password": "$2a$10$mgJRdGS858SQX3uq1GFe2uY11ek6kJtkGdCWPpaozGNuy9b84sHkO"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Jacinto",
+    "telefono": "856331",
+    "email": "jacinto@gmail.com",
+    "password": "$2a$10$xH/PR5b3Xq5Mgsnr1Y7z3Otv.R9VEslRQ5lXMdQ8gNcrRp.fdL5/K",
+    "politicas": "politicas"
   }
 ]
