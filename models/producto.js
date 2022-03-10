@@ -5,7 +5,7 @@ const productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json',
 
 const producto_Model = {
     borrarProducto: (productoId) => {
-        const listadoActualizado = productsJson.filter(producto => parseInt(producto.id) !== parseInt(productoId));
+        const listadoActualizado = productsJson.filter(producto => producto.id !== productoId);
         console.log({ productoId });
         console.log(`Original ${productsJson.length}, final ${listadoActualizado.length}`);
         const updatedProducts = JSON.stringify(listadoActualizado, null, 2);

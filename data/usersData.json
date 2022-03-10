@@ -1,196 +1,27 @@
 [
   {
-    "id": "1",
-    "nombre": "Juan",
-    "apellido": "Perez",
-    "telefono": "55835440",
-    "email": "fgrdew@gmail.com",
-    "password": "12345678"
+    "nombre": "Usuario",
+    "apellido": "Admin",
+    "telefono": "1124585488",
+    "email": "admin@email.com",
+    "password": "$2a$10$zyqdh9yakysl9Csera.wTeZ0jKAgptvO9Hibr6fQAjoK/tS1atcmu",
+    "politicas": "on",
+    "typeUser": "admin"
   },
   {
-    "id": "2",
-    "nombre": "Ana",
-    "apellido": "Gutierrez",
-    "telefono": "45123698",
-    "email": "anagutierrez@gmail.com",
-    "password": "78945612"
-  },
-  {
-    "nombre": "EDWIN",
-    "apellido": "BUSTAMANTE",
-    "telefono": "1555867893",
-    "email": "ew75h@gmail.com",
-    "password": "15156328"
-  },
-  {
-    "nombre": "Abraham ",
-    "apellido": "Bustamante",
-    "telefono": "152312348",
-    "email": "abraham@gmail.com",
-    "password": "Caracas2022"
-  },
-  {
-    "Nombre": "CATERINA",
-    "Apellido": "ALOI",
-    "Telefono": "455555",
-    "Email": "SDFDGDG@gmail.ocm",
-    "Password": "1222256746"
-  },
-  {
-    "Nombre": "WACHA",
-    "Apellido": "MARTINEZ",
-    "Telefono": "91155847563",
-    "Email": "wacha@gmail.com",
-    "Password": "11233566",
-    "Politicas": "Politicas",
-    "img": "img-1646006317054.png"
-  },
-  {
-    "Nombre": "srfert",
-    "Apellido": "gdggs",
-    "Telefono": "45646456",
-    "Email": "catya@gmail.com",
-    "password": "$2a$10$ocPGprqDJmE1Q6eJqVYemOyAQqsj4IUt6N7FkIrSSDbLG6CQdqLHC",
-    "img": "img-1646009970589.png"
-  },
-  {
-    "Nombre": "Juana",
-    "Apellido": "Perez",
-    "Telefono": "",
-    "Email": "",
-    "password": "$2a$10$CcBaktj6uzk6muhs3fhRVuFy3knxNkZ8JyP8fBbrJX5gZ00awjDf6",
-    "img": "img-1646010790370.png"
-  },
-  {
-    "Nombre": "Juan",
-    "Apellido": "Perez",
-    "Telefono": "121235",
-    "Email": "juan@gmail.com",
-    "password": "$2a$10$NBTvbcGicrJmZ2tELxccCu/bb5QIo0jTlFEbsAv8IiV0WF95QFhwa",
-    "img": "img-1646010823920.png"
-  },
-  {
-    "Nombre": "Alberto",
-    "Apellido": "Marlrt",
-    "Telefono": "123456789",
-    "Email": "alberto@gmail.com",
-    "password": "$2a$10$AftMd.QaBk2RVdk7VaXOz.NaDdOqZ/rPU9e6UDOwJCb42Mz49UBka",
-    "Politicas": "Politicas",
-    "img": "img-1646012439390.jpg"
-  },
-  {
-    "Nombre": "dgdsg",
-    "Apellido": "dgdsgsdg",
-    "Telefono": "4565445",
-    "Email": "dsfsgf@gmail.com",
-    "password": "$2a$10$p9iKjMOtwxo6KFcaqPaOxufr/ptCkbTuCqXpPR4yCCqKK7W2mAyIq",
-    "img": "img-1646013602306.png"
-  },
-  {
-    "Nombre": "fsfsf",
-    "Apellido": "sdsgsg",
-    "Telefono": "112233",
-    "Email": "dfsdsggs@gmail.com",
-    "password": "$2a$10$nE0rWcgol8wdNtTQ6.gquO2.V1n0gYdjBweAcrwfnUDWdIi/vpH2O",
-    "img": "img-1646013756184.png"
-  },
-  {
-    "Nombre": "eeeee",
-    "Apellido": "eeeee",
-    "Telefono": "678676",
-    "Email": "sfdssdg@gmail.com",
-    "password": "$2a$10$hKeqmRARD/eIxEtEP60caeSkWZ7se3DkJbAv1fV5YVXufZFJGMHpm",
-    "img": "img-1646013807268.png"
-  },
-  {
-    "Nombre": "fgdg",
-    "Apellido": "gdgdsg",
-    "Telefono": "67656",
-    "Email": "fsfdsg@gmail.com",
-    "password": "$2a$10$AqTHhG4fzLi9IwWAU5BQlOAduhgW6BinBlSlql.6W4ymhQ34FEXHe",
-    "img": "img-1646013888584.png"
-  },
-  {
-    "Nombre": "rewet",
-    "Apellido": "wtewtwet",
-    "Telefono": "646678",
-    "Email": "fsfsf@gmail.com",
-    "password": "$2a$10$x1YFjCb6do7MNB0ySmPfoeN.9sCXf16rc8PBFNEI4TRtll9g1cTTS",
-    "img": "img-1646013942604.png"
-  },
-  {
-    "Nombre": "dadfasfa",
-    "Apellido": "ffasfasgf",
-    "Telefono": "54545",
-    "Email": "sdsfs@gmail.com",
-    "password": "$2a$10$.S1wjDQBDysqWiyXTXBt4.KQE9yf899L4t8FMY7SAi96lxRdFhzOa",
-    "politicas": "politicas",
-    "img": "img-1646015514257.png"
-  },
-  {
-    "Nombre": "Alberto",
-    "Apellido": "Fernandez",
-    "Telefono": "115212332",
-    "Email": "dgdfghfdh@gmail.com",
-    "password": "$2a$10$IzE.VZsUs6tZNvDnGzexKOfETZDYJIThKVz5L.wjsam6EDr45WkvW",
-    "politicas": "politicas",
-    "img": "img-1646096098320.jpg"
-  },
-  {
-    "Nombre": "Ana",
-    "Apellido": "Pepito",
-    "Telefono": "458548",
-    "Email": "ana@email.com",
-    "password": "$2a$10$FqsXpqAHcmbXkP0PyTbiaeVSsxX5/VKFfJb3QwQljtGh5WJ97rPpS",
-    "confirmarPassword": "1234",
-    "politicas": "politicas",
-    "img": "img-1646163093965.png"
-  },
-  {
-    "nombre": "asdasd",
-    "apellido": "asdafdfsvaefv",
-    "telefono": "123123",
-    "email": "5555@gmail.com",
-    "password": "$2a$10$TaNfnMXgPF1FPxd.Is3oPehj6Y1.i.W4CfvgOzo9/fP7ZRJXHsxQG",
-    "confirmarPassword": ""
-  },
-  {
-    "nombre": "qweqwe",
-    "apellido": "asdafdfsvaefv",
-    "telefono": "123123",
-    "email": "2126s3@gmail.com",
-    "password": "$2a$10$6Bk0pxS1Bmrn1TKtJXZ8hOa0mRst.hqGWinRWdcBMXA7/QkPeass6",
-    "confirmarPassword": "",
-    "politicas": "politicas"
-  },
-  {
-    "nombre": "Lalalala",
-    "apellido": "lalalalalala",
-    "telefono": "784589",
-    "email": "ddd@gmail.com",
-    "password": "$2a$10$xprN5J4or1lq1Be.MxFkre3btkFKbot7SFXqJeE6SatwdnrkXHeTa",
-    "politicas": "politicas",
-    "img": "img-1646241345950.png"
-  },
-  {
-    "nombre": "lalalala",
-    "apellido": "jajkajakaka",
-    "telefono": "4585458",
-    "email": "x333xx@gmail.com",
-    "password": "$2a$10$qH0VvJW2UE4YIYz8shJCNuv/11AehTHaB2cbFE8FIPxzjs/K.l8ry"
-  },
-  {
-    "nombre": "sdsfhsdifs",
-    "apellido": "dfgsfhdf",
-    "telefono": "1254528552",
-    "email": "4444@gmail.com",
-    "password": "$2a$10$oWcZBV2BsohFzSqPIqU0k.h.WMbcOsohWH6x1XVU49gEkp6eazN0u"
-  },
-  {
-    "nombre": "José",
+    "nombre": "Federico",
     "apellido": "Prueba",
-    "telefono": "123123",
-    "email": "xxx@gmail.com",
-    "password": "$2a$10$5rogkFJPgV1xVsw7fZdPMu83./LoXUXQv.IJBWstfZ9rwMMm.fg1a"
+    "telefono": "1124585655",
+    "email": "prueba@email.com",
+    "password": "$2a$10$qHCw4vgwg19SL.GcN72gWuoOC/T2UM49Q9lAl1wNEMeqjVTg7m6ui",
+    "politicas": "on"
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "Lopez",
+    "telefono": "11254585",
+    "email": "pedro@email.com",
+    "password": "$2a$10$glWVBE4X/t4JdVMJb0xcrOVPk8vbZbDyCFrl4YtoQO12gVDY5VX.y",
+    "politicas": "on"
   }
 ]

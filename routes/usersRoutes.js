@@ -44,6 +44,7 @@ router.post(
     check('confirmarPassword')
         .notEmpty().withMessage('La contraseña es requerida')
         .custom((value, {req}) => (value === req.body.password)).withMessage('Las contraseñas no coinciden'),
+    check('politicas').custom(value => value == 'on').withMessage('Debe aceptar las Políticas, Términos y Condiciones'),
     usersControllers.formValidationRegister,
     usersControllers.storeRegistro
 );

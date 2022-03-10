@@ -442,24 +442,6 @@
     "id": 24
   },
   {
-    "nombreProducto": "Zapatillas Under Armour Flow Velociti Wind",
-    "codigo": "UA_3023561-106",
-    "precio": "21999",
-    "descuento": "",
-    "descripcion": "Las zapatillas Under Armour Flow Velociti Wind nacieron para que alcances nuevos desafíos mientras corres. Confeccionadas con estructuras fuertes que se flexionan al momento de aplicar presión para un soporte más reactivo, generan una ligereza ideal para maratones medias y largas. La tecnología Flow bajo los pies no es más que una espuma suave que ofrece el máximo agarre en cualquier superficie. Su parte superior incluye UA Warp, una base flexible tejida con cintas de soporte inspiradas en los cinturones de seguridad.",
-    "talle": [
-      "44",
-      "45",
-      "46"
-    ],
-    "marca": "Under Armour",
-    "categoria": "hombre",
-    "status": "activo",
-    "stock": "10",
-    "img": "img-1646000218506.jpg",
-    "id": 25
-  },
-  {
     "nombreProducto": "Zapatillas Adidas New Room",
     "codigo": "12312",
     "precio": "15000",
