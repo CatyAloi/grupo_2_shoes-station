@@ -74,23 +74,23 @@
                 <% } %>
             </div>
             <br>
-
             <div class="check-politicas">
                 <label class= "label_register politicas-acl" for="politicas">
-                <input type="checkbox" name="politicas" > Acepto las Políticas de Privacidad y Términos y Condiciones
+                <input type="checkbox" name="politicas" > Acepto las <a href="/politicas-de-privacidad" target="_blank">
+                Políticas de Privacidad</a> y <a href="/terminos-y-condiciones"
+                target="_blank">Términos y Condiciones</a>
                 </label> <br>
                 <% if (errors.politicas) { %>
                     <span class="error-politicas-acl"> <%= errors.politicas.msg %> </span>
                     <br><br>
                 <% } %> 
             </div>
+            
             <% if (typeof usuario == "object" && usuario.typeUser) { %>
                 <label class= "label_register" for="admin"> 
                     <input type="checkbox" name="typeUser" value="admin"> Usuario Administrador
                 </label>
             <% } %>
-
-            
             
             <input type="submit" value="Crear mi Cuenta" id="btn_register">
             <p class="ca_cuenta">¿Ya tienes una Cuenta?<a href="/login"> Ingresá acá</a></p>

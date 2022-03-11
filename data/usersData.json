@@ -15,13 +15,5 @@
     "email": "prueba@email.com",
     "password": "$2a$10$qHCw4vgwg19SL.GcN72gWuoOC/T2UM49Q9lAl1wNEMeqjVTg7m6ui",
     "politicas": "on"
-  },
-  {
-    "nombre": "Pedro",
-    "apellido": "Lopez",
-    "telefono": "11254585",
-    "email": "pedro@email.com",
-    "password": "$2a$10$glWVBE4X/t4JdVMJb0xcrOVPk8vbZbDyCFrl4YtoQO12gVDY5VX.y",
-    "politicas": "on"
   }
 ]

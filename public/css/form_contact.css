@@ -8,22 +8,17 @@
 }
 
 /*SECCION FORMULARIO*/
-
-.content-formContact-acl {
-    display: flex;
-    justify-content: center;
-}
-
 .ca_container_form{
+    width: 80%;
     box-sizing: border-box;
-    width: 90%;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 100px;
-    margin-bottom: 100px;
     border: none;
     outline: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .ca_titulo_form{
@@ -45,7 +40,6 @@
     background: hsla(208, 92%, 60%, 0.2);
     border-radius: 5px;
     border: none;
-    font-family: 'Prompt', sans-serif;
 }
  
 #ca_textarea {
@@ -55,13 +49,13 @@
 }
  
 #btn_contact {
+    margin: 5px;
     text-decoration: none;
-    font-family: 'Prompt', sans-serif;
     text-align: center;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: bold;
     width: 100%;
-    height: 40px;
+    height: 50px;
     border-radius: 8px;
     border: none;
     color: rgb(0, 0, 0);
@@ -71,45 +65,7 @@
     cursor: pointer;
 }
  
-/*SECCION METODOS DE PAGO*/
-.ca_title_met{
-    font-size: 25px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
-#ca_intro{
-    font-size: 15px;
-    text-align: center;
-}
-
-.merc-pago-acl {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.font-imgcard {
-    display: flex;
-    justify-content: center;    
-}
-
-.font-imgcard > img{
-    width: 30%;
-    margin: 15px;
-}
-
-.merc-pago-acl > img {
-    width: 30%;
-    margin: 15px;
-}
-
-.ca_name_card{
-    margin-top: 30px;
-    font-size: 18px;
-    text-align: center;
-}
 
 /*DESKTOP*/
 @media (min-width:1024px){
@@ -122,7 +78,7 @@
     }
 
     .ca_container_form{
-        width: 60%;
+        width: 40%;
     }
 }
 

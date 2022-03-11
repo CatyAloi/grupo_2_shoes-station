@@ -28,8 +28,12 @@ app.use ('/', rutasMain);
 app.use ('/', rutasProducts);
 app.use ('/', rutasUsers);
 
-app.post('/contacto', (req,res) =>{
-    return res.send(req.body)
-})
+app.use ((req, res, next) => {
+    res.status(400).render('./errors/error404');
+    next();
+});
+
+
+
  
 app.listen(3000, () => console.log('Servidor Shoes_Station corriendo, http://localhost:3000'));
