@@ -440,24 +440,5 @@
     "stock": "15",
     "img": "img-1645650219858.jpeg",
     "id": 24
-  },
-  {
-    "nombreProducto": "Zapatillas Adidas New Room",
-    "codigo": "12312",
-    "precio": "15000",
-    "descuento": "",
-    "descripcion": "fgdsgdsghdh",
-    "talle": [
-      "36",
-      "37",
-      "38",
-      "39"
-    ],
-    "marca": "Adidas",
-    "categoria": "hombre",
-    "status": "activo",
-    "stock": "15",
-    "img": "img-1646094829452.jpg",
-    "id": 26
   }
 ]
