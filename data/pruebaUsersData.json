@@ -194,10 +194,11 @@
     "password": "$2a$10$5rogkFJPgV1xVsw7fZdPMu83./LoXUXQv.IJBWstfZ9rwMMm.fg1a"
   },
   {
-    "nombre": "santino", 
-    "apellido": "prueba", 
+    "nombre": "santino",
+    "apellido": "test",
     "telefono": "8888",
     "email": "santino@santino.com",
-    "password": "santi"
+    "password": "$2a$10$XcXeqEdlOAhG9PsGykmm/OS4ab6nrW89nM.J5FU6ohAjbvHju4jnq",
+    "politicas": "politicas"
   }
 ]

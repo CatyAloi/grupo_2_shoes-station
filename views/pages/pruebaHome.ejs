@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+    <body>
+        <%- include('../partials/header', { usuario: usuario }); %>
+        <div class="container-slider-al">
+            <div class="slider-al" id="slider-al">
+                <section class="contenido-slide-al">
+                    <img src="images/slider1.1.jpg" class="slider-img" alt="">
+                </section>
+                <section class="contenido-slide-al">
+                    <img src="images/slider2.2.jpg" class="slider-img" alt="">
+                </section>
+                <section class="contenido-slide-al">
+                    <img src="images/slider3.1.jpeg" class="slider-img" alt="">
+                </section>
+                <section class="contenido-slide-al">
+                    <img src="images/prueba.jpg" class="slider-img" alt="">
+                </section>
+            </div>
+            <button class="btn-slider btnleft" id="btnleft">
+                <i class='bx bxs-chevrons-left'></i>
+            </button>
+            <button class="btn-slider btnright" id="btnright">
+                <i class='bx bxs-chevrons-right'></i>
+            </button>
+        </div>
+
+        <!-- Slider -->
+        <% data.forEach(function(slide){ %>
+            <%- include('../partials/sliderHome', {slide: slide}); %>
+        <% }); %>
+
+        <section class="container-marcas">
+            <section class="content-marcas">
+                <div class="title-marcas sale_title">
+                    <p>Navegá por marcas</p>
+                </div>
+                <div class="logo-marcas">
+                    <div class="img-marcas">
+                        <img src="images/logo-adidas.png" alt="">
+                    </div>
+                    <div class="img-marcas">
+                        <img src="images/logo-nike.png" alt="">
+                    </div>
+                    <div class="img-marcas">
+                        <img src="images/logo-UnderArmour.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <%- include('../partials/footer'); %>
+        <script src="js/slider_home.js"></script>
+    </body>
+</html>
