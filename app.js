@@ -3,8 +3,15 @@ const session = require('express-session');
 const path = require('path');
 const app = express();
 const bodyParser = require ('body-parser');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+
+
+//agrego el cookie parser
+app.use(cookieParser());
+//Agregamos middleware de recordame
+const recordameMiddleware=require('./middlewares/recordameMiddleware');
 
 const publicPath = path.resolve (__dirname, './public');
 app.use(express.static(publicPath));
@@ -17,6 +24,9 @@ app.use(session({
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+
+//agregamos uso de middleware recordame
+app.use(recordameMiddleware); 
 
 app.set('view engine', 'ejs');
 
