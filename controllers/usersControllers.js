@@ -56,7 +56,7 @@ const users_Controllers = {
 
     //MOSTRAR EL FORMULARIO DEL REGISTRO DE USUARIO
     registro: (req,res)=> {
-        res.render('users/register', { errors: {}, data: {}, errorEmail: undefined});
+        res.render('users/register', { errors: {}, data: {}, errorEmail: undefined, usuario: req.session.userLogged});
     },
 
     formValidationRegister: (req, res, next) => {

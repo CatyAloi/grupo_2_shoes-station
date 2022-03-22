@@ -20,46 +20,41 @@
   },
   {
     "id": 2,
-    "nombreProducto": "Zapatillas Adidas Postmove ",
-    "codigo": "ma_002 ",
+    "nombreProducto": "Zapatillas Adidas Postmove  ",
+    "codigo": "ma_002  ",
     "img": "ma_002.jpg",
     "precio": "18500",
     "descuento": "",
-    "descripcion": "Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                ",
-    "marca": "Adidas",
-    "categoria": "hombre",
-    "status": "activo",
-    "stock": "",
+    "descripcion": "                    Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                \r\n                ",
     "talle": [
-      36,
-      37,
-      38,
-      39,
-      40,
-      41
-    ]
-  },
-  {
-    "id": 3,
-    "nombreProducto": "Zapatillas Adidas Showtheway ",
-    "codigo": "ha_003 ",
-    "img": "ha_003.jpg",
-    "precio": "18.500",
-    "descuento": "10%",
-    "descripcion": "Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.\r\n                ",
-    "talle": [
-      "40",
-      "41",
       "42",
       "43",
       "44",
-      "45",
-      "46"
+      "45"
     ],
     "marca": "Adidas",
     "categoria": "hombre",
     "status": "activo",
     "stock": ""
+  },
+  {
+    "id": 3,
+    "nombreProducto": "Zapatillas  Showtheway New     ",
+    "codigo": "ha_003       ",
+    "img": "ha_003.jpg",
+    "precio": "20000",
+    "descuento": "10%",
+    "descripcion": "            Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la media suela con amortiguación ofrece apoyo al pie en cada pisada.\r\n                \r\n                \r\n                \r\n                \r\n                \r\n                \r\n                ",
+    "talle": [
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "200"
   },
   {
     "id": 4,
@@ -440,24 +435,5 @@
     "stock": "15",
     "img": "img-1645650219858.jpeg",
     "id": 24
-  },
-  {
-    "nombreProducto": "Zapatillas Adidas New Room",
-    "codigo": "12312",
-    "precio": "15000",
-    "descuento": "",
-    "descripcion": "fgdsgdsghdh",
-    "talle": [
-      "36",
-      "37",
-      "38",
-      "39"
-    ],
-    "marca": "Adidas",
-    "categoria": "hombre",
-    "status": "activo",
-    "stock": "15",
-    "img": "img-1646094829452.jpg",
-    "id": 26
   }
 ]

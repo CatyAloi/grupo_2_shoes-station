@@ -30,6 +30,12 @@
     margin-bottom: 20px;
 }
 
+.error-politicas-acl {
+    color: crimson;
+    font-size: 12px;
+    margin-left: 25px;
+}
+
 .ca_cuenta{
     text-align: center;
     font-size: 12px;
@@ -49,6 +55,10 @@
  
  .label_register{
     font-size: 14px;
+ }
+
+ .politicas-acl {
+     font-size: 12px;
  }
 
 #btn_register {

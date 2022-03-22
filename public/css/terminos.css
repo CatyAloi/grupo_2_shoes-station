@@ -1,0 +1,13 @@
+
+
+.terminos {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
+
+.terminos > p{
+  text-align: justify;
+}

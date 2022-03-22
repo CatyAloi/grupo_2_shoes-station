@@ -1,0 +1,39 @@
+
+/*SECCION METODOS DE PAGO*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.ca_title_met{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#ca_intro{
+    font-size: 20px;
+    text-align: center;
+}
+
+.font{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.font >img{
+    width: 15%;
+    margin: 15px;
+    
+    
+}
+
+.ca_name_card{
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+}

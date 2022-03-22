@@ -6,14 +6,14 @@
     
     <div class="linea-al">
     </div>
+    <% if (typeof usuario == "object" && usuario.typeUser) { %>
+        <div class="add_product_acl">
+            <a href="/crearproductos" class="product_add_acl">
+                    <i class='bx bx-plus-medical'></i> Agregar producto
+            </a>
+        </div>
+    <% } %> 
 
-    <div class="add_product_acl">
-        <a href="/crearproductos" >
-            <button class="product_add_acl">    
-                <i class='bx bx-plus-medical'></i> Agregar producto
-            </button>
-        </a>
-    </div>
     <div class="filter_catalogo"> 
         <div class="filters-container">
                 <button id="btn-filters" class="filters">Filtros</button>
