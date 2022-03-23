@@ -24,8 +24,12 @@ let usersControllers = require('../controllers/usersControllers');
 router.get('/login', usersControllers.login);
 
 router.post('/login',
-    check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no es valido'), 
-    check('password').notEmpty().withMessage('La contraseña es requerida'),
+    check('email')
+        .notEmpty().withMessage('El email es requerido').isEmail()
+        .withMessage('El email no es valido'),
+
+    check('password')
+        .notEmpty().withMessage('La contraseña es requerida'),
     usersControllers.formValidationLogin,
     usersControllers.loginProcess
 );
@@ -47,5 +51,7 @@ router.post(
     usersControllers.formValidationRegister,
     usersControllers.storeRegistro
 );
+
+router.get('/logout', usersControllers.logout);
 
 module.exports = router;

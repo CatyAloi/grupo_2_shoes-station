@@ -22,9 +22,10 @@
             <% if (typeof usuario == "object") { %>
              <div class="user-login-acl">
                 <i class='bx bxs-user-circle' ></i> <%= usuario.nombre %>  
+                <a href='/logout' style="color:crimson;">Logout</a>
              </div>
             <% } else { %>
-                 <a href="/pruebaLogin"><i class='bx bxs-user'></i></a> 
+                 <a href="/login"><i class='bx bxs-user'></i></a> 
             <% } %>
 
             <a href="/carrito"><i class='bx bxs-cart'></i></a>
