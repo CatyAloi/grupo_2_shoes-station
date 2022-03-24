@@ -21,7 +21,10 @@
         <div class="icons_al header-al">
             <% if (typeof usuario == "object") { %>
              <div class="user-login-acl">
-                <i class='bx bxs-heart'></i> <%= usuario.nombre %>  
+               
+                <i class='bx bxs-heart' ></i> <%= usuario.nombre %>  
+                <a href='/logout' style="color:crimson;">Logout</a>
+
              </div>
             <% } else { %>
                  <a href="/login"><i class='bx bxs-user'></i></a> 

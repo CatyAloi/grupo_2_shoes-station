@@ -2,8 +2,6 @@ const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 const { validationResult  } = require('express-validator');
-const res = require('express/lib/response');
-const { use } = require('../routes/usersRoutes');
 const usuariosFilePath = path.join(__dirname, '../data/usersData.json');
 const usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
@@ -16,27 +14,22 @@ const users_Controllers = {
     loginProcess: (req, res) => { 
         const email = req.body.email;
         const password = req.body.password.trim();
+        const recuerdame = req.body.recordar;
 
-        let userToLogin = usuariosJson.find(usuario => {
-           return usuario.email === email;
-        });
+        let userToLogin = usuariosJson.find(usuario => usuario.email === email && bcrypt.compareSync(password, usuario.password));
 
-        if(userToLogin === undefined){
-            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
-        }
-
-        const passwordCorrecto = bcrypt.compareSync(password, userToLogin.password);
-
-        if (!passwordCorrecto){
+        if(userToLogin === undefined) {
             res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
             return;
         }
         
-        delete userToLogin.password; // para que no se mantenga el password en toda la aplicación; 
-        // para simular el login por ahora redirecciono al home, Falta propagar los dato del usuario.
-        req.session.userLogged = userToLogin;
+        req.session.userLogged = { ...userToLogin, password: undefined };
+
+        if(recuerdame != 'undefined'){
+            const cookie = { recuerdame: { email: userToLogin.email } };
+            res.cookie('data', JSON.stringify(cookie), { maxAge: 60000 })
+        }
         res.redirect('/');
-        return;
     },
 
     formValidationLogin: (req, res, next) => {
@@ -95,6 +88,12 @@ const users_Controllers = {
             
             res.redirect('/login');
         }
+    },
+    logout: (req,res) => {
+        console.log('adios');
+        req.session.destroy();
+        res.clearCookie("auth");
+        res.redirect('/');
     }     
 };
 
