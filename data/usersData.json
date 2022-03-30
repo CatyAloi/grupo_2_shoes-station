@@ -207,5 +207,28 @@
     "email": "marco@marco.com",
     "password": "$2a$10$FD9YgdWcU9Ch9eqCJQ9UtuomB3arBTPYla0WglkiLaPmVU5iixo3e",
     "politicas": "politicas"
+  },
+  {
+    "nombre": "santi ",
+    "apellido": "com",
+    "telefono": "8888",
+    "email": "santi@santi.com",
+    "politicas": "politicas"
+  },
+  {
+    "nombre": "marco",
+    "apellido": "marco",
+    "telefono": "88888888",
+    "email": "marco1@marco.com",
+    "password": "$2a$10$smkueWxhR.BC1THl5NTvxed5zpwI8Jy/Dy6wbG1bWAxF82CnW.umG",
+    "politicas": "politicas"
+  },
+  {
+    "nombre": "marco",
+    "apellido": "marco",
+    "telefono": "8888",
+    "email": "marco@gmail.com",
+    "password": "$2a$10$/1KfzQ6ZPsl25Qe1wBCx.eRdnZusOOhc9UUwFmCPDElwvh1lwN.5S",
+    "politicas": "politicas"
   }
 ]

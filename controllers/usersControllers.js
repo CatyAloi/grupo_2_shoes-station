@@ -28,7 +28,7 @@ const users_Controllers = {
         req.session.userLogged = userToLogin;
 
         if(recuerdame !== 'undefined'){
-            res.cookie('auth', JSON.stringify(userToLogin), {maxAge: 60 * 1000* 60})
+            res.cookie('auth', userToLogin.email, {maxAge: 60 * 1000* 60})
         }
         res.redirect('/');
     },
