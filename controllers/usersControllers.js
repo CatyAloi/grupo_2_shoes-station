@@ -4,13 +4,16 @@ const path = require('path');
 const { validationResult  } = require('express-validator');
 const usuariosFilePath = path.join(__dirname, '../data/usersData.json');
 const usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const users_Controllers = {
 
-    login: (req,res)=> {
-       res.render('users/login', { resultErrors: {}, errorLogin: undefined }); 
+    login: async (req,res)=> {
+        const data = await db.usuarios.findAll();
+        console.log('UsuarioModel', data);
+        res.render('users/login', { resultErrors: {}, errorLogin: undefined }); 
     },
-      
+
     loginProcess: (req, res) => { 
         const email = req.body.email;
         const password = req.body.password.trim();
