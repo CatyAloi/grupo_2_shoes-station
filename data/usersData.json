@@ -15,5 +15,13 @@
     "email": "prueba@email.com",
     "password": "$2a$10$qHCw4vgwg19SL.GcN72gWuoOC/T2UM49Q9lAl1wNEMeqjVTg7m6ui",
     "politicas": "on"
+  },
+  {
+    "nombre": "asdasd",
+    "apellido": "asdafdfsvaefv",
+    "telefono": "8756485",
+    "email": "pruebados@email.com",
+    "password": "$2a$10$NY2YeYOH/WGvVV1CkkBoF.ucs1o6i8OGky.XV7vNabvifdc9hQsQG",
+    "politicas": "on"
   }
 ]

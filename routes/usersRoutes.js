@@ -28,7 +28,7 @@ router.post('/login',
         .notEmpty().withMessage('El email es requerido').isEmail()
         .withMessage('El email no es valido'),
 
-    check('password')
+    check('pwd')
         .notEmpty().withMessage('La contraseña es requerida'),
     usersControllers.formValidationLogin,
     usersControllers.loginProcess
@@ -44,10 +44,10 @@ router.post(
     check('apellido', 'El apellido es requerido').notEmpty(),
     check('telefono').notEmpty().withMessage('El teléfono es requerido').isNumeric().withMessage('Solo se aceptan números'),
     check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no es valido'),
-    check('password').notEmpty().withMessage('La contraseña es requerida'),
+    check('pwd').notEmpty().withMessage('La contraseña es requerida'),
     check('confirmarPassword')
         .notEmpty().withMessage('La contraseña es requerida')
-        .custom((value, {req}) => (value === req.body.password)).withMessage('Las contraseñas no coinciden'),
+        .custom((value, {req}) => (value === req.body.pwd)).withMessage('Las contraseñas no coinciden'),
     check('politicas').custom(value => value == 'on').withMessage('Debe aceptar las Políticas, Términos y Condiciones'),
     usersControllers.formValidationRegister,
     usersControllers.storeRegistro

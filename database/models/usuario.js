@@ -32,7 +32,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BOOLEAN
         },
         admin: {
-            allowNull: false,
             type: dataTypes.BOOLEAN
         }
     };

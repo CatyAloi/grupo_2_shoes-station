@@ -5,23 +5,29 @@ const { validationResult  } = require('express-validator');
 const usuariosFilePath = path.join(__dirname, '../data/usersData.json');
 const usuariosJson = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const db = require('../database/models');
+const usuario = require('../database/models/usuario');
 
 const users_Controllers = {
 
-    login: async (req,res)=> {
-        const data = await db.usuarios.findAll();
-        console.log('UsuarioModel', data);
+    login: (req,res)=> {
         res.render('users/login', { resultErrors: {}, errorLogin: undefined }); 
     },
 
-    loginProcess: (req, res) => { 
+    loginProcess: async (req, res) => { 
         const email = req.body.email;
-        const password = req.body.password.trim();
+        const password = req.body.pwd.trim();
         const recuerdame = req.body.recordar;
 
-        let userToLogin = usuariosJson.find(usuario => usuario.email === email && bcrypt.compareSync(password, usuario.password));
+        const userToLogin = await db.usuarios.findOne({ where: { email: email } })
 
-        if(userToLogin === undefined) {
+        if (userToLogin === null) {
+            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
+            return;
+        } 
+        
+        const bool = bcrypt.compareSync(password, userToLogin.pwd);
+
+        if (!bool) {
             res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
             return;
         }
@@ -71,12 +77,15 @@ const users_Controllers = {
     },    
 
     //GUARDAR O AGREGAR UN NUEVO USUARIO A LA BD 
-    storeRegistro: (req,res)=> { 
-        let usuarioNew = req.body;
+    storeRegistro: async (req,res)=> { 
+        const usuarioNew = req.body;
+
         delete usuarioNew.confirmarPassword;
-        let userInDb = usuariosJson.find(usuario => {
-            return usuario.email === usuarioNew.email;
-        });
+
+        const userInDb = await db.usuarios.findOne({ where: { email: usuarioNew.email } });
+
+        console.log(userInDb);
+
         if(userInDb) {
             res.render('users/register', { errorEmail: 'El Email ya existe', data: {}, errors: {} });
         } else {
@@ -84,11 +93,26 @@ const users_Controllers = {
                 usuarioNew.img = req.file.filename;
             }
             const salt = bcrypt.genSaltSync(10);
-            usuarioNew.password = bcrypt.hashSync(req.body.password.trim(), salt);
-            usuariosJson.push(usuarioNew)
-            const usuarioNewJson = JSON.stringify(usuariosJson, null, 2);
-            fs.writeFileSync('./data/usersData.json', usuarioNewJson);
+            usuarioNew.pwd = bcrypt.hashSync(req.body.pwd.trim(), salt);
             
+            if(usuarioNew.admin === 'on'){
+                usuarioNew.admin = true;
+            } else {
+                usuarioNew.admin = false;
+            }
+
+            if(usuarioNew.politicas === 'on'){
+                usuarioNew.politicas = true;
+            } else {
+                usuarioNew.politicas = false;
+            }
+
+            try {
+                await db.usuarios.create(usuarioNew);
+            } catch (e) {
+                console.log('ERROR:', e)
+            }
+
             res.redirect('/login');
         }
     },
