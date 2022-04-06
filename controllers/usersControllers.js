@@ -32,7 +32,13 @@ const users_Controllers = {
             return;
         }
         
-        req.session.userLogged = { ...userToLogin, password: undefined };
+        req.session.userLogged = { 
+            id: userToLogin.id,
+            nombre: userToLogin.nombre,
+            telefono: userToLogin.telefono,
+            email: userToLogin.email,
+            admin: userToLogin.admin,
+        };
 
         if(recuerdame != 'undefined'){
             const cookie = { recuerdame: { email: userToLogin.email } };

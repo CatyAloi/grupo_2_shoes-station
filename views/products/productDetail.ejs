@@ -34,7 +34,7 @@
                         </div> 
                 </form>
 
-                <% if (typeof usuario == "object" && usuario.typeUser) { %>
+                <% if (typeof usuario == "object" && usuario.admin) { %>
                     <section class="container_edit_delet">
                         <a href="/editarproductos/<%= producto.id %>" class="edit_delet_al blue_edit">
                                 <i class='bx bxs-pencil'></i> Editar producto

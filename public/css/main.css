@@ -73,18 +73,29 @@ html, body {
     position: relative;
 }
 
-.bxs-heart {
+.bxs-user-circle {
     color: green;
     font-size: 30px;
     position: absolute;
-    top: -10%;
+    top: -20%;
     transform: translatex(-35px);
+}
+
+.bx-log-out-circle {
+    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    transform: translateX(0px);
 }
 
 .icons_al > a {
     font-size: 30px;
     margin: 5px;
     color: rgb(0, 0, 0);;
+}
+
+.bxs-cart {
+    padding-left: 10px;
 }
 
 .icons_al {
