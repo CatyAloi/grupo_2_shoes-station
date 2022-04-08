@@ -7,9 +7,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        num: {
+        numero: {
             allowNull: false,
-            type: dataTypes.DECIMAL
+            type: dataTypes.INTEGER
         }
     }
 

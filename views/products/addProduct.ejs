@@ -41,7 +41,7 @@
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br> 
                 <% talles.forEach(function (talle){ %>
-                    <input type="checkbox" name="talle[]" value="<%= talle %>"> <%= talle %>
+                    <input type="checkbox" name="talle[]" value="<%= talle.id %>"> <%= talle.numero %>
                 <% }); %>
             </p>
             

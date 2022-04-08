@@ -5,22 +5,42 @@ const modelProductos = require('../models/producto');
 const dataPath = path.join(__dirname, '../data');
 let productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
 const tallesJson = JSON.parse(fs.readFileSync(dataPath + '/talles.json', 'utf-8'));
+const db = require('../database/models');
 
-const product_Controllers = {
-    catalogo: (req, res)=> {
-        res.render('products/catalogo', { productos: productsJson, talles: tallesJson, usuario: req.session.userLogged });
+const product_Controllers = { 
+    catalogo: async(req, res)=> {
+        try {
+            const tallesDb = await db.talles.findAll();
+            res.render('products/catalogo', {  productos: productsJson, talles: tallesDb, usuario: req.session.userLogged }); 
+        } catch (e) {
+            console.log('errorrrrr', e);
+        } 
     },
-    detalle: (req, res)=> {
+    detalle: async(req, res)=> {
         let producto = productsJson.find(producto => producto.id == req.params.id);
-        res.render("products/productDetail", { producto, usuario: req.session.userLogged });
+
+        try {
+            const tallesDb = await db.talles.findAll();
+            res.render('products/productDetail', {  producto, talles: tallesDb, usuario: req.session.userLogged }); 
+        } catch (e) {
+            console.log('errorrrrr', e);
+        } 
     },
     carrito: (req, res)=> {
         res.render('products/productCart',{ usuario: req.session.userLogged });
     },
 
     // MUESTRA EL FORMULARIO DE AGREGAR NUEVO PRODUCTO
-    crearProducto: (req,res)=> { 
-        res.render('products/addProduct', { talles: tallesJson, usuario: req.session.userLogged }); 
+    crearProducto: async (req,res)=> {
+        try {
+            const tallesDb = await db.talles.findAll();
+            // talleDb.forEach(element => {
+            //     console.log(element.id, element.numero);
+            // });
+            res.render('products/addProduct', { talles: tallesDb, usuario: req.session.userLogged }); 
+        } catch (e) {
+            console.log('errorrrrr', e);
+        } 
     },
 
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
@@ -73,9 +93,15 @@ const product_Controllers = {
     },
     
     //EDITA EL PRODUCTO EXISTENTE          
-    editarProducto: (req, res)=> {
+    editarProducto: async(req, res)=> {
         let producto = productsJson.find(producto => producto.id == req.params.id);
-        res.render('products/form_edition', { producto, talles: tallesJson, usuario: req.session.userLogged });
+
+        try {
+            const tallesDb = await db.talles.findAll();
+            res.render('products/form_edition', { producto, talles: tallesDb, usuario: req.session.userLogged }); 
+        } catch (e) {
+            console.log('errorrrrr', e);
+        }
     },
 
     //ELIMINA EL PRODUCTO EXISTENTE 
