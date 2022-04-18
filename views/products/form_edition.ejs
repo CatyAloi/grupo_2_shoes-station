@@ -8,12 +8,8 @@
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
-                <input type="text" name="nombreProducto" id=inp_width value="<%= producto.nombreProducto %> ">
+                <input type="text" name="nombre" id=inp_width value="<%= producto.nombre %> ">
             </p>
-            <p>
-                <label  class="label_edition" for="codigo del Producto">Código:</label>
-                <input type="text" name="codigo" id=inp_width value="<%= producto.codigo %> ">
-            </p> 
             <section class="editNew-acl">
                 <h4>Imagen del Producto</h4>
                 <img src="/images/<%= producto.img %>" alt="" class="editNew-prod">
@@ -40,10 +36,10 @@
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br>
                 <% talles.forEach(function (talle){ %>
-                    <% if (producto.talle.includes(talle)) { %> 
-                        <input type="checkbox" name="talle[]" value="<%= talle.id %>" checked> <%= talle.numero %>
+                    <% if (producto.talles.find(talleProducto => talleProducto.id === talle.id)) { %> 
+                        <input type="checkbox" name="talles[]" value="<%= talle.id %>" checked> <%= talle.numero %>
                     <% } else { %>
-                        <input type="checkbox" name="talle[]" value="<%= talle.id %>"> <%= talle.numero %>
+                        <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
                     <% }  %>
                 <% }); %>
             </p>
@@ -51,17 +47,17 @@
                 <label class="label_edition" for="marcas">
                     <span>Marcas:</span>
                 </label>
-                <select id="inp_width" name="marca">
-                    <option value="Adidas" <% if (producto.marca === 'Adidas') { %> selected="selected" <% } %>>Adidas</option>
-                    <option value="Under Armour" <% if (producto.marca === 'Under Armour') { %> selected="selected" <% } %>>Under Armour</option>
-                    <option value="Nike" <% if (producto.marca === 'Nike') { %> selected="selected" <% } %>>Nike</option>
+                <select id="inp_width" name="id_marca">
+                    <option value="1" <% if (producto.id_marca === 1) { %> selected="selected" <% } %>>Adidas</option>
+                    <option value="2" <% if (producto.id_marca === 2) { %> selected="selected" <% } %>>Under Armour</option>
+                    <option value="3" <% if (producto.id_marca === 3) { %> selected="selected" <% } %>>Nike</option>
                 </select>
             </p>
             <p>
                 <label class="label_edition" for="categoria">
                     <span>Categoría:</span>
                 </label>
-                <select id="inp_width" name="categoria">
+                <select id="inp_width" name="genero">
                     <option value="hombre" <% if (producto.categoria === 'hombre') { %> selected="selected" <% } %>>Hombre</option>
                     <option value="mujer" <% if (producto.categoria === 'mujer') { %> selected="selected" <% } %>>Mujer</option>
                 </select>

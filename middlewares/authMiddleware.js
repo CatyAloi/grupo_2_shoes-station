@@ -1,9 +1,17 @@
 function authMiddleware(req, res, next){
-    if(req.session.userLogged != undefined){
-        next();
+    const rutasAdmin = [
+        '/editarproductos',
+        '/crearproductos',
+    ]
+
+    if (
+        ((req.session.userLogged && !req.session.userLogged.admin && rutasAdmin.find(url => req.url.indexOf(url) > -1)) ||
+        (!req.session.userLogged && rutasAdmin.find(url => req.url.indexOf(url) > -1)))
+    ) {
+        res.redirect('/404');
     } else {
-        res.send('Esta página es sólo para usuarios');
+        next();
     }
-    };
+};
     
-    module.exports = authtMiddleware;
+module.exports = authMiddleware;
