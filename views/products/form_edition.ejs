@@ -8,7 +8,19 @@
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
-                <input type="text" name="nombre" id=inp_width value="<%= producto.nombre %> ">
+                <input type="text" 
+                name="nombre" 
+                id=inp_width 
+                value="<%= producto.nombre %> ">
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class = "error2">
+                        <%= errors.nombre.msg %> 
+                    </div>    
+                    <br><br>           
+                <% } %>
+
+
+
             </p>
             <section class="editNew-acl">
                 <h4>Imagen del Producto</h4>
@@ -33,16 +45,9 @@
                     <%= producto.descripcion %>
                 </textarea>                   
             </p>
-            <p>
-                <label class="label_edition" for="">Talles Disponibles:</label><br>
-                <% talles.forEach(function (talle){ %>
-                    <% if (producto.talles.find(talleProducto => talleProducto.id === talle.id)) { %> 
-                        <input type="checkbox" name="talles[]" value="<%= talle.id %>" checked> <%= talle.numero %>
-                    <% } else { %>
-                        <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
-                    <% }  %>
-                <% }); %>
-            </p>
+
+            <!--ACA VA EL CODIGO DE LOS TALLES-->
+           
             <p>
                 <label class="label_edition" for="marcas">
                     <span>Marcas:</span>
@@ -55,11 +60,11 @@
             </p>
             <p>
                 <label class="label_edition" for="categoria">
-                    <span>Categoría:</span>
+                    <span>Género:</span>
                 </label>
                 <select id="inp_width" name="genero">
-                    <option value="hombre" <% if (producto.categoria === 'hombre') { %> selected="selected" <% } %>>Hombre</option>
-                    <option value="mujer" <% if (producto.categoria === 'mujer') { %> selected="selected" <% } %>>Mujer</option>
+                    <option value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
+                    <option value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
                 </select>
             </p>
             <p>

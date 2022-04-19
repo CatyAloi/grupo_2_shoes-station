@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const {validationResult} = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -27,6 +28,16 @@ module.exports = {
     contacto: (req, res)=> {
         res.render('pages/form_contact', { usuario: req.session.userLogged });
     },
+
+    processContact: (req,res)=>{
+        const resultContact = validationResult(req);
+        if (resultContact.errors){
+            return res.render ('pages/form_contact', {errors : resultContact.mapped(), oldData: req.body});
+        } 
+
+    },
+
+
     terminos: (req, res)=> {
         res.render('pages/terminos_condiciones');
     },

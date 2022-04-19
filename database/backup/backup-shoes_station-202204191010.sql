@@ -82,7 +82,7 @@ CREATE TABLE `marcas` (
   `nombre` varchar(200) NOT NULL,
   `img` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,6 +91,7 @@ CREATE TABLE `marcas` (
 
 LOCK TABLES `marcas` WRITE;
 /*!40000 ALTER TABLE `marcas` DISABLE KEYS */;
+INSERT INTO `marcas` VALUES (1,'Adidas','logo-adidas.png'),(2,'Nike','logo-nike.png'),(3,'Under Armour','logo-UnderArmour.png');
 /*!40000 ALTER TABLE `marcas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,14 +108,14 @@ CREATE TABLE `productos` (
   `precio` decimal(10,0) NOT NULL,
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `descuento` decimal(10,0) DEFAULT NULL,
-  `genero` varchar(1) NOT NULL,
+  `genero` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `img` varchar(100) NOT NULL,
   `stock` decimal(10,0) NOT NULL,
   `id_marca` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_productos_marcas` (`id_marca`),
   CONSTRAINT `fk_productos_marcas` FOREIGN KEY (`id_marca`) REFERENCES `marcas` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,6 +124,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (2,'Zapatilla clásica adidas            ',15000,'                                                                                                    Las Zapatillas adidas Showtheway te impulsan hacia nuevos caminos a la hora de correr. El ajuste con cordones aporta estabilidad y te permite acomodarlas a vos. La capellada de malla es elástica y transpirable para mantenerte fresco durante todas tus carreras y cuenta con un refuerzo Fitframe en el mediopié para aportar durabilidad. La mediasuela de EVA mejora la comodidad de tus pasos y los amortigua para transformarse en tu calzado de running favorito.\r\n                \r\n                \r\n                \r\n                \r\n                ',5000,'hombre','img-1649815290281.jpg',12,1),(3,'Zapatillas Adidas ',13599,'                    El par más cómodo y ligero para running. Las Zapatillas adidas Coreracer ofrecen la combinación ideal de sujeción para correr y estilo urbano. Tus pisadas serán livianas en todo momento. Su diseño clásico te permitirá combinarlo con diferentes prendas y fueron confeccionados con materiales transpirables para mantener tus pies frescos.\r\n                \r\n                ',0,'Hombre','img-1649815378186.jpg',4,1),(4,'Zapallitas deportivas',18500,'jshdfsjbdiufsf',0,'mujer','img-1650035059855.jpg',15,3);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +144,7 @@ CREATE TABLE `productos_talles` (
   KEY `fk_productos_talles_talles` (`id_talle`),
   CONSTRAINT `fk_productos_talles_productos` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`),
   CONSTRAINT `fk_productos_talles_talles` FOREIGN KEY (`id_talle`) REFERENCES `talles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,6 +153,7 @@ CREATE TABLE `productos_talles` (
 
 LOCK TABLES `productos_talles` WRITE;
 /*!40000 ALTER TABLE `productos_talles` DISABLE KEYS */;
+INSERT INTO `productos_talles` VALUES (14,4,2),(15,4,3),(16,4,5),(17,4,4),(54,2,3),(55,2,4),(56,2,10),(57,2,9),(58,2,5),(59,2,11),(60,2,12),(67,3,4),(68,3,5),(69,3,6),(70,3,7),(71,3,9),(72,3,8);
 /*!40000 ALTER TABLE `productos_talles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -163,9 +166,9 @@ DROP TABLE IF EXISTS `talles`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `talles` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `numero` decimal(10,0) NOT NULL,
+  `numero` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,6 +177,7 @@ CREATE TABLE `talles` (
 
 LOCK TABLES `talles` WRITE;
 /*!40000 ALTER TABLE `talles` DISABLE KEYS */;
+INSERT INTO `talles` VALUES (1,35),(2,36),(3,37),(4,38),(5,39),(6,40),(7,41),(8,42),(9,43),(10,44),(11,45),(12,46);
 /*!40000 ALTER TABLE `talles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -194,7 +198,7 @@ CREATE TABLE `usuarios` (
   `politicas` tinyint(1) NOT NULL,
   `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,7 +207,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Admin','Administrador','1233','admin@email.com','$2a$10$B4LAfG3jm1dcCKDxB07TkeZwKwuYH5gv7v7dlPbsIFDRbkExeI6Ya',1,1);
+INSERT INTO `usuarios` VALUES (1,'Admin','Administrador','1233','admin@email.com','$2a$10$B4LAfG3jm1dcCKDxB07TkeZwKwuYH5gv7v7dlPbsIFDRbkExeI6Ya',1,1),(2,'Pepito','Perez','123456','pepito@email.com','$2a$10$cLOJ9nRLQNgrQgLu4yhjguA0X2z.Udf0m7zEQpUjmeT/8eGdiqmbq',1,0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-05 19:13:05
+-- Dump completed on 2022-04-19 10:10:18

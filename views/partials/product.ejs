@@ -8,21 +8,16 @@
         </div>
     </div>
 
-    <!-- Text *****************-->
-    <div class="p-box-text">
-        <!-- category -->
-        <div class="product-category">
-            <span>Zapatilla <%= producto.marca %></span>
-        </div>
-    </div>
-
-    <!-- title -->
+    <!-- title 
     <a href="/detalle/<%= producto.id %>" class="product-title">
-        Zapatillas para <%= producto.categoria %>.
-    </a>
+        <%= producto.nombreProducto %>
+    </a>-->
+    
+     <div class="info-prod-price">
+        <a href="/detalle/<%= producto.id %>" class="">
+            <%= producto.nombre %> 
+        </a>
+        <span class=""> $ <%= producto.precio %></span>
+    </div>  
 
-    <!-- price buy -->
-    <div class="price-buy">
-        <span class="p-price">$<%= producto.precio %></span>
-    </div>
 </div>

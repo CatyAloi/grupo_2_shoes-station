@@ -7,19 +7,41 @@
 
         <form action="/crearproductos" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Crear un Producto</h2>
-            <p>
-                <label class="label_edition" for="nombreProducto">Nombre del Producto:</label>
-                <input class="ca_input_add" type="text" name="nombre" id="nombreProducto">
+
+            <p class="input-container2">
+                <label class="label_edition" for="nombre">Nombre del Producto:</label>
+                <input class="ca_input_add" 
+                type="text" 
+                name="nombre" 
+                id="nombre"
+                value="<%= locals.oldData ? oldData.nombre: null %>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class = "error2">
+                            <%= errors.nombre.msg %> 
+                        </div>    
+                        <br><br>           
+                    <% } %>
             </p>
        
            <p>
-                <label  class="label_edition"for="img">Agregar imagen:</label>
-                <input class="ca_input_add"  type="file" name="img" id="img"> (acepta solo formatos.jpg, .png)
+                <label  class="label_edition"for="img">Agregar imagen: (acepta solo formatos .JPG, .PNG)</label>
+                <input class="ca_input_add"  type="file" name="img" id="img"> 
             </p>
 
-           <p>
+           <p class="input-container2">
                 <label class="label_edition" for="precio">Precio del Producto:</label>
-                <input class="ca_input_add"  type="number" name="precio" id="precio">
+                <input class="ca_input_add"  
+                type="number" 
+                name="precio" 
+                id="precio"
+                value="<%= locals.oldData ? oldData.precio: null %>">
+                    <% if (locals.errors && errors.precio) { %>
+                        <div class = "error2">
+                            <%= errors.precio.msg %> 
+                        </div>
+                        <br><br>
+                
+                    <% } %>
            </p>
             
             <p>
@@ -28,17 +50,23 @@
         
             </p>
            
-            <p>
+            <p class="input-container2">
                 <label class="label_edition" for="descripcion">Descripción del Producto:</label> <br>
-                <textarea class="ca_input_add"  name="descripcion" id="descripcion" cols="30" rows="10"></textarea>             
+                <textarea class="ca_input_add"  
+                name="descripcion" 
+                id="descripcion" cols="30" rows="10">
+                <%= locals.oldData ? oldData.descripcion: null %>
+                </textarea>
+            <% if (locals.errors && errors.descripcion) { %>
+                <div class = "error2">
+                    <%= errors.descripcion %> 
+                </div>
+                <br><br>
+            <% } %>      
+
             </p>
         
-            <p>
-                <label class="label_edition" for="">Talles Disponibles:</label><br> 
-                <% talles.forEach(function (talle){ %>
-                    <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
-                <% }); %>
-            </p>
+           <!--AQUI VA EL CODIGO DE LOS TALLES-->
             
             <p>
                 <label class="label_edition" for="id_marca">
@@ -53,11 +81,11 @@
     
             <p>
                 <label class="label_edition" for="genero">
-                    <span>Categoría:</span>
+                    <span>Género:</span>
                 </label>
                 <select class="ca_input_add" id="genero" name="genero">
-                    <option value="hombre">Hombre</option>
-                    <option value="mujer">Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
                 </select>
             </p>
 
@@ -71,13 +99,26 @@
                 </select>
               </p>
     
-            <label class="label_edition" for="stock">Stock</label>
-            <input class="ca_input_add" type="number" name ="stock" id="stock">
-                
-            <div class="flex_cancelar_agregar">
-                <input type="reset" value="Cancelar" id="btn_cancelar" >
-                <input type="submit" value="Crear Producto" id="btn_agregar">
-            </div>
+             <p class="input-container2">
+                <label class="label_edition" for="stock">Stock</label>
+                <input class="ca_input_add" 
+                type="number" 
+                name ="stock" 
+                id="stock">
+                <%= locals.oldData ? oldData.stock: null %>
+                <% if (locals.errors && errors.stock) { %>
+                    <div class = "error2">
+                        <%= errors.stock.msg %> 
+                    </div>
+                    <br><br>
+                <% } %> 
+                    
+                <div class="flex_cancelar_agregar">
+                    <input type="reset" value="Cancelar" id="btn_cancelar" >
+                    <input type="submit" value="Crear Producto" id="btn_agregar">
+                </div>
+             </p> 
+            
             
         </form>
     </section>
