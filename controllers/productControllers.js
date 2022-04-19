@@ -11,7 +11,9 @@ const product_Controllers = {
         try {
             const tallesDb = await db.talles.findAll();
     
-            res.render('products/catalogo', {  productos: productsJson, talles: tallesDb, usuario: req.session.userLogged }); 
+            res.render('products/catalogo', {  productos: productsJson, talles: tallesDb, usuario: req.session.userLogged });
+            //const productDb = await db.productos.findAll() 
+            //res.render('products/catalogo', { productos: productDb, talles: tallesDb, usuario: req.session.userLogged });
         } catch (e) {
             console.log('errorrrrr', e);
         } 
