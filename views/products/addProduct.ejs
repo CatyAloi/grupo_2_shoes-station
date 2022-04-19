@@ -9,13 +9,8 @@
             <h2 id="title_editar" >Crear un Producto</h2>
             <p>
                 <label class="label_edition" for="nombreProducto">Nombre del Producto:</label>
-                <input class="ca_input_add" type="text" name="nombreProducto" id="nombreProducto">
+                <input class="ca_input_add" type="text" name="nombre" id="nombreProducto">
             </p>
-    
-           <p>
-                <label  class="label_edition" for="codigo">Código:</label>
-                <input class="ca_input_add"  type="text" name="codigo" id="codigo">
-           </p>
        
            <p>
                 <label  class="label_edition"for="img">Agregar imagen:</label>
@@ -41,27 +36,26 @@
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br> 
                 <% talles.forEach(function (talle){ %>
-                    <input type="checkbox" name="talle[]" value="<%= talle %>"> <%= talle %>
+                    <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
                 <% }); %>
             </p>
             
             <p>
-                <label class="label_edition" for="marca">
+                <label class="label_edition" for="id_marca">
                     <span>Marcas:</span>
                 </label>
-                <select  class="ca_input_add" id="marca" name="marca">
-                    <option value="Adidas">Adidas</option>
-                    <option value="Under Armour">Under Armour</option>
-                    <option value="Nike">Nike</option>
-                
+                <select  class="ca_input_add" id="marca" name="id_marca">
+                    <option value="1">Adidas</option>
+                    <option value="2">Nike</option>
+                    <option value="3">Under Armour</option>
                 </select>
             </p>
     
             <p>
-                <label class="label_edition" for="categoria">
+                <label class="label_edition" for="genero">
                     <span>Categoría:</span>
                 </label>
-                <select class="ca_input_add" id="categoria" name="categoria">
+                <select class="ca_input_add" id="genero" name="genero">
                     <option value="hombre">Hombre</option>
                     <option value="mujer">Mujer</option>
                 </select>

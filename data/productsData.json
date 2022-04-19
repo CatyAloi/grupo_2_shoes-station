@@ -20,12 +20,12 @@
   },
   {
     "id": 2,
-    "nombreProducto": "Zapatillas Adidas Postmove  ",
-    "codigo": "ma_002  ",
+    "nombreProducto": "Zapatillas Adidas Postmove   ",
+    "codigo": "ma_002   ",
     "img": "ma_002.jpg",
     "precio": "18500",
     "descuento": "",
-    "descripcion": "                    Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                \r\n                ",
+    "descripcion": "                                        Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                \r\n                \r\n                ",
     "talle": [
       "42",
       "43",
@@ -435,5 +435,178 @@
     "stock": "15",
     "img": "img-1645650219858.jpeg",
     "id": 24
+  },
+  {
+    "nombreProducto": "ssssssssssssssss",
+    "codigo": "11213",
+    "precio": "1500",
+    "descuento": "",
+    "descripcion": "yrutrutitfi",
+    "talle": [
+      "36"
+    ],
+    "marca": "Nike",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "200",
+    "id": 25
+  },
+  {
+    "nombreProducto": "ffffffffffffffff",
+    "codigo": "4324646",
+    "precio": "12000",
+    "descuento": "",
+    "descripcion": "asfrewteyrey",
+    "talle": [
+      "36"
+    ],
+    "marca": "Nike",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "150",
+    "img": "img-1649522124409.jpg",
+    "id": 26
+  },
+  {
+    "nombreProducto": "gdghdfhfhjdfj",
+    "codigo": "4323463",
+    "precio": "45000",
+    "descuento": "",
+    "descripcion": "gtdesrtreyryuu",
+    "talle": [
+      "36",
+      "37",
+      "38"
+    ],
+    "marca": "Under Armour",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "100",
+    "img": "img-1649624027748.jpg",
+    "id": 27
+  },
+  {
+    "nombreProducto": "DSAADFASFASF",
+    "codigo": "231313",
+    "precio": "25000",
+    "descuento": "",
+    "descripcion": "eawrwtet",
+    "talle": [
+      "38",
+      "39"
+    ],
+    "marca": "Nike",
+    "categoria": "mujer",
+    "status": "activo",
+    "stock": "100",
+    "id": 28
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 29
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 30
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 31
+  },
+  {
+    "nombreProducto": "fg",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 32
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 33
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 34
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 35
+  },
+  {
+    "nombreProducto": "fg",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 36
+  },
+  {
+    "nombreProducto": "",
+    "codigo": "",
+    "precio": "",
+    "descuento": "",
+    "descripcion": "",
+    "marca": "Adidas",
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": "",
+    "id": 37
   }
 ]

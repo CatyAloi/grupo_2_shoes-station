@@ -5,6 +5,24 @@
 .ca_container_ppal{
     display: flex;
     flex-direction: column;
+    
+}
+
+div.errores > ul{
+    text-align: center;
+    color: red;
+    background-color: antiquewhite;
+}
+
+.input_class{
+    position: relative;
+}
+.text-danger{
+ position: absolute;
+ color: #f5576c;
+ font-size: 11px;
+ left: 0;
+ bottom: 22px;
 }
 
 /*SECCION FORMULARIO*/
@@ -78,7 +96,7 @@
     }
 
     .ca_container_form{
-        width: 40%;
+        width: 100%;
     }
 }
 

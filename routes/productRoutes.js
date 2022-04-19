@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const multer = require('multer');
+const { check } = require ('express-validator');
+
 
 const storage = multer.diskStorage({
     // Carpeta destino del archivo
@@ -19,6 +21,15 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
+//validaciones
+//const validateAddProduct = [
+  //  check('nombreProducto')
+   //    .notEmpty().withMessage('Debe ingresar un nombre del producto').bail()
+    //   .isLength({min: 8}).withMessage('El nombre debe tener un mínimo de 10 caracteres'),
+
+//]
+
+
 const controladorProduct = require('../controllers/productControllers');
 
 //SHOW ALL PRODUCTS//
@@ -32,6 +43,7 @@ router.get('/detalle/:id', controladorProduct.detalle);
 
 //CREATE ONE PRODUCT//
 router.get('/crearproductos', controladorProduct.crearProducto);
+
 router.post('/crearproductos', upload.single('img'), controladorProduct.store);
 
 //EDIT ONE PRODUCT//

@@ -6,6 +6,7 @@ const bodyParser = require ('body-parser');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const estaRecordado = require('./middlewares/estaRecordado');
+const authMiddleware = require('./middlewares/authMiddleware');
 
 app.use(methodOverride('_method'));
 
@@ -24,6 +25,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+app.use(authMiddleware, estaRecordado);
 
 app.set('view engine', 'ejs');
 
@@ -31,11 +33,9 @@ let rutasMain = require('./routes/mainRoutes');
 let rutasProducts = require('./routes/productRoutes');
 let rutasUsers = require('./routes/usersRoutes');
 
-app.use(estaRecordado);
-
 app.use ('/', rutasMain);
 app.use ('/', rutasProducts);
-app.use ('/', rutasUsers);;
+app.use ('/', rutasUsers);
 
 app.use ((req, res, next) => {
     res.status(400).render('./errors/error404');
