@@ -10,22 +10,19 @@
             </div>
             <div class= "ca_container3">
                 <div class="ca_caja_nombreproducto">
-                    <h1><%= producto.nombreProducto %></h1>
-                </div>
-                <div class="ca_caja_codigo">
-                    <p><%= producto.codigo %></p>
+                    <h1><%= producto.nombre %></h1>
                 </div>
                 <div class="ca_caja_precio">
-                    <p><%= producto.precio %></p>
+                    <p>Precio: $<%= producto.precio %></p>
                 </div>  
                 <div class="ca_caja_labeltalle">
-                    <p>Seleccionar Talle:</p> 
+                    <p>Seleccionar Talles:</p> 
                 </div>  
                 <div class="ca_container_talles">
-                    <% producto.talle.forEach(function (talle){ %>
-                        <li class="talle"><span> <%= talle %> </span></li>
+                    <% producto.talles.forEach(function (talle){ %>
+                        <li class="talle"><span> <%= talle.numero %> </span></li>
                    <% }); %>
-                </div>         
+                </div>       
                 <form class ="ca_caja_agregar" action="" method="POST">
                         <div class= "ca_cantidad"><input type="number"></div>
                     
@@ -52,8 +49,8 @@
         </div>
         <div class="ca_caja_atributos">
             <ul>
-                <li>Género: <%= producto.categoria %></li>
-                <li>Marca: <%= producto.marca %></li>
+                <li>Género: <%= producto.genero %></li>
+                <li>Marca: <%= producto.marca.nombre %></li>
             </ul>
         </div>    
         <%- include('../partials/footer'); %>

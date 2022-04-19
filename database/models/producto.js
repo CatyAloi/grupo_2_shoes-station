@@ -1,8 +1,9 @@
-const DetalleModel = require('./talle');
+const talleModel = require('./talle');
+const marcaModel = require('./marca');
+const productoTalleModel = require('./producto_talle');
 
 module.exports = (sequelize, dataTypes) => {
     const alias = 'productos';
-    const productos_talles_alias = 'productos_talles';
 
     const cols = {
         id: {
@@ -36,6 +37,10 @@ module.exports = (sequelize, dataTypes) => {
         img: {
             allowNull: false,
             type: dataTypes.STRING
+        },
+        id_marca: {
+            allowNull: false,
+            type: dataTypes.INTEGER,
         }
     }
 
@@ -44,27 +49,23 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Producto = sequelize.define(alias, cols, config);
-    const Talle = DetalleModel(sequelize, dataTypes);
+    const Marca = marcaModel(sequelize, dataTypes);
+    const Talle = talleModel(sequelize, dataTypes);
+    const ProductosTalles = productoTalleModel(sequelize, dataTypes);
 
-    const ProductosTalles = sequelize.define(productos_talles_alias, {
-        id_producto: {
-          type: dataTypes.INTEGER,
-          references: {
-            model: Producto,
-            key: 'id'
-          }
-        },
-        id_talle: {
-          type: dataTypes.INTEGER,
-          references: {
-            model: Talle,
-            key: 'id'
-          }
-        }
+    Producto.belongsTo(Marca, {
+        foreignKey: 'id_marca',
     });
 
-    Producto.belongsToMany(Talle, { through: ProductosTalles });
-    Talle.belongsToMany(Producto, { through: ProductosTalles });
+    Producto.belongsToMany(Talle, {
+        through: ProductosTalles,
+        foreignKey: 'id_producto',
+    });
+
+    Talle.belongsToMany(Producto, { 
+        through: ProductosTalles,
+        foreignKey: 'id_talle',
+    });
 
     return Producto;
 }

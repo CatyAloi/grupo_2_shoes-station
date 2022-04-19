@@ -40,8 +40,8 @@
                     <div class="filters-alc">
                         <h3 class="title_filter">Talle</h3>
                         <% talles.forEach(function (talle){ %>
-                            <input type="checkbox" id="" name="" value="">
-                            <label for=""> <%= talle %>  </label><br>
+                            <input type="checkbox" id="" name="talle[]" value="<%= talle.id %> ">
+                            <label for=""> <%= talle.numero %>  </label><br>
                        <% }); %>
                     </div>
                 </form> 
