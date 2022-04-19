@@ -58,27 +58,19 @@
   },
   {
     "id": 4,
-    "nombreProducto": "Zapatillas Adidas Lite Racer 2.0",
-    "codigo": "ha_004",
+    "nombreProducto": "Zapatillas Adidas Lite Racer 2.0  ",
+    "codigo": "ha_004  ",
     "img": "ha_004.jpg",
     "precio": "18500",
     "descuento": "15%",
-    "descripcion": "Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.",
+    "descripcion": "                                        Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.\r\n                \r\n                ",
     "talle": [
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46
+      "36"
     ],
     "marca": "Adidas",
-    "categoria": "Hombre"
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": ""
   },
   {
     "id": 5,
