@@ -18,6 +18,7 @@ const product_Controllers = {
             console.log('errorrrrr', e);
         } 
     },
+
     detalle: async(req, res)=> {
         try {
             const productoDB = await db.productos.findOne({
@@ -47,7 +48,7 @@ const product_Controllers = {
 
             res.render('products/productDetail', {  producto: productoDB, talles: tallesDb, usuario: req.session.userLogged }); 
         } catch (e) {
-            console.log('errorrrrr', e);
+            console.log('error', e);
         } 
     },
     carrito: (req, res)=> {
@@ -61,7 +62,7 @@ const product_Controllers = {
 
             res.render('products/addProduct', { talles: tallesDb, usuario: req.session.userLogged }); 
         } catch (e) {
-            console.log('errorrrrr', e);
+            console.log('error', e);
         } 
     },
 
