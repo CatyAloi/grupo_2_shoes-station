@@ -69,17 +69,17 @@ const product_Controllers = {
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
     store: async (req, res)=> { 
 
-        const resultCreated = validationResult(req);
-        if (resultCreated.errors){
-            return res.render ('products/addProduct', {errors : resultCreated.mapped(), oldData: req.body});
-        }
+    const resultCreated = validationResult(req);
+    if (resultCreated.errors){
+    const tallesDb = await db.talles.findAll();
+    return res.render ('products/addProduct', {talles: tallesDb, errors : resultCreated.mapped(), oldData: req.body});
+       }
 
-        const resultEdit = validationResult(req);
-        if (resultEdit.errors){
-            return res.render ('products/form_edition', {errors : resultEdit.mapped(), oldData: req.body});
-        } 
-
-
+        //const resultEdit = validationResult(req);
+       //if (resultEdit.errors){
+        //const tallesDb = await db.talles.findAll();
+       //  return res.render ('products/form_edition', {talles: tallesDb, errors : resultEdit.mapped(), oldData: req.body});
+      // } 
 
         const camposProductoFormulario = req.body;
         if (req.file) {
@@ -93,6 +93,7 @@ const product_Controllers = {
                     await db.productos_talles.create({
                         id_producto: productoGuardado.id,
                         id_talle: idTalle,
+                        
                     });
                 });
             } catch (error) {
@@ -172,13 +173,19 @@ const product_Controllers = {
 
     //ELIMINA EL PRODUCTO EXISTENTE 
 
-    borrarProducto: (req, res)=> {
-        db.productos.destroy({
+    borrarProducto: async(req, res)=> {
+        await db.productos_talles.destroy({
+            where:{
+                id_producto:req.params.id 
+            }
+        })
+        await db.productos.destroy({
             where:{
                 id: req.params.id 
          }
         });
-        res.redirect('/catalogo', { productos: db.productos, usuario: req.session.userLogged });
+        const productos = await db.productos.findAll()
+        res.redirect('/catalogo');
 
     },
 };

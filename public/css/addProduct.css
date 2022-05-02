@@ -5,6 +5,13 @@ color: #f5576c;
 font-size: 14px;
 }
 
+div.errores > ul{
+  list-style: none;
+  text-align: center;
+  color: red;
+  background-color: antiquewhite;
+}
+
 .ca_formediction{
   box-sizing: border-box;
   width: 800px;
@@ -44,6 +51,7 @@ font-size: 14px;
    font-size: 25px;
 }
 
+
 #btn_cancelar {
   text-align: center;
   align-content: center;
@@ -64,6 +72,8 @@ font-size: 14px;
   cursor: pointer;
 }
 
+
+
 #btn_agregar{
   margin: 5px;
   text-decoration: none;
@@ -80,6 +90,7 @@ font-size: 14px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   margin-bottom: 15px;
   cursor: pointer;
+
 }
 
 #btn_cancelar:active {

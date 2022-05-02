@@ -22,20 +22,21 @@ const upload = multer({ storage });
 const validationCreated = [
     check('nombre').notEmpty().withMessage('Debe ingresar el nombre del producto').bail(),
     check('nombre').isLength({min: 10}).withMessage('El nombre debe tener mínimo 10 caracteres'),
-    check('precio').notEmpty().withMessage('Debe ingresar el precio del producto'),
+    //check('precio').notEmpty().withMessage('Debe ingresar el precio del producto'),
     check('descripcion').notEmpty().withMessage('Debe ingresar la descripción del producto'),
     check('stock').notEmpty().withMessage('Debe ingresar la cantidad de Zapatillas disponibles'),
+    check('talles').notEmpty().withMessage('Debe seleccionar al menos un talle'),
    
 ]
 
-const validationEdit = [
-    check('nombre').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar el nombre del producto').bail(),
-    check('nombre').isLength({min: 10}).withMessage('El nombre debe tener mínimo 10 caracteres'),
-    check('precio').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar el precio del producto'),
-    check('descripcion').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar la descripción del producto'),
-    check('stock').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar la cantidad de Zapatillas disponibles'),
+//const validationEdit = [
+  //  check('nombre').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar el nombre del producto').bail(),
+  //  check('nombre').isLength({min: 10}).withMessage('El nombre debe tener mínimo 10 caracteres'),
+  //  check('precio').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar el precio del producto'),
+  //  check('descripcion').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar la descripción del producto'),
+   // check('stock').notEmpty().withMessage('Este campo no puede quedar vacío, debe ingresar la cantidad de Zapatillas disponibles'),
    
-]
+//]
 
 
 const controladorProduct = require('../controllers/productControllers');
@@ -55,7 +56,7 @@ router.post('/crearproductos', upload.single('img'), validationCreated, controla
 
 //EDIT ONE PRODUCT//
 router.get('/editarproductos/:id', controladorProduct.editarProducto);
-router.post('/editarproductos/:id', upload.single('img'), validationEdit, controladorProduct.store)
+router.post('/editarproductos/:id', upload.single('img'), controladorProduct.store)
 
 //DELETE ONE PRODUCT//
 router.delete('/borrarProducto/:id', controladorProduct.borrarProducto);

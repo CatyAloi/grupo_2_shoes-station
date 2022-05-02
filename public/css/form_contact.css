@@ -9,9 +9,11 @@
 }
 
 div.errores > ul{
+    list-style: none;
     text-align: center;
     color: red;
     background-color: antiquewhite;
+ 
 }
 
 .input_class{

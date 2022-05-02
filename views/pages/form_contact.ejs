@@ -20,7 +20,7 @@
                     <input class="ca_input_contact name" 
                         type="text" 
                         name = "Nombre" 
-                        placeholder="Nombre y Apellidos" 
+                        placeholder="Nombre y Apellido" 
                         value="<%= locals.oldData ? oldData.Nombre: null %>">
                     <% if (locals.errors && errors.Nombre) { %>
                         <div class = "text-danger">
@@ -33,7 +33,8 @@
                 
                 <div class="input_class"> 
                         <input class="ca_input_contact email" 
-                        type="" name = "Email" 
+                        type="" 
+                        name = "Email" 
                         placeholder="correo electrónico"
                         value="<%= locals.oldData ? oldData.Email: null %>">
                         <% if (locals.errors && errors.Email) { %>
@@ -62,13 +63,16 @@
                 </div>
 
                 <div class="input_class"> 
-                        <textarea id="ca_textarea" class="ca_input_contact message" 
+                        <textarea class="ca_input_contact message" 
+                        
                         type="text" 
                         name="mensaje" 
                         placeholder= "Escriba aquí su mensaje" 
-                        id="" cols="30" rows="10">
-                        <%= locals.oldData ? oldData.mensaje: null %>
-                        </textarea><% if (locals.errors && errors.mensaje) { %>
+                        id="mensaje" cols="30" rows="10">
+                        <%= locals.oldData ? oldData.mensaje: null %> 
+                        </textarea>
+                        
+                        <% if (locals.errors && errors.mensaje) { %>
                             <div class = "text-danger">
                                 <%= errors.mensaje.msg %> 
                             </div>

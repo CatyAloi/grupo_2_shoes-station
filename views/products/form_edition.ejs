@@ -3,12 +3,20 @@
     <%- include('../partials/head'); %>
 <body>
     <%- include('../partials/header'); %>
+
+            <div class="errores">
+                <ul></ul>
+            </div>
+
+
     <section class = "ca_formediction">
-        <form action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
+
+
+        <form class="edit" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
-                <input type="text" 
+                <input class="nameproduct2" type="text" 
                 name="nombre" 
                 id=inp_width 
                 value="<%= producto.nombre %> ">
@@ -33,20 +41,42 @@
             </p>
             <p>
                 <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-                <input type="text" name= "precio" id=inp_width value="<%= producto.precio  %>">
+                <input class="priceproduct2"  type="text" name= "precio" id=inp_width value="<%= producto.precio  %>">
             </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
                 <input type="text" name= "descuento" id=inp_width value="<%= producto.descuento %>" >
             </p>
+
+            <p>
+                <label class="label_edition" for="recomendado">
+                    <span>Recomendado para Vos:</span>
+                </label>
+                <select  class="ca_input_add" id="recomendado" name="recomendado">
+                    <option value="1">No</option>
+                    <option value="2">Si</option>
+                </select>
+            </p>
+
+
             <p>
                 <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea name="descripcion" id=inp_width cols="30" rows="10">
+                <textarea class="descriproduct2"  name="descripcion" id=inp_width cols="30" rows="10">
                     <%= producto.descripcion %>
                 </textarea>                   
             </p>
 
             <!--ACA VA EL CODIGO DE LOS TALLES-->
+            <p>
+                <label class="label_edition" for="">Talles Disponibles:</label><br>
+                <% talles.forEach(function (talle){ %>
+                    <% if (producto.talles.find(talleProducto => talleProducto.id === talle.id)) { %> 
+                        <input type="checkbox" name="talles[]" value="<%= talle.id %>" checked> <%= talle.numero %>
+                    <% } else { %>
+                        <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
+                    <% }  %>
+                <% }); %>
+            </p>
            
             <p>
                 <label class="label_edition" for="marcas">
@@ -78,14 +108,21 @@
             </p>
     
             <label class="label_edition" for="stock">Stock</label>
-            <input type="number" name="stock" id=inp_width value="<%= producto.stock %>">
+            <input class="stockproduct2"  type="number" name="stock" id=inp_width value="<%= producto.stock %>">
 
             <div class="container-cancl-edit-alc">
-                <input type="reset" value="Cancelar" id="btn_cancelar-acl">
+                <!--<input type="reset" value="Cancelar" id="btn_cancelar-acl">-->
+
+                <a href="/detalle/<%= producto.id %>">
+                    <input id="btn_cancelar-acl" type="button" value="Cancelar">
+                </a>
+
                 <input type="submit" value="Editar Producto" id="btn_editar"> 
             </div>
         </form>
     </section>
     <%- include('../partials/footer'); %>  
+
+    <script src="js/form_edit.js"></script>
 </body>
 </html>

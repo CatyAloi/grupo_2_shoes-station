@@ -4,8 +4,14 @@
 <body>
     <%- include('../partials/header');%>
     <div id="franja"></div>
+
+            <div class="errores">
+                <ul></ul>
+            </div>
+
+
     <div>
-        <form class="ca_container_register" action="/registro" method="POST" enctype="multipart/form-data">
+        <form class="ca_container_register registro" action="/registro" method="POST" enctype="multipart/form-data">
             <h2 class="ca_titulo_register">Registrarme</h2>
 
             <p id="ca_requeridos">(*)Campos Requeridos</p>
@@ -18,7 +24,7 @@
 
             <div class="input-container">
                 <label class= "label_register" for="nombre">* Nombre</label>
-                <input class="ca_input_register" type="text" name="nombre" placeholder="" value="<%= data.nombre %>">
+                <input class="ca_input_register name" type="text" name="nombre" placeholder="" value="<%= data.nombre %>">
                 <% if (errors.nombre) { %> 
                     <span class="error"><%= errors.nombre.msg %> </span>
                     <br><br>
@@ -27,7 +33,7 @@
             
             <div class="input-container">
                 <label class= "label_register" for="apellido">* Apellido</label>
-                <input class="ca_input_register" type="text" name="apellido" placeholder="" value="<%= data.apellido %>">
+                <input class="ca_input_register lastname" type="text" name="apellido" placeholder="" value="<%= data.apellido %>">
                 <% if (errors.apellido) { %> 
                     <span class="error"><%= errors.apellido.msg %> </span>
                     <br><br>
@@ -39,8 +45,8 @@
             <input class="ca_input_register"  type="file" name="img" id="img" (acepta solo formatos.jpg, .png)>
         
             <div class="input-container">
-                <label class= "label_register" for="telefono">* Teléfono (cod. área + número)</label>
-                <input class="ca_input_register" type="number" name="telefono" placeholder="" value="<%= data.telefono %>">
+                <label class= "label_register" for="telefono">* Teléfono (cod. área + número, Ej. 91112345678)</label>
+                <input class="ca_input_register phone" type="number" name="telefono" placeholder="" value="<%= data.telefono %>">
                 <% if (errors.telefono) { %> 
                     <span class="error"><%= errors.telefono.msg %> </span>
                     <br><br>
@@ -49,7 +55,7 @@
 
             <div class="input-container">
                 <label class= "label_register" for="email">* Email</label>
-                <input class="ca_input_register" type="email" name="email" placeholder="" value="<%= data.email %>">
+                <input class="ca_input_register email" type="email" name="email" placeholder="" value="<%= data.email %>">
                 <% if (errors.email) { %> 
                     <span class="error"><%= errors.email.msg %> </span>
                     <br><br>
@@ -58,7 +64,7 @@
 
             <div class="input-container">
                 <label class= "label_register" for="password">* Contraseña (mínimo 8 caracteres)</label>
-                <input class="ca_input_register" type="password" name="pwd" placeholder="">
+                <input class="ca_input_register clave" type="password" name="pwd" placeholder="">
                 <% if (errors.password) { %> 
                     <span class="error"><%= errors.password.msg %> </span>
                     <br><br>
@@ -96,6 +102,8 @@
         </form>
     </div>
     <%- include('../partials/footer'); %>
+
+    <!--<script src="js/registro.js"></script>-->
 </body>
 </html>
 

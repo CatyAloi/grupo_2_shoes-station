@@ -9,6 +9,7 @@ const validationContact = [
     check('Email').notEmpty().withMessage('Debe ingresar un Email').bail(),
     check('Email').isEmail().withMessage('Debe ingresar un email con formato válido'),
     check('Telefono').notEmpty().withMessage('Debe ingresar un número de Teléfono').bail(),
+    check('Telefono').isNumeric().withMessage('Solo acepta números'),
     check('Telefono').isLength({min: 11}).withMessage('Por Favor, ingrese un número de teléfono válido'),
     check('mensaje').notEmpty().withMessage('Por favor, escriba su mensaje').bail(),
     check('mensaje').isLength({min: 10}).withMessage('Este campo debe tener mínimo 10 caracteres'),
