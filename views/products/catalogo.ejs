@@ -18,7 +18,7 @@
         <div class="filters-container">
                 <button id="btn-filters" class="filters">Filtros</button>
             <div id="menu-filters">
-                <form class="form-filter_al">
+                <form class="form-filter_al" method="GET" action="/catalogo">
                     <div class="filters-alc">
                         <h3 class="title_filter">Género</h3>
                         <input type="checkbox" id="hombre" name="hombre" value="hombre">
@@ -29,12 +29,16 @@
                     
                     <div class="filters-alc">
                         <h3 class="title_filter">Marcas</h3>
-                        <input type="checkbox" id="adidas" name="adidas" value="adidas">
+                        <% marcas.forEach(function (marca){ %>
+                            <input type="checkbox" id="" name="<%= marca.nombre %>" value="<%= marca.id %> ">
+                            <label for=""> <%= marca.nombre %>  </label><br>
+                       <% }); %>
+                        <!-- <input type="checkbox" id="adidas" name="adidas" value="adidas">
                         <label for="adidas"> Adidas </label><br>
                         <input type="checkbox" id="nike" name="nike" value="nike">
                         <label for="adidas"> Nike</label><br>
                         <input type="checkbox" id="under-armour" name="under-armour" value="under-armour">
-                        <label for="under-armour"> Under Armour</label>
+                        <label for="under-armour"> Under Armour</label> -->
                     </div>
 
                     <div class="filters-alc">
@@ -44,6 +48,7 @@
                             <label for=""> <%= talle.numero %>  </label><br>
                        <% }); %>
                     </div>
+                    <button>Filtrar</button>
                 </form> 
             </div> 
         </div>  

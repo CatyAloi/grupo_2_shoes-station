@@ -8,15 +8,16 @@ const db = require('../database/models');
 
 const product_Controllers = { 
     catalogo: async(req, res)=> {
+        console.log('Esto es el catalogo', req.query)
         try {
             const tallesDb = await db.talles.findAll();
-    
-            res.render('products/catalogo', {  productos: productsJson, talles: tallesDb, usuario: req.session.userLogged });
+            const marcasDb= await db.marcas.findAll();
+            res.render('products/catalogo', {  productos: productsJson, talles: tallesDb, marcas: marcasDb, usuario: req.session.userLogged });
             //const productDb = await db.productos.findAll() 
-            //res.render('products/catalogo', { productos: productDb, talles: tallesDb, usuario: req.session.userLogged });
+            //res.render('products/catalogo', { productos: productDb, talles: tallesDb, usuario: req.session.userLogged }
         } catch (e) {
             console.log('errorrrrr', e);
-        } 
+        }
     },
 
     detalle: async(req, res)=> {
