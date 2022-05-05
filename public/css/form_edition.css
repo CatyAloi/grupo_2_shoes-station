@@ -25,6 +25,13 @@
     font-family: 'Prompt', sans-serif;
 }
 
+div.errores > ul{
+    list-style: none;
+    text-align: center;
+    color: red;
+    background-color: antiquewhite;
+  }
+
 .img-input-acl {
     width: 100%;
     font-size: 10px;

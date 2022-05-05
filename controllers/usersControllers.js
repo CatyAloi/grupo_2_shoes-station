@@ -16,14 +16,14 @@ const users_Controllers = {
         const userToLogin = await db.usuarios.findOne({ where: { email: email } })
 
         if (userToLogin === null) {
-            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
+            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
             return;
         } 
         
         const bool = bcrypt.compareSync(password, userToLogin.pwd);
 
         if (!bool) {
-            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden' });
+            res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
             return;
         }
         

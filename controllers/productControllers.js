@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const modelProductos = require('../models/producto'); 
+const modelProductos = require('../models/producto');
+const {validationResult} = require('express-validator'); 
 
 const dataPath = path.join(__dirname, '../data');
 let productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
@@ -12,11 +13,11 @@ const product_Controllers = {
         try {
             const tallesDb = await db.talles.findAll();
             const marcasDb= await db.marcas.findAll();
-            res.render('products/catalogo', {  productos: productsJson, talles: tallesDb, marcas: marcasDb, usuario: req.session.userLogged });
-            //const productDb = await db.productos.findAll() 
-            //res.render('products/catalogo', { productos: productDb, talles: tallesDb, usuario: req.session.userLogged }
+            const productDb = await db.productos.findAll() 
+            res.render('products/catalogo', {  productos: productDb, talles: tallesDb, marcas: marcasDb, usuario: req.session.userLogged });
+        
         } catch (e) {
-            console.log('errorrrrr', e);
+            console.log('error', e);
         }
     },
 
@@ -69,6 +70,19 @@ const product_Controllers = {
 
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
     store: async (req, res)=> { 
+
+    const resultCreated = validationResult(req);
+    if (resultCreated.errors){
+    const tallesDb = await db.talles.findAll();
+    return res.render ('products/addProduct', {talles: tallesDb, errors : resultCreated.mapped(), oldData: req.body});
+       }
+
+        //const resultEdit = validationResult(req);
+       //if (resultEdit.errors){
+        //const tallesDb = await db.talles.findAll();
+       //  return res.render ('products/form_edition', {talles: tallesDb, errors : resultEdit.mapped(), oldData: req.body});
+      // } 
+
         const camposProductoFormulario = req.body;
         if (req.file) {
             camposProductoFormulario.img = req.file.filename;
@@ -81,6 +95,7 @@ const product_Controllers = {
                     await db.productos_talles.create({
                         id_producto: productoGuardado.id,
                         id_talle: idTalle,
+                        
                     });
                 });
             } catch (error) {
@@ -159,10 +174,27 @@ const product_Controllers = {
     },
 
     //ELIMINA EL PRODUCTO EXISTENTE 
-    borrarProducto: (req, res)=> {
-        productsJson = modelProductos.borrarProducto(req.params.id);
+
+    borrarProducto: async(req, res)=> {
+        await db.productos_talles.destroy({
+            where:{
+                id_producto:req.params.id 
+            }
+        })
+        await db.productos.destroy({
+            where:{
+                id: req.params.id 
+         }
+        });
+        const productos = await db.productos.findAll()
         res.redirect('/catalogo');
+
     },
 };
+
+    //borrarProducto: (req, res)=> {
+       // productsJson = modelProductos.borrarProducto(req.params.id);
+       // res.redirect('/catalogo');
+
 
 module.exports = product_Controllers;

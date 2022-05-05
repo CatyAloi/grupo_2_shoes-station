@@ -19,25 +19,6 @@
     "categoria": "Mujer"
   },
   {
-    "id": 2,
-    "nombreProducto": "Zapatillas Adidas Postmove  ",
-    "codigo": "ma_002  ",
-    "img": "ma_002.jpg",
-    "precio": "18500",
-    "descuento": "",
-    "descripcion": "                    Las zapatillas Adidas introducen un estilo deportivo y versátil a cada mujer. El exterior de malla transpirable ofrece comodidad de la mañana a la noche y la mediasuela de EVA amortigua cada uno de tus pasos.\r\n                \r\n                ",
-    "talle": [
-      "42",
-      "43",
-      "44",
-      "45"
-    ],
-    "marca": "Adidas",
-    "categoria": "hombre",
-    "status": "activo",
-    "stock": ""
-  },
-  {
     "id": 3,
     "nombreProducto": "Zapatillas  Showtheway New     ",
     "codigo": "ha_003       ",
@@ -58,27 +39,19 @@
   },
   {
     "id": 4,
-    "nombreProducto": "Zapatillas Adidas Lite Racer 2.0",
-    "codigo": "ha_004",
+    "nombreProducto": "Zapatillas Adidas Lite Racer 2.0  ",
+    "codigo": "ha_004  ",
     "img": "ha_004.jpg",
     "precio": "18500",
     "descuento": "15%",
-    "descripcion": "Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.",
+    "descripcion": "                                        Inspiradas para deportistas, las Zapatillas Adidas son ideales para los hombres amantes de entrenamientos. El exterior de malla elástica en estas zapatillas es cómodo y transpirable, y la mediasuela con amortiguación ofrece apoyo al pie en cada pisada.\r\n                \r\n                ",
     "talle": [
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46
+      "36"
     ],
     "marca": "Adidas",
-    "categoria": "Hombre"
+    "categoria": "hombre",
+    "status": "activo",
+    "stock": ""
   },
   {
     "id": 5,
@@ -250,32 +223,6 @@
     ],
     "marca": "Under Armour",
     "categoria": "Hombre"
-  },
-  {
-    "nombreProducto": "Zapatilla Nike",
-    "codigo": "58220",
-    "precio": "18000",
-    "descuento": "15000",
-    "descripcion": "",
-    "talle": [
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46
-    ],
-    "marca": "Nike",
-    "categoria": "hombre",
-    "status": "activo",
-    "stock": "15",
-    "id": 13,
-    "img": "img-1645047971748.jpeg"
   },
   {
     "nombreProducto": "Zapatilla Adidas",
