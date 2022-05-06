@@ -129,6 +129,18 @@ html, body {
     font-family: 'Prompt', sans-serif;
 }
 
+.content-info > a {
+    font-weight: 200;
+}
+
+.content-info > p {
+    font-weight: 200;
+}
+
+.info > p {
+    font-weight: 200;
+}
+
 .content-footer {
     font-size: 20px;
 }

@@ -22,6 +22,10 @@
     margin-top: 15px;
 }
 
+.ca_caja_nombreproducto > h1 {
+    font-weight: 400;
+}
+
 .ca_caja_codigo{/*propiedades del CODIGO del producto*/
     font-size: 16px;
     margin-left: 40px;
@@ -35,6 +39,10 @@
     margin-left: 40px;
     margin-top: 20px;
     color: #006bc994;
+}
+
+.ca_caja_precio > p {
+    font-weight: 400;
 }
 
 .ca_caja_labeltalle{/*propiedades del LABEL del talle*/
@@ -112,6 +120,7 @@
     font-size: 15px;
     margin-right: 5px;
     text-align: center;
+    font-weight: 200;
 }
 
 .ca_caja_atributos{/*Contenedor de los dos atributos*/

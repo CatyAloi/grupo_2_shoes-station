@@ -11,11 +11,13 @@
     margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 400;
 }
 
 #ca_intro{
     font-size: 20px;
     text-align: center;
+    font-weight: 200;
 }
 
 .font{
@@ -36,4 +38,5 @@
     margin-top: 30px;
     font-size: 18px;
     text-align: center;
+    font-weight: 200;
 }

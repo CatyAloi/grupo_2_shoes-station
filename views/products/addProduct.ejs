@@ -3,13 +3,13 @@
     <%- include('../partials/head'); %>
 <body>
     <%- include('../partials/header'); %>
-
-            <div class="errores">
-                <ul></ul>
-            </div>
+   
+    <div id="franja"></div>
+    <div class="errores">
+        <ul></ul>
+    </div>
 
     <section class = "ca_formediction">
-
         <form class = "add" action="/crearproductos" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Crear un Producto</h2>
 
@@ -27,23 +27,18 @@
                         <br><br>           
                     <% } %>
             </p>
-       
-           <p>
+            <p>
                 <label  class="label_edition"for="img">Agregar imagen:</label>
                 <input class="ca_input_add"  type="file" name="img" id="img"> (acepta solo formatos.jpg, .png)
             </p>
-
-           <p>
+            <p>
                 <label class="label_edition" for="precio">Precio del Producto:</label>
                 <input class="ca_input_add priceproduct"  type="number" name="precio" id="precio">
-           </p>
-            
+            </p> 
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
                 <input class="ca_input_add"  type="number" name="descuento" id="descuento">
-        
             </p>
-
             <p>
                 <label class="label_edition" for="recomendado">
                     <span>Recomendado para Vos:</span>
@@ -52,9 +47,7 @@
                     <option value="1">No</option>
                     <option value="2">Si</option>
                 </select>
-            </p>
-    
-           
+            </p> 
             <p>
                 <label class="label_edition" for="descripcion">Descripción del Producto:</label> <br>
                 <textarea class="ca_input_add descriproduct"  name="descripcion" id="descripcion" cols="30" rows="10"><%= locals.oldData ? oldData.stock: null %></textarea>             
@@ -65,7 +58,6 @@
                     <br><br>           
                 <% } %>
             </p>
-        
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br> 
                 <% talles.forEach(function (talle){ %>
@@ -121,14 +113,11 @@
                     </div>    
                     <br><br>           
                 <% } %>
-
             </p>
-              
-                
             <div class="flex_cancelar_agregar">
               
-                <a href="/catalogo">
-                    <input id="btn_cancelar" type="button" value="Cancelar">
+                <a href="/catalogo" class="cancel-add">
+                    Cancelar
                 </a>
 
                 <input type="submit" value="Crear Producto" id="btn_agregar">
@@ -138,6 +127,6 @@
     </section>
     <%- include('../partials/footer'); %>  
 
-    <script src="js/form_add.js"></script>  
+    <!-- <script src="js/form_add.js"></script>   -->
 </body>
 </html>

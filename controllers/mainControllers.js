@@ -36,9 +36,7 @@ module.exports = {
         if (resultContact.errors){
             return res.render ('pages/form_contact', {errors : resultContact.mapped(), oldData: req.body});
         } 
-
     },
-
 
     terminos: (req, res)=> {
         res.render('pages/terminos_condiciones');
@@ -49,10 +47,10 @@ module.exports = {
     },
 
     nosotros: (req, res)=> {
-        res.render('pages/nosotros');
+        res.render('pages/nosotros', { usuario: req.session.userLogged });
     },
 
     metodos_pago: (req, res)=> {
-        res.render('pages/metodos_pago');
+        res.render('pages/metodos_pago', { usuario: req.session.userLogged });
     }
 };

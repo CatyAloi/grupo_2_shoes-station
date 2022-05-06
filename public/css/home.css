@@ -121,8 +121,9 @@ a {
 }
 
 .product-title {
-    color: #333333;
-    font-weight: 600;
+    font-weight: 300;
+    text-align: center;
+    color: #000000;
     text-decoration: none;
     transition: all ease 0.3s;
 }

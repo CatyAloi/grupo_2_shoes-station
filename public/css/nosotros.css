@@ -8,3 +8,20 @@
 .nosotros > p{
   text-align: justify;
 }
+
+.politicas > p {
+  font-weight: 200;
+}
+
+.politicas > h2 {
+  font-weight: 400;
+}
+
+.politicas > h3 {
+  font-weight: 400;
+}
+
+.valores {
+  list-style: none;
+  font-weight: 200;
+}

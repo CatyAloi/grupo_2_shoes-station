@@ -71,11 +71,11 @@ const product_Controllers = {
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
     store: async (req, res)=> { 
 
-    const resultCreated = validationResult(req);
-    if (resultCreated.errors){
-    const tallesDb = await db.talles.findAll();
-    return res.render ('products/addProduct', {talles: tallesDb, errors : resultCreated.mapped(), oldData: req.body});
-       }
+    // const resultCreated = validationResult(req);
+    // if (resultCreated.errors){
+    // const tallesDb = await db.talles.findAll();
+    // return res.render ('products/addProduct', {talles: tallesDb, errors : resultCreated.mapped(), oldData: req.body});
+    //    }
 
         //const resultEdit = validationResult(req);
        //if (resultEdit.errors){
@@ -94,8 +94,7 @@ const product_Controllers = {
                 camposProductoFormulario.talles.forEach(async (idTalle) => {
                     await db.productos_talles.create({
                         id_producto: productoGuardado.id,
-                        id_talle: idTalle,
-                        
+                        id_talle: idTalle, 
                     });
                 });
             } catch (error) {
@@ -143,6 +142,7 @@ const product_Controllers = {
     
     //EDITA EL PRODUCTO EXISTENTE          
     editarProducto: async(req, res)=> {
+        console.log(req.body);
         try {
             const tallesDb = await db.talles.findAll();
 

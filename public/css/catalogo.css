@@ -13,7 +13,7 @@ body {
 
 .product_add_acl {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    height: 30px;
+    height: 28px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -75,8 +75,13 @@ body {
     justify-content: center;
 }
 
+.title_filter {
+    font-weight: 400;
+}
+
 .product-catalog {
     margin: 20px auto;
+    text-align: center
 }
 
 .container-catalogo {
@@ -95,12 +100,17 @@ body {
     color: black;
     font-size: 14px;
     text-align: center;
+    width: 180px;
 }
 
 .info-prod-price {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.info-prod-price > a{
+    font-weight: 300;
 }
 
 @media screen and (min-width: 941px){
@@ -167,8 +177,8 @@ body {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
     .catal-prod {
-        width: 120px;
+        width: 100%;
     }
 }

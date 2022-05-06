@@ -3,15 +3,11 @@
     <%- include('../partials/head'); %>
 <body>
     <%- include('../partials/header'); %>
-
+    <div id="franja"></div>
             <div class="errores">
                 <ul></ul>
             </div>
-
-
     <section class = "ca_formediction">
-
-
         <form class="edit" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
@@ -26,15 +22,12 @@
                     </div>    
                     <br><br>           
                 <% } %>
-
-
-
             </p>
             <section class="editNew-acl">
                 <h4>Imagen del Producto</h4>
                 <img src="/images/<%= producto.img %>" alt="" class="editNew-prod">
             </section>
-            <p>
+            <p class="formato-img">
                 <label  class="label_edition img-edit" for="img Producto">Cambiar imagen:</label>
                 <input type="file" name="img" class="img-input-acl"> 
                 (acepta solo formatos.jpg, .png)
@@ -45,7 +38,7 @@
             </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
-                <input type="text" name= "descuento" id=inp_width value="<%= producto.descuento %>" >
+                <input type="text" class="weight-acl" name= "descuento" id=inp_width value="<%= producto.descuento %>" >
             </p>
 
             <p>
@@ -82,20 +75,20 @@
                 <label class="label_edition" for="marcas">
                     <span>Marcas:</span>
                 </label>
-                <select id="inp_width" name="id_marca">
-                    <option value="1" <% if (producto.id_marca === 1) { %> selected="selected" <% } %>>Adidas</option>
-                    <option value="2" <% if (producto.id_marca === 2) { %> selected="selected" <% } %>>Under Armour</option>
-                    <option value="3" <% if (producto.id_marca === 3) { %> selected="selected" <% } %>>Nike</option>
+                <select id="inp_width" name="id_marca" class="weight-acl">
+                    <option class="weight-acl" value="1" <% if (producto.id_marca === 1) { %> selected="selected" <% } %>>Adidas</option>
+                    <option class="weight-acl" value="2" <% if (producto.id_marca === 2) { %> selected="selected" <% } %>>Under Armour</option>
+                    <option class="weight-acl" value="3" <% if (producto.id_marca === 3) { %> selected="selected" <% } %>>Nike</option>
                 </select>
             </p>
             <p>
                 <label class="label_edition" for="categoria">
                     <span>Género:</span>
                 </label>
-                <select id="inp_width" name="genero">
+                <select id="inp_width" name="genero" class="weight-acl">
 
-                    <option value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
-                    <option value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
+                    <option class="weight-acl" value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
+                    <option class="weight-acl" value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
 
                 </select>
             </p>
@@ -103,28 +96,25 @@
                 <label class="label_edition" for="status">
                     <span>Status:</span>
                 </label>
-                <select id="inp_width"id="inp_width" name="status">
-                    <option value="activo" <% if (producto.status === 'activo') { %> selected="selected" <% } %>>Activo</option>
-                    <option value="inactivo" <% if (producto.status === 'inactivo') { %> selected="selected" <% } %>>Inactivo</option>
+                <select id="inp_width"id="inp_width" name="status" class="weight-acl">
+                    <option class="weight-acl" value="activo" <% if (producto.status === 'activo') { %> selected="selected" <% } %>>Activo</option>
+                    <option class="weight-acl" value="inactivo" <% if (producto.status === 'inactivo') { %> selected="selected" <% } %>>Inactivo</option>
                 </select>
             </p>
     
             <label class="label_edition" for="stock">Stock</label>
-            <input class="stockproduct2"  type="number" name="stock" id=inp_width value="<%= producto.stock %>">
+            <input class="stockproduct2" type="number" name="stock" id=inp_width value="<%= producto.stock %>">
 
             <div class="container-cancl-edit-alc">
-                <!--<input type="reset" value="Cancelar" id="btn_cancelar-acl">-->
-
-                <a href="/detalle/<%= producto.id %>">
-                    <input id="btn_cancelar-acl" type="button" value="Cancelar">
+                <a href="/detalle/<%= producto.id %>" id="btn_cancelar-acl">
+                    Cancelar
                 </a>
-
                 <input type="submit" value="Editar Producto" id="btn_editar"> 
             </div>
         </form>
     </section>
     <%- include('../partials/footer'); %>  
 
-    <script src="js/form_edit.js"></script>
+    <!-- <script src="js/form_edit.js"></script> -->
 </body>
 </html>

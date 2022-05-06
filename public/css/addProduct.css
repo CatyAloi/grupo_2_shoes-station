@@ -36,23 +36,30 @@ div.errores > ul{
   background: hsla(208, 92%, 60%, 0.2);
   border-radius: 5px;
   border: none;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 200;
 }
 
 #title_editar{
   color:#000000;
   text-align: center;
   margin: 0;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 500;
   margin-bottom: 25px; 
+  font-weight: 200;
 }
 
 .label_edition{
    font-size: 25px;
+   font-weight: 200;
 }
 
+.priceproduct2 {
+  font-weight: 100;
+}
 
-#btn_cancelar {
+.flex_cancelar_agregar > .cancel-add {
   text-align: center;
   align-content: center;
   background-image:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);;
@@ -61,9 +68,9 @@ div.errores > ul{
   text-decoration: none;
   font-family: 'Prompt', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   width: 30%;
-  height: 40px;
+  height: 30px;
   border-radius: 8px;
   border: none;
   color: rgb(0, 0, 0);
@@ -72,17 +79,21 @@ div.errores > ul{
   cursor: pointer;
 }
 
-
+.cancel-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #btn_agregar{
   margin: 5px;
   text-decoration: none;
   text-align: center;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: 'Prompt', sans-serif;
   width: 60%;
-  height: 40px;
+  height: 30px;
   border-radius: 8px;
   border: none;
   color: rgb(0, 0, 0);
@@ -101,13 +112,27 @@ div.errores > ul{
   transform: translateY(4px);
 }
 
-@media screen and (max-width: 440px){
+@media (min-width:600px) {
+  .flex_cancelar_agregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex_cancelar_agregar > .cancel-add {
+    margin-top: 13px;
+  }
+
+}
+
+@media screen and (max-width: 599px){
   .flex_cancelar_agregar {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #btn_cancelar {
+
+  .flex_cancelar_agregar > .cancel-add {
     width: 100%;
   }
 

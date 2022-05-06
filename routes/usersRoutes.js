@@ -19,11 +19,7 @@ const storage = multer.diskStorage({
 // clase( parametros )
 const upload = multer({ storage });
 
-
-
 let usersControllers = require('../controllers/usersControllers');
-
-
 
 router.get('/login', usersControllers.login);
 
