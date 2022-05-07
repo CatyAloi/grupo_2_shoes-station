@@ -33,12 +33,6 @@
                             <input type="checkbox" id="" name="<%= marca.nombre %>" value="<%= marca.id %> ">
                             <label for=""> <%= marca.nombre %>  </label><br>
                        <% }); %>
-                        <!-- <input type="checkbox" id="adidas" name="adidas" value="adidas">
-                        <label for="adidas"> Adidas </label><br>
-                        <input type="checkbox" id="nike" name="nike" value="nike">
-                        <label for="adidas"> Nike</label><br>
-                        <input type="checkbox" id="under-armour" name="under-armour" value="under-armour">
-                        <label for="under-armour"> Under Armour</label> -->
                     </div>
 
                     <div class="filters-alc">
@@ -48,7 +42,9 @@
                             <label for=""> <%= talle.numero %>  </label><br>
                        <% }); %>
                     </div>
-                    <button>Filtrar</button>
+                    <div class="container-btnFilter">
+                        <button class="filter-form">Filtrar</button>
+                    </div>
                 </form> 
             </div> 
         </div>

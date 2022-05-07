@@ -113,6 +113,23 @@ body {
     font-weight: 300;
 }
 
+.filter-form {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Prompt', sans-serif;
+    border: none;
+    width: 80px;
+    height: 25px;
+    font-weight: 200;
+    border-radius: 5px;
+}
+
+.container-btnFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (min-width: 941px){
     .linea-al {
         display: none;

@@ -8,6 +8,10 @@
     margin-left: 20px;
 }
 
+.ca_titulo_carrito > h3 {
+    font-weight: 400;
+}
+
 .comprar_mas{/*Propiedades link seguir comprando*/
     margin: 15px;
 }
@@ -39,7 +43,11 @@
     margin-top: 10px;
     margin-left: 15px;
     margin-bottom: 10px;
-    font-size: 15px
+    font-size: 15px;
+}
+
+.ca_nombre_producto > h3 {
+    font-weight: 400;
 }
 
 .talle_ca{/*propiedades del texto del TALLE y el CÓDIGO*/
@@ -133,8 +141,8 @@
 .ca_monto_total{/*propiedades del texto MONTO TOTAL*/
     padding: 10px;
     margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 400;
 } 
 
 .shopping{/*propiedades del botón Finalizar*/
