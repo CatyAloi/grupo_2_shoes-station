@@ -76,9 +76,12 @@
                     <span>Marcas:</span>
                 </label>
                 <select id="inp_width" name="id_marca" class="weight-acl">
-                    <option class="weight-acl" value="1" <% if (producto.id_marca === 1) { %> selected="selected" <% } %>>Adidas</option>
-                    <option class="weight-acl" value="2" <% if (producto.id_marca === 2) { %> selected="selected" <% } %>>Under Armour</option>
-                    <option class="weight-acl" value="3" <% if (producto.id_marca === 3) { %> selected="selected" <% } %>>Nike</option>
+                    <% marcas.forEach(function (marca){ %>
+                        <option class="weight-acl" value="<%= marca.id %>" <% if (marca.id) { %> selected="selected" <% } %> > 
+                            <%= marca.nombre %>  
+                        </option>
+                    <% }); %>
+                   
                 </select>
             </p>
             <p>
@@ -86,10 +89,8 @@
                     <span>Género:</span>
                 </label>
                 <select id="inp_width" name="genero" class="weight-acl">
-
                     <option class="weight-acl" value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
                     <option class="weight-acl" value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
-
                 </select>
             </p>
             <p>

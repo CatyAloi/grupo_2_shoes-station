@@ -77,9 +77,11 @@
                     <span>Marcas:</span>
                 </label>
                 <select  class="ca_input_add" id="marca" name="id_marca">
-                    <option value="1">Adidas</option>
-                    <option value="2">Nike</option>
-                    <option value="3">Under Armour</option>
+                    <% marcas.forEach(function (marca){ %>
+                        <option class="weight-acl" value="<%= marca.id %>" <% if (marca.id) { %> selected="selected" <% } %> > 
+                            <%= marca.nombre %>  
+                        </option>
+                    <% }); %>
                 </select>
             </p>
     

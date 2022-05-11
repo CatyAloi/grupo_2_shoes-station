@@ -11,11 +11,36 @@ const product_Controllers = {
     catalogo: async(req, res)=> {
         console.log('Esto es el catalogo', req.query)
         try {
+             
             const tallesDb = await db.talles.findAll();
             const marcasDb= await db.marcas.findAll();
-            const productDb = await db.productos.findAll() 
-            res.render('products/catalogo', {  productos: productDb, talles: tallesDb, marcas: marcasDb, usuario: req.session.userLogged });
-        
+           
+            if(req.query.genero && req.query.marca) {
+                let filterProducts = await db.productos.findAll( {where: {genero: req.query.genero, id_marca: req.query.marca}} );
+                res.render('products/catalogo', {  productos: filterProducts, 
+                                                   talles: tallesDb, 
+                                                   marcas: marcasDb, 
+                                                   usuario: req.session.userLogged });
+            } else if(req.query.genero) {
+                let filterProducts = await db.productos.findAll( {where: {genero: req.query.genero}} );
+                res.render('products/catalogo', {  productos: filterProducts, 
+                                                   talles: tallesDb, 
+                                                   marcas: marcasDb, 
+                                                   usuario: req.session.userLogged });
+            } else if(req.query.marca) {
+                let filterProducts = await db.productos.findAll( {where: {id_marca: req.query.marca}} );
+                res.render('products/catalogo', {  productos: filterProducts, 
+                                                   talles: tallesDb, 
+                                                   marcas: marcasDb, 
+                                                   usuario: req.session.userLogged }); 
+            } else {
+                const productDb = await db.productos.findAll() 
+                res.render('products/catalogo', {  productos: productDb, 
+                                                   talles: tallesDb, 
+                                                   marcas: marcasDb, 
+                                                   usuario: req.session.userLogged });
+            }
+
         } catch (e) {
             console.log('error', e);
         }
@@ -27,6 +52,7 @@ const product_Controllers = {
                 include: [
                     {
                         model: db.marcas,
+
                     },
                     {
                         model: db.talles,
@@ -40,6 +66,8 @@ const product_Controllers = {
                     [db.talles, 'numero', 'ASC'],
                 ]
             });
+
+            console.log('productoDB', productoDB);
 
             if (!productoDB) {
                 res.redirect('/404');
@@ -61,8 +89,9 @@ const product_Controllers = {
     crearProducto: async (req,res)=> {
         try {
             const tallesDb = await db.talles.findAll();
+            const marcasDb= await db.marcas.findAll();
 
-            res.render('products/addProduct', { talles: tallesDb, usuario: req.session.userLogged }); 
+            res.render('products/addProduct', { talles: tallesDb, marcas: marcasDb, usuario: req.session.userLogged }); 
         } catch (e) {
             console.log('error', e);
         } 
@@ -145,6 +174,7 @@ const product_Controllers = {
         console.log(req.body);
         try {
             const tallesDb = await db.talles.findAll();
+            const marcasDb= await db.marcas.findAll();
 
             const productoDB = await db.productos.findOne({
                 include: [
@@ -167,14 +197,13 @@ const product_Controllers = {
                 return;
             }
             
-            res.render('products/form_edition', { producto: productoDB, talles: tallesDb, usuario: req.session.userLogged }); 
+            res.render('products/form_edition', { producto: productoDB, talles: tallesDb, marcas: marcasDb, usuario: req.session.userLogged }); 
         } catch (e) {
             console.log('error', e);
         }
     },
 
     //ELIMINA EL PRODUCTO EXISTENTE 
-
     borrarProducto: async(req, res)=> {
         await db.productos_talles.destroy({
             where:{
@@ -195,6 +224,5 @@ const product_Controllers = {
     //borrarProducto: (req, res)=> {
        // productsJson = modelProductos.borrarProducto(req.params.id);
        // res.redirect('/catalogo');
-
 
 module.exports = product_Controllers;

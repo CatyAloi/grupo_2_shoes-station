@@ -190,7 +190,11 @@ a {
     cursor: pointer;
 }
 
-.img-marcas > img{
+.img-marcas > img {
+    width: 100px;
+}
+
+.img-marcas > a > img {
     width: 100px;
 }
 
@@ -218,6 +222,10 @@ a {
     }
     
     .img-marcas > img{
+        width: 150px;
+    }
+
+    .img-marcas > a > img {
         width: 150px;
     }
     
