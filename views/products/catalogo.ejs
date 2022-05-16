@@ -21,16 +21,33 @@
                 <form class="form-filter_al" method="GET" action="/catalogo">
                     <div class="filters-alc">
                         <h3 class="title_filter">Género</h3>
-                        <input type="checkbox" id="hombre" name="genero" value="hombre">
+                        <input
+                            type="checkbox"
+                            id="hombre"
+                            name="generos[]"
+                            value="hombre"
+                            <% if (filtros.generos && filtros.generos.includes('hombre')) { %> checked <% } %>
+                        />
                         <label for="hombre"> Hombre </label><br>
-                        <input type="checkbox" id="mujer" name="genero" value="mujer">
+                        <input
+                            type="checkbox"
+                            id="mujer"
+                            name="generos[]"
+                            value="mujer"
+                            <% if (filtros.generos && filtros.generos.includes('mujer')) { %> checked <% } %>
+                        />
                         <label for="mujer"> Mujer</label><br>
                     </div>
                     
                     <div class="filters-alc">
                         <h3 class="title_filter">Marcas</h3>
                         <% marcas.forEach(function (marca){ %>
-                            <input type="checkbox" id="" name="marca" value="<%= marca.id %> ">
+                            <input 
+                                type="checkbox"
+                                id="" name="marcas[]"
+                                value="<%= marca.id %>"
+                                <% if (filtros.marcas && filtros.marcas.includes(`${marca.id}`)) { %> checked  <% } %>
+                            />
                             <label for=""> <%= marca.nombre %>  </label><br>
                        <% }); %>
                     </div>
@@ -38,7 +55,12 @@
                     <div class="filters-alc">
                         <h3 class="title_filter">Talle</h3>
                         <% talles.forEach(function (talle){ %>
-                            <input type="checkbox" id="" name="talle[]" value="<%= talle.id %> ">
+                            <input
+                                type="checkbox"
+                                id=""
+                                name="talles[]"
+                                value="<%= talle.id %>" <% if (filtros.talles && filtros.talles.includes(`${talle.id}`)) { %> checked <% } %>   
+                            />
                             <label for=""> <%= talle.numero %>  </label><br>
                        <% }); %>
                     </div>
