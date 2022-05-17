@@ -169,18 +169,6 @@ const product_Controllers = {
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
     store: async (req, res)=> { 
 
-    // const resultCreated = validationResult(req);
-    // if (resultCreated.errors){
-    // const tallesDb = await db.talles.findAll();
-    // return res.render ('products/addProduct', {talles: tallesDb, errors : resultCreated.mapped(), oldData: req.body});
-    //    }
-
-        //const resultEdit = validationResult(req);
-       //if (resultEdit.errors){
-        //const tallesDb = await db.talles.findAll();
-       //  return res.render ('products/form_edition', {talles: tallesDb, errors : resultEdit.mapped(), oldData: req.body});
-      // } 
-
         const camposProductoFormulario = req.body;
         if (req.file) {
             camposProductoFormulario.img = req.file.filename;
