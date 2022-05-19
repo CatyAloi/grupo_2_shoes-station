@@ -168,11 +168,18 @@ const product_Controllers = {
 
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
     store: async (req, res)=> { 
-
+        console.log(req.body)
         const camposProductoFormulario = req.body;
         if (req.file) {
             camposProductoFormulario.img = req.file.filename;
         }
+
+        if(camposProductoFormulario.recomendado === 'on') {
+            camposProductoFormulario.recomendado = true;
+        } else {
+            camposProductoFormulario.recomendado = false
+        }
+
         if (!req.params['id']) {
             try {
                 const productoGuardado = await db.productos.create(camposProductoFormulario);
@@ -209,14 +216,15 @@ const product_Controllers = {
                     stock: camposProductoFormulario.stock,
                     genero: camposProductoFormulario.genero,
                     descripcion: camposProductoFormulario.descripcion,
+                    recomendado: camposProductoFormulario.recomendado
                 }
 
                 if (camposProductoFormulario.img) {
                     productoActualizado.img = camposProductoFormulario.img;
                 }
-            
+
                 const producto = await db.productos.update(productoActualizado, { where: { id }});
-                producto.save();
+                // producto.save();
 
             } catch (error) {
                 console.log(error);
@@ -227,7 +235,7 @@ const product_Controllers = {
     },
     
     //EDITA EL PRODUCTO EXISTENTE          
-    editarProducto: async(req, res)=> {
+    editarProducto: async (req, res)=> {
         console.log(req.body);
         try {
             const tallesDb = await db.talles.findAll();

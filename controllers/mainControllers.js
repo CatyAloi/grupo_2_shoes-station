@@ -3,28 +3,32 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
 const { pbkdf2 } = require('crypto');
-
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
-    home: (req, res)=> {
+    home: async (req, res)=> {
+        try {
+            const recommendedProducts = await db.productos.findAll({where: {recomendado: true}}) 
+            const data = [
+                
+                {
+                    titulo: 'Recomendados para Vos',
+                    productos: recommendedProducts
+                },
 
-        const data = [
-            
-            {
-                titulo: 'Recomendados para Vos',
-                productos: productsJson
-            },
+                {
+                    titulo: 'Ofertas',
+                    productos: productsJson
+                }
+            ];
 
-            {
-                titulo: 'Ofertas',
-                productos: productsJson
-            }
-        ];
-
-        const marcas = [];
-        res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
+            const marcas = [];
+            res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
+        } catch (error) {
+            console.log('error', e);
+        }
+       
     },
 
     contacto: (req, res)=> {
