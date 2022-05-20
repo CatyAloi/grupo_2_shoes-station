@@ -36,10 +36,14 @@ module.exports = {
     },
 
     processContact: (req,res)=>{
-        const resultContact = validationResult(req);
-        if (resultContact.errors){
-            return res.render ('pages/form_contact', {errors : resultContact.mapped(), oldData: req.body});
-        } 
+       
+        const respuestaConsulta = { 
+            nombre: req.body.Nombre,
+            numeroTicket: Math.floor(Math.random()*1000),
+            telefono: req.body.Telefono, 
+            mensaje: req.body.mensaje 
+        } ;
+        res.status(200).json(respuestaConsulta)
     },
 
     terminos: (req, res)=> {

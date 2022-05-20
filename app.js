@@ -22,8 +22,8 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+app.use(express.urlencoded());
+app.use(express.json());
 
 app.use(authMiddleware, estaRecordado);
 

@@ -13,11 +13,12 @@
 
                  
         <div>
-            <form class="ca_container_form contact" action="/contacto" method="POST">
+            <form id= "form-contacto" class="ca_container_form contact" action="/contacto" method="POST">
                 <h2 class="ca_titulo_form">Déjanos tu Mensaje</h2>
                 
                 <div class="input_class"> 
                     <input class="ca_input_contact name" 
+                        id="Nombre"
                         type="text" 
                         name = "Nombre" 
                         placeholder="Nombre y Apellido" 
@@ -33,7 +34,8 @@
                 
                 <div class="input_class"> 
                         <input class="ca_input_contact email" 
-                        type="" 
+                        id="Email"
+                        type="email" 
                         name = "Email" 
                         placeholder="correo electrónico"
                         value="<%= locals.oldData ? oldData.Email: null %>">
@@ -51,6 +53,7 @@
                     <input class="ca_input_contact phone" 
                     type="number" 
                     name = "Telefono" 
+                    id="Telefono"
                     placeholder="Teléfono (cod. área + número)"
                     value="<%= locals.oldData ? oldData.Telefono: null %>">
                     <% if (locals.errors && errors.Telefono) { %>
@@ -64,7 +67,7 @@
 
                 <div class="input_class"> 
                         <textarea class="ca_input_contact message" 
-                        
+                       
                         type="text" 
                         name="mensaje" 
                         placeholder= "Escriba aquí su mensaje" 
@@ -80,14 +83,16 @@
                         <% } %> 
                 </div>
 
-                <button type="submit" id="btn_contact">Enviar Consulta</button> 
+                <button class= "open-modal" type="submit" id="btn_contact" data-open-target="#modal1">Enviar Consulta</button> 
             </form>
         </div>
-
+        <%- include ('../partials/modal')%>
        
     </section>
     <%- include('../partials/footer'); %>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/contacto.js"></script>
+    <script src="js/modal.js"></script>
+    
 </body>
 </html>
