@@ -9,7 +9,7 @@ const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     home: async (req, res)=> {
         try {
-            const recommendedProducts = await db.productos.findAll({where: {recomendado: true}}) 
+            const recommendedProducts = await db.productos.findAll() 
             const data = [
                 
                 {
@@ -26,7 +26,7 @@ module.exports = {
             const marcas = [];
             res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
         } catch (error) {
-            console.log('error', e);
+            console.log('error', error);
         }
        
     },
