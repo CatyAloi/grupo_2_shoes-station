@@ -75,6 +75,7 @@
             <% productos.forEach(function (producto) { %>
                 <%- include('../partials/productCatalog', {producto: producto}); %>
             <% }); %> 
+            <%- include ('../partials/controlesPaginacion', { controlPaginas, rutaLista: "/catalogo" }) %>
         </section>
     </div>
     <%- include('../partials/footer'); %>
