@@ -12,7 +12,7 @@ const validationContact = [
     check('Telefono').isNumeric().withMessage('Solo acepta números'),
     check('Telefono').isLength({min: 11}).withMessage('Por Favor, ingrese un número de teléfono válido'),
     check('mensaje').notEmpty().withMessage('Por favor, escriba su mensaje').bail(),
-    check('mensaje').isLength({min: 10}).withMessage('Este campo debe tener mínimo 10 caracteres'),
+    check('mensaje').isLength({min: 50}).withMessage('El mensaje debe tener mínimo 20 caracteres'),
 ]
 
 

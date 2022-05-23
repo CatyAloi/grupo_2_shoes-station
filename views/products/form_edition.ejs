@@ -12,7 +12,7 @@
     <section class = "ca_formediction">
 
 
-        <form class="edit" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
+        <form class="edition" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
@@ -24,7 +24,7 @@
                     <div class = "error2">
                         <%= errors.nombre.msg %> 
                     </div>    
-                    <br><br>           
+                            
                 <% } %>
 
 
@@ -35,13 +35,22 @@
                 <img src="/images/<%= producto.img %>" alt="" class="editNew-prod">
             </section>
             <p>
-                <label  class="label_edition img-edit" for="img Producto">Cambiar imagen:</label>
+                <label  class="label_edition img-edit" for="img Producto">Cambiar imagen: (acepta solo formatos.jpg, .png)</label>
                 <input type="file" name="img" class="img-input-acl"> 
-                (acepta solo formatos.jpg, .png)
+                
             </p>
+
             <p>
                 <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-                <input class="priceproduct2"  type="text" name= "precio" id=inp_width value="<%= producto.precio  %>">
+                <input class="priceproduct2"  type="text" name= "precio" id=inp_width value="<%= producto.precio  %>"  value="<%= producto.precio %> ">
+                
+                <% if (locals.errors && errors.precio) { %>
+                    <div class = "error2">
+                        <%= errors.precio.msg %> 
+                    </div>    
+                            
+                <% } %>
+            
             </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
@@ -58,15 +67,7 @@
                 </select>
             </p>
 
-
-            <p>
-                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea class="descriproduct2"  name="descripcion" id=inp_width cols="30" rows="10">
-                    <%= producto.descripcion %>
-                </textarea>                   
-            </p>
-
-            <!--ACA VA EL CODIGO DE LOS TALLES-->
+            
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br>
                 <% talles.forEach(function (talle){ %>
@@ -76,8 +77,42 @@
                         <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
                     <% }  %>
                 <% }); %>
+
+                <% if (locals.errors && errors.talles) { %>
+                    <div class = "error2">
+                        <%= errors.talles.msg %> 
+                    </div>    
+                             
+                <% } %>
             </p>
            
+
+            <p>
+                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
+                <textarea class="descriproduct2" name="descripcion" id = inp_width cols="30" rows="10">
+                    <%= producto.descripcion %>
+                </textarea>   
+                
+                <% if (locals.errors && errors.descripcion) { %>
+                    <div class = "error2">
+                        <%= errors.descripcion.msg %> 
+                    </div>    
+                             
+                <% } %>
+
+            </p>
+
+
+            <p>
+                <label class="label_edition" for="categoria">
+                    <span>Género:</span>
+                </label>
+                <select id="inp_width" name="genero">
+                    <option value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
+                    <option value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
+                </select>
+            </p>
+
             <p>
                 <label class="label_edition" for="marcas">
                     <span>Marcas:</span>
@@ -88,15 +123,7 @@
                     <option value="3" <% if (producto.id_marca === 3) { %> selected="selected" <% } %>>Nike</option>
                 </select>
             </p>
-            <p>
-                <label class="label_edition" for="categoria">
-                    <span>Género:</span>
-                </label>
-                <select id="inp_width" name="genero">
-                    <option value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
-                    <option value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
-                </select>
-            </p>
+            
             <p>
                 <label class="label_edition" for="status">
                     <span>Status:</span>
@@ -106,9 +133,18 @@
                     <option value="inactivo" <% if (producto.status === 'inactivo') { %> selected="selected" <% } %>>Inactivo</option>
                 </select>
             </p>
-    
-            <label class="label_edition" for="stock">Stock</label>
-            <input class="stockproduct2"  type="number" name="stock" id=inp_width value="<%= producto.stock %>">
+            <P>
+                <label class="label_edition" for="stock">Stock</label>
+                <input class="stockproduct2"  type="number" name="stock" id=inp_width value="<%= producto.stock %>">
+                
+                <% if (locals.errors && errors.stock) { %>
+                    <div class = "error2">
+                        <%= errors.stock.msg %> 
+                    </div>    
+                              
+                <% } %>
+            </P>
+            
 
             <div class="container-cancl-edit-alc">
                 <!--<input type="reset" value="Cancelar" id="btn_cancelar-acl">-->
@@ -123,6 +159,6 @@
     </section>
     <%- include('../partials/footer'); %>  
 
-    <script src="js/form_edit.js"></script>
+    <script src="../js/form_edition.js"></script>
 </body>
 </html>

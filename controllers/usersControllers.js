@@ -122,7 +122,29 @@ const users_Controllers = {
         req.session.destroy();
         res.clearCookie("auth");
         res.redirect('/');
-    }     
+    },
+
+   /* usersList: (req, res)=> {
+        res.render('users/users_list');
+    },*/ 
+    
+    
+    listarUsuariosRegistrados: async(req, res)=>{
+           try {
+            const usuarioDb = await db.usuarios.findAll();
+
+            res.render('users/users_list', {listUsuario: usuarioDb, usuario: req.session.userLogged }); 
+        } catch (e) {
+            console.log('errorrrrr', e);
+        } 
+    },
+
+    
+
+    
+
+
+
 };
 
 module.exports = users_Controllers;

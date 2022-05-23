@@ -2,6 +2,7 @@
 <html lang="en">
     <%- include('../partials/head'); %>
     <body>
+
         <%- include('../partials/header'); %>
         <div id="franja"></div>
         <section class="ca_container1">
@@ -16,20 +17,28 @@
                     <p>Precio: $<%= producto.precio %></p>
                 </div>  
                 <div class="ca_caja_labeltalle">
-                    <p>Seleccionar Talles:</p> 
-                </div>  
-                <div class="ca_container_talles">
-                    <% producto.talles.forEach(function (talle){ %>
-                        <li class="talle"><span> <%= talle.numero %> </span></li>
-                   <% }); %>
-                </div>       
-                <form class ="ca_caja_agregar" action="" method="POST">
-                        <!--<div class= "ca_cantidad"><input type="number"></div>-->
+                    <p>Selecciona el Talle:</p> 
+                </div> 
+                
+                <!--SELECCION DE TALLES-->
+                                 
+                <form action="/carrito" method="POST">
+
+                    <div class="ca_container_talles">
+                        <% producto.talles.forEach(function (talle){ %>
+                            <input class ="talle_radio" type="radio" id=<%=talle.numero %> name = "talle_sel" value = <%talle.numero %>></input>
+                            <label class="talle" for=<%=talle.numero %> ><%=talle.numero %></label>
+                        <% }); %>   
+
+                    </div>
                     
-                        <div>
-                            <button class="ca_boton_agregar"> Agregar al Carrito</button>
-                        </div> 
+
+                    <div class ="ca_caja_agregar" id="colorbtn">
+                        <button class="ca_boton_agregar" id= "botonag"  name="botonag" type = "submit" disabled> Agregar al Carrito</button>
+                    </div>
+
                 </form>
+                                           
 
                 <% if (typeof usuario == "object" && usuario.admin) { %>
                     <section class="container_edit_delet">
@@ -54,5 +63,16 @@
             </ul>
         </div>    
         <%- include('../partials/footer'); %>
+
+
+        <!--<script>
+            function habilitar(form){
+            form.botonag.disabled = false;
+          
+        }
+        </script>-->
+
+        <script src="../js/botonagregar.js"></script>
+
     </body>
 </html>

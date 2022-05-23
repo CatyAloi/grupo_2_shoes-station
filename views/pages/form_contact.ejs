@@ -68,9 +68,7 @@
                         type="text" 
                         name="mensaje" 
                         placeholder= "Escriba aquí su mensaje" 
-                        id="mensaje" cols="30" rows="10">
-                        <%= locals.oldData ? oldData.mensaje: null %> 
-                        </textarea>
+                        id="mensaje" cols="30" rows="10"><%= locals.oldData ? oldData.mensaje: null %></textarea>
                         
                         <% if (locals.errors && errors.mensaje) { %>
                             <div class = "text-danger">
@@ -88,6 +86,6 @@
     </section>
     <%- include('../partials/footer'); %>
 
-    <script src="js/contacto.js"></script>
+    <!--<script src="js/contacto.js"></script>-->
 </body>
 </html>

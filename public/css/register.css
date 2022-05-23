@@ -2,6 +2,11 @@
     border-top: 1px solid #399ef794;
 }
 
+input:focus {
+    border: 2px solid #000;
+    background: #F3F3F3;
+  }
+
 .ca_container_register{
     box-sizing: border-box;
     width: 80%;
@@ -25,15 +30,16 @@
 }
 
 #ca_requeridos{
-    color: crimson;
+    color: #c00;
     font-size: 12px;
     margin-bottom: 20px;
 }
 
 .error-politicas-acl {
-    color: crimson;
-    font-size: 12px;
-    margin-left: 25px;
+    color: #c00;
+    font-size: 11px;
+    margin-left: 20px;
+    font-style: italic;
 }
 
 .ca_cuenta{
@@ -91,7 +97,7 @@
     }
 
     .label_register{
-        font-size: 12px;
+        font-size: 15px;
     }
 
     #btn_register {

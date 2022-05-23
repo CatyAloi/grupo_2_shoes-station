@@ -23,7 +23,7 @@ window.addEventListener('load', function(){
 
         let campoPhone = document.querySelector("input.phone");
         if(campoPhone.value == "") {
-                errores.push("Debe ingresar un número telefónico");
+                errores.push("Debe ingresar un número de teléfono");
         } else if (campoPhone.value.length < 11) {
             errores.push("El campo Teléfono debe tener al menos once (11) digitos");
         }
@@ -32,7 +32,7 @@ window.addEventListener('load', function(){
 
         let campoEmail = document.querySelector("input.email");
         if(campoEmail.value == "") {
-                errores.push("Debe ingresar un correo");
+                errores.push("Debe ingresar un email válido");
     
         } 
 
@@ -40,7 +40,7 @@ window.addEventListener('load', function(){
         if(campoClave.value == "") {
                 errores.push("Debe ingresar una Contraseña");
         } else if (campoClave.value.length < 8) {
-                errores.push("La Contraseña debe tener al menos ocho (08) digitos");
+                errores.push("La Contraseña debe tener mínimo ocho (08) caracteres");
         }
     
 
