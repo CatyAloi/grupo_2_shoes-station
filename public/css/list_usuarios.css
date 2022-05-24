@@ -1,0 +1,28 @@
+
+table {
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(220, 203, 203, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 15px;
+}
+
+th {
+     background-color:  rgba(74, 166, 245, 0.3);
+}
+
+
+.inf {
+    text-align: center;
+}
+
+tr:hover td {
+    background-color: #ffa4f9;
+}
+
+
+
+table, th, td {
+    border: 1px solid rgb(129, 129, 129);
+    padding: 10px;
+    border-collapse: collapse;
+   
+}

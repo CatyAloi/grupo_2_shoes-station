@@ -2,6 +2,7 @@ function authMiddleware(req, res, next){
     const rutasAdmin = [
         '/editarproductos',
         '/crearproductos',
+        '/usuariosregistrados',
     ]
 
     if (

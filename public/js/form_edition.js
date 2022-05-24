@@ -1,8 +1,9 @@
 
-//VALIDACIONES FRONTEND NO SE MUESTRA EN EL FORMULARIO Y SE SALTA AL FORMULARIO CREAR PRODUCTO
+    /*alert("Se ha agregado tu producto al carrito");*/
+
 window.addEventListener('load', function(){
 
-    let formulario = document.querySelector("form.edit");
+    let formulario = document.querySelector("form.edition");
 
     formulario.addEventListener("submit", function(e){
         let errores = [];

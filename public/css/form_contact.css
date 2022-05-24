@@ -2,6 +2,11 @@
     border-top: 1px solid #399ef794;
 }
 
+input:focus {
+    border: 2px solid #000;
+    background: #F3F3F3;
+  }
+
 .ca_container_ppal{
     display: flex;
     flex-direction: column;
@@ -22,7 +27,7 @@ div.errores > ul{
 
 .text-danger{
  position: absolute;
- color: #f5576c;
+ color: #c00;
  font-size: 11px;
  left: 0;
  bottom: 22px;

@@ -1,5 +1,4 @@
 
-//VALIDACIONES FRONTEND NO SE MUESTRA EN EL FORMULARIO
 window.addEventListener('load', function(){
 
     let formulario = document.querySelector("form.add");
@@ -21,9 +20,10 @@ window.addEventListener('load', function(){
 
         } 
 
-        let campoDescripcion = document.querySelector("input.descriproduct");
+        let campoDescripcion = document.querySelector("textarea.descriproduct");
         if(campoDescripcion.value == 0) {
             errores.push("Debe agregar la Descripción del producto");
+
        } else if (campoDescripcion.value.trim().length < 30) {
             errores.push("La Descripción debe tener al menos 30 caracteres");  
     
@@ -45,3 +45,4 @@ window.addEventListener('load', function(){
         }
     });
 })
+

@@ -8,7 +8,9 @@
                 <ul></ul>
             </div>
     <section class = "ca_formediction">
-        <form class="edit" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
+
+        <form class="edition" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
+
             <h2 id="title_editar" >Editar un Producto</h2>
             <p>
                 <label class="label_edition" for="Nombre del Producto">Nombre del Producto:</label>
@@ -20,21 +22,32 @@
                     <div class = "error2">
                         <%= errors.nombre.msg %> 
                     </div>    
-                    <br><br>           
+                            
                 <% } %>
             </p>
             <section class="editNew-acl">
                 <h4>Imagen del Producto</h4>
                 <img src="/images/<%= producto.img %>" alt="" class="editNew-prod">
             </section>
-            <p class="formato-img">
-                <label  class="label_edition img-edit" for="img Producto">Cambiar imagen:</label>
+
+            <p>
+                <label  class="label_edition img-edit" for="img Producto">Cambiar imagen: (acepta solo formatos.jpg, .png)</label>
+
                 <input type="file" name="img" class="img-input-acl"> 
-                (acepta solo formatos.jpg, .png)
+                
             </p>
+
             <p>
                 <label class="label_edition" for="precio Producto">Precio del Producto:</label>
-                <input class="priceproduct2"  type="text" name= "precio" id=inp_width value="<%= producto.precio  %>">
+                <input class="priceproduct2"  type="text" name= "precio" id=inp_width value="<%= producto.precio  %>"  value="<%= producto.precio %> ">
+                
+                <% if (locals.errors && errors.precio) { %>
+                    <div class = "error2">
+                        <%= errors.precio.msg %> 
+                    </div>    
+                            
+                <% } %>
+            
             </p>
             <p>
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
@@ -47,15 +60,7 @@
                 </label>  
             </p>
 
-
-            <p>
-                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea class="descriproduct2"  name="descripcion" id=inp_width cols="30" rows="10">
-                    <%= producto.descripcion %>
-                </textarea>                   
-            </p>
-
-            <!--ACA VA EL CODIGO DE LOS TALLES-->
+            
             <p>
                 <label class="label_edition" for="">Talles Disponibles:</label><br>
                 <% talles.forEach(function (talle){ %>
@@ -65,9 +70,18 @@
                         <input type="checkbox" name="talles[]" value="<%= talle.id %>"> <%= talle.numero %>
                     <% }  %>
                 <% }); %>
+
+                <% if (locals.errors && errors.talles) { %>
+                    <div class = "error2">
+                        <%= errors.talles.msg %> 
+                    </div>    
+                             
+                <% } %>
             </p>
            
+
             <p>
+
                 <label class="label_edition" for="marcas">
                     <span>Marcas:</span>
                 </label>
@@ -79,7 +93,23 @@
                     <% }); %>
                    
                 </select>
+
+                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
+                <textarea class="descriproduct2" name="descripcion" id = inp_width cols="30" rows="10">
+                    <%= producto.descripcion %>
+                </textarea>   
+                
+                <% if (locals.errors && errors.descripcion) { %>
+                    <div class = "error2">
+                        <%= errors.descripcion.msg %> 
+                    </div>    
+                             
+                <% } %>
+
+
             </p>
+
+
             <p>
                 <label class="label_edition" for="categoria">
                     <span>Género:</span>
@@ -89,6 +119,8 @@
                     <option class="weight-acl" value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
                 </select>
             </p>
+
+
             <p>
                 <label class="label_edition" for="status">
                     <span>Status:</span>
@@ -98,9 +130,17 @@
                     <option class="weight-acl" value="inactivo" <% if (producto.status === 'inactivo') { %> selected="selected" <% } %>>Inactivo</option>
                 </select>
             </p>
-    
-            <label class="label_edition" for="stock">Stock</label>
-            <input class="stockproduct2" type="number" name="stock" id=inp_width value="<%= producto.stock %>">
+            <P>
+                <label class="label_edition" for="stock">Stock</label>
+                <input class="stockproduct2"  type="number" name="stock" id=inp_width value="<%= producto.stock %>">
+                
+                <% if (locals.errors && errors.stock) { %>
+                    <div class = "error2">
+                        <%= errors.stock.msg %> 
+                    </div>    
+                              
+                <% } %>
+            </P>
 
             <div class="container-cancl-edit-alc">
                 <a href="/detalle/<%= producto.id %>" id="btn_cancelar-acl">
@@ -112,6 +152,7 @@
     </section>
     <%- include('../partials/footer'); %>  
 
-    <!-- <script src="js/form_edit.js"></script> -->
+    <script src="../js/form_edition.js"></script>
+
 </body>
 </html>

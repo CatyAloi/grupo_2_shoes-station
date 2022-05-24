@@ -154,6 +154,10 @@ const product_Controllers = {
         res.render('products/productCart',{ usuario: req.session.userLogged });
     },
 
+    carrito_producto: (req, res)=> {
+        res.render('products/productCart');
+    },
+
     // MUESTRA EL FORMULARIO DE AGREGAR NUEVO PRODUCTO
     crearProducto: async (req,res)=> {
         try {
@@ -165,10 +169,58 @@ const product_Controllers = {
             console.log('error', e);
         } 
     },
+    
+    
+    //VALIDACIONES DEL FORMULARIO AGREGAR PRODUCTO 
+    processadd: async (req,res,next)=>{
+        const resultCreated = validationResult(req);
+        if (resultCreated.errors.length){
+            const marcasDb= await db.marcas.findAll();
+            const tallesDb = await db.talles.findAll();
+            return res.render ('products/addProduct', {talles: tallesDb, marcas: marcasDb, errors : resultCreated.mapped(), 
+                                                        oldData: req.body, usuario: req.session.userLogged});
+        } 
+        console.log("hola")
+        return next()
+    },
 
-    //CREA Y ACTUALIZA UN PRODUCTO A LA BD       
+    //VALIDACIONES DEL FORMULARIO EDITAR PRODUCTO  
+    processedit: async (req,res, next)=>{
+        const resultEdit = validationResult(req);
+        const tallesDb = await db.talles.findAll();
+        const marcasDb = await db.marcas.findAll();
+        const productoDB = await db.productos.findOne({
+            include: [
+        
+                {
+                    model: db.talles,
+                    through: {
+                        model: db.productos_talles,
+                        key: 'id_talle',
+                    }
+                }
+            ], 
+            where: { id: req.params.id }
+        });
+
+        if (resultEdit.errors && resultEdit.errors.length) {
+           return res.render ('products/form_edition', {talles: tallesDb, producto: productoDB, 
+                                                        errors : resultEdit.mapped(), 
+                                                        oldData: req.body, 
+                                                        marcas: marcasDb,
+                                                        usuario: req.session.userLogged});
+       
+        }
+        return next()
+       
+    },
+
+
+    //CREA Y ACTUALIZA UN PRODUCTO A LA BD   
     store: async (req, res)=> { 
+
         console.log(req.body)
+
         const camposProductoFormulario = req.body;
         if (req.file) {
             camposProductoFormulario.img = req.file.filename;
@@ -195,6 +247,7 @@ const product_Controllers = {
             }
 
             res.redirect('/catalogo');
+            
         } else {
             const id = req.params.id;
 
@@ -234,9 +287,11 @@ const product_Controllers = {
         }
     },
     
-    //EDITA EL PRODUCTO EXISTENTE          
-    editarProducto: async (req, res)=> {
-        console.log(req.body);
+
+    //EDITA EL PRODUCTO EXISTENTE 
+       
+    editarProducto: async(req, res)=> {
+
         try {
             const tallesDb = await db.talles.findAll();
             const marcasDb= await db.marcas.findAll();

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+<body>
+    <%- include('../partials/header');%>
+    <div id="franja"></div>
+
+
+            <div class="errores">
+                <ul></ul>
+            </div>
+
+
+            <br>  <br>  <br>  
+            <section>
+                <table class= "" >
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Contraseña Encriptada</th>
+                        
+                    </tr>
+
+                <% listUsuario.forEach(usuario => { %>
+                    <tr class = inf>
+                        <td><%= usuario.id %></td>
+                        <td><%= usuario.nombre %></td>
+                        <td><%= usuario.apellido %></td>
+                        <td><%= usuario.telefono %></td>
+                        <td><%= usuario.email %></td>
+                        <td><%= usuario.pwd %></td>
+                    </tr>
+                    <% }); %> 
+            
+             
+                    </table>
+            </section>
+               <br>  <br>  <br>  <br> 
+          
+     
+
+   
+    <%- include('../partials/footer'); %>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

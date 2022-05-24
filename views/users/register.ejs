@@ -41,12 +41,12 @@
             </div>
             
 
-            <label  class="label_register"for="img">Agregar imagen o Avatar de perfil:</label>
-            <input class="ca_input_register"  type="file" name="img" id="img" (acepta solo formatos.jpg, .png)>
+            <!--<label  class="label_register"for="img">Agregar imagen o Avatar de perfil: </label>
+            <input class="ca_input_register"  type="file" name="img" id="img" (acepta solo formatos.jpg, .png)>-->
         
             <div class="input-container">
                 <label class= "label_register" for="telefono">* Teléfono (cod. área + número, Ej. 91112345678)</label>
-                <input class="ca_input_register phone" type="number" name="telefono" placeholder="" value="<%= data.telefono %>">
+                <input class="ca_input_register phone" type="" name="telefono" placeholder="" value="<%= data.telefono %>">
                 <% if (errors.telefono) { %> 
                     <span class="error"><%= errors.telefono.msg %> </span>
                     <br><br>
@@ -55,7 +55,7 @@
 
             <div class="input-container">
                 <label class= "label_register" for="email">* Email</label>
-                <input class="ca_input_register email" type="email" name="email" placeholder="" value="<%= data.email %>">
+                <input class="ca_input_register email" type="" name="email" placeholder="" value="<%= data.email %>">
                 <% if (errors.email) { %> 
                     <span class="error"><%= errors.email.msg %> </span>
                     <br><br>
@@ -63,10 +63,10 @@
             </div>
 
             <div class="input-container">
-                <label class= "label_register" for="password">* Contraseña (mínimo 8 caracteres)</label>
+                <label class= "label_register" for="pwd">* Contraseña (mínimo 8 caracteres)</label>
                 <input class="ca_input_register clave" type="password" name="pwd" placeholder="">
-                <% if (errors.password) { %> 
-                    <span class="error"><%= errors.password.msg %> </span>
+                <% if (errors.pwd) { %> 
+                    <span class="error"><%= errors.pwd.msg %> </span>
                     <br><br>
                 <% } %>
             </div>
@@ -97,13 +97,13 @@
                 <% } %> 
             </div>
             <input type="submit" value="Crear mi Cuenta" id="btn_register">
-            <p class="ca_cuenta">¿Ya tienes una Cuenta?<a href="/login"> Ingresá acá</a></p>
+            <p class="ca_cuenta">¿Ya tenés una Cuenta?<a href="/login"> Ingresá acá</a></p>
             
         </form>
     </div>
     <%- include('../partials/footer'); %>
 
-    <!--<script src="js/registro.js"></script>-->
+    <script src="js/registro.js"></script>
 </body>
 </html>
 
