@@ -75,10 +75,12 @@
             <% productos.forEach(function (producto) { %>
                 <%- include('../partials/productCatalog', {producto: producto}); %>
             <% }); %> 
-            <%- include ('../partials/controlesPaginacion', { controlPaginas, rutaLista: "/catalogo" }) %>
         </section>
     </div>
+    <%- include ('../partials/controlesPaginacion', { controlPaginas, rutaLista: "/catalogo" }) %>
+    <div class="paginador">
     <%- include('../partials/footer'); %>
+    </div>
     <script src="js/catalogo.js"></script>    
 </body>
 </html>

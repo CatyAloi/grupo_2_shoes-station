@@ -37,7 +37,7 @@ const users_Controllers = {
 
         if(recuerdame != 'undefined'){
             const cookie = { recuerdame: { email: userToLogin.email } };
-            res.cookie('data', JSON.stringify(cookie), { maxAge: 60000 })
+            res.cookie('auth', JSON.stringify(cookie), { maxAge: 200000000 })
         }
         res.redirect('/');
     },

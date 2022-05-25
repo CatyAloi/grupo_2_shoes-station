@@ -8,9 +8,11 @@ class Paginador {
         if(pagina_actual > this.obtenerCantidadDePaginas()) pagina_actual = this.obtenerCantidadDePaginas();
         const inicio = (pagina_actual - 1) * this.cantidadPorPagina;
         const fin = pagina_actual * this.cantidadPorPagina;
-        return this.listaObjetos.slice(inicio, fin);
+        const elementosPorPagina = this.listaObjetos.slice(inicio, fin);
+        return elementosPorPagina;
     }
     obtenerCantidadDePaginas() {
+        //math.ceil es para redondear para arriba 
         return Math.ceil(this.listaObjetos.length / this.cantidadPorPagina);
     }
     obtenerPaginaAnterior(pagina) {
