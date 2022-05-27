@@ -46,7 +46,7 @@ input:focus {
     text-align: center;
     font-size: 12px;
     margin-bottom: 30px;
-    font-weight: 200;
+    font-weight: 400;
 }
  
 .ca_input_register {
@@ -62,7 +62,12 @@ input:focus {
  
  .label_register{
     font-size: 14px;
-    font-weight: 200
+    font-weight: 400;
+    color: #515151;
+ }
+
+ .label_register:hover{
+    color: black;
  }
 
  .politicas-acl {

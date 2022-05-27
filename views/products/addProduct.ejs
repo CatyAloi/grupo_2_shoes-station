@@ -58,13 +58,13 @@
                 <label  class="label_edition" for="descuento">Precio Oferta:</label>
                 <input class="ca_input_add"  type="number" name="descuento" id="descuento">
             </p>
-            <p>
+            <p class="recomendado">
                 <label for="recomendado">  
                     <input type="radio" name="recomendado"> Recomendado para vos
                 </label>  
             </p> 
 
-            <p>
+            <p class="talles">
                 <label class="label_edition" for="">Talles Disponibles:</label><br> 
 
                 <% talles.forEach(function (talle){ %>
@@ -83,8 +83,6 @@
                              
                 <% } %>
             </p>
-            
-
             <div> 
                 <label class="label_edition" for="descripcion">Descripción del Producto:</label> <br>
                 <textarea class="ca_input_add descriproduct" 

@@ -180,7 +180,6 @@ const product_Controllers = {
             return res.render ('products/addProduct', {talles: tallesDb, marcas: marcasDb, errors : resultCreated.mapped(), 
                                                         oldData: req.body, usuario: req.session.userLogged});
         } 
-        console.log("hola")
         return next()
     },
 
@@ -340,9 +339,5 @@ const product_Controllers = {
 
     },
 };
-
-    //borrarProducto: (req, res)=> {
-       // productsJson = modelProductos.borrarProducto(req.params.id);
-       // res.redirect('/catalogo');
 
 module.exports = product_Controllers;

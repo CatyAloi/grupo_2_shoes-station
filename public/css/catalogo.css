@@ -97,8 +97,7 @@ body {
 
 .info-prod-price > a {
     text-decoration: none;
-    color: black;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     width: 180px;
 }
@@ -110,7 +109,12 @@ body {
 }
 
 .info-prod-price > a{
-    font-weight: 300;
+    font-weight: 400;
+    color: #616161;
+}
+
+.info-prod-price > a:hover{
+    color: black;
 }
 
 .filter-form {

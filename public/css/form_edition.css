@@ -28,8 +28,9 @@
 div.errores > ul{
     list-style: none;
     text-align: center;
-    color: red;
-    background-color: antiquewhite;
+    color: #c00;;
+    font-size: 12px;
+    background-color: none
   }
 
 .img-input-acl {
@@ -41,12 +42,12 @@ div.errores > ul{
     color:#000000;
     text-align: center;
     margin: 0;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 25px; 
 }
 
 .label_edition{
-     font-size: 18px;
+     font-size: 16px;
 }
 
 .formato-img {

@@ -25,7 +25,7 @@ const ValidationRegister = [
     check('telefono').notEmpty().withMessage('El teléfono es requerido').isNumeric().withMessage('Solo se aceptan números'),
     check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no es válido'),
     check('pwd').notEmpty().withMessage('La contraseña es requerida').isLength({min: 8}).withMessage('La contraseña debe tener mínimo 8 caracteres'),
-    check('confirmarPassword').notEmpty().withMessage('La confirmación de la contraseña es requerida').custom((value, {req}) => (value === req.body.pwd)).withMessage('Las contraseñas no coinciden'),
+    check('confirmarPassword').notEmpty().withMessage('Debe confirmar la contraseña').custom((value, {req}) => (value === req.body.pwd)).withMessage('Las contraseñas no coinciden'),
     check('politicas').custom(value => value == 'on').withMessage('Para continuar deberás aceptar las Políticas de Privacidad, Términos y Condiciones'),
 ]
 

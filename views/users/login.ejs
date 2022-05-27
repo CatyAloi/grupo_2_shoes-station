@@ -27,17 +27,13 @@
             <div class="input-container">
                 <label class= "label_login" for="password">* Contraseña</label>
                 <input class="ca_input_login" type="password" name="pwd" placeholder="">
-                <% if (resultErrors.password) { %>
-                    <span class="error"> <%= resultErrors.password.msg %> </span>
+                <% if (resultErrors.pwd) { %>
+                    <span class="error"> <%= resultErrors.pwd.msg %> </span>
                     <br><br>   
                 <% } %>  
             </div>
-            
-
             <div class="ca_container_recuperar">
                 <label class= "label_checkbox" for=""><input type="checkbox" name="recordar" value ="recuerdame">  Recuerdame</label>
-
-                <a class="ca_recuperar_pass" href="#">¿Olvidaste tu Contraseña?</a>
             </div>
             
             <button type="submit" id="btn_login">Iniciar Sesión</button> 

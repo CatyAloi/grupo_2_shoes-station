@@ -24,6 +24,7 @@
 
 .ca_caja_nombreproducto > h1 {
     font-weight: 400;
+    text-align: center;
 }
 
 /*.talle_radio {
@@ -257,6 +258,10 @@ input:checked{
     /* input[type=radio] {
       display: none;
     } */
+
+    .ca_caja_nombreproducto > h1 {
+        width: 550px;
+    }
    
     form input[type="radio"]:checked + label {
     background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
