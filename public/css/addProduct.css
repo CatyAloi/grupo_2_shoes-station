@@ -1,21 +1,19 @@
 
 input:focus {
-  border: 2px solid #000;
+  border: 1px solid #000;
   background: #F3F3F3;
 }
 
-.error2{
+textarea:focus{
+  border: 1px solid #000;
+  background: #F3F3F3;
 
+}
+
+.error2{
 color: #c00;
 font-size: 14px;
 font-style: italic;
-}
-
-div.errores > ul{
-  list-style: none;
-  text-align: center;
-  color: #c00;
-  background-color: antiquewhite;
 }
 
 .ca_formediction{
@@ -109,13 +107,16 @@ div.errores > ul{
 
 }
 
-#btn_cancelar:active {
+
+#btn_agregar:active {
   transform: translateY(4px);
 }
 
-#btn_agregar {
+.cancel-add:active {
   transform: translateY(4px);
 }
+
+
 
 @media (min-width:600px) {
   .flex_cancelar_agregar{

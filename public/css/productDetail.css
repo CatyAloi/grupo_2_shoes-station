@@ -26,6 +26,10 @@
     font-weight: 400;
 }
 
+.talle:hover{
+    background-color: #a9fbffef;
+}
+
 /*.talle_radio {
     opacity: 0;
      }*/
@@ -174,6 +178,13 @@ input:checked{
     padding: 10px;
 }
 
+
+.ca_boton_agregar:active {
+    transform: translateY(4px);
+  }
+
+
+
 /* Movil */
 @media (max-width: 599px) {
     .container_edit_delet{
@@ -249,14 +260,17 @@ input:checked{
         justify-content: center;
         cursor: pointer;
     }
+
+
+  
 }
 
 /*DESKTOP*/
 @media (min-width: 1025px){
 
-    /* input[type=radio] {
+    .talle_radio[type=radio] {
       display: none;
-    } */
+    }
    
     form input[type="radio"]:checked + label {
     background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);

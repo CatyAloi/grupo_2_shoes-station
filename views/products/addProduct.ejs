@@ -5,8 +5,12 @@
     <%- include('../partials/header'); %>
    
     <div id="franja"></div>
-    <div class="errores">
-        <ul></ul>
+
+    
+    <div class = "container_valid">
+        <div class="errores">
+            <ul></ul>
+        </div>
     </div>
 
     <section class = "ca_formediction">
@@ -87,10 +91,7 @@
 
             <div> 
                 <label class="label_edition" for="descripcion">Descripción del Producto:</label> <br>
-                <textarea class="ca_input_add descriproduct" 
-                    type="text" 
-                    name="descripcion" 
-                    id="descripcion" cols="30" rows="10"><%= locals.oldData ? oldData.descripcion: null %></textarea>
+                <textarea class="ca_input_add descriproduct" type="text" name="descripcion" id="descripcion" cols="30" rows="10"><%= locals.oldData ? oldData.descripcion: null %></textarea>
                 
                 <% if (locals.errors && errors.descripcion) { %>
                     <div class = "error2">
@@ -137,7 +138,7 @@
               </p>
     
             <p>
-                <label class="label_edition" for="stock">Stock</label>
+                <label class="label_edition" for="stock">Stock:</label>
                 <input class="ca_input_add stockproduct" type="number" name ="stock" id="stock" value ="<%= locals.oldData ? oldData.stock: null %>">
                 
                 <% if (locals.errors && errors.stock) { %>

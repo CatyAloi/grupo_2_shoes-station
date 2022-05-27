@@ -2,8 +2,9 @@
     border-top: 1px solid #399ef794;
 }
 
+
 input:focus {
-    border: 2px solid #000;
+    border: 1px solid #000;
     background: #F3F3F3;
   }
 
@@ -13,7 +14,7 @@ input:focus {
     margin: auto;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 100px;
     border: none;
     outline: none;
@@ -69,6 +70,8 @@ input:focus {
      font-size: 12px;
  }
 
+
+
 #btn_register {
     margin: 5px;
     text-decoration: none;
@@ -87,6 +90,11 @@ input:focus {
     cursor: pointer;
     font-family: 'Prompt', sans-serif;
     font-weight: 400;
+}
+
+
+#btn_register:active {
+    transform: translateY(4px);
 }
 
  @media (min-width:1024px){

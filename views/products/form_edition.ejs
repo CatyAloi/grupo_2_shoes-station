@@ -3,11 +3,17 @@
     <%- include('../partials/head'); %>
 <body>
     <%- include('../partials/header'); %>
+
     <div id="franja"></div>
-            <div class="errores">
-                <ul></ul>
-            </div>
-    <section class = "ca_formediction">
+
+    <div class = "container_valid">
+        <div class="errores">
+            <ul></ul>
+        </div>
+    </div>
+    
+    
+            <section class = "ca_formediction">
 
         <form class="edition" action="/editarproductos/<%= producto.id %>" method="POST" enctype="multipart/form-data">
 
@@ -78,7 +84,29 @@
                              
                 <% } %>
             </p>
-           
+                                
+            <p>
+                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
+                <textarea class="descriproduct2" name="descripcion" id = inp_width cols="30" rows="10"><%= producto.descripcion %></textarea>   
+                
+                <% if (locals.errors && errors.descripcion) { %>
+                    <div class = "error2">
+                        <%= errors.descripcion.msg %> 
+                    </div>    
+                             
+                <% } %>
+            </p>
+    
+
+            <p>
+                <label class="label_edition" for="categoria">
+                    <span>Género:</span>
+                </label>
+                <select id="inp_width" name="genero" class="weight-acl">
+                    <option class="weight-acl" value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
+                    <option class="weight-acl" value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
+                </select>
+            </p>
 
             <p>
 
@@ -91,33 +119,8 @@
                             <%= marca.nombre %>  
                         </option>
                     <% }); %>
-                   
                 </select>
-
-                <label class="label_edition" for="descripcion del Producto">Descripción del Producto:</label> <br>
-                <textarea class="descriproduct2" name="descripcion" id = inp_width cols="30" rows="10">
-                    <%= producto.descripcion %>
-                </textarea>   
                 
-                <% if (locals.errors && errors.descripcion) { %>
-                    <div class = "error2">
-                        <%= errors.descripcion.msg %> 
-                    </div>    
-                             
-                <% } %>
-
-
-            </p>
-
-
-            <p>
-                <label class="label_edition" for="categoria">
-                    <span>Género:</span>
-                </label>
-                <select id="inp_width" name="genero" class="weight-acl">
-                    <option class="weight-acl" value="Hombre" <% if (producto.categoria === 'Hombre') { %> selected="selected" <% } %>>Hombre</option>
-                    <option class="weight-acl" value="Mujer" <% if (producto.categoria === 'Mujer') { %> selected="selected" <% } %>>Mujer</option>
-                </select>
             </p>
 
 

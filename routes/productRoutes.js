@@ -25,7 +25,7 @@ const validationCreated = [
     check('nombre').isLength({min: 10}).withMessage('El nombre debe tener mínimo 10 caracteres'),
     check('precio').notEmpty().withMessage('Debe ingresar el precio del producto o el precio de oferta'),
     check('descripcion').notEmpty().withMessage('Debe ingresar la descripción del producto').bail(),
-    check('descripcion').isLength({min: 50}).withMessage('La Descripción del producto debe tener mínimo 50 caracteres'),
+    check('descripcion').isLength({min: 20}).withMessage('La Descripción del producto debe tener mínimo 20 caracteres'),
     check('talles').notEmpty().withMessage('Debe seleccionar al menos un talle disponible para esta zapatilla'),
     check('stock').notEmpty().withMessage('Debe ingresar la cantidad de Zapatillas disponibles'),
     check('img').custom((value, {req}) =>{

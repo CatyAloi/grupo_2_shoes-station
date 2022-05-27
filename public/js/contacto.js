@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
             errores.push("Debe colocar su Nombre y Apellido");
 
         } else if (campoNombre.value.length < 2) {
-            errores.push("El campo del Nombre debe tener al menos dos (2) caracteres");
+            errores.push("El Nombre debe tener al menos dos (2) caracteres");
         }
 
         let campoEmail = document.querySelector("input.email");
@@ -27,11 +27,11 @@ window.addEventListener('load', function(){
     let campoMessage = document.querySelector("textarea.message");
     
         if(campoMessage.value == 0) {
-                errores.push("Por favor escriba su mensaje");
+                errores.push("Por favor, escriba su mensaje");
 
   
         } else if (campoMessage.value.trim().length < 20) {
-        errores.push("Debe tener al menos veinte (20) caracteres");  
+        errores.push("El mensaje debe tener al menos veinte (20) caracteres");  
 
     }
     

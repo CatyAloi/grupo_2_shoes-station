@@ -3,8 +3,15 @@
 }
 
 input:focus {
-    border: 2px solid #000;
+    border: 1px solid #000;
     background: #F3F3F3;
+  }
+
+
+  textarea:focus{
+    border: 1px solid #000;
+    background: #F3F3F3;
+  
   }
 
 .ca_container_ppal{
@@ -14,11 +21,17 @@ input:focus {
 }
 
 div.errores > ul{
-    list-style: none;
-    text-align: center;
+    list-style:none;
+    text-align:justify;
     color: red;
-    background-color: antiquewhite;
- 
+    background-color: rgb(255, 244, 244);
+   
+}
+
+.container_valid{
+display: flex;
+justify-content:center;
+
 }
 
 .input_class{
@@ -43,7 +56,7 @@ div.errores > ul{
     outline: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
@@ -94,6 +107,9 @@ div.errores > ul{
     font-family: 'Prompt', sans-serif;
 }
  
+#btn_contact:active {
+    transform: translateY(4px);
+}
 
 
 /*DESKTOP*/
