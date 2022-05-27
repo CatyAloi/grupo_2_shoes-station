@@ -332,9 +332,10 @@ html, body {
 }
 
 .isVisible {
-    visibility: visible;
+    display: inline;
+    
     }
 
     .isNotVisible {
-    visibility: hidden;
+    display: none;
     }
