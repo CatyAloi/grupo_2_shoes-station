@@ -26,7 +26,7 @@ module.exports = {
             const marcas = [];
             res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
         } catch (error) {
-            console.log('error', e);
+            console.log('error', error);
         }
        
     },
