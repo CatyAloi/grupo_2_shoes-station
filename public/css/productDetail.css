@@ -30,17 +30,13 @@
     background-color: #a9fbffef;
 }
 
-/*.talle_radio {
-    opacity: 0;
-     }*/
-/* 
-input[type=radio]{
-display: none;
-} */
+.talle_radio[type=radio] {
+    display: none;
+}
 
 form input[type="radio"]:checked + label {
 background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
-}*/
+}
 
 input:checked{
     background-color: rgb(240, 15, 15);
@@ -199,14 +195,6 @@ input:checked{
 /*TABLET*/
 @media (min-width:600px) and (max-width:1024px) {
 
-    /* input[type=radio],
-    input[type=checkbox] {
-      display: none;
-    }
-    */
-    form input[type="radio"]:checked + label {
-    background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
-    }
     
     .ca_container1{/*Contenedor de la imagen,nombre del producto, código, precio, labeltalle, talles, input cantidad, botón Agregar al carrito*/
         display: flex;
@@ -267,16 +255,9 @@ input:checked{
 
 /*DESKTOP*/
 @media (min-width: 1025px){
-
-    .talle_radio[type=radio] {
-      display: none;
-    }
-   
-    form input[type="radio"]:checked + label {
-    background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
-    }
     
-
+ 
+    
    .ca_container1{/*Contenedor de la imagen,nombre del producto, código, precio, labeltalle, talles, input cantidad, botón Agregar al carrito*/
         display: flex;
         justify-content: center;
