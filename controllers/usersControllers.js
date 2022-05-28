@@ -59,7 +59,7 @@ const users_Controllers = {
 
     //MOSTRAR EL FORMULARIO DEL REGISTRO DE USUARIO
     registro: (req,res)=> {
-        res.render('users/register', { errors: {}, data: {}, errorEmail: undefined, usuario: req.session.userLogged});
+        res.render('users/register', {errors: {}, data: {}, errorEmail: undefined, usuario: req.session.userLogged});
     },
 
     formValidationRegister: (req, res, next) => {
@@ -117,6 +117,7 @@ const users_Controllers = {
             res.redirect('/login');
         }
     },
+    
     logout: (req,res) => {
         console.log('adios');
         req.session.destroy();
