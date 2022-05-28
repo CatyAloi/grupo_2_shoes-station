@@ -57,7 +57,7 @@ div.errores > ul{
 
 .recomendado {
   margin-bottom: 20px;
-  color: #515151;
+  color: black;
 }
 
 .talles {
@@ -66,11 +66,7 @@ div.errores > ul{
 
 .label_edition{
    font-weight: 400;
-   color: #515151;
-}
-
-.label_edition:hover {
-  color: black;
+   color: black;
 }
 
 .priceproduct2 {

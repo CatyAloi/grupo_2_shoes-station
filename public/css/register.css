@@ -63,7 +63,7 @@ input:focus {
  .label_register{
     font-size: 14px;
     font-weight: 400;
-    color: #515151;
+    color: black;
  }
 
  .label_register:hover{

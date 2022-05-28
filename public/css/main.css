@@ -330,3 +330,11 @@ html, body {
     bottom: 22px;
     font-size: 11px;
 }
+
+.isVisible {
+    display: inline;   
+}
+
+.isNotVisible {
+display: none;
+}

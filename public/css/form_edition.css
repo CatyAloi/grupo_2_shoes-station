@@ -23,6 +23,7 @@
     border: none;
     font-family: 'Prompt', sans-serif;
     font-weight: 200;
+    margin-bottom: 20px;
 }
 
 div.errores > ul{
@@ -59,7 +60,7 @@ div.errores > ul{
 }
 
 .editNew-acl > h4 {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 18px;
 }
 

@@ -77,7 +77,12 @@
             <% }); %> 
         </section>
     </div>
-    <%- include('../partials/footer'); %>
-    <script src="js/catalogo.js"></script>    
+    <div class="control-paginas" style="justify-content: center; display:flex;">
+        <%- include ('../partials/controlesPaginacion', { controlPaginas, rutaLista: "/catalogo" }) %>
+    </div>
+    <div class="footer">
+        <%- include('../partials/footer'); %>
+    </div>
+    <script src="js/catalogo.js"></script>
 </body>
 </html>
