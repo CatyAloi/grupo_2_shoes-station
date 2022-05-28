@@ -24,8 +24,7 @@ div.errores > ul{
     list-style:none;
     text-align:justify;
     color: red;
-    background-color: rgb(255, 244, 244);
-   
+    background-color: rgb(255, 244, 244);   
 }
 
 .container_valid{
@@ -44,6 +43,7 @@ justify-content:center;
  font-size: 11px;
  left: 0;
  bottom: 22px;
+ font-style: italic;
 }
 
 /*SECCION FORMULARIO*/

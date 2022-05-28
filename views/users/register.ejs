@@ -81,12 +81,15 @@
                     <br><br>
                 <% } %>
             </div>
-            <br> 
+            
             <% if (typeof usuario == "object" && usuario.admin) { %>
                 <label class= "label_register" for="admin"> 
                     <input type="radio" name="admin"> Usuario Administrador
                 </label>
+                
             <% } %>
+            <br>
+            
             <div class="check-politicas">
                 <label class= "label_register politicas-acl" for="politicas">
                 <input type="checkbox" name="politicas" > Acepto las <a href="/politicas-de-privacidad" target="_blank">

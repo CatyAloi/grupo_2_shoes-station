@@ -18,20 +18,41 @@
             <input type="text" class="search" placeholder="Buscar productos...">
             <button type="submit" class= "button-search"><i class='bx bx-search-alt-2'></i></button>
         </div>
+
         <div class="icons_al header-al">
             <% if (typeof usuario == "object") { %>
              <div class="user-login-acl">
-               
-                <i class='bx bxs-user-circle'></i> <%= usuario.nombre %>  
-                <a href='/logout' style="color:crimson;"><i class='bx bx-log-out-circle'></i></a>
-
+                
+                 <i class='bx bxs-user-circle'></i> <%= usuario.nombre %>  
+                 <a href='/logout' style="color:crimson;"><i class='bx bx-log-out-circle'></i></a>
+                                
              </div>
-            <% } else { %>
-                 <a href="/login"><i class='bx bxs-user'></i></a> 
-            <% } %>
+                <% } else { %>
+                    <a href="/login"><i class='bx bxs-user'></i></a> 
+                <% } %>
 
-            <a href="/carrito"><i class='bx bxs-cart'></i></a>
+                <a href="/carrito"><i class='bx bxs-cart'></i></a>
+
+           
+             <div class="icons_al header-al">
+                <% if (typeof usuario == "object") { %>
+                    <div class="user-login-acl">
+                        <a href="/usuariosregistrados"><i class='bx bxs-user-detail'></i></a>
+                    </div>
+        
+                <% } else { %>
+                            
+                <% } %>
+                            
+             </div>
+
         </div>
+
+        
+
+
+           
+
     </section>
     <nav class="nav-menu-al" id="menu">
         <ul class="menu-al">

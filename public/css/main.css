@@ -94,8 +94,15 @@ html, body {
     color: rgb(0, 0, 0);;
 }
 
+.bxs-user-detail{
+    font-size: 35px;
+    color: black;
+    padding: 15px;
+}
+
 .bxs-cart {
     padding-left: 10px;
+   
 }
 
 .icons_al {
@@ -329,4 +336,5 @@ html, body {
     left: 0;
     bottom: 22px;
     font-size: 11px;
+    font-style: italic;
 }

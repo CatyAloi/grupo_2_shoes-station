@@ -45,6 +45,7 @@
                         <a href="/editarproductos/<%= producto.id %>" class="edit_delet_al blue_edit">
                                 <i class='bx bxs-pencil'></i> Editar producto
                         </a>
+
                         <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST">
                                 <button class="edit_delet_al" type="submit"> <i class='bx bxs-trash-alt'></i> Borrar producto</button>
                         </form>
@@ -63,14 +64,6 @@
             </ul>
         </div>    
         <%- include('../partials/footer'); %>
-
-
-        <!--<script>
-            function habilitar(form){
-            form.botonag.disabled = false;
-          
-        }
-        </script>-->
 
         <script src="../js/botonagregar.js"></script>
 

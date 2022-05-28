@@ -4,7 +4,7 @@
 
 .ca_container_login{
     box-sizing: border-box;
-    width: 80%;
+    width: 60%;
     margin: auto;
     padding: 10px 20px;
     border-radius: 5px;
@@ -88,6 +88,10 @@
     cursor: pointer;
 }
 
+
+#btn_login:active {
+    transform: translateY(4px);
+}
 .ca_registro{
     text-align: center;
     font-size: 12px; 
@@ -102,9 +106,9 @@
 }
 
 @media (min-width:1024px){
-    .ca_container_login{
+    /*.ca_container_login{
         width: 50%;   
-    }
+    }*/
 
     .ca_titulo_login{
         font-size: 30px;
@@ -129,9 +133,9 @@
 }
 
 @media (min-width:1440px){
-    .ca_container_login{
-        width: 25%;   
-        height: 450px;
+   .ca_container_login{
+      width: 25%;
+      
     }
 
     .label_checkbox{
