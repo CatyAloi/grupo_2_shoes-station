@@ -42,8 +42,9 @@ div.errores > ul{
   border-radius: 5px;
   border: none;
   font-family: 'Prompt', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 10px;
+  color: #515151;
 }
 
 #title_editar{
@@ -57,7 +58,7 @@ div.errores > ul{
 
 .recomendado {
   margin-bottom: 20px;
-  color: #515151;
+  color: black;
 }
 
 .talles {
@@ -66,11 +67,7 @@ div.errores > ul{
 
 .label_edition{
    font-weight: 400;
-   color: #515151;
-}
-
-.label_edition:hover {
-  color: black;
+   color: black;
 }
 
 .priceproduct2 {
