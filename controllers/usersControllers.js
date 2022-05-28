@@ -12,7 +12,6 @@ const users_Controllers = {
         const email = req.body.email;
         const password = req.body.pwd.trim();
         const recuerdame = req.body.recordar;
-
         const userToLogin = await db.usuarios.findOne({ where: { email: email } })
 
         if (userToLogin === null) {
@@ -43,7 +42,9 @@ const users_Controllers = {
     },
 
     formValidationLogin: (req, res, next) => {
+        console.log(req.body)
         const resultErrors = validationResult(req);
+        console.log(resultErrors)
         if (resultErrors.isEmpty()) {
             next();
         } else {
@@ -53,6 +54,7 @@ const users_Controllers = {
                     formateadoErrors[err.param] = { msg: err.msg };
                 }
             }); 
+            console.log('Erroreeees', formateadoErrors)
             res.render('users/login', { resultErrors: formateadoErrors, errorLogin: undefined });
         }
     },

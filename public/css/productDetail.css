@@ -24,6 +24,7 @@
 
 .ca_caja_nombreproducto > h1 {
     font-weight: 400;
+    text-align: center;
 }
 
 .talle:hover{
@@ -255,8 +256,13 @@ input:checked{
 
 /*DESKTOP*/
 @media (min-width: 1025px){
-    
- 
+    .ca_caja_nombreproducto > h1 {
+        width: 550px;
+    }
+   
+    /*form input[type="radio"]:checked + label {
+    background-image: linear-gradient(to right, #4facfeee 0%, #00f1feef 100%);
+    }*/
     
    .ca_container1{/*Contenedor de la imagen,nombre del producto, código, precio, labeltalle, talles, input cantidad, botón Agregar al carrito*/
         display: flex;

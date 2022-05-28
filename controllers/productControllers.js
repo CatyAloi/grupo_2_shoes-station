@@ -180,7 +180,7 @@ const product_Controllers = {
             return res.render ('products/addProduct', {talles: tallesDb, marcas: marcasDb, errors : resultCreated.mapped(), 
                                                         oldData: req.body, usuario: req.session.userLogged});
         } 
-        
+
         return next()
     },
 

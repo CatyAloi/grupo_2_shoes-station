@@ -22,7 +22,8 @@
     border-radius: 5px;
     border: none;
     font-family: 'Prompt', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
+    color: #515151;
 }
 
 .img-input-acl {
@@ -34,12 +35,12 @@
     color:#000000;
     text-align: center;
     margin: 0;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 25px; 
 }
 
 .label_edition{
-     font-size: 18px;
+     font-size: 16px;
 }
 
 .formato-img {
@@ -51,7 +52,7 @@
 }
 
 .editNew-acl > h4 {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 18px;
 }
 

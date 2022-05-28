@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
+const { Op } = require("sequelize");
 const db = require('../database/models');
 const { pbkdf2 } = require('crypto');
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
@@ -9,7 +10,10 @@ const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     home: async (req, res)=> {
         try {
-            const recommendedProducts = await db.productos.findAll({where: {recomendado: true}}) 
+            const recommendedProducts = await db.productos.findAll({where: {recomendado: true}})  
+            const offersProducts = await db.productos.findAll({where: {
+                descuento: { [Op.gt]: 0 }
+            }})
             const data = [
                 
                 {
@@ -19,14 +23,14 @@ module.exports = {
 
                 {
                     titulo: 'Ofertas',
-                    productos: productsJson
+                    productos: offersProducts
                 }
             ];
 
             const marcas = [];
             res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
         } catch (error) {
-            console.log('error', e);
+            console.log('error', error);
         }
        
     },
