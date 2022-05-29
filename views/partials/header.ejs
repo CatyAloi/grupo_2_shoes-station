@@ -33,9 +33,8 @@
 
                 <a href="/carrito"><i class='bx bxs-cart'></i></a>
 
-           
              <div class="icons_al header-al">
-                <% if (typeof usuario == "object") { %>
+                <% if (typeof usuario == "object" && usuario.admin) { %>
                     <div class="user-login-acl">
                         <a href="/usuariosregistrados"><i class='bx bxs-user-detail'></i></a>
                     </div>
