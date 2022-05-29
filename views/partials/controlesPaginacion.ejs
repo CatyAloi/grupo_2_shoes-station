@@ -1,8 +1,22 @@
-
-
+<% let queryGeneros = ""; 
+if (filtros.generos){
+    for (genero of filtros.generos) {
+        queryGeneros = queryGeneros + '&genero=' + genero}
+} %> 
+<% let queryMarcas = ""; 
+if (filtros.marcas){
+    for (marca of filtros.marcas) {
+        queryMarcas = queryMarcas + '&marca=' + marca}
+} %> 
+<% let queryTalles = ""; 
+if (filtros.talles){
+    for (talle of filtros.talles) {
+        queryTalles = queryTalles + '&talle=' + talle}
+} %>
+<% const queries = queryGeneros + queryMarcas + queryTalles %>
 <nav class="control" style="display: flex; margin:auto; " > 
-    <a href="<%=rutaLista%>?pagina=<%=controlPaginas.paginaAnterior %>" class="btn-prev">Anterior</a> 
+    <a href="<%=rutaLista%>?pagina=<%=controlPaginas.paginaAnterior %><%=queries%>" class="btn-prev">Anterior</a> 
     <p><%=controlPaginas.paginaActual %></p>
-    <a href="<%=rutaLista%>?pagina=<%=controlPaginas.paginaSiguiente %>" class="btn-next">Siguiente</a>
+    <a href="<%=rutaLista%>?pagina=<%=controlPaginas.paginaSiguiente %><%=queries%>" class="btn-next">Siguiente</a>
     
 </nav>

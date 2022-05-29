@@ -1,12 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const modelProductos = require('../models/producto');
-const {validationResult} = require('express-validator'); 
 const Paginador = require('./../utils/paginador');
-
 const dataPath = path.join(__dirname, '../data');
 let productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
 const db = require('../database/models');
+const req = require('express/lib/request');
 
 const product_Controllers = { 
     catalogo: async(req, res)=> {
@@ -15,109 +13,23 @@ const product_Controllers = {
              
             const tallesDb = await db.talles.findAll();
             const marcasDb= await db.marcas.findAll();
-            let options = {};
-           
-            if (req.query.generos && req.query.marcas && req.query.talles) {
-                options = {
-                    include: [
-                        {
-                            model: db.talles,
-                            through: {
-                                model: db.productos_talles,
-                            },
-                            where: {
-                                id: req.query.talles
-                            }
-                        },
-                        {
-                            model: db.marcas,
-                            where: {
-                                id: req.query.marcas
-                            }
-                        }
-                    ],
-                    where: {
-                        genero: req.query.generos,
-                    }
-                };
-            } else if(req.query.generos && req.query.marcas) {
-                options = {
-                    where: { genero: req.query.generos, id_marca: req.query.marcas }
-                }
-            } else if (req.query.generos && req.query.talles) {
-                options = {
-                    include: [
-                        {
-                            model: db.talles,
-                            through: {
-                                model: db.productos_talles,
-                            },
-                            where: {
-                                id: req.query.talles
-                            }
-                        }
-                    ],
-                    where: {
-                        genero: req.query.generos
-                    }
-                }
-            } else if (req.query.marcas && req.query.talles) {
-                options = {
-                    include: [
-                        {
-                            model: db.talles,
-                            through: {
-                                model: db.productos_talles,
-                            },
-                            where: {
-                                id: req.query.talles
-                            }
-                        }
-                    ],
-                    where: {
-                        id_marca: req.query.marcas
-                    }
-                }
-            } else if (req.query.generos) {
-                options = {
-                    where: { genero: req.query.generos }
-                }
-            } else if (req.query.marcas) {
-                options = { 
-                    where: { id_marca: req.query.marcas }
-                };
-               
-            } else if (req.query.talles) {
-                options = {
-                    include: [
-                        {
-                            model: db.talles,
-                            through: {
-                                model: db.productos_talles,
-                            },
-                            where: {
-                                id: req.query.talles
-                            }
-                        }
-                    ],          
-                }
-            } 
-
-            const productos = await db.productos.findAll(options);
-            const cantidadPorPagina = 6;
+            const filtrosDeBusqueda = makeDbQueryFilter(req.query); 
+            const productos = await db.productos.findAll(filtrosDeBusqueda);
+            const cantidadPorPagina = 9;
             const paginador = new Paginador ( productos, cantidadPorPagina );
             const paginaActual = req.query.pagina || 1;
             const productosPorPagina = paginador.obtenerPagina(paginaActual); 
             const paginaAnterior = paginador.obtenerPaginaAnterior(paginaActual);
             const paginaSiguiente = paginador.obtenerPaginaSiguiente(paginaActual);
-            const paginasTotales = paginador.obtenerCantidadDePaginas();
+            const filtros = req.query? req.query: {};
+            console.log(filtros.generos);
 
             res.render('products/catalogo', { 
                 productos: productosPorPagina, 
                 talles: tallesDb, 
                 marcas: marcasDb, 
                 usuario: req.session.userLogged,
-                filtros: req.query,
+                filtros, 
                 controlPaginas: { paginaAnterior, paginaSiguiente, paginaActual}
             });
         } catch (e) {
@@ -295,6 +207,91 @@ const product_Controllers = {
 
     },
 };
+
+function makeDbQueryFilter(queryFromRequest={}){
+    const { generos, marcas, talles } = queryFromRequest;
+
+    if (generos && marcas && talles) {
+
+        return {
+            include: [
+                {
+                    model: db.talles,
+                    through: {
+                        model: db.productos_talles,
+                    },
+                    where: {
+                        id: talles
+                    }
+                },
+                {
+                    model: db.marcas,
+                    where: {
+                        id: marcas
+                    }
+                }
+            ],
+            where: {genero: generos,}
+        };
+    } else if(generos && marcas) {
+        return {where: { genero: generos, id_marca: marcas }}
+
+    } else if (generos && talles) {
+        return {
+            include: [
+                {
+                    model: db.talles,
+                    through: {
+                        model: db.productos_talles,
+                    },
+                    where: {
+                        id: talles
+                    }
+                }
+            ],
+            where: {genero: generos}
+        }
+    } else if (marcas && talles) {
+        return {
+            include: [
+                {
+                    model: db.talles,
+                    through: {
+                        model: db.productos_talles,
+                    },
+                    where: {
+                        id: talles
+                    }
+                }
+            ],
+            where: {id_marca: marcas}
+        }
+    } else if (generos) {
+        return  {
+            where: { genero: generos }
+        }
+    } else if (marcas) {
+        return { 
+            where: { id_marca: marcas }
+        };
+       
+    } else if (talles) {
+        return {
+            include: [
+                {
+                    model: db.talles,
+                    through: {
+                        model: db.productos_talles,
+                    },
+                    where: {id: talles}
+                }
+            ],          
+        }
+    } 
+    else {
+        return {};
+    }
+}
 
     //borrarProducto: (req, res)=> {
        // productsJson = modelProductos.borrarProducto(req.params.id);
