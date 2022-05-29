@@ -47,7 +47,7 @@ a {
 
 .product-heading {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
     margin-top: 55px;
 }
@@ -69,10 +69,11 @@ a {
 }
 
 .product-slider-heading {
-    font-size: 20px;
+    /* font-size: 25px; */
     color: #111111;
     margin: 15px;
     padding: 10px; 
+    margin-left: 35px;
 }
 
 .product-box {
@@ -196,7 +197,7 @@ a {
     }
 
     .product-slider-heading {
-        font-size: 25px;    
+        font-size: 30px;    
     }
     
     .title-marcas {
@@ -222,8 +223,12 @@ a {
 }
 
 @media screen and (max-width: 940px) {
+    .product-slider-heading {
+        font-size: 25px;
+    }
+    
     .title-marcas {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .logo-marcas {
@@ -242,7 +247,7 @@ a {
     }
 
     .product-slider-heading {
-        font-size: 15px;    
+        font-size: 20px;    
     }
 
     .logo-marcas {
