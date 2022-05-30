@@ -1,6 +1,5 @@
 const Paginador = require('./../utils/Paginador');
 
-
 const IndexController = {
 
     index: (req, res) => {

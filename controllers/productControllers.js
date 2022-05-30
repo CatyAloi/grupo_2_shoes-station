@@ -104,7 +104,7 @@ const product_Controllers = {
             } 
 
             const productos = await db.productos.findAll(options);
-            const cantidadPorPagina = 6;
+            const cantidadPorPagina = 9;
             const paginador = new Paginador ( productos, cantidadPorPagina );
             const paginaActual = req.query.pagina || 1;
             const productosPorPagina = paginador.obtenerPagina(paginaActual); 
