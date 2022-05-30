@@ -112,6 +112,9 @@ justify-content:center;
     transform: translateY(4px);
 }
 
+.modal {
+    text-align: center;
+}
 
 /*DESKTOP*/
 @media (min-width:1024px){

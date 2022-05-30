@@ -41,9 +41,7 @@ module.exports = (sequelize, dataTypes) => {
         id_marca: {
             allowNull: false,
             type: dataTypes.INTEGER,
-        },
-        recomendado: {
-            type: dataTypes.BOOLEAN,
+        
         }
     }
 

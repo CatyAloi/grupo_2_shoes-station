@@ -4,7 +4,8 @@
   "description": "Marketplace Venta de Zapatillas Deportivas",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16",
     "sequelize": "^6.18.0",
     "sequelize-cli": "^6.4.1",
     "session": "^0.1.0"

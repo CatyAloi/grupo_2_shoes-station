@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const modelProductos = require('../models/producto');
 const {validationResult} = require('express-validator'); 
+const Paginador = require('./../utils/paginador');
 
 const dataPath = path.join(__dirname, '../data');
 let productsJson = JSON.parse(fs.readFileSync(dataPath + '/productsData.json', 'utf-8'));
@@ -102,13 +103,22 @@ const product_Controllers = {
                 }
             } 
 
-            const productosDb = await db.productos.findAll(options);
+            const productos = await db.productos.findAll(options);
+            const cantidadPorPagina = 9;
+            const paginador = new Paginador ( productos, cantidadPorPagina );
+            const paginaActual = req.query.pagina || 1;
+            const productosPorPagina = paginador.obtenerPagina(paginaActual); 
+            const paginaAnterior = paginador.obtenerPaginaAnterior(paginaActual);
+            const paginaSiguiente = paginador.obtenerPaginaSiguiente(paginaActual);
+            const paginasTotales = paginador.obtenerCantidadDePaginas();
+
             res.render('products/catalogo', { 
-                productos: productosDb, 
+                productos: productosPorPagina, 
                 talles: tallesDb, 
                 marcas: marcasDb, 
                 usuario: req.session.userLogged,
                 filtros: req.query,
+                controlPaginas: { paginaAnterior, paginaSiguiente, paginaActual}
             });
         } catch (e) {
             console.log('error', e);
@@ -214,7 +224,6 @@ const product_Controllers = {
         return next()
        
     },
-
 
     //CREA Y ACTUALIZA UN PRODUCTO A LA BD   
     store: async (req, res)=> { 

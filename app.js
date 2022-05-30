@@ -22,8 +22,8 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+app.use(express.urlencoded( { extended:true }));
+app.use(express.json());
 
 app.use(authMiddleware, estaRecordado);
 
@@ -45,4 +45,4 @@ app.use ((req, res, next) => {
 
 
  
-app.listen(3000, () => console.log('Servidor Shoes_Station corriendo, http://localhost:3000'));
+app.listen(process.env.PORT || 3000, () => console.log('Servidor Shoes_Station corriendo, http://localhost:3000'));
