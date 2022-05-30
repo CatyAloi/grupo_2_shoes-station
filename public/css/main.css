@@ -355,3 +355,11 @@ html, body {
     font-size: 11px;
     font-style: italic;
 }
+
+.isVisible {
+    display: inline;   
+}
+
+.isNotVisible {
+display: none;
+}

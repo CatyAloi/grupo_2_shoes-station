@@ -14,6 +14,7 @@ module.exports = {
             const offersProducts = await db.productos.findAll({where: {
                 descuento: { [Op.gt]: 0 }
             }})
+
             const data = [
                 
                 {
