@@ -4,7 +4,7 @@
 
 .ca_container_login{
     box-sizing: border-box;
-    width: 60%;
+    width: 80%;
     margin: auto;
     padding: 10px 20px;
     border-radius: 5px;
@@ -38,11 +38,12 @@
     background: hsla(208, 92%, 60%, 0.2);
     border-radius: 5px;
     border: none;
+    color: #515151;
 }
 
 .input-container > .ca_input_login {
     font-family: 'Prompt', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
 }
  
 .label_login{
@@ -106,9 +107,9 @@
 }
 
 @media (min-width:1024px){
-    /*.ca_container_login{
-        width: 50%;   
-    }*/
+    .ca_container_login{
+        width: 30%;   
+    }
 
     .ca_titulo_login{
         font-size: 30px;

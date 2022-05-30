@@ -9,23 +9,22 @@ const users_Controllers = {
     },
 
     loginProcess: async (req, res) => { 
-        const email = req.body.email;
-        const password = req.body.pwd.trim();
-        const recuerdame = req.body.recordar;
+        const { email, pwd } = req.body;
+
         const userToLogin = await db.usuarios.findOne({ where: { email: email } })
 
         if (userToLogin === null) {
             res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
             return;
         } 
-        
-        const bool = bcrypt.compareSync(password, userToLogin.pwd);
 
-        if (!bool) {
+        const passwordsAreEquals = bcrypt.compareSync(pwd, userToLogin.pwd);
+
+        if (!passwordsAreEquals) {
             res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
             return;
         }
-        
+
         req.session.userLogged = { 
             id: userToLogin.id,
             nombre: userToLogin.nombre,
@@ -34,9 +33,9 @@ const users_Controllers = {
             admin: userToLogin.admin,
         };
 
-        if(recuerdame != 'undefined'){
+        if(req.body.recuerdame && req.body.recuerdame === 'recuerdame'){
             const cookie = { recuerdame: { email: userToLogin.email } };
-            res.cookie('data', JSON.stringify(cookie), { maxAge: 60000 })
+            res.cookie('auth', JSON.stringify(cookie), { maxAge: 200000000 })
         }
         res.redirect('/');
     },

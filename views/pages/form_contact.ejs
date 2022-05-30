@@ -37,7 +37,7 @@
                         <input class="ca_input_contact email" 
                         type="" 
                         name = "Email" 
-                        placeholder="correo electrónico"
+                        placeholder="Correo electrónico"
                         value="<%= locals.oldData ? oldData.Email: null %>">
                         <% if (locals.errors && errors.Email) { %>
                         <div class = "text-danger">
@@ -88,6 +88,7 @@
     </section>
     <%- include('../partials/footer'); %>
 
-    <!--<script src="js/contacto.js"></script>-->
+    <script src="js/contacto.js"></script>
+        <!-- -->
 </body>
 </html>

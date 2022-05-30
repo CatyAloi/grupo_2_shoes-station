@@ -97,7 +97,7 @@ html, body {
 .bxs-user-detail{
     font-size: 35px;
     color: black;
-    padding: 15px;
+   
 }
 
 .bxs-cart {
@@ -109,6 +109,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .user-login-acl {
@@ -116,6 +117,8 @@ html, body {
 }
 
 /* Footer */
+
+
 
 .fucsiaDos {
     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
@@ -233,6 +236,10 @@ html, body {
         color: black;
     }
 
+    .menu-al > li >a:hover{
+        font-weight: 500;
+    }
+
     .bx-menu {
         display: none;
     }
@@ -255,6 +262,10 @@ html, body {
         position: fixed;
         width: 100%;
         z-index: 1;
+    }
+
+    .user-login-acl{
+        position: relative;
     }
 
     .shop-name {
@@ -316,7 +327,7 @@ html, body {
     }
 
     .icons_al {
-        margin: 30px;
+        margin: 10px;
     }
 
     .content-footer {

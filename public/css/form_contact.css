@@ -25,6 +25,7 @@ div.errores > ul{
     text-align:justify;
     color: red;
     background-color: rgb(255, 244, 244);   
+    font-size: 14px;
 }
 
 .container_valid{
