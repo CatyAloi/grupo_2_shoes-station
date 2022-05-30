@@ -5,6 +5,34 @@ table {
     border-radius: 15px;
 }
 
+.table_users{
+    margin:20px
+}
+
+.admin_register > #fifi:hover{
+    color: rgb(255, 0, 144);
+}
+
+.bxs-user-plus{
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    left: -32px;
+}
+
+.admin_register{
+    display: flex;
+    justify-content: left;
+    margin-left: 60px;
+    margin-top: 40px;
+    position: relative;
+}
+
+#fifi{
+  cursor: pointer;
+}
+
 th {
      background-color:  rgba(74, 166, 245, 0.3);
 }
@@ -25,4 +53,19 @@ table, th, td {
     padding: 10px;
     border-collapse: collapse;
    
+}
+
+@media screen and (max-width: 1000px) {
+    
+.table_users{
+    overflow: hidden;
+    margin: 0 50px;
+    overflow-x: scroll;
+}
+
+.admin_register{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 }

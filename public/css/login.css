@@ -4,7 +4,7 @@
 
 .ca_container_login{
     box-sizing: border-box;
-    width: 60%;
+    width: 80%;
     margin: auto;
     padding: 10px 20px;
     border-radius: 5px;
@@ -108,7 +108,7 @@
 
 @media (min-width:1024px){
     .ca_container_login{
-        width: 40%;   
+        width: 30%;   
     }
 
     .ca_titulo_login{

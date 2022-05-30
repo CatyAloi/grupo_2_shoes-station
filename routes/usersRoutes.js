@@ -23,7 +23,7 @@ const ValidationRegister = [
     check('nombre', 'El nombre es requerido').notEmpty().isLength({min: 2}).withMessage('El Nombre debe tener mínimo 2 caracteres'),
     check('apellido', 'El apellido es requerido').notEmpty().isLength({min: 2}).withMessage('El Apellido debe tener mínimo 2 caracteres'),
     check('telefono').notEmpty().withMessage('El teléfono es requerido').isNumeric().withMessage('Solo se aceptan números'),
-    check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no es válido'),
+    check('email').notEmpty().withMessage('El email es requerido').isEmail().withMessage('El email no tiene un formato válido'),
     check('pwd').notEmpty().withMessage('La contraseña es requerida').isLength({min: 8}).withMessage('La contraseña debe tener mínimo 8 caracteres'),
     check('confirmarPassword').notEmpty().withMessage('Debe confirmar la contraseña').custom((value, {req}) => (value === req.body.pwd)).withMessage('Las contraseñas no coinciden'),
     check('politicas').custom(value => value == 'on').withMessage('Para continuar deberás aceptar las Políticas de Privacidad, Términos y Condiciones'),
