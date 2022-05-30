@@ -325,10 +325,6 @@ html, body {
         width: auto;
     }
 
-    .icons_al {
-        margin: 10px;
-    }
-
     .content-footer {
         display: flex;
         flex-direction: column;
