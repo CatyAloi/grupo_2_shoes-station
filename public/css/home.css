@@ -69,7 +69,7 @@ a {
 }
 
 .product-slider-heading {
-    font-size: 25px;
+    /* font-size: 25px; */
     color: #111111;
     margin: 15px;
     padding: 10px; 
@@ -223,6 +223,10 @@ a {
 }
 
 @media screen and (max-width: 940px) {
+    .product-slider-heading {
+        font-size: 25px;
+    }
+    
     .title-marcas {
         font-size: 25px;
     }

@@ -119,10 +119,6 @@
         font-size: 16px;
     }
 
-    .label_login:hover {
-        color: black;
-    }
-
     #btn_login {
         font-size: 18px;  
     }

@@ -52,6 +52,7 @@ input:focus {
  
 .ca_input_register {
     width: 100%;
+    font-family: 'Prompt', sans-serif;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
@@ -59,6 +60,7 @@ input:focus {
     background: hsla(208, 92%, 60%, 0.2);
     border-radius: 5px;
     border: none;
+    color: #515151;
  }
  
  .label_register{

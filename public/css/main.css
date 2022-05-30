@@ -88,6 +88,17 @@ html, body {
     transform: translateX(0px);
 }
 
+.users-register {
+    position: relative;
+}
+
+.bxs-user-detail {
+    position: absolute;
+    transform: translateY(-57%);
+    top: 50%;
+    left: 0px;
+}
+
 .icons_al > a {
     font-size: 30px;
     margin: 5px;
@@ -165,7 +176,6 @@ html, body {
     text-decoration: none;
     color: white;
 }
-
 
 .social {
     text-align: center;
