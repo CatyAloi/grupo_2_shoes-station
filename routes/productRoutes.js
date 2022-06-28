@@ -19,7 +19,6 @@ const storage = multer.diskStorage({
 // clase( parametros )
 const upload = multer({ storage });
 
-
 const validationCreated = [
     check('nombre').notEmpty().withMessage('Debe ingresar el nombre del producto').bail(),
     check('nombre').isLength({min: 10}).withMessage('El nombre debe tener mínimo 10 caracteres'),
