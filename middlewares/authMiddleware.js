@@ -1,18 +1,18 @@
 function authMiddleware(req, res, next){
-    const rutasAdmin = [
-        '/editarproductos',
-        '/crearproductos',
-        '/usuariosregistrados',
-    ]
+  const rutasAdmin = [
+    '/editarproductos',
+    '/crearproductos',
+    '/usuariosregistrados',
+  ]
 
-    if (
-        ((req.session.userLogged && !req.session.userLogged.admin && rutasAdmin.find(url => req.url.indexOf(url) > -1)) ||
-        (!req.session.userLogged && rutasAdmin.find(url => req.url.indexOf(url) > -1)))
-    ) {
-        res.redirect('/404');
-    } else {
-        next();
-    }
+  if (
+    ((req.session.userLogged && !req.session.userLogged.admin && rutasAdmin.find(url => req.url.indexOf(url) > -1)) ||
+    (!req.session.userLogged && rutasAdmin.find(url => req.url.indexOf(url) > -1)))
+  ) {
+    res.redirect('/404');
+  } else {
+    next();
+  }
 };
     
 module.exports = authMiddleware;

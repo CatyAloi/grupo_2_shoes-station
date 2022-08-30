@@ -1,142 +1,140 @@
 .ca_formediction{
-    box-sizing: border-box;
-    width: 80%;
-    margin: auto;
-    padding: 10px 30px ;
-    border-radius: 8px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: none;
-    outline: none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+  box-sizing: border-box;
+  width: 80%;
+  margin: auto;
+  padding: 10px 30px ;
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: none;
+  outline: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
 }
 
 #inp_width{
-    text-indent: 15px;
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    font-size: 15px;
-    border-color: #c2c2c294;
-    background: hsla(208, 92%, 60%, 0.2);
-    border-radius: 5px;
-    border: none;
-    font-family: 'Prompt', sans-serif;
-    font-weight: 400;
-    color: #515151;
+  text-indent: 15px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border-color: #c2c2c294;
+  background: hsla(208, 92%, 60%, 0.2);
+  border-radius: 5px;
+  border: none;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+  color: #515151;
 }
 
 .img-input-acl {
-    width: 100%;
-    font-size: 10px;
+  width: 100%;
+  font-size: 10px;
 }
 
 #title_editar{
-    color:#000000;
-    text-align: center;
-    margin: 0;
-    font-size: 30px;
-    margin-bottom: 25px; 
+  color:#000000;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 25px; 
 }
 
 .label_edition{
-     font-size: 16px;
+   font-size: 16px;
 }
 
 .formato-img {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .nameproduct2 {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .editNew-acl > h4 {
-    font-weight: 400;
-    font-size: 18px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .editNew-prod {
-    width: 80%;
+  width: 80%;
 }
 
 .weight-acl {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .descriproduct2 {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 #btn_cancelar-acl {
-    text-align: center;
-    background-image:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-    margin: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    width: 100%;
-    height: 30px;
-    border-radius: 8px;
-    border: none;
-    color: rgb(0, 0, 0);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 15px;
-    font-family: 'Prompt', sans-serif;
-    cursor: pointer;    
-    align-items: center;
+  text-align: center;
+  background-image:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  margin: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 15px;
+  font-family: 'Prompt', sans-serif;
+  cursor: pointer;    
+  align-items: center;
 }
 
 #btn_cancelar-acl {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #btn_editar{
-    margin: 5px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    width: 100%;
-    height: 30px;
-    border-radius: 8px;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-family: 'Prompt', sans-serif;
-    background-image:linear-gradient(to right, #4facfeee 0%, #00f1feef 100%); 
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 15px;
-    cursor: pointer;
+  margin: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Prompt', sans-serif;
+  background-image:linear-gradient(to right, #4facfeee 0%, #00f1feef 100%); 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 #btn_editar:active {
-    transform: translateY(4px);
+  transform: translateY(4px);
 }
 
 #btn_cancelar-acl:active {
-    transform: translateY(4px);
+  transform: translateY(4px);
 }
 
-
-
 @media screen and (min-width: 941px) {
-    .ca_formediction {
-        width: 800px;
-    }
+  .ca_formediction {
+    width: 800px;
+  }
 
-    .container-cancl-edit-alc {
-        display: flex;
-        justify-content: center;
-    }
+  .container-cancl-edit-alc {
+    display: flex;
+    justify-content: center;
+  }
 
-    .editNew-prod {
-        width: 200px;
-    }
+  .editNew-prod {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 940px) {
-    .container-cancl-edit-alc {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .container-cancl-edit-alc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

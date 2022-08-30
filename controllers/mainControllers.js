@@ -8,58 +8,54 @@ const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
-	home: async (req, res)=> {
-		try {
-			const recommendedProducts = await db.productos.findAll({where: {recomendado: true}})  
-			const offersProducts = await db.productos.findAll({where: {
-				descuento: { [Op.gt]: 0 }
-			}})
+  home: async (req, res)=> {
+    try {
+      const recommendedProducts = await db.productos.findAll({where: {recomendado: true}})  
+      const offersProducts = await db.productos.findAll({where: {
+        descuento: { [Op.gt]: 0 }
+      }})
 
-			const data = [
-				
-				{
-					titulo: 'Recomendados para Vos',
-					productos: recommendedProducts
-				},
+      const data = [
+        {
+          titulo: 'Recomendados para Vos',
+          productos: recommendedProducts
+        },
+        {
+          titulo: 'Ofertas',
+          productos: offersProducts
+        }
+      ];
+      const marcas = [];
+      res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
+    } catch (error) {
+      console.log('error', error);
+    }
+  },
 
-				{
-					titulo: 'Ofertas',
-					productos: offersProducts
-				}
-			];
+  contacto: (req, res)=> {
+    res.render('pages/form_contact', { usuario: req.session.userLogged });
+  },
 
-			const marcas = [];
-			res.render('pages/home', { data, marcas, usuario: req.session.userLogged });
-		} catch (error) {
-			console.log('error', error);
-		}
-	   
-	},
+  processContact: (req,res)=>{
+    const resultContact = validationResult(req);
+    if (resultContact.errors){
+      return res.render ('pages/form_contact', {errors : resultContact.mapped(), oldData: req.body});
+    } 
+  },
 
-	contacto: (req, res)=> {
-		res.render('pages/form_contact', { usuario: req.session.userLogged });
-	},
+  terminos: (req, res)=> {
+    res.render('pages/terminos_condiciones');
+  },
 
-	processContact: (req,res)=>{
-		const resultContact = validationResult(req);
-		if (resultContact.errors){
-			return res.render ('pages/form_contact', {errors : resultContact.mapped(), oldData: req.body});
-		} 
-	},
+  privacidad: (req, res)=> {
+    res.render('pages/politicas_privacidad');
+  },
 
-	terminos: (req, res)=> {
-		res.render('pages/terminos_condiciones');
-	},
+  nosotros: (req, res)=> {
+    res.render('pages/nosotros', { usuario: req.session.userLogged });
+  },
 
-	privacidad: (req, res)=> {
-		res.render('pages/politicas_privacidad');
-	},
-
-	nosotros: (req, res)=> {
-		res.render('pages/nosotros', { usuario: req.session.userLogged });
-	},
-
-	metodos_pago: (req, res)=> {
-		res.render('pages/metodos_pago', { usuario: req.session.userLogged });
-	}
+  metodos_pago: (req, res)=> {
+    res.render('pages/metodos_pago', { usuario: req.session.userLogged });
+  }
 };

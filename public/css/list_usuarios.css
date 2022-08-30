@@ -1,32 +1,32 @@
 
 table {
-    width: 100%;
-    box-shadow: 0 8px 16px 0 rgba(220, 203, 203, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(220, 203, 203, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 15px;
 }
 
 .table_users{
-    margin:20px
+  margin:20px
 }
 
 .admin_register > #fifi:hover{
-    color: rgb(255, 0, 144);
+  color: rgb(255, 0, 144);
 }
 
 .bxs-user-plus{
-    position: absolute; 
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    left: -32px;
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  left: -32px;
 }
 
 .admin_register{
-    display: flex;
-    justify-content: left;
-    margin-left: 60px;
-    margin-top: 40px;
-    position: relative;
+  display: flex;
+  justify-content: left;
+  margin-left: 60px;
+  margin-top: 40px;
+  position: relative;
 }
 
 #fifi{
@@ -34,38 +34,38 @@ table {
 }
 
 th {
-     background-color:  rgba(74, 166, 245, 0.3);
+   background-color:  rgba(74, 166, 245, 0.3);
 }
 
 
 .inf {
-    text-align: center;
+  text-align: center;
 }
 
 tr:hover td {
-    background-color: #f8d9f6;
+  background-color: #f8d9f6;
 }
 
 
 
 table, th, td {
-    border: 1px solid rgb(129, 129, 129);
-    padding: 10px;
-    border-collapse: collapse;
+  border: 1px solid rgb(129, 129, 129);
+  padding: 10px;
+  border-collapse: collapse;
    
 }
 
 @media screen and (max-width: 1000px) {
-    
+  
 .table_users{
-    overflow: hidden;
-    margin: 0 50px;
-    overflow-x: scroll;
+  overflow: hidden;
+  margin: 0 50px;
+  overflow-x: scroll;
 }
 
 .admin_register{
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 }

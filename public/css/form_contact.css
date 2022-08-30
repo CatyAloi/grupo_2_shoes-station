@@ -1,31 +1,31 @@
 #franja{
-    border-top: 1px solid #399ef794;
+  border-top: 1px solid #399ef794;
 }
 
 input:focus {
-    border: 1px solid #000;
-    background: #F3F3F3;
+  border: 1px solid #000;
+  background: #F3F3F3;
   }
 
 
   textarea:focus{
-    border: 1px solid #000;
-    background: #F3F3F3;
+  border: 1px solid #000;
+  background: #F3F3F3;
   
   }
 
 .ca_container_ppal{
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  
 }
 
 div.errores > ul{
-    list-style:none;
-    text-align:justify;
-    color: red;
-    background-color: rgb(255, 244, 244);   
-    font-size: 14px;
+  list-style:none;
+  text-align:justify;
+  color: red;
+  background-color: rgb(255, 244, 244);   
+  font-size: 14px;
 }
 
 .container_valid{
@@ -35,7 +35,7 @@ justify-content:center;
 }
 
 .input_class{
-    position: relative;
+  position: relative;
 }
 
 .text-danger{
@@ -49,90 +49,90 @@ justify-content:center;
 
 /*SECCION FORMULARIO*/
 .ca_container_form{
-    width: 80%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 50px;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .ca_titulo_form{
-    color:#000000;
-    text-align: center;
-    margin: 0;
-    font-size: 20px;
-    margin-bottom: 25px; 
-    font-weight: 400;
+  color:#000000;
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 25px; 
+  font-weight: 400;
 }
 
 .ca_input_contact {
-    text-indent: 15px;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 15px;
-    border-color: #c2c2c294;
-    background: hsla(208, 92%, 60%, 0.2);
-    border-radius: 5px;
-    border: none;
-    font-family: 'Prompt', sans-serif;
+  text-indent: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border-color: #c2c2c294;
+  background: hsla(208, 92%, 60%, 0.2);
+  border-radius: 5px;
+  border: none;
+  font-family: 'Prompt', sans-serif;
 }
  
 #ca_textarea {
-     min-height: 100px;
-     max-height: 200px;
-     max-width: 100%;
+   min-height: 100px;
+   max-height: 200px;
+   max-width: 100%;
 }
  
 #btn_contact {
-    margin: 5px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    width: 100%;
-    height: 35px;
-    border-radius: 8px;
-    border: none;
-    color: rgb(0, 0, 0);
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-family: 'Prompt', sans-serif;
+  margin: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-family: 'Prompt', sans-serif;
 }
  
 #btn_contact:active {
-    transform: translateY(4px);
+  transform: translateY(4px);
 }
 
 .modal {
-    text-align: center;
+  text-align: center;
 }
 
 /*DESKTOP*/
 @media (min-width:1024px){
-    .ca_container_ppal{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 50px;
-    }
+  .ca_container_ppal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 
-    .ca_container_form{
-        width: 100%;
-    }
+  .ca_container_form{
+    width: 100%;
+  }
 }
 
 @media (min-width:941px) {
-    #franja {
-        display: none;
-    }
+  #franja {
+    display: none;
+  }
 }

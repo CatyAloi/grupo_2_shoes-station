@@ -42,7 +42,4 @@ app.use ((req, res, next) => {
     next();
 });
 
-
-
- 
 app.listen(process.env.PORT || 3000, () => console.log('Servidor Shoes_Station corriendo, http://localhost:3000'));
