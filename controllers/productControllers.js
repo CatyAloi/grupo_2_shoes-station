@@ -104,21 +104,23 @@ const product_Controllers = {
       } 
 
       const productos = await db.productos.findAll(options);
-      const cantidadPorPagina = 9;
-      const paginador = new Paginador ( productos, cantidadPorPagina );
-      const paginaActual = req.query.pagina || 1;
-      const productosPorPagina = paginador.obtenerPagina(paginaActual); 
-      const paginaAnterior = paginador.obtenerPaginaAnterior(paginaActual);
-      const paginaSiguiente = paginador.obtenerPaginaSiguiente(paginaActual);
-      const paginasTotales = paginador.obtenerCantidadDePaginas();
+
+    //=============Paginador
+      // const cantidadPorPagina = 9;
+      // const paginador = new Paginador ( productos, cantidadPorPagina );
+      // const paginaActual = req.query.pagina || 1;
+      // const productosPorPagina = paginador.obtenerPagina(paginaActual); 
+      // const paginaAnterior = paginador.obtenerPaginaAnterior(paginaActual);
+      // const paginaSiguiente = paginador.obtenerPaginaSiguiente(paginaActual);
+      // const paginasTotales = paginador.obtenerCantidadDePaginas();
 
       res.render('products/catalogo', { 
-        productos: productosPorPagina, 
+        productos: productos, 
         talles: tallesDb, 
         marcas: marcasDb, 
         usuario: req.session.userLogged,
         filtros: req.query,
-        controlPaginas: { paginaAnterior, paginaSiguiente, paginaActual}
+        // controlPaginas: { paginaAnterior, paginaSiguiente, paginaActual}
       });
     } catch (e) {
       console.log('error', e);
@@ -188,7 +190,7 @@ const product_Controllers = {
       const marcasDb= await db.marcas.findAll();
       const tallesDb = await db.talles.findAll();
       return res.render ('products/addProduct', {talles: tallesDb, marcas: marcasDb, errors : resultCreated.mapped(), 
-                            oldData: req.body, usuario: req.session.userLogged});
+                          oldData: req.body, usuario: req.session.userLogged});
     } 
 
     return next()

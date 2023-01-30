@@ -14,14 +14,17 @@ const users_Controllers = {
     const userToLogin = await db.usuarios.findOne({ where: { email: email } })
 
     if (userToLogin === null) {
-      res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
+      res.render('users/login', { resultErrors: {}, 
+                  errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
       return;
     } 
 
     const passwordsAreEquals = bcrypt.compareSync(pwd, userToLogin.pwd);
 
     if (!passwordsAreEquals) {
-      res.render('users/login', { resultErrors: {}, errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
+      res.render('users/login', 
+                { resultErrors: {}, 
+                  errorLogin: 'Los datos no coinciden, verifique sus datos de acceso' });
       return;
     }
 
@@ -125,7 +128,6 @@ const users_Controllers = {
     res.clearCookie("auth");
     res.redirect('/');
   },
-
 
   listarUsuariosRegistrados: async(req, res)=>{
     try {

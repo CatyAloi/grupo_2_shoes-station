@@ -16,7 +16,7 @@
 
     <div class="filter_catalogo"> 
         <div class="filters-container">
-                <button id="btn-filters" class="filters">Filtros</button>
+            <button id="btn-filters" class="filters">Filtros</button>
             <div id="menu-filters">
                 <form class="form-filter_al" method="GET" action="/catalogo">
                     <div class="filters-alc">
@@ -70,16 +70,13 @@
                 </form> 
             </div> 
         </div>
-        
         <section class="container-catalogo">
             <% productos.forEach(function (producto) { %>
                 <%- include('../partials/productCatalog', {producto: producto}); %>
             <% }); %> 
         </section>
     </div>
-    <div class="control-paginas" style="justify-content: center; display:flex;">
-        <%- include ('../partials/controlesPaginacion', { controlPaginas, rutaLista: "/catalogo" }) %>
-    </div>
+    
     <div class="footer">
         <%- include('../partials/footer'); %>
     </div>
